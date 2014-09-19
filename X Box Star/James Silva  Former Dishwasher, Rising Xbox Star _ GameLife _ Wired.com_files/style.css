@@ -1,0 +1,24 @@
+/**
+ * Description: Game Life Specific Stylesheet
+ */
+#blog_header{
+    background-image: url('/images/blogs/banners/hed_gamelife.gif');
+}
+
+/*HEADLINES*/
+h1, h2, h3 {
+        font-family: Arial, Verdana, sans-serif;
+}
+
+/* corrects left aligned images*/
+.alignleft {
+    border:0;
+    margin:0;
+    padding: 5px 20px 5px 0;
+}
+
+.alignright {
+    border:0;
+    margin:0;
+    padding: 5px 0p 5px 20px;
+}

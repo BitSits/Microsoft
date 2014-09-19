@@ -1,0 +1,10 @@
+function AT_tags(){
+  try{var tags = new Array();
+    var imgs = new Array();
+    tags = ['http://spe.atdmt.com/images/pixel.gif','http://r.turn.com/r/beacon?b2=5_eTcn9zOZPi3ovOg8ALmsG5qUD4vWH0Fwe6spDRm-er7x1BP_jQEEW2U7W2VkKeuvl6NPTM7U4pJRmDDIH4-Q&cid='];
+    for(var i=0; i<tags.length; i++)
+    { imgs[i] = new Image();
+      imgs[i].src = tags[i];}
+    this.csk='Test';
+  }catch(e){this.csk='Error';}}
+var AT_csk = new AT_tags();

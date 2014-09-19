@@ -1,0 +1,1593 @@
+/* -------------------------------------------------------------- 
+   
+   CmsControlsBody.css
+   
+   Provides the layout for the controls used on the CMS system.
+   included into: CmsControls.css, siteHelp.css
+      
+-------------------------------------------------------------- */
+/* -------------------------------------------------------------- 
+In Use 
+-------------------------------------------------------------- */
+/* Begin General */
+.XnaCgp_Cms_Content_Image
+{
+    float: left;
+    padding: 0em 10px 0em 0em;
+    border: none;
+}
+.XnaCgp_Cms_Content_Image_Alt
+{
+    float: right;
+    padding: 0em 8px 0em 0em;
+    border: none;
+}
+/* End General */
+/* Start Home Page Controls*/
+.XnaCgp_Cms_HomePage_Container
+{
+	margin-left:15px;
+}
+.XnaCgp_Cms_Tagline_Container
+{
+	min-height: 15px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+    margin: 15px 0px; 
+    padding: 0px;
+    text-align: center;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+    font-size: 15px;
+    color: #758997;
+}
+.XnaCgp_Cms_HowItWorks_Container
+{
+	height: 360px;
+	width: 224px;    
+	float: left;
+}
+.XnaCgp_Cms_HowItWorks_TextDiv
+{	
+	padding: 25px 0 0 0;	     
+	text-transform: lowercase;
+}
+.XnaCgp_Cms_HowItWorks_Container ol
+{
+	margin: 0;
+	padding: 0px;
+	list-style-type: none;
+	display: block;
+}
+.XnaCgp_Cms_HowItWorks_OL li
+{
+    display: block;
+    height: 69px;
+    overflow: hidden;
+    width: 221px;
+    margin: 0px 0px 8px 0px
+}
+.XnaCgp_Cms_HowItWorks_OL a, XnaCgp_Cms_HowItWorks_OL a:link, XnaCgp_Cms_HowItWorks_OL a:visited
+{
+	display: block;
+	color: #FB9700;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 12px;
+    text-transform:uppercase;
+    height:70px;
+}
+	
+.XnaCgp_Cms_HowItWorks_OL a:hover
+{
+	color: #F6CA1E;
+}
+.XnaCgp_Cms_HowItWorks_StepDescription
+{
+    color: #758997;
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-size: 80%;
+    display:block;
+    padding:0px 11px 0px 80px;
+    text-transform:none;
+    font-weight:normal;
+    height:45px;
+}    
+.XnaCgp_Cms_HowItWorks_StepTitle
+{
+    display:block;
+    padding:11px 0px 0px 80px;
+}
+    
+.XnaCgp_Cms_HomePage_FeaturedArea1
+{
+	float: left;
+	margin: 0;
+	height: 360px;
+	width: 706px;
+	overflow: hidden;
+}
+/* TopMovers start */
+.XnaCgp_Cms_TopMovers_Container
+{
+    height: 360px;
+	width: 224px;    
+	float: left;
+}
+.XnaCgp_Cms_TopMovers_Container .XnaCgp_Cms_HowItWorks_TextDiv
+{
+    margin-bottom:15px;
+}
+.XnaCgp_Cms_TopMovers_CreatorName
+{
+    display:block;
+    margin-top:7px;
+    width:140px;
+    overflow:hidden;
+    height:13px;
+    margin-bottom:1px; 
+}
+.XnaCgp_Cms_TopMovers_item
+{
+    height: 57px;
+    width: 198px;
+    float:left;   
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    font-size:11px;
+    line-height:12px;
+}
+.XnaCgp_Cms_TopMovers_Diamond
+{
+    float:left;
+    display:block;
+    height:15px;
+    width:115px;
+    background-image:url(/assets/Images/global/cco_global_reputation_diamond_small_allSet.png);
+    background-repeat:no-repeat;
+}
+.XnaCgp_Cms_TopMovers_level1
+{
+    background-position:left 1px;
+}
+.XnaCgp_Cms_TopMovers_level2
+{
+    background-position:left -11px;
+}
+.XnaCgp_Cms_TopMovers_level3
+{
+    background-position:left -23px;
+}
+.XnaCgp_Cms_TopMovers_level4
+{
+    background-position:left -35px;
+}
+.XnaCgp_Cms_TopMovers_level5
+{
+    background-position:left -47px;
+}
+.XnaCgp_Cms_TopMovers_level_access
+{
+    display:none;
+}
+.XnaCgp_Cms_TopMovers_score
+{
+    color:#999999;
+}
+.XnaCgp_Cms_TopMovers_Tile
+{
+   border:none;
+   float:left;
+   margin:8px 6px 8px 0;
+   
+}
+/* TopMovers end */
+.XnaCgp_Cms_GotGame
+{
+	margin-top: 11px;	
+	clear:left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Top
+{
+  height:7px;/*$Browser#(FF)*/
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Top, .XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox, .XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Bottom
+{
+	margin-left: 0;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Title
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 145%;
+    margin: 3px 0 0 9px; /*$Browser#(Uplevel,FF)*/
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Game
+{
+	color: #D65627;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBoxTop
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_top.jpg); 
+	width: 654px;
+	height: 5px;
+	margin-top: 10px;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBox
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_middle.jpg);
+	background-repeat: repeat-y;
+	width: 654px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBoxBottom
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_bottom.jpg);
+	width: 654px;
+	height: 5px;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GenreImage
+{
+	background-image: url(/assets/images/home/home/cco_Home_gamegenre_action.jpg); /* must match the first category in the list*/
+	background-position: left;
+	background-repeat: no-repeat;
+	width: 482px;
+	margin-left: 5px;
+	margin-right: 0px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GenreList
+{
+	margin: 8px 0 0 10px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul
+{
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0;
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul:first-child 
+{
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0 0 0 132px; /*$Script#(Default)*/ 
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul li
+{
+	background-image: url(/assets/Images/global/cco_global_dots.jpg);
+	background-position: left 3px;
+	background-repeat: no-repeat;
+	margin: 0 4px 7px 0;
+	padding-left: 18px;
+	width: 144px; /*$Script#(Default)*/ 
+}
+.XnaCgp_Cms_GotGame ul li a, .XnaCgp_Cms_GotGame ul li a:link, .XnaCgp_Cms_GotGame ul li a:visited
+{
+    color: #E16D2E;
+    text-decoration: none;
+}
+.XnaCgp_Cms_GotGame ul li a:hover
+{
+    color: #E27614;
+}
+.XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame, .XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:link, .XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:visited
+{
+	display: block;
+	background: url(/assets/images/home/home/cco_home_game_review_image.jpg) no-repeat center center;
+	border: none;
+	width: 153px;
+	margin-left: 14px;
+    padding-top: 110px;/*$Script#(Default)*/
+	float: left;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 150%; /*$Script#(Default)*/
+    color: #D65627;
+    cursor: pointer;
+    text-align: center;
+}
+.XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:hover
+{
+    color: #E27614;
+}
+.XnaCgp_Cms_Content_Featured_Announcement_Container
+{
+    clear: both; 
+    width: 674px; 
+    margin-top: 11px;
+}
+.XnaCgp_Cms_HomePage_News_Wrapper
+{
+    margin-top: 9px;
+}
+.XnaCgp_Cms_HomePage_News_Wrapper .XnaCgp_Cms_Page_Header
+{
+	padding: 0 0 4px 38px;
+}
+.XnaCgp_Cms_Content_Repeater_News_More_Link
+{
+	float: right;
+	margin: 10px 10px 0 0;
+}
+/* End Home Page Controls */
+/* Begin CmsContentRepeater */
+.XnaCgp_Cms_Content_Repeater_Pager
+{
+    width: 680px;
+    min-height: 25px;
+    float: left;
+    padding-top: 15px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item	
+{
+    padding: 19px 0em 19px 0em;
+    width: 660px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner
+{
+    
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner p
+{
+    margin: 0em;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt
+{
+    
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt p
+{
+    margin: 0em;
+    clear: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt1 div
+{
+    clear: left;
+    float: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Title
+{
+    height: 16px;/*$Script#(Default)*/
+    margin-bottom: 10px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Title span
+{
+    float: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area
+{
+    margin-bottom: 8px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area_Column_Left
+{
+    padding-right: 5px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    border-left: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Repeater_List_Divider
+{
+    border-bottom: 1px solid #c1ced2;
+    width: 680px;
+    height: 1px;
+    clear: both;
+}	
+/* End CmsContentRepeater */
+.XnaCgp_Cms_Page_Header
+{	
+    
+}
+.XnaCgp_Cms_Page_Header h1,
+.XnaCgp_Cms_Page_Header span
+{
+    float: left;
+}
+.XnaCgp_Cms_Page_Header a img
+{
+    position:relative;
+    top:-2px;
+}
+.XnaCgp_Cms_Section2
+{
+    float:left;
+    clear:left;/*$Browser#(IE8,FF,Uplevel)*/
+}
+/* feed repeater */
+.XnaCgp_Cms_FeedRepeater
+{
+    width:222px; 
+    float:left;
+    margin:30px 20px 0px 0px;
+}
+.XnaCgp_Cms_HomePage_Chiclets
+{
+	width: 224px;
+	margin: 0 20px 0 0;
+	float: left;
+}
+.XnaCgp_Cms_FeedRepeater_Education
+{
+	width: 222px;	
+}
+.XnaCgp_Cms_FeedRepeater_Sidebar .XnaCgp_Global_SmallWhiteBox 
+{
+    min-height:275px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_FeedRepeater_News
+{
+	width: 224px;	
+}
+.XnaCgp_Cms_FeedRepeater_News .XnaCgp_Global_SmallWhiteBox 
+{
+    min-height:510px;/*$Browser#(FF)*/
+}
+.XnaCgp_Cms_FeedRepeater_Education .XnaCgp_Global_SmallWhiteBox,
+.XnaCgp_Cms_FeedRepeater_Spotlight .XnaCgp_Global_SmallWhiteBox,
+.XnaCgp_Cms_FeedRepeater_News .XnaCgp_Global_SmallWhiteBox
+{
+    overflow: hidden;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Page_Header
+{
+    float:left;    
+    width:222px;
+    margin-bottom: 15px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Page_Header h1
+{
+    float:left;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 250%;/*$Script#(Default)*/
+    text-transform: lowercase; 
+    color: #4a4a4a;    
+    display:inline;    
+    padding: 0;   
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+    
+             
+}
+.XnaCgp_Cms_FeedRepeater h3
+{
+    font-size:110%;
+    padding:9px 13px 0px 13px;
+    margin:0px;
+}
+.XnaCgp_Cms_FeedRepeater h3 span
+{
+    font-size:80%;
+    margin:0px;
+    padding:0px;
+    display:inline-block;
+}
+.XnaCgp_Cms_FeedRepeater span
+{
+    font-size: 115%;
+    margin: 10px 0 10px 0;
+    display:block;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Repeater_News_Item
+{
+    width: 200px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Catalog_Divider
+{
+    width: 191px;
+    margin:0px 11px 6px;
+}	
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Repeater_News_Item_Body
+{
+    width: 200px;
+}
+.XnaCgp_Cms_FeedRepeater img
+{
+    border: 0em;
+    float:right;
+    margin:16px 2px 0px 0px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_Body_Item img,
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_Body_Item_HomePage img
+{
+	margin: 0;
+}
+.XnaCgp_Cms_FeedRepeater_Spotlight h4,
+.XnaCgp_Cms_FeedRepeater_News h4
+{
+	font-size: 125%;	
+}
+.XnaCgp_Cms_FeedRepeater_MoreLink
+{
+    background-image: url(/assets/Images/home/home/homeFeaturePanelEndRule.png);
+    background-repeat: no-repeat;
+    background-position: -26px 2px;/*$Script#(Default)*/
+    width: 224px;
+    margin:0px;
+    height:20px;
+    font-size: 115%;
+    float:left;
+}
+.XnaCgp_Cms_FeedRepeater_MoreLink a
+{
+    float:right;
+    padding:0px 10px 0px 0px;
+}
+/* Education feed repeater */
+.XnaCgp_Cms_EducationSamples_Body_Item,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage
+{
+    float: left;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item h3,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage h3
+{
+    padding:13px 0px 0px 0px;
+    margin:0px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage h4
+{
+	font-size: 110%;	
+	float: left;
+	width: 148px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item img,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage img
+{
+	float: left;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_AreaLabel
+{
+    display:inline;
+    border-right:solid 1px black;
+    height:10px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item a
+{
+    display:block;
+    padding:1px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage a
+{
+    float: left;    
+}
+.XnaCgp_Cms_EducationSamples_Body_Item p,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage p
+{
+    padding:0px 2px;
+    margin:0px
+}
+.XnaCgp_Cms_Sidebar_Item
+{
+	margin-top: 20px;
+}
+.XnaCgp_Cms_Sidebar_Item_LR
+{
+	height:105px;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	overflow:hidden;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	width:217px;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	clear:both;
+	margin-top: 30px;
+	float: left;
+}
+.XnaCgp_Cms_FormElement
+{
+    padding: 5px 0px 5px 10px;
+}
+.XnaCgp_Cms_FindBox_DropDown
+{
+    font: 11px verdana; 
+    color: #666666
+}
+.XnaCgp_Cms_PagerWrapper
+{
+    border-bottom: 1px solid #CCC;
+    height: 22px;
+}
+.XnaCgp_Cms_PagerInnerWrapper
+{
+    text-align: right;
+    padding-right: 5px;
+}
+.XnaCgp_Cms_Content_Repeater_Item_Main_Info
+{
+    margin: 57px 0px 0px 0px;
+}
+.XnaCgp_Cms_Large_Subtitle
+{
+    padding-right: 22px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_Content_Align_Right
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Platform_Logo
+{
+    height: 30px;
+    text-align: right;
+}
+.XnaCgp_Cms_Platform_Logo_Starter_Kit
+{
+    width: 50px;
+    
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    float: right;
+    text-align: right;	
+    margin-top: -10px;	
+}
+.XnaCgp_Cms_Platform_Logo_Windows
+{
+    width: 23px;
+}
+.XnaCgp_Cms_Platform_Logo_Xbox
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Platform_Logo_Zune
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Platform_Logo_Phone
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Content_Catalog_Pager
+{
+    width: 680px;
+    height: 20px;    
+    float: left;
+    margin-top: 7px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item
+{
+    padding: 10px 8px;
+    float: left;
+    width: 664px;
+    border-bottom: 1px solid #c1ced2; 
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Left_Column
+{
+	float: left;
+	width: 440px;	
+	margin-left: 10px;
+	border-right: 1px solid #c1ced2; 
+	min-height: 64px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Title
+{
+	float: left;
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Title a
+{
+	float: left;	
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area
+{
+    width: 100%;
+    float: left;
+    font-size: 115%;    
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area_Column_Left
+{
+    float: left;
+    width: 70px;/*$Script#(Default)*/
+    text-align: right;    
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;        
+    float: left;
+    padding-left: 10px;
+    width: 320px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Right_Column
+{
+	float: right;
+	width: 119px;	
+	padding: 0 10px;
+	min-height: 64px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Type
+{   
+    text-transform: uppercase;
+    color: #4a4a4a;
+    font-size: 115%;/*$Script#(Default)*/
+font-weight: bold;
+    float: left;
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Image_Outer
+{
+	background-image: url(/assets/images/home/home/cco_cms_EducationSample_placeholder_64x64.png);
+	float: left;
+	min-height: 64px;
+	width: 64px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Platform_Logo,
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Platform_Logo div
+{    
+    float: left;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item:hover, .XnaCgp_Cms_Content_Catalog_Repeater_Item:hover .XnaCgp_Cms_Content_Catalog_Repeater_Item_Top,.XnaCgp_Cms_Content_Catalog_Repeater_Item:hover .XnaCgp_Cms_Content_Catalog_Repeater_Item_Bottom
+{
+    background-color: #D9E0E2;
+}
+.XnaCgp_Cms_Content_Catalog_Divider
+{
+    border-bottom: 1px solid #c1ced2;
+    width: 680px;
+    height: 1px;    
+    clear: both;
+}	
+.XnaCgp_Cms_Content_Catalog_More_Link
+{
+    float: right;
+    padding-top: 10px;
+    font-size: 115%;
+    background-image: url('/assets/images/global/cco_global_more_arrow.png');
+    background-position: left 12px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}	
+/* Begin CmsContentRepeaterLarge */
+.XnaCgp_Cms_Content_Repeater_Large_Wrapper
+{
+    float: left;
+    margin-bottom: 18px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item
+{
+    padding: 10px;
+    display: block;
+    min-height: 108px;
+    width: 680px;
+    border-bottom: 1px solid #c1ced2;
+    float: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item:hover
+{
+	background-color: #EBEFF0;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item_Image
+{
+	min-height: 128px;
+	width: 187px;
+	/*	background-image: url(/assets/images/global/cco_global_187x128_placeholder.png);
+		background-repeat: no-repeat; */
+	float: left;
+	padding-right: 10px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item_Image img
+{
+	padding: 0;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Inner
+{
+	float: left;	
+	min-height: 108px;
+	width: 443px;
+	padding: 10px;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Title
+{
+    clear: right; 
+    height: 16px; /*$Script#(Default)*/
+    margin-bottom: 10px; 
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Title a
+{
+	float: left;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area
+{
+    clear: right; 
+    min-height:20px;/*$Script#(Default)*/
+    margin-bottom: 5px;
+    font-size: 115%;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Column_Left
+{
+	margin-right: 10px;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_ShortHtml
+{
+	font-size: 115%;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area_Column_Left
+{
+    padding: 0em 8px 0em 0px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    margin: 0em 0em 8px 0em;
+    max-width: 340px;
+    border-left: 1px solid #cccccc;
+    text-transform: lowercase;
+}
+/* End CmsContentRepeaterLarge */
+/* Begin CmsContentFeaturedAreaItems */
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Container
+{
+    clear: both; 
+    width: 680px; 
+    height: 162px; 
+    margin: 20px 0;
+    float: left;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items,
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Last
+{
+    background-image:url(/assets/images/education/main/cco_DevEd_Main_Feature_window_small.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;
+    width: 149px;
+    height: 162px;
+    float: left;
+    margin-right: 28px;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Last
+{
+	margin: 0;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Image
+{
+    padding: 0em;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Image img
+{
+    border: 0em;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Link
+{
+    float: left; 
+    padding-left: 10px;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Type
+{
+    float: right; 
+    padding-right: 10px;
+}
+/* End CmsContentFeaturedAreaItems */
+/* Begin CmsContentDetail */
+.XnaCgp_Cms_Content_Details_Wrapper
+{
+    padding-bottom: 20px;
+    font-size: 115%;
+    line-height: 1.4em;/*$Script#(Default)*/ 
+}
+.XnaCgp_Cms_Content_Details_Wrapper h1,.XnaCgp_Cms_Content_Html_Block h1{font-family:"Segoe UI Light","Segoe Light","Segoe UI",Arial,Helvetica,sans-serif;line-height:1em;margin:0 0 0.5em 0;font-weight:normal;font-size:36px;}
+.XnaCgp_Cms_Content_Details_Wrapper h2,.XnaCgp_Cms_Content_Html_Block h2{font-family:"Segoe UI Light","Segoe Light","Segoe UI",Arial,Helvetica,sans-serif;line-height:1em;margin:0.8em 0 0.5em 0;font-weight:normal;font-size:28px;float:none;}
+.XnaCgp_Cms_Content_Details_Wrapper h4,.XnaCgp_Cms_Content_Html_Block h4{font-size:14px;float:none;margin-bottom:2px;}
+.XnaCgp_Cms_Content_Details_Wrapper p,.XnaCgp_Cms_Content_Html_Block p{margin:0;margin-bottom:1em;}
+.XnaCgp_Cms_Content_Details_Wrapper ul,.XnaCgp_Cms_Content_Html_Block ul{margin:5px 0 1em 16px;padding:0;}
+.XnaCgp_Cms_Content_Details_Wrapper ul li,.XnaCgp_Cms_Content_Html_Block ul li{padding-bottom:0.325em;}
+.XnaCgp_Cms_Content_Details_Wrapper ol,.XnaCgp_Cms_Content_Html_Block ol{margin:5px 0 1em 0;padding:0;}
+.XnaCgp_Cms_Content_Details_Wrapper ol li,.XnaCgp_Cms_Content_Html_Block ol li{padding-bottom:0.325em;margin-left:25px;}
+.XnaCgp_Cms_Content_Details_Wrapper ul.nobulletlist,.XnaCgp_Cms_Content_Html_Block ul.nobulletlist{margin-left:0;padding-left:0;list-style:none none;list-style-type:none;list-style-image:none;}
+.XnaCgp_Cms_Content_Details_Wrapper ul.nobulletlist li,.XnaCgp_Cms_Content_Html_Block ul.nobulletlist li{list-style:none none;list-style-type:none;list-style-image:none;}
+.XnaCgp_Cms_Content_Details_Container
+{
+    
+}
+.XnaCgp_Cms_Content_Details_Container_Main_Info
+{
+	float: left;
+}
+.XnaCgp_Cms_Content_Details_Container_Title
+{
+    clear: right;       
+}
+.XnaCgp_Cms_Content_Details_Container_Title span
+{
+	float: left;	
+}
+.XnaCgp_Cms_Content_Details_Container_Area
+{
+	float: left;
+    width: 450px;
+    min-height: 28px;    
+}
+XnaCgp_Cms_Content_Details_Container_Area_News
+{
+	float: left;
+    width: 660px;
+    min-height: 28px;  
+}
+.XnaCgp_Cms_Content_Details_Container_Area_Inner
+{
+    float: left;
+    padding-top: 5px;
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left
+{
+    clear: left;
+    min-width: 60px;
+    padding: 0em 8px 0em 10px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0em 0em 5px 8px;
+    width: 260px;
+}
+.XnaCgp_Cms_Content_Detail_Platform_Logo
+{
+    width: 75px;
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    float: right;
+    text-align: right;		
+    margin-top: -10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_Content_Detail_Blob
+{
+    float: left;
+    clear: both;
+    width: 680px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.XnaCgp_Cms_Content_Detail_Blob p
+{
+	margin-left: 0;
+}
+.XnaCgp_Cms_Content_Detail_Download_Panel_Top
+{
+    margin-top: 15px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Body
+{    
+    padding-bottom: 10px;
+    width: 680px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Info
+{
+    margin-left: 10px;
+    width: 250px;
+}
+.XnaCgp_Cms_Download_Wrapper
+{
+    margin: 25px 0 0 0;    
+    width: 680px;
+    
+    min-height:79px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_Content_Detail_Download_Attributes
+{
+    width: 100%;
+}
+.XnaCgp_Cms_Download_Detail_Column_Left
+{	
+    vertical-align: text-bottom;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 128px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Download_Detail_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 6px 5px;    
+font-weight: bold;
+    width: 100px;/*$Script#(Default)*/
+    margin-left: 132px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Download_Detail_Column_Right p
+{
+    margin: 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download_Platform_Logo
+{    
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_Content_Detail_Downloads
+{
+	margin-top: 25px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Title h3
+{
+	text-align: left;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Info h4
+{
+	font-size: 110%;
+}
+.XnaCgp_Cms_Content_Detail_Download_Right_Column
+{
+	border-left: 1px solid #c2ced2;
+	padding-left: 15px;
+	margin-left: 15px;
+	min-height: 79px;
+}
+/* End CmsContentDetail */
+/* Begin CmsContentRepeaterNews */
+.XnaCgp_Cms_Content_Repeater_News_Container
+{
+    float:left;
+    margin-bottom: 20px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item
+{
+    padding: 10px;
+    min-height: 88px;
+    width: 660px;
+    border-bottom: 1px solid #cec1d2;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item:hover, .XnaCgp_Cms_Content_Repeater_News_Item:hover .XnaCgp_Cms_Content_Repeater_News_Item_Top, .XnaCgp_Cms_Content_Repeater_News_Item:hover .XnaCgp_Cms_Content_Repeater_News_Item_Bottom
+{
+    background-color: #d9e0e2;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Title
+{    
+    min-height: 19px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area
+{    
+    margin: 5px 0;
+    font-size: 115%;   
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area_Column_Left
+{
+    padding: 0em 8px 0em 0px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Body
+{	
+    padding-top: 5px;
+    width: 680px;
+    font-size: 115%;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Description
+{
+	font-size: 115%;	
+}
+/* End CmsContentRepeaterNews */
+/* Begin CmsContentHotLinks */
+	
+.XnaCgp_Cms_HotLinks_Title
+{	
+	margin: 10px 0;		
+	text-transform: lowercase;	
+}
+.XnaCgp_Cms_HotLinks_Body
+{
+    background-color: #ebeff0;    
+    padding: 20px;    
+    clear: left;
+    font-size: 115%;
+}
+.XnaCgp_Cms_HotLinks_Body ul
+{
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding-left: 0;
+    vertical-align: top;
+}
+.XnaCgp_Cms_HotLinks_Body ul li
+{
+    padding-left: 2px;
+    padding-bottom: 8px;
+}
+/* End CmsContentHotLinks */
+/* Begin CmsContentQuickLinks */
+.XnaCgp_Cms_QuickLinks_Container
+{
+    padding-top: 20px;
+}
+.XnaCgp_Cms_QuickLinks_Title
+{   	
+	margin: 10px 0;  	
+}
+.XnaCgp_Cms_QuickLinks_Title_Middle p
+{
+    margin: 0em;
+    padding-top: 5px;
+}
+.XnaCgp_Cms_QuickLinks_Body
+{    
+    background-color: #EBEFF0;    
+    padding: 10px;
+    width: 220px;
+    clear: left;
+    font-size: 115%;
+}
+.XnaCgp_Cms_QuickLinks_Body ul
+{
+	list-style: none outside none;
+	margin: 0;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.XnaCgp_Cms_QuickLinks_Item
+{
+}
+.XnaCgp_Cms_QuickLinks_Item img
+{
+    border: none;
+    margin: auto;
+    display: block;
+}
+.XnaCgp_Cms_QuickLinks_Body ul li
+{
+    padding: 0 0 8px 2px;
+}
+/* End CmsContentQuickLinks */
+/* Begin CmsContentHtmlBlock */
+.XnaCgp_Cms_Content_Html_Block
+{
+    margin: 0px 0px 0px 0px;
+    font-size: 115%;
+    line-height: 1.4em;/*$Script#(Default)*/    
+}
+/* End CmsContentHtmlBlock */
+/* Begin CmsContentFeaturedHero */
+.XnaCgp_Cms_Content_Featured_Area_Hero
+{    	    
+    width: 680px;
+    height: 287px;	
+    float:left;
+}
+/* End CmsContentFeaturedHero */
+/* Begin NewHelper */
+.XnaCgp_Cms_New_Container,
+.XnaCgp_Cms_Premium_Container
+{
+    width: 90px;
+    min-height:14px;/*$Script#(Default)*/
+    text-align: center;      
+    text-transform: uppercase; 
+    margin-left: 10px;
+}
+h4 .XnaCgp_Cms_New_Container
+{
+	font-size: 95%;	
+}
+/* End NewHelper */
+/* Begin Sorting control */
+.XnaCgp_Sorting_Container
+{
+    margin: 10px 0px 10px 0px;
+}
+.XnaCgp_Sorting
+{
+    background-image: url(/assets/images/global/cco_global_findbox_top.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 210px;
+    color:#FFFFFF;
+}
+.XnaCgp_Sorting_Middle
+{
+    background-image: url(/assets/images/global/cco_global_findbox_middle.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: repeat-y;
+    float: left;
+    width: 210px;
+}
+.XnaCgp_Sorting span
+{
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 3px 0 0 10px;
+    text-transform: lowercase;
+}
+.XnaCgp_Sorting_Bottom
+{
+    background-image: url(/assets/images/global/cco_global_findbox_bottom.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 210px;
+}
+/* End Sorting control */
+/* Begin CmsContentEducationSamples */
+.XnaCgp_Cms_EducationSamples_Container
+{
+    padding-top: 20px;
+}
+.XnaCgp_Cms_EducationSamples
+{
+}
+.XnaCgp_Cms_EducationSamples_Title
+{
+    background-image: url(/assets/images/global/cco_global_section_title_small.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: repeat-x;
+    min-height:53px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 227px;
+    color: #FFFFFF; 
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    position: relative;
+    margin-left: -15px;
+    z-index: 100;
+}
+.XnaCgp_Cms_EducationSamples_Title p
+{
+	padding-left: 40px;
+	padding-top: 15px;
+    margin: 0;
+}
+.XnaCgp_Cms_EducationSamples_Image
+{
+	width: 64px;
+	min-height: 64px;
+	margin-right: 10px;
+	float: left;
+	background-image: url(/assets/images/home/home/cco_cms_EducationSample_placeholder_64x64.png);
+}
+	
+.XnaCgp_Cms_EducationSamples_Body
+{
+    background-image: url(/assets/images/global/cco_global_window_gradation.jpg); 
+    background-position: left top; 
+    background-repeat: repeat-x;
+    background-color: #F5F7F6;
+    border: solid 1px #CCC;
+    border-top: none;	
+    width: 210px;
+    clear: both;
+    top: -20px;
+    margin-bottom: -20px;
+    min-height:100px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    position: relative;
+    z-index: 10;
+    padding-top: 25px;
+    overflow: hidden;/*$Browser#(Uplevel,FF,IE8)*/
+}
+.XnaCgp_Cms_EducationSamples_Body_Item,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage
+{
+	width: 222px;
+	padding-bottom: 20px;
+	overflow: hidden;/*$Browser#(Uplevel,FF)*/
+    min-height:64px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    font-size: 115%;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Left
+{
+	float: left;
+	margin-right: 10px;
+	margin-left: 15px; /*$Script#(Default)*/
+	min-height: 46px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+	width: 46px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Left img
+{
+	width: 46px;
+	height: 46px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Right
+{
+	float: left;
+	clear: right;
+	width: 124px; /*$Script#(Default)*/
+}
+a.XnaCgp_Cms_EducationSamples_Item_Title
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+	font-size: 110%;
+	color: #E28221;	
+}
+.XnaCgp_Cms_EducationSamples_Item_Area
+{
+    clear: right;	
+    margin: 2px 15px 0px 0px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_EducationSamples_Item_Area_Column_Left
+{
+    padding: 0px 8px 0px 0px;/*$Script#(Default)*/
+    text-align: right;	
+    float: left;
+    border-right: 1px solid #cccccc;
+}
+.XnaCgp_Cms_EducationSamples_Item_Area_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0px 0px 0px 8px;/*$Script#(Default)*/
+    float: left;
+}
+.XnaCgp_Cms_EducationSamples_More_Link
+{
+	clear: both;/*$Browser#(Uplevel,FF)*/
+	float: right;
+	margin-top: -10px;/*$Browser#(Uplevel,FF)*/
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+/* End CmsContentEducationSamples */
+/* -------------------------------------------------------------- 
+NOT In Use 
+-------------------------------------------------------------- */
+.XnaCgp_Cms_Content_Repeater_List
+{
+    list-style-type: none;
+    margin: 9px 29px 0em 25px;
+    width: 602px;
+}
+.XnaCgp_Cms_Content_Repeater_List_News_Catalog
+{
+    width: 602px;
+    list-style-type: none;
+}
+.XnaCgp_Cms_Content_Repeater_List_News_Catalog_Item
+{
+    width: 602px;  
+    
+    min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    border-bottom: 1px solid #CCC;
+}
+.XnaCgp_Cms_Content_Meta_Info
+{
+    display: block;
+    list-style-type: none;
+    margin: 10px 0em 0em 0em;
+}
+.XnaCgp_Cms_Content_Meta_Info li
+{
+    margin: 0em 0em 8px 0em;
+}
+.XnaCgp_Cms_Content_Image_List_Item
+{
+    float: left;
+    padding: 0em 14px 0em 0em;
+}
+.XnaCgp_Cms_Content_Image_List_Item_Alt
+{
+    position: relative;
+    bottom: 14px;
+    float: right;
+    padding: 14px 0em 0em 14px;
+}
+.XnaCgp_Cms_Content_Image_List_Item img
+{
+    border: 0px;
+}
+.XnaCgp_Cms_Content_Image_List_Item_Alt img
+{
+    border: 0px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table
+{
+    margin: 10px 0em 0em 0em;
+    width: 602px;
+    height: 93px;
+    border-bottom: 1px solid #cccccc;
+    margin: 0em 0em 10px 14px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table td
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table div
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Title
+{
+    padding: 0em 0em 6px 9px;
+}
+.XnaCgp_Cms_Area_Column
+{
+    text-align: center;
+    width: 62px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table td p
+{
+    margin: 0em;
+}
+.XnaCgp_Cms_Content_Categories
+{
+    padding: 0em 0em 6px 0em;
+}
+.XnaCgp_Cms_Content_Table_Bottom_Row
+{
+    height: 100%;
+}
+.XnaCgp_Cms_Content_Catalog_Content_Column
+{
+    padding: 0em 0em 9px 9px;
+}
+.XnaCgp_Cms_Content_Catalog_Items
+{
+    margin: 15px 0em 0em 0em;
+}
+.XnaCgp_Cms_Content_Area_Text
+{
+    border-right: 1px solid #cccccc;
+    padding: 0em 8px 0em 0em;
+}
+.XnaCgp_Cms_Content_Detail
+{
+    width: 602px;
+}
+.XnaCgp_Cms_Content_Detail_Header
+{
+    width: 602px;
+    margin: 53px 0em 17px 79px;
+}
+.XnaCgp_Cms_Content_Detail_Download
+{
+    width: 602px;
+    margin: 19px 0em 0em 89px;
+}
+.XnaCgp_Cms_Content_Detail_Download table
+{
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Detail_Download table th
+{
+    text-align: left;
+    padding: 0em 0em 0em 4em;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td ul
+{
+    margin: 0em;
+    padding: 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td table tr td table tr td
+{
+    white-space: nowrap;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td ul li
+{
+    list-style-type: none;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Item_Table
+{
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Detail_Table_Bottom_Row
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Detail_Area_Text
+{
+    text-align: right;
+    padding: 0em 8px 0em 0em;
+}
+.XnaCgp_Cms_Content_Detail_Table_Right_Col
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Download_Thumb_Col
+{
+    padding: 0em 16px 16px 16px;
+}
+.XnaCgp_Cms_Content_Download_Item_Table
+{
+    margin: 19px 0em 0em 0em;
+    border-bottom: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Detail_Download_Desc
+{
+    padding: 0em 0em 10px 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download_Meta tr td
+{
+    padding: 0em 8px 8px 8px;
+}
+.XnaCgp_Cms_Content_Float_Left
+{
+    float: left;
+}
+.XnaCgp_Cms_Content_Float_Right
+{
+    display: inline;
+    float: right;
+}
+.XnaCgp_Cms_Content_Repeater_Thumb
+{
+    float: left; padding: 0px 20px 0px 0px
+}
+.XnaCgp_Cms_Content_Repeater_Thumb img
+{
+    border: 0px;
+}
+.XnaXgp_Cms_Content_Repeater_Title
+{
+    
+    min-height:15px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    min-width: 400px;
+    padding: 0px 0px 7px 0px
+}
+.XnaCgp_Cms_Content_Repeater_Title_Text
+{
+    float: left; padding: 0px 22px 0px 0px;
+}
+.XnaCgp_Cms_Content_Repeater_Item
+{
+    clear: both;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Main_Info
+{
+    width: 550px;
+    float: left;
+    position: relative;
+    margin: 0px 0px 0px 14px;
+}
+.XnCgp_Cms_Content_Repeater_Platform_Type
+{
+    max-height: 90px;
+    width: 82px;
+    text-align: right;
+    white-space: nowrap
+}
+.XnaCgp_Cms_Content_Repeater_Logo
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Content_Platform_Logo_Cell
+{
+    width: 50px;
+}
+/* 
+included in FindAGame Control
+*/
+form
+{
+    margin: 0;
+    padding: 0;
+}
+.XnaCgp_Global_FindBox_Text
+{
+    padding-bottom: 5px;
+}
+.XnaCgp_Global_FindBox_Inner .XnaCgp_Global_Button_Small
+{
+    float: right;   
+    margin-top: 15px;    
+}
+.XnaCgp_FindAGame_Filter_Label
+{
+font-weight: bold;
+    display: block;
+    margin: 15px 0 3px 8px;
+    padding-left: 6px;
+    text-transform: lowercase;
+}
+.XnaCgp_FindAGame_Filter_Select
+{
+    width: 190px;
+    font-size: 110%;
+    display: block;
+    margin-left: 8px;
+}
+.XnaCgp_Global_FindBox_Sort_Label
+{
+    margin-top: 0px;
+}
+.XnaCgp_UpdateMyLanguages
+{
+	font-size: 115%;/*$Script#(Default)*/ 
+	text-transform: lowercase;
+	float: left;
+	width: 100%;
+	margin-top: -5px;
+}

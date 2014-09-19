@@ -1,0 +1,1 @@
+document.write('<a href=\"http://ads.neudesicmediagroup.com/a.aspx?Task=Click&ZoneID=54&CampaignID=476&AdvertiserID=72&BannerID=361&SiteID=6&RandomNumber=673538469&Keywords=\" target=\"_Blank\"><img src=\"http://ads.neudesicmediagroup.com/ads/DL300_250_06.png\"  width=\"300\" height=\"250\" alt=\"\" align=\"Center\" border=\"0\"></a><br>'); adcode=' '

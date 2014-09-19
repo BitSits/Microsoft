@@ -1,0 +1,1 @@
+document.write('<a href=\"http://ads.neudesicmediagroup.com/a.aspx?Task=Click&ZoneID=54&CampaignID=480&AdvertiserID=59&BannerID=296&SiteID=6&RandomNumber=1942273716&Keywords=\" target=\"_Blank\"><img src=\"http://ads.neudesicmediagroup.com/ads/AR%20300x250.gif\"  width=\"300\" height=\"250\" alt=\"Advertisement - Grape City\" align=\"Center\" border=\"0\"></a><br>'); adcode=' '

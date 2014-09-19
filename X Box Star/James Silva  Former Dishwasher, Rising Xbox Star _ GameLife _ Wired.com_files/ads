@@ -1,0 +1,51 @@
+{ 
+ 
+var google_ads = new Array(); 
+var google_ad; 
+var google_radlinks = new Array(); 
+var google_radlink; 
+var google_info = new Object(); 
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "site"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=BQvf1i2XMS8fpBoincIHa2f0P37X2twHj-8nPE7uGj90s4IJIEAEYASD8ifsDKAM4AFCdxuX6AWDlqumD5A6yAQ13d3cud2lyZWQuY29tugEKMzAweDI1MF9hc8gBAdoBNmh0dHA6Ly93d3cud2lyZWQuY29tL2dhbWVsaWZlLzIwMDgvMDIvamFtZXMtc2lsdmEtZm9yL4ACAcACAcgCwdPxDagDAegDKegDnwXoAwX1AwAEAEQ&amp;num=1&amp;sig=AGiWqtxY3Zx6jff10EoFI9agLBzxUADOmQ&amp;client=ca-pub-9817987453265044&amp;adurl=http://www.clickmanage.com/events/clickevent.aspx%3Fv%3D1%26ca%3D10060%26e%3D4%26l%3D1048950061%26u%3Dhttp%2525253A%2525252F%2525252Fwww.teksystems.com%2525252FServices%2525252FGlobal-Services%2525252FDefault.aspx%2525253Fsource%2525253Dgoogle"; 
+google_ad.visible_url = "www.TEKsystems.com"; 
+google_ad.line1 = "TEKsystems -Official Site"; 
+google_ad.line2 = "Leaders in Technology \x26amp; Premier"; 
+google_ad.line3 = "Staffing Services in the US."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=B36iji2XMS8fpBoincIHa2f0PseGTvgHJmOisEcCNtwHAy8kCEAIYAiD8ifsDKAM4AFDzqeDwB2DlqumD5A6gAYHssOYDsgENd3d3LndpcmVkLmNvbboBCjMwMHgyNTBfYXPIAQHaATZodHRwOi8vd3d3LndpcmVkLmNvbS9nYW1lbGlmZS8yMDA4LzAyL2phbWVzLXNpbHZhLWZvci-pAgVSzoZrIlg-yAK7z_0PqAMB6AMp6AOfBegDBfUDAAQARA&amp;num=2&amp;sig=AGiWqtxfcydw331bPzK2XAePbdv5jbQcSQ&amp;client=ca-pub-9817987453265044&amp;adurl=http://www.maacindia.com/student-enquiry-form.aspx%3FSource%3DctAD3Dnext"; 
+google_ad.visible_url = "www.MAACindia.com"; 
+google_ad.line1 = "3D Animation in 24 months"; 
+google_ad.line2 = "Get advanced diploma in AD3D NEXT"; 
+google_ad.line3 = "Join MAAC, the leaders in 3D \x26amp; VFX"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=Bus6ni2XMS8fpBoincIHa2f0PlN_HwAH0xL6kEsCNtwHA-uADEAMYAyD8ifsDKAM4AFDS3NP6_v____8BYOWq6YPkDqABotyM7AOyAQ13d3cud2lyZWQuY29tugEKMzAweDI1MF9hc8gBAdoBNmh0dHA6Ly93d3cud2lyZWQuY29tL2dhbWVsaWZlLzIwMDgvMDIvamFtZXMtc2lsdmEtZm9yL6kCBVLOhmsiWD7IArTx1RCoAwHoAynoA58F6AMF9QMABABE&amp;num=3&amp;sig=AGiWqtw8MSom6lAMAf7pWb5sPdEtb9P63w&amp;client=ca-pub-9817987453265044&amp;adurl=http://www.animation.manipal.edu%3F%26utm_source%3Dgoogle%26utm_campaign%3DBScAnimation%26utm_medium%3Dcpc%26utm_term%3DGame%2520development%2520college%26Network%3DC%26utm_content%3D4811268188%26SiteTarget%3Dwww.wired.com"; 
+google_ad.visible_url = "Manipal.edu/Apply_Now"; 
+google_ad.line1 = "B.Sc. in Animation"; 
+google_ad.line2 = "3 year fulltime degree program"; 
+google_ad.line3 = "at Manipal University B\x26#39;lore campus"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.wired.com/gamelife/2008/02/james-silva-for/%26hl%3Den%26client%3Dca-pub-9817987453265044%26adU%3Dwww.TEKsystems.com%26adT%3DTEKsystems%2B-Official%2BSite%26adU%3Dwww.MAACindia.com%26adT%3D3D%2BAnimation%2Bin%2B24%2Bmonths%26adU%3DManipal.edu/Apply_Now%26adT%3DB.Sc.%2Bin%2BAnimation%26gl%3DIN\x26usg\x3dAFQjCNHxw3RUC0wr2K45wmeSwwPYQ2fSvw"; 
+if (window.google_ad_request_done) { 
+google_ad_request_done(google_ads); 
+} 
+if (window.google_radlink_request_done) { 
+google_radlink_request_done(google_radlinks); 
+} 
+}

@@ -1,0 +1,1858 @@
+/* 
+    CreatorCards.css
+    purpose: css classes for all creators cards including signup page, profile page, shell creator card, forums creator card
+    included into: main.css
+*/
+/* start : new Creator Rollup */
+.XnaCgp_new_CreatorRollUp_Div
+{
+    background-image: url(/assets/images/global/cco_creator_profile_creator_card_big.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position:left top;
+    background-repeat:no-repeat;
+    min-width:380px;
+    width:380px;
+    min-height:149px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    font-size: 115%;
+}
+.XnaCgp_CreatorRollUpNameLabel
+{
+    float: left;
+    margin: 16px 0 0 20px;
+    color: #FFF;
+    overflow: hidden;
+    width: 340px;
+}
+.XnaCgp_new_CreatorRollUp_Tile
+{
+    float:left;
+    margin: 5px 0 0 20px;
+}
+.XnaCgp_new_CreatorRollUp_Tile img
+{
+    height: 92px;
+    width: 92px;
+    border-width: 0px;
+}
+.XnaCgp_CreatorRollUp_RepInfo
+{
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.XnaCgp_CreatorRollUp_RepLevel
+{
+    margin-left: 10px;
+}
+.XnaCgp_CreatorRollUp_RepScore
+{
+    margin: 2px 0 0 10px;
+    color: White;
+    font-weight: bold;
+}
+.XnaCgp_new_CreatorRollUp_Badge
+{
+    float: left;
+    margin-top: 8px;
+}
+/* end: new Creator Rollup */
+/* start: shell creator rollup */
+.XnaCgp_shell_CreatorRollUp_Div
+{
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    background-image:none; /*url(/assets/images/global/cco_global_signed-in_cc.jpg);*/
+    background-position:left top;
+    background-repeat:no-repeat;
+    width:213px;
+    height:55px;
+}
+.XnaCgp_shell_CreatorRollUp_Div a
+{
+    display: block;
+    position: relative;
+    width:213px;
+    height:55px;
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-size: 9px;
+}
+.XnaCgp_shell_CreatorRollUp_Div a:Hover
+{
+    cursor: pointer;	
+    text-decoration: none;
+}
+.XnaCgp_shell_CreatorRollUp_CreatorName
+{
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    color: #4a4a4a;
+    text-align:right;
+    width: 156px;
+    overflow: hidden;
+}
+.XnaCgp_shell_CreatorRollUp_RepScore
+{
+    position: absolute;
+    top: 19px;
+    left: 77px;
+    color: #4a4a4a;
+    text-align:right;
+    width:40px;
+    text-align:right;
+}
+.XnaCgp_shell_CreatorRollUp_Tile
+{
+    position: absolute;
+    top: 8px;
+    left: 173px;
+    width: 40px;
+    height: 40px;
+    
+}
+.XnaCgp_shell_CreatorRollUp_Badges
+{
+    position:absolute;    
+    top: 32px;
+    left: 0;
+    width:168px;
+    display:block;
+}
+.XnaCgp_shell_CreatorRollUp_Badge
+{
+	float: right;
+    border: medium none;
+}
+/*end: shell creator rollup*/
+/* start: small creator rollup */
+.XnaCgp_small_CreatorRollUp_Container
+{    
+    width:40px;
+    height:40px;
+    position: relative;
+}
+.XnaCgp_small_CreatorRollUp_Tile
+{
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    width: 40px;
+    height: 40px;
+}
+.XnaCgp_small_CreatorRollUp_Tile img
+{
+    width: 40px;
+    height: 40px;
+    border-width: 0px;
+}
+/*end: small creator rollup*/
+.XnaCgp_CreatorRollUp_ReputationDiamond_Full, .XnaCgp_CreatorRollUp_ReputationDiamond_Empty
+{
+    background-image: url(/assets/images/global/cco_global_reputation_diamond.png);
+    display: block;
+    width: 23px;
+    height: 23px;
+    float: left;
+}
+.XnaCgp_CreatorRollUp_ReputationDiamond_Full
+{
+    background-position:left top;
+}
+.XnaCgp_CreatorRollUp_ReputationDiamond_Empty
+{
+    background-position:left bottom;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel1,
+.XnaCgp_shell_CreatorRollUp_ReputationLevel2,
+.XnaCgp_shell_CreatorRollUp_ReputationLevel3,
+.XnaCgp_shell_CreatorRollUp_ReputationLevel4,
+.XnaCgp_shell_CreatorRollUp_ReputationLevel5
+{
+    background-image: url(/assets/images/global/cco_global_Reputation_Diamond_small_allSet.png);
+    height: 14px;
+    width: 48px;   
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    display:block;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel1
+{
+    background-position: left top;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel2
+{
+    background-position: left -12px;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel3
+{
+    background-position: left -24px;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel4
+{
+    background-position: left -36px;
+}
+.XnaCgp_shell_CreatorRollUp_ReputationLevel5
+{
+    background-position: left -48px;
+}
+/* Included in main.css */
+body
+{    
+    background-color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+.XnaCgp_shell_background
+{    
+    /*position: absolute; non required*/
+    top: 0; 
+    bottom: 0; 
+    min-width: 950px;
+    width: 100%;
+    min-height:924px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    text-align: left;
+}
+.XnaCgp_shell_nonav_background
+{    
+    background-image: url(/assets/images/global/shell_nonav/cco_shell_nonav_background.jpg); 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    top: 0; 
+    bottom: 0; 
+    min-width: 950px; 
+    width: 100%;
+    text-align: left;
+    min-height:924px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_wide_background
+{    
+    background-image: url(/assets/Images/global/shell_wide/cco_shell_wide_background.jpg); 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    min-width: 950px; 
+    width: 100%;
+    
+    min-height:924px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+}
+.XnaCgp_shell_header
+{
+    position: relative;    
+    background-image: url(/assets/Images/global/shell_default/cco_shell_default_header_xna_logo_print.png); 
+    background-repeat: no-repeat;
+    background-position: 0px 15px;
+    width: 950px; 
+    margin-right: auto; 
+    margin-left: auto;    
+    border-bottom: solid 1px #D9E0E3;
+    min-height:140px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_nonav_header
+{
+    position: relative;
+    width:950px;
+    margin-right: auto; 
+    margin-left: auto;
+    
+    min-height:113px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_header_logolink
+{
+    position: absolute;   
+    top: 15px;
+    display: block;
+    height: 83px;
+    width: 316px;
+}
+.XnaCgp_shell_header_logolink img
+{
+    border: 0;
+}
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_MsdnLogo,
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_MsdnLogo:link,
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_MsdnLogo:visited
+{
+	background-image: url('/assets/images/global/shell_default/cco_shell_default_header_msdn-sm-logo.png');
+	background-repeat:no-repeat;
+	background-position: left center;
+	min-height: 16px;
+	width: 61px;
+	float: left;
+	position:relative;
+	top:-1px;/*$Browser#(IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_header_LiveSearch
+{
+    position: absolute;
+    top: 110px;
+    left: 718px; 
+    border:solid 1px #BDCED6;
+    background-image: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+.XnaCgp_shell_header_LiveSearch form
+{
+    margin: 0;
+    width: auto;
+}
+.XnaCgp_shell_header_LiveSearch input[type=text]
+{
+    float: left;
+    margin: 0 5px 0 5px;/*$Script#(Default)*/
+    padding: 0;/*$Script#(Default)*/
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    width: 200px;
+    border: none 0px;
+}
+.XnaCgp_shell_header_LiveSearch input[type=image]
+{
+	margin: 5px 5px;
+}
+font-size: 9px;
+.XnaCgp_shell_header_LiveSearch input[type=image]
+{
+    float: left;
+}
+.XnaCgp_shell_header_TopLinks
+{
+    position: absolute;
+    top: 5px;
+    right: 0;    
+    font-size: 12px;    
+    color: #8a8a8a;
+    z-index:20;    
+    text-align: right; /*$Browser#(Uplevel,FF,IE8)*/
+}
+.XnaCgp_shell_header_TopLinks span
+{
+     color: #8a8a8a;
+}
+.XnaCgp_shell_header_TopLinks a, .XnaCgp_shell_header_TopLinks a:link, .XnaCgp_shell_header_TopLinks a:visited
+{
+    color: #8a8a8a;
+    text-decoration: none;
+    background-image: url(/assets/images/global/shell_default/cco_shell_default_header_dot.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 13px;
+    margin-right: 8px;
+    display: inline-block;
+    text-transform:lowercase;
+}
+.XnaCgp_shell_header_TopLinks a:hover,
+.XnaCgp_shell_header_TopLinks a:hover span
+{
+	color: #141414;
+}
+.XnaCgp_shell_header_TopLinks a:hover, .XnaCgp_shell_header_TopLinks a:active
+{   
+    text-decoration: none;
+}
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_profilelink, .XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_profilelink:link, .XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_profilelink:visited
+{    
+    text-transform:none;
+}
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_passportlink
+{
+    position: relative;
+    top: -1px;/*$Browser#(Uplevel,FF,IE8)*/
+    padding: 2px 0px 4px 1px; /*$Script#(Default)*/    
+    background-image: none;
+    margin-right: 0;     
+}
+.XnaCgp_shell_header_TopLinks a.XnaCgp_shell_header_passportlink span
+{   
+    padding: 2px 0px 4px 0px; /*$Script#(Default)*/
+    margin: 0;   
+    text-transform: lowercase;
+}
+.XnaCgp_shell_body_shadow
+{   
+    width: 950px;
+    margin-right: auto; 
+    margin-left: auto;
+}
+.XnaCgp_shell_wide_body_shadow
+{
+    width: 100%;
+    margin-right: auto; 
+    margin-left: auto;
+}
+.XnaCgp_shell_body
+{   
+    width: 950px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    min-height:797px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    overflow: hidden;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_nonav_body
+{    
+    width: 950px;
+    margin-right: auto; 
+    margin-left: auto;
+    min-height:811px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    overflow: hidden;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_wide_body
+{
+    width:100%;
+    
+    min-height:771px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_shell_footer
+{
+    width:950px;
+    margin-right: auto; 
+    margin-left: auto;
+    margin-top: 10px;
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    
+    position: relative;
+    min-height:70px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    clear: both;
+    background-image: url(/assets/images/global/microsoft_logo.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.XnaCgp_shell_footer_default_bg
+{
+     font-size: 115%;/*$Script#(Default)*/
+}
+.XnaCgp_shell_footer div
+{   
+    float:left;	
+    margin: 2px 0 0 110px;
+    float: left;
+}
+.XnaCgp_shell_footer div.XnaCgp_Shell_Footer_Links
+{   
+    float: right;   
+    margin: 2px 0 0 0;
+}
+.XnaCgp_shell_footer ul
+{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.XnaCgp_shell_footer li
+{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 5px;
+    display: inline; /*$Browser#(IE6,Uplevel,FF)*/
+    background-image: none; /*url(/assets/images/global/shell_default/cco_shell_default_footer_dot.gif);*/
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.XnaCgp_shell_footer li.XnaCgp_Shell_Footer_li_First
+{
+    padding-left: 0;
+    background-image: none;
+}
+.XnaCgp_shell_footer a, .XnaCgp_shell_footer a:link, .XnaCgp_shell_footer a:visited
+{
+    color: #AFAFAF;
+    text-decoration: none;
+}
+.XnaCgp_shell_footer a:hover, .XnaCgp_shell_footer a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+.RadMenu_CultureMenu
+{
+    background-image:url(/assets/images/global/shell_default/cco_shell_default_header_dot.gif);
+    background-position:right center;
+    background-repeat:no-repeat;
+    color:#759AA9; 
+    margin-right:8px;
+    padding-right:8px;
+    text-decoration:none;
+    position: relative; 
+    text-transform:lowercase;
+    top: -3px; /*$Browser#(Uplevel,FF)*/
+}
+.XnaCgp_shell_header_TopLinks  .RadMenu_CultureMenu
+{
+	float: none; /*$Browser#(Uplevel,FF,IE8)*/
+	text-align: left;
+	display: inline-block; 
+	position: relative;
+}
+.XnaCgp_shell_header_TopLinks  .RadMenu_CultureMenu:after 
+{
+	display: inline;
+}
+.XnaCgp_shell_header_TopLinks .RadMenu_CultureMenu a, .XnaCgp_shell_header_TopLinks .RadMenu_CultureMenu a:link, .XnaCgp_shell_header_TopLinks .RadMenu_CultureMenu a:visited
+{
+    margin-right: 0;
+    padding: 2px;
+    padding-right: 5px; 
+    background-image: none;
+    font-size: 12px;
+}
+.XnaCgp_shell_header_TopLinks .RadMenu_CultureMenu span
+{
+    padding-right: 15px; 
+    background-image: url(/assets/images/global/shell_default/cco_shell_default_countries_dropdown_arrow.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.XnaCgp_shell_header_TopLinks .RadMenu_CultureMenu .slide span
+{
+    background-image: none;  
+    font-size: 11px;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+.RadMenu_CultureMenu li
+{
+    border: none;
+    margin: 1px;
+}
+.RadMenu_CultureMenu li:hover, .RadMenu_CultureMenu li ul
+{
+    border: solid 1px #abb4bc; 
+    margin: 0;   
+}
+.RadMenu_CultureMenu li ul
+{
+    background-image: url(/assets/images/global/shell_default/cco_shell_default_countries_dropdown_bkgrd.png);
+}
+.RadMenu_CultureMenu li li
+{
+    border: none;
+}
+.RadMenu_MainMenu
+{
+    position: absolute;
+    left: 0px;
+    top: 102px;
+    width: 690px;
+    z-index: 10;
+}
+/* make it appear right without JS*/
+.RadMenu_MainMenu div.slide
+{
+    display: none;
+}
+.RadMenu_MainMenu li
+{
+    display: block;
+    float: left;
+}
+.RadMenu_MainMenu ul
+{
+    display: block;
+    margin-top: 7px;
+    padding: 0;
+    margin-left: 0;    
+    background-color: #ffffff;
+}
+/* End make it appear right without JS*/
+.RadMenu_MainMenu ul ul
+{
+	border: 1px solid #D9E0E3;	
+}
+.RadMenu_MainMenu ul ul span
+{
+	font-size: 14px;/*$Script#(Default)*/
+}
+.RadMenu_MainMenu a, .RadMenu_MainMenu a:link, .RadMenu_MainMenu a:visited
+{
+    padding: 6px 0px 7px 0px;/*$Script#(Default)*/
+    text-align: left;
+    margin-right: 45px;      
+    text-decoration: none;
+    font-size: 18px;/*$Script#(Default)*/
+    color: #8A8A8A;     
+}
+.RadMenu_MainMenu .slide a, .RadMenu_MainMenu .slide a:link, .RadMenu_MainMenu .slide a:visited
+{
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+}
+.RadMenu_MainMenu .first a.current, .RadMenu_MainMenu .first a.current:link, .RadMenu_MainMenu .first a.current:visited
+{
+   
+}
+.RadMenu_MainMenu a.current, .RadMenu_MainMenu a.current:link, .RadMenu_MainMenu a.current:visited
+{   
+    color: #141414;
+}
+.RadMenu_MainMenu a:active, .RadMenu_MainMenu a:hover, .RadMenu_MainMenu a.expanded, 
+.RadMenu_MainMenu a.current:active, .RadMenu_MainMenu a.current:hover, .RadMenu_MainMenu li.item a.expanded
+{   
+    color: #141414;
+    cursor: pointer;
+}
+.RadMenu_MainMenu .first a:active, .RadMenu_MainMenu .first a:hover, .RadMenu_MainMenu .first a.expanded, .RadMenu_MainMenu .first a.current:active, .RadMenu_MainMenu .first a.current:hover, .RadMenu_MainMenu .first a.expanded, .RadMenu_MainMenu .first a.expanded:link, .RadMenu_MainMenu .first a.expanded:visited
+{  
+    cursor: pointer;
+}
+.RadMenu_MainMenu li
+{
+    padding: 0 1px 0 0 ;  
+    margin-bottom: 0;
+}
+.RadMenu_MainMenu li.last
+{
+    background-image: none;
+}
+.RadMenu_MainMenu li li
+{
+    background-image: none;
+}
+.RadMenu_MainMenu li li a:active, .RadMenu_MainMenu li li a:hover, .RadMenu_MainMenu li li a.expanded
+{
+    background-image: none;
+}
+.RadMenu_MainMenu li li.first a:active, .RadMenu_MainMenu li li.first a:hover, .RadMenu_MainMenu li li.first a.expanded
+{
+    
+}
+.RadMenu_MainMenu .first li a:active, .RadMenu_MainMenu .first li a:hover, .RadMenu_MainMenu .first li a.current:active, .RadMenu_MainMenu .first li a.current:hover
+{
+   
+}
+.RadMenu_MainMenu li .group li a, .RadMenu_MainMenu li .group li a:link, .RadMenu_MainMenu li .group li a:visited
+{
+    font-weight: normal;
+    
+    padding: 0;
+    cursor: pointer;
+}
+.RadMenu_MainMenu li .group li.last a, .RadMenu_MainMenu li .group li.last a:link, .RadMenu_MainMenu li .group li.last a:visited
+{
+    
+}
+.RadMenu_MainMenu li .group li a span, .RadMenu_MainMenu li .group li a:link span, .RadMenu_MainMenu li .group li a:visited span
+{
+    padding: 7px 15px 2px 15px;    
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+}
+.RadMenu_MainMenu li .group li.first a span, .RadMenu_MainMenu li .group li.first a:link span, .RadMenu_MainMenu li .group li.first a:visited span
+{
+    padding: 11px 15px 2px 15px;
+}
+.RadMenu_MainMenu li .group li.last a span, .RadMenu_MainMenu li .group li.last a:link span, .RadMenu_MainMenu li .group li.last a:visited span
+{
+    padding: 7px 15px 13px 15px;
+    
+}
+.RadMenu_MainMenu li .group li a:hover span
+{
+    color: #141414;
+}
+.RadMenu_MainMenu div.slide
+{
+    margin: 0 0 0 -2px;
+}
+/* Included in main.css */
+body
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-size: 0.65em;
+    color: #4a4a4a;
+    
+}
+h1
+{
+    padding: 0;
+    margin: 0 0 10px 0;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+    font-weight: normal;
+    font-size:350%;/*$Script#(Default)*/
+    color: #385b69;
+    text-transform:lowercase;
+}
+h2
+{
+	padding: 0;
+    margin: 0 0 7px 0;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+    font-size: 250%;/*$Script#(Default)*/
+    text-transform:lowercase;        
+    font-weight: normal;    
+}
+h3
+{
+font-weight: bold;
+    font-size:135%;
+    width: 170px;
+    text-align:right;
+    margin-top: 0px;
+    margin-bottom: 8px;   
+    text-transform: lowercase;		
+}
+h4
+{
+	margin: 0;
+	padding: 0;	
+	font-size: 135%;
+}
+p
+{
+    display: block;
+    margin: 0;
+}
+a, a:link, a:visited
+{
+    color: #e28221;
+    text-decoration: none;
+} 
+a:hover, a:active
+{
+    text-decoration: none;
+    color: #8e5924;
+}
+ol
+{
+    list-style-type: decimal;
+    margin-left: 54px;
+}
+ol li
+{
+    margin-bottom: 3px;
+}
+ol ol
+{
+    list-style-type: lower-alpha;
+    margin-left: 38px;
+}
+ol ol li
+{
+    margin-bottom: 1px;
+}
+ul
+{        
+    margin-top: 0px;
+    list-style-image: url(/assets/images/global/shell_default/cco_shell_default_footer_dot.gif);
+    margin-left: 49px;
+}
+ul li
+{
+    margin-bottom: 3px;
+}
+ul ul
+{        
+    list-style-image: url(/assets/images/global/shell_default/cco_shell_default_header_dot.gif);
+    margin-left: 38px;
+}
+ul ul li
+{
+    margin-bottom: 1px;
+}
+pre, code
+{
+font-family: Courier New, mono;
+    color: #000066;
+    font-size: 120%; /* IE7 */
+    margin: 0px;
+}
+pre pre, pre code, code pre, code code
+{
+    font-size: 100%;
+}
+.XnaCgp_DisplayNone
+{
+    display: none;
+}
+.XnaCgp_shell_body
+{
+    padding: 0 0px;
+}
+.XnaCgp_Global_ClearLeft
+{
+    clear: left;
+    /* height: 0px; this breaks manage my profile page layout*/
+}
+.XnaCgp_Global_ClearLeft_FloatLeft
+{
+    clear: left;
+    float: left;
+}
+.XnaCgp_Global_ClearBoth
+{
+    clear: both;
+    height: 0px;
+}
+.XnaCgp_Global_ClearRight
+{
+    clear: right;
+  
+}
+.XnaCgp_Global_ClearFloat
+{
+    height: 1px;
+    clear: both;
+}
+.XnaCgp_Global_Float_Left
+{
+	float: left;
+}
+.XnaCgp_Global_Float_Right
+{
+	float: right;	
+}
+.XnaCgp_Global_col_700
+{
+    width: 700px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_700_nomargin
+{
+    width: 700px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_680
+{
+    width: 680px; 
+    margin-right: 30px; 
+    float: left;
+}
+.XnaCgp_Global_col_680_nomargin
+{
+    width: 680px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_750_nomargin
+{
+    width: 750px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_620
+{
+    width: 620px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_620_nomargin
+{
+    width: 620px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_460
+{
+    width: 460px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_460_nomargin
+{
+    width: 460px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_360
+{
+    width: 360px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_360_nomargin
+{
+    width: 360px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_330
+{
+    width: 330px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_330_nomargin
+{
+    width: 330px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_300
+{
+    width: 300px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_300_nomargin
+{
+    width: 300px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_240
+{
+    width: 240px; 
+    margin-right: 30px; 
+    float: left;
+}
+.XnaCgp_Global_col_240_nomargin
+{
+    width: 240px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_220
+{
+    width: 220px; 
+    margin-right: 20px; 
+    float: left;
+}
+.XnaCgp_Global_col_220_nomargin
+{
+    width: 220px; 
+    margin-right: 0; 
+    float: left;
+}
+.XnaCgp_Global_col_170
+{
+	width: 170px;
+	margin: 0 30px 0 0;
+	float: left;	
+}
+.XnaCgp_Global_UE_Content li p, li p
+{
+    margin-left: 0px;
+} 
+.XnaCgp_Global_Info
+{	
+	font-size: 115%;
+	color: #4a4a4a;	
+	clear: both;
+	margin: 0;
+	padding: 0 0 13px 0;
+}
+/* Begin Form Styles */
+.XnaCgp_Global_Form_Group_Title,
+.XnaCgp_Global_Form_Field_Label
+{
+font-weight: bold;
+    font-size:135%;
+    width: 170px;
+    text-align:right;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    float: left;    
+}
+.XnaCgp_Global_Form_Field_Label
+{
+	font-size: 115%;
+}
+.XnaCgp_Global_InfoDescription
+{
+	text-align: left;    
+    padding: 0px 0px 0px 13px;    
+    text-transform: none;
+    float: left;
+    font-size: 115%;
+    width: 527px;
+    margin-bottom: 8px;    
+    min-height: 19px;
+}
+.XnaCgp_Global_Form_Panel
+{
+	background-color: #ebeff0;
+	width: 710px;
+	padding: 20px;
+	float: right;
+	min-height: 760px;
+}
+.XnaCgp_Global_Form_Panel_Release
+{	
+	width: 750px;	
+	float: left;
+	min-height: 760px;
+}
+/* End Form Styles */
+/* Begin Transparent Box */
+.XnaCgp_Global_TransarentBox_Top
+{
+   height:7px;
+   width: 680px;
+   margin-top: 11px;
+}
+.XnaCgp_Global_TransarentBox_Bottom
+{    
+    height: 7px;
+    width: 680px;
+}
+.XnaCgp_Global_TransarentBox
+{   
+    min-height:18px;
+    width: 680px;
+    padding: 2px 0;
+}
+/* End Transparent Box */ 
+/* uncomment to use white box
+.XnaCgp_Global_WhiteBox_Top
+{
+    background-image: url(/assets/Images/global/cco_global_white_window_top.png);/*$Browser#(IE7,IE8,FF,Uplevel)
+    height:8px;
+    width: 674px;
+    margin-left: 8px;
+    margin-top: 11px;
+}
+.XnaCgp_Global_WhiteBox_Bottom
+{
+    background-image: url(/assets/Images/global/cco_global_white_window_bottom.png);/*$Browser#(IE7,IE8,FF,Uplevel)
+    background-position: bottom center;
+    height: 8px;
+    width: 674px;
+    margin-left: 8px;
+}
+.XnaCgp_Global_WhiteBox
+{
+    background-image: url(/assets/Images/global/cco_global_white_window_middle.png);/*$Browser#(IE7,IE8,FF,Uplevel)
+    min-height:30px;/*$Browser#(IE7,IE8,FF,Uplevel)
+    width: 654px;
+    margin-left: 8px;
+    padding: 2px 10px;
+}
+.XnaCgp_Global_SmallWhiteBox
+{
+    background-image: url(/assets/Images/home/home/cco_home_whiteBox_middle.png);
+min-height: 260px;
+    /*min-height:260px;
+    width: 217px;
+    margin:0px;
+}
+.XnaCgp_Global_SmallWhiteBox_Top
+{
+    background-image: url(/assets/Images/home/home/cco_home_whiteBox_topBottom.png);
+    height:10px;
+    width: 217px;
+    margin:0px;
+}
+.XnaCgp_Global_SmallWhiteBox_Bottom
+{   
+    background-image: url(/assets/Images/home/home/cco_home_whiteBox_topBottom.png);
+    background-position:center bottom;
+    height: 0px;
+    width: 217px;
+    margin:0px 0px 10px 0px;
+} */
+.XnaCgp_Global_ExternalGreenBox_Top
+{
+    background-image: url(/assets/Images/games/game_detail/cco_game_detail_game_info_text_container_top_section.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    height:5px;
+    width: 670px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.XnaCgp_Global_ExternalGreenBox_Bottom
+{
+    background-image: url(/assets/Images/games/game_detail/cco_game_detail_game_info_text_container_bottom_section.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: bottom center;
+    height: 5px;
+    width: 670px;
+    margin-left: 10px;
+}
+.XnaCgp_Global_ExternalGreenBox
+{
+    background-color: #D1DCD4;
+    min-height:5px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 650px;
+    margin-left: 10px;
+    padding: 2px 10px;
+}
+.XnaCgp_Global_InternalGreenBox_Top
+{
+    background-image: url(/assets/Images/global/cco_global_description_text_container_top.jpg);
+    height:5px;
+    width: 639px;
+    margin-left: 10px;
+    margin-top: 18px;
+}
+.XnaCgp_Global_InternalGreenBox_Bottom
+{
+    background-image: url(/assets/Images/global/cco_global_description_text_container_bottom.jpg);
+    background-position: bottom center;
+    height: 5px;
+    width: 639px;
+    margin-left: 10px;
+}
+.XnaCgp_Global_InternalGreenBox
+{
+    background-color: #E7EDE9;
+    min-height:5px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 619px;
+    margin-left: 10px;
+    padding: 2px 10px;
+}
+.XnaCgp_Global_PageTitle_Small
+{
+    font-weight: normal;
+    font-size: 230%;
+    text-transform: lowercase; 
+    color: #385b69;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+}
+.XnaCgp_Global_PageTitle_ExtraSmall
+{
+    font-weight: normal;
+    font-size: 200%;
+    text-transform: lowercase; 
+    color: #385b69;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+}
+.XnaCgp_DescriptionBox_Top
+{	
+	width: 670px;
+	height: 5px;	
+}
+.XnaCgp_DescriptionBox
+{	
+	width: 642px;	
+	padding: 7px 14px 7px 14px;
+	min-height: 12px; /*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_DescriptionBox_Bottom
+{	
+	width: 670px; 
+	height: 5px;	
+}
+.XnaCgp_Global_Promo
+{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 230%; 
+    color: #FF9900;
+}
+.XnaCgp_Global_XLarge_Subtitle
+{
+    font-size: 175%;
+    font-weight: normal;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    color: #E28221;
+}
+.XnaCgp_Global_Large_Subtitle
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 145%;
+    color: #E28221
+}
+.XnaCgp_Global_Medium_Subtitle
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 125%;
+    color: #E28221
+}
+.XnaCgp_Global_Small_Subtitle
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 105%;
+    color: #E28221;
+}
+.XnaCgp_Global_Large_Type
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 145%;
+    font-weight: normal;
+}
+.XnaCgp_Global_Code
+{
+    width: 100%;
+    overflow: auto;
+    overflow-y: hidden; /* IE7 IE6 */
+}
+.XnaCgp_Global_UE_Content
+{
+    padding: 30px 15px;
+    max-width: 680px;
+    overflow: hidden;
+    line-height: 1.4em;
+}
+.XnaCgp_Global_UE_Content .XnaCgp_Global_XLarge_Subtitle
+{
+    margin-top: -1px
+}
+.XnaCgp_Global_UE_Content p
+{
+    margin: 10px 0 10px 30px;
+}
+.XnaCgp_Global_UE_Table
+{
+    font-weight: normal;
+}
+.XnaCgp_Global_UE_Table
+{
+    width: 100%;
+    background: #D5DAD5;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+    border: none;
+}
+.XnaCgp_Global_UE_Table th
+{ 
+    padding: 5px 10px;
+    background: #BDC5BA;
+    text-align: left;
+    vertical-align: bottom;
+    border: 1px solid #D5DAD5;
+    font-size: 120%;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-weight: normal;
+    color: #393D42;
+}
+.XnaCgp_Global_UE_Table td
+{ 
+    padding: 5px 15px;
+    background: #F4F7f5;
+    vertical-align: top;
+    border: 1px solid #D5DAD5;
+}
+    
+.XnaCgp_Global_UE_Content .XnaCgp_Global_Small_Type
+{
+    margin-bottom: 10px;
+}
+.XnaCgp_Global_UE_Content .XnaCgp_Global_Large_Type
+{
+    margin-top: 30px;
+}
+.XnaCgp_Global_Small_SideType
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 120%;
+    color: #393D42
+}
+.XnaCgp_Global_Ad
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+font-size: 8px;
+    color: #799197;
+}
+.XnaCgp_Global_Premium
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_end.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    
+    min-height:14px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: repeat-y; 
+    background-position: top right; 
+    float: left; 
+    padding-right: 8px;
+}
+.XnaCgp_Global_Premium div
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_start.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    
+    min-height:14px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: repeat-y; 
+    background-position: top left;
+    padding-left: 10px;
+    padding-right: 4px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 120%;
+}
+.XnaCgp_Global_Premium_Small
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_end.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    
+    min-height:14px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: repeat-y; 
+    background-position: top right; 
+    float: left; 
+    padding-right: 8px;
+}
+.XnaCgp_Global_Premium_Small div
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_start.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    
+    min-height:14px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: repeat-y; 
+    background-position: top left;
+    padding-left: 10px;
+    padding-right: 4px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 100%;
+}
+.XnaCgp_Global_Catalog
+{
+    width: 684px; 
+    
+     min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+}
+.XnaCgp_Global_Catalog div
+{
+    width: 676px; 
+    
+    min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+    margin: 0 4px; 
+}
+.XnaCgp_Global_Catalog_MouseOver
+{
+    background-image: url(/assets/Images/education/content_catalog/cco_DevEd_catalog_rollover.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 684px; 
+    
+    min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/  
+    background-repeat: no-repeat;
+}
+.XnaCgp_Global_Catalog_MouseOver div
+{
+    background-image: url(/assets/Images/education/content_catalog/cco_DevEd_catalog_rollover_middle.jpg); 
+    width: 676px; 
+    
+    min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/  
+    margin: 0 4px; 
+    background-repeat: no-repeat; 
+    background-color: #F7EFE7;
+}
+.XnaCgp_Global_New
+{
+    position:relative;
+}
+.XnaCgp_Global_New div
+{
+    background-image: url(/assets/Images/education/content_details/cco_DevEd_content_thumbnail_new.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 79px; 
+    height: 13px; 
+    background-position: 0 -61px; 
+    text-transform:uppercase; 
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-size: 9px;
+    color: #4E525A; 
+font-weight: bold;
+    text-align: center; 
+    padding-top: 1px; 
+    position: absolute; 
+    top: 62px; 
+    left: 0;
+}
+/* Begin Global Find Box */
+.XnaCgp_Global_FindBox
+{    
+    width: 240px;        
+    background-color: #ebeff0;
+    padding: 0;
+    overflow:hidden;
+}
+.XnaCgp_Global_FindBox_Title
+{    
+    min-height:40px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+    font-size: 230%;/*$Script#(Default)*/
+    text-transform: lowercase;      
+    background-color: #ffffff;  
+    padding-top: 12px;  
+    padding-bottom: 6px;
+}
+.XnaCgp_Global_FindBox_Subtitle
+{    
+font-weight: bold;
+    font-size: 135%;/*$Script#(Default)*/
+    text-transform: lowercase;    
+    margin-bottom: 10px;    
+    width: 100%;
+    display: block;
+}
+.XnaCgp_Global_FindBox_Text ul
+{
+	margin-left:0px;
+}
+.XnaCgp_Global_FindBox_Inner
+{    
+    padding: 18px 14px;        
+}
+.XnaCgp_Global_FindBox_Inner .XnaCgp_Global_Button_Small
+{
+	float: right;	
+}
+.XnaCgp_Global_FindBox_Select
+{
+	float: left;	
+	margin-bottom: 15px;
+	width: 100%;
+}
+.XnaCgp_Global_FindBox_List
+{	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.XnaCgp_Global_FindBox_List ul
+{    
+    font-size: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin: 0em;
+    list-style-type: none;
+    list-style-image: none;
+}
+.XnaCgp_Global_FindBox_Checkbox
+{
+	font-size: 115%;
+	width: 100%;
+	float: left;
+	text-transform: lowercase;
+}
+.XnaCgp_Global_FindBox_Checkbox label
+{
+	margin: 2px 0px 0px 5px;
+	float: left	
+}
+.XnaCgp_Global_FindBox_Checkbox input
+{
+	float: left;
+}
+/* End Global Find Box */
+/* Begin Global Buttons */
+.XnaCgp_Global_Button, 
+.XnaCgp_Global_Button_Alt, 
+.XnaCgp_Global_Button_Disabled
+{
+	float: right;	
+	margin-left: 11px;
+	min-height:31px;   
+}
+.XnaCgp_Global_Button input, 
+.XnaCgp_Global_Button_Alt input, 
+.XnaCgp_Global_Button_Disabled input
+{	 
+	min-height:31px; 	
+    min-width: 100px;/*$Browser#(FF,Uplevel)*/
+    font-size: 115%;  
+    padding: 0 18px 5px;/*$Browser#(FF)*/
+}
+.XnaCgp_Global_Button_Small,
+.XnaCgp_Global_Button_Small_Alt,
+.XnaCgp_Global_Button_Small_Disabled
+{
+	float: left;		
+	min-height:18px;   
+}
+.XnaCgp_Global_Button_Small input,
+.XnaCgp_Global_Button_Small_Alt input,
+.XnaCgp_Global_Button_Small_Disabled input
+{
+	min-height:15px;/*$Browser#(FF,Uplevel)*/    
+    min-width: 45px;/*$Browser#(FF,Uplevel)*/
+    font-size: 115%;  
+    padding: 0 12px;/*$Browser#(IE8,FF,Uplevel)*/    
+}
+.XnaCgp_Global_Button,
+.XnaCgp_Global_Button_Small
+{
+	background-color: #385b69;  
+	border: 1px solid #385b69;
+	color: #ffffff;    
+}
+.XnaCgp_Global_Button input,
+.XnaCgp_Global_Button_Small input
+{
+	background-color: #385b69;      
+    color: #ffffff;    
+    border: none;  
+}
+.XnaCgp_Global_Button:hover,
+.XnaCgp_Global_Button_Small:hover,
+{
+	background-color: #223942;  
+    border: 1px solid #223942;
+    color: #ffffff;    
+}
+.XnaCgp_Global_Button:hover input,
+.XnaCgp_Global_Button_Small:hover input,
+.XnaCgp_Global_Button input:focus,
+.XnaCgp_Global_Button_Small input:focus
+{
+	background-color: #223942;      
+    color: #ffffff;      
+    border: none;
+}
+.XnaCgp_Global_Button_Alt,
+.XnaCgp_Global_Button_Small_Alt
+{
+	background-color: #759aa9;  
+    border: 1px solid #759aa9;
+    color: #ffffff;    
+}
+.XnaCgp_Global_Button_Alt input,
+.XnaCgp_Global_Button_Small_Alt input
+{
+	background-color: #759aa9;  
+    color: #ffffff;      
+    border: none;  
+}
+.XnaCgp_Global_Button_Alt:hover,
+.XnaCgp_Global_Button_Small_Alt:hover,
+{
+	background-color: #73909c;  
+    border: 1px solid #73909c;
+}
+.XnaCgp_Global_Button_Alt:hover input,
+.XnaCgp_Global_Button_Small_Alt:hover input,
+.XnaCgp_Global_Button_Alt input:focus,
+.XnaCgp_Global_Button_Small_Alt input:focus
+{
+	background-color: #73909c;  
+    border: none;
+}
+input.XnaCgp_Global_Button_Disabled,
+.XnaCgp_Global_Button_Disabled input,
+.XnaCgp_Global_Button_Small_Disabled input
+{
+	background-color: Transparent;
+    background-image: url("/assets/images/global/cco_global_button_disabled.png");
+    border: 1px solid #cccccc;
+    color: #888888;
+}
+.XnaCgp_Global_Button_Link input,
+.XnaCgp_Global_Button_Link_Disabled input
+{
+	border: none; 
+    background-color: Transparent; 
+    text-transform: lowercase;
+    color: #709baa;
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    padding: 2px 0px 3px 0px; /*$Script#(Default)*/
+    font-size: 12px;
+    cursor: pointer;    
+}
+.XnaCgp_Global_Button_Link:hover input
+{
+	color: #223942;
+}
+.XnaCgp_Global_Button_Link_Disabled input
+{
+	color: #888888;
+}
+/* End Global Buttons */
+.XnaCgp_Global_ValidationMessage
+{
+    background-image: url(/assets/images/global/cco_global_notification_error.png);
+    background-repeat: no-repeat;
+    background-position: left 2px;
+    padding-left: 25px;
+    float: left;
+}
+.XnaCgp_Global_ValidationMessage span
+{
+    line-height: 20px;
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    color: #88172E;
+    display:block;
+    font-size: 115%;
+}
+.XnaCgp_Global_ValidationMessageLabel
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    color: #88172E;
+font-size: 75%;
+    display:block;
+}
+.XnaCgp_Global_DefaultLink_Small
+{
+font-size: 80%;
+}
+/*Help Icon Css*/
+.XnaCgp_Global_HelpLink a, XnaCgp_Global_HelpLink a:link, XnaCgp_Global_HelpLink a:visited
+{
+    text-decoration:none;
+    padding:3px;
+    height: 22px;
+    width:23px;
+    background-image:url(/assets/images/global/cco_global_help_button_normal.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;
+    background-position: right center;
+    margin: 15px 0 0 5px;
+    float: left;
+}
+.XnaCgp_Global_HelpLink a:hover
+{
+    background-image:url(/assets/images/global/cco_global_help_button_rollover.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;    
+}
+.XnaCgp_Global_HelpLinkSmall a, XnaCgp_Global_HelpLinkSmall a:link, XnaCgp_Global_HelpLinkSmall a:visited
+{
+    display: inline-block;
+    text-decoration:none;
+    padding:0px 2px 3px 2px;
+    height:17px;
+    width:17px;
+    background-image:url(/assets/images/global/cco_global_help_button_normal_small.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;
+    background-position: right center;
+}
+.XnaCgp_Global_HelpLinkSmall a:hover
+{
+    background-image:url(/assets/images/global/cco_global_help_button_rollover_small.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;
+    background-position: right center;
+}
+/* begin: PagingControl */
+.XnaCgp_Global_PagingPrevious a,
+.XnaCgp_Global_PagingPreviousDisabled a
+{
+    font-size: 12px;   
+    padding: 3px 8px 3px 17px;
+}
+.XnaCgp_Global_PagingNext a,
+.XnaCgp_Global_PagingNextDisabled a
+{
+    font-size: 12px;
+    padding: 3px 17px 3px 8px;
+}
+.XnaCgp_Global_PagingPrevious a, 
+.XnaCgp_Global_PagingPages a, 
+.XnaCgp_Global_PagingNext a
+{
+    text-decoration: none;   
+    font-size: 115%;
+    color: #4a4a4a;     
+}
+.XnaCgp_Global_PagingPages a,
+.XnaCgp_Global_PagingCurrentPage
+{	
+    padding: 3px 8px; /*$Script#(Default)*/
+}
+.XnaCgp_Global_PagingPages a:hover
+{
+	color: #141414;
+	background-color: #d2e2e6;
+}
+.XnaCgp_Global_PagingPrevious a, 
+.XnaCgp_Global_PagingPrevious a:link, 
+.XnaCgp_Global_PagingPrevious a:visited
+{    
+    background: url(/assets/images/global/cco_global_left_scroll_arrow_normal.png) no-repeat scroll left 5px transparent;
+    color: #4a4a4a;
+}
+.XnaCgp_Global_PagingPrevious a:hover
+{    
+    background:url(/assets/images/global/cco_global_left_scroll_arrow_rollover.png) no-repeat scroll left 5px transparent;
+    color: #141414;
+}
+.XnaCgp_Global_PagingPreviousDisabled a
+{    
+    background: url(/assets/images/global/cco_global_left_scroll_arrow_disabled.png) no-repeat scroll left 5px transparent;
+    color: #bbbbbb;
+}
+.XnaCgp_Global_PagingNext a, 
+.XnaCgp_Global_PagingNext a:link, 
+.XnaCgp_Global_PagingNext a:visited
+{    
+    background: url(/assets/images/global/cco_global_right_scroll_arrow_normal.png) no-repeat scroll right 5px transparent;
+    color: #4a4a4a;
+}
+.XnaCgp_Global_PagingNext a:hover
+{    
+    background: url(/assets/images/global/cco_global_right_scroll_arrow_rollover.png) no-repeat scroll right 5px transparent;
+    color: #141414;
+}
+.XnaCgp_Global_PagingNextDisabled a
+{    
+    background: url(/assets/images/global/cco_global_right_scroll_arrow_disabled.png) no-repeat scroll right 5px transparent;
+    color: #bbbbbb;
+}
+    
+.XnaCgp_Global_PagingLabel
+{
+    margin-right: 25px;
+    margin-top: 3px;
+    color: #4a4a4a;
+    font-size: 12px;
+}
+.XnaCgp_Global_PagingCurrentPage
+{
+    color: #141414;   
+    font-size: 115%; 
+}
+.XnaCgp_Global_PageDisable
+{
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 99000; 
+    width: 100%; 
+}
+/* end: PagingControl */
+.XnaCgp_Global_Section_Title
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 110%;
+    color: #FFFFFF;
+}
+/* begin: ComplaintDescriptionBox */
+.XnaCgp_Global_ComplaintDescBox
+{
+    padding-top: 16px;    
+    float: left;
+}
+.XnaCgp_Global_ComplaintDescBox p
+{   
+    font-size: 115%;   
+    margin: 15px 0; 
+}
+.XnaCgp_Global_ComplaintDescBox textarea
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+	font-size: 115%;	    
+    border: solid 1px #c1ced2;
+    height: 52px;
+    margin-top: 2px;
+    padding: 6px 0 6px 10px;
+    width: 668px;
+}
+.XnaCgp_Global_ComplaintDescBox .XnaCgp_Global_ValidationMessage
+{
+    margin-top: 10px;
+	margin-left: 12px;
+}
+/* end: ComplaintDescriptionBox */
+.XnaCgp_Global_Error
+{
+	clear:both;
+	padding:4px 10px 5px 15px; 
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+	font-size:115%; 
+	color:#88172E; 
+}
+.XnaCgp_Global_Error img
+{
+	float:left;
+	position:relative;
+	top:-2px; 
+	margin-right:5px;
+}
+/*begin: peer review progress control*/
+div.XnaCgp_PeerReviewProgress_Container
+{
+    width:130px; 
+    height:25px; 
+    overflow:hidden;  
+    float:right;
+    position:relative; 
+    right:0px;
+    top:-25px;
+    z-index:1; 
+    margin:0px; 
+}
+	
+	
+div.XnaCgp_PeerReviewProgress_bar
+{
+    background-image:url(/assets/images/games/game_detail/cco_game_detail_review_progress_bar.jpg);
+    background-repeat:no-repeat;
+    z-index:2; 
+    top:3px;  
+    left:0px;  
+    width:110px;
+    height:5px;
+    margin-top:4px;
+}
+		
+div.XnaCgp_PeerReviewProgressbar_Fill
+{
+    background-image:url(/assets/images/games/game_detail/cco_game_detail_review_progress_bar_percentage.jpg);
+    background-repeat:no-repeat;
+	z-index:3;
+	top:0px;    
+	height:5px;	
+}
+		
+.XnaCgp_PeerReviewProgress_Text
+{    
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+    margin-bottom:3px; 
+    
+    text-transform:lowercase;
+    color: #4a4a4a;
+}
+/*end: peer review progress control*/
+.XnaCgp_Global_FF_FloatBugSpacer
+{
+	width:100%;
+	height:1px;
+	clear:both;
+}
+/*Language checkbox layout*/
+.XnaCgp_LanguagesSpoken_LanguageLabel
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+font-size: 92%;
+    float:left;
+    display:inline-block;
+    width: 160px;
+}
+.XnaCgp_SiteError_ErrDiv
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+	display:block;
+	background-color: #f4edea;
+	color: #4a4a4a;
+	padding: 20px 25px;
+	background-position: 25px 25px;	
+	background-repeat:no-repeat;
+	font-size: 135%;	
+}
+.XnaCgp_SiteError_Header
+{
+font-family: "Segoe UI Light", "Segoe UI", Arial, Helvetica, Sans-Serif;
+	font-size:170%;
+	color: #89172e;
+}
+.XnaCgp_SiteError_ErrMessageDiv
+{	
+	padding-left: 57px;	
+}
+.XnaCgp_Global_OptionalLabel
+{
+	float: left;
+	font-size: 115%;
+	color: #b7b7b7;	
+}
+/* Begin CMS Content Blob Styles */
+.XnaCgp_Cms_Content_Detail_Blob h3
+{
+font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;	
+	font-size: 135%;
+	text-align: left;
+	float:none;
+	width:auto;
+}
+.XnaCgp_Cms_Content_Detail_Blob ul
+{
+	margin: 0;	
+}
+.XnaCgp_Cms_Content_Detail_Blob ol
+{
+	margin: 0;	
+}
+.XnaCgp_Cms_Content_Detail_Blob h1[style]
+{
+	font-size:350%;
+}
+/* End CMS Content Blob Styles */

@@ -1,0 +1,158 @@
+/* global */
+.db-wrapper,
+.db-clean {
+    display:inline-block;
+}
+.db-container, .db-body, .db-count, .db-copy {
+    display:block;
+}
+.db-wrapper, span.db-wrapper {
+    cursor: pointer;
+    font-family: Arial;
+    color: #554e1b;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 14px;
+    text-align: center;
+}
+
+.db-wrapper.db-compact {
+    vertical-align:middle;
+}
+
+.db-wrapper a {
+    display: block;
+    text-indent: -10000px;
+    overflow: hidden;
+}
+.db-wrapper span span span span.db-count {
+    padding-top: 4px;
+    text-align:center;
+}
+.db-wrapper span span span span.db-copy {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 500;
+    color: #bba872;
+    text-align:center;
+}
+
+.db-submit .db-count,
+.db-submit .db-copy,
+.db-submit .db-anchor {
+    visibility: hidden;
+}
+
+/* large */
+.db-wrapper span span .db-large {
+    width: 50px;
+    height: 72px;
+    background: transparent url(/img/button/diggThis.png) no-repeat 0 0;
+    padding: 4px 0;
+}
+.db-wrapper span span .db-large .db-anchor {
+    height: 33px;
+    margin-top: 10px;
+}
+.db-wrapper span .db-submit .db-large {
+    background-image: url(/img/button/diggThisSubmit.png);
+}
+.db-wrapper span .db-dugg .db-large {
+    background-image: url(/img/button/diggThisDugg.png);
+}
+.db-wrapper .db-ie span .db-large {
+    width: 50px;
+    height: 80px;
+}
+.db-wrapper .db-ie6 span .db-large {
+    background-image: url(/img/button/diggThis.gif);
+}
+.db-wrapper .db-ie6 .db-submit .db-large {
+    background-image: url(/img/button/diggThisSubmit.gif);
+}
+.db-wrapper .db-ie6 .db-dugg .db-large {
+    background-image: url(/img/button/diggThisDugg.gif);
+}
+
+/* medium */
+.db-wrapper span span .db-medium {
+    width: 50px;
+    height: 55px;
+    background: transparent url(/img/button/diggThisMedium.png) no-repeat 0 0;
+    padding: 3px 0;
+}
+.db-wrapper span span .db-medium .db-anchor {
+    height: 21px;
+    margin-top: 5px;
+}
+.db-wrapper span .db-submit .db-medium {
+    background-image: url(/img/button/diggThisMediumSubmit.png);
+}
+.db-wrapper span .db-dugg .db-medium {
+    background-image: url(/img/button/diggThisMediumDugg.png);
+}
+.db-wrapper .db-ie span .db-medium {
+    width: 50px;
+    height: 61px;
+}
+.db-wrapper .db-ie6 span .db-medium {
+    background-image: url(/img/button/diggThisMedium.gif);
+}
+.db-wrapper .db-ie6 .db-submit .db-medium {
+    background-image: url(/img/button/diggThisMediumSubmit.gif);
+}
+.db-wrapper .db-ie6 .db-dugg .db-medium {
+    background-image: url(/img/button/diggThisMediumDugg.gif);
+}
+
+/* compact */
+.db-wrapper span span span.db-compact {
+    width: 76px;
+    height: 11px;
+    background: transparent url(/img/button/diggThisCompact.png) no-repeat 0 0;
+    padding: 3px 0;
+    text-align:left;
+}
+.db-wrapper span span .db-compact .db-copy,
+.db-wrapper span span .db-compact .db-anchor {
+    display: none;
+}
+.db-wrapper span span .db-compact span.db-count {
+    padding: 0;
+    line-height: 10px;
+    font-size: 10px;
+    width: 36px;
+    text-align:center;
+}
+.db-wrapper span .db-submit .db-compact {
+    background-image: url(/img/button/diggThisCompactSubmit.png);
+}
+.db-wrapper span .db-dugg .db-compact {
+    background-image: url(/img/button/diggThisCompactDugg.png);
+}
+.db-wrapper .db-ie span .db-compact {
+    width: 76px;
+    height: 17px;
+}
+.db-wrapper .db-ie6 span .db-compact {
+    background-image: url(/img/button/diggThisCompact.gif);
+}
+.db-wrapper .db-ie6 .db-submit .db-compact {
+    background-image: url(/img/button/diggThisCompactSubmit.gif);
+}
+.db-wrapper .db-ie6 .db-dugg .db-compact {
+    background-image: url(/img/button/diggThisCompactDugg.gif);
+}
+
+/* digger */
+.db-wrapper span span .db-digger {
+    width: 16px;
+    height: 16px;
+    background: transparent url(/img/button/diggThisDigger.png) no-repeat 0 0;
+}
+
+.db-digger .db-count,
+.db-digger .db-copy,
+.db-digger .db-anchor {
+    display: none;
+}

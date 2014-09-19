@@ -1,0 +1,17 @@
+Advanced Platformer Features
+	ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.XNAGS31.1033/XNA/PlatformerSK_AdvancedFeatures.htm
+
+Platformer: Adding a Scrolling Level
+	ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.XNAGS31.1033/XNA/PlatformerSK_Parallax.htm
+
+Platformer: Adding a Power-Up
+	ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.XNAGS31.1033/XNA/PlatformerSK_PowerUp.htm
+
+
+
+Storage Overview
+	ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.XNAGS31.1033/XNA/XNA_Storage_Overview.htm#ID4EHB
+
+How To: Make a Scrolling Background
+	ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.XNAGS31.1033/XNA/2DGraphicsHowTo_Make_Scrolling_Background.htm
+
