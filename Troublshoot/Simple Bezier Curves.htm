@@ -1,0 +1,353 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_ctl00_Head1">
+            
+        <link type="text/css" rel="Stylesheet" href="http://i4.social.microsoft.com/Forums/GlobalResources/styles/Msdn.css?cver=2.13.0068.0" />    
+    
+        <link rel="shortcut icon" href="http://i1.social.microsoft.com/Forums/GlobalResources/images/Msdn/favicon.ico" type="image/x-icon" /> 
+    <meta name="CommunityInfo" content=" B=Msdn;A=Forums;L=en-US;" />
+    <script src="http://i3.social.microsoft.com/Forums/GlobalResources/scripts/jquery-1.3.2.js" type="text/javascript" language="javascript"></script>
+    <script src="http://i1.social.microsoft.com/Forums/GlobalResources/scripts/common.js?cver=2.13.0068.0" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" language="javascript" src="http://i1.social.microsoft.com/Forums/GlobalResources/Scripts/MasterPage.js?cver=2.13.0068.0" ></script>
+    
+    <title>
+    Simple Bezier Curves
+</title>
+    <link type="text/css" rel="Stylesheet" href="http://i2.social.microsoft.com/Forums/resources/styles/Core.css?cver=2.13.0068.0" />
+    <!--[if IE 6]>
+    <link type="text/css" rel="Stylesheet" href="http://i2.social.microsoft.com/Forums/resources/styles/IE6Core.css?cver=2.13.0068.0" />
+    <![endif]-->
+    <link type="text/css" rel="Stylesheet" href="http://i3.social.microsoft.com/Forums/resources/brand/Msdn/forums.css?cver=2.13.0068.0" />
+    
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="Simple Bezier Curves" href="http://social.msdn.microsoft.com/Forums/en-US/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?outputAs=rss" />
+
+</head>
+<body class="FF FF3">
+    <form name="aspnetForm" method="post" action="../8048b77a-f5c7-4cc5-8f82-6d2a14100cc6" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEwOTM4OTU2MmRktvcPZshzOiHTK3jnLw91mZ+k19I=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/Forums/WebResource.axd?d=N_1md7pTV3nOnZtLOmQyFw2&amp;t=633739595980000000" type="text/javascript"></script>
+
+
+<script src="http://i4.social.microsoft.com/Forums/GlobalResources/Scripts/MicrosoftAjax.js?cver=2.13.0068.0" type="text/javascript"></script>
+<script src="http://i3.social.microsoft.com/Forums/GlobalResources/Scripts/MicrosoftAjaxWebForms.js?cver=2.13.0068.0" type="text/javascript"></script>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    
+<script src="http://i4.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=SearchTextBox&btnid=SearchButton&brand=Msdn&loc=en-US&resref=&locovr=&addEnglish=&rn=&rq=&watermark=&cver=2.13.0068.0" type="text/javascript" language="javascript"></script><script src="http://i4.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=MastHeadSearchTextBox&btnid=MastSearchButton&brand=Msdn&loc=en-US&resref=&locovr=&addEnglish=&rn=&rq=&watermark=&cver=2.13.0068.0" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    <div id="BodyBackground">
+        <div id="JelloSizer">    
+            <div id="JelloExpander">
+                <div id="JelloWrapper">
+                    <div class="Clear"> </div>
+                    
+                    <div class="Masthead">
+                        <a class="BrandLogoLink" href="http://msdn.microsoft.com/en-us/ms348103.aspx"><div id="BrandLogo" class="BrandLogo"><span id="BrandDisplayText">Microsoft Developer Network</span></div></a>
+                                 
+                        <div class="Search">
+                            <div id="SearchBox" class="SearchBox"><input name="SearchTextBox" type="text" id="SearchTextBox" class="TextBoxSearch TextBoxSearchIE7" /><span class="Bing"> </span><input type="image" name="SearchButton" id="SearchButton" class="SearchButton" src="http://i1.social.microsoft.com/Forums/globalresources/Images/trans.gif?cver=2.13.0068.0" /></div>
+                        </div>
+
+                        <div class="GlobalBar">                       
+                            <div class="PassportScarab">
+                                <a id="idPPScarab" href="http://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1271306976&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=Msdn%24Msdn%24Msdn&amp;wreply=http:%2F%2Fsocial.msdn.microsoft.com%2Fforums%2Fen-US%2Fxnagamestudioexpress%2Fthread%2F8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2F%3Fprof%3Drequired&amp;lc=1033&amp;id=254354" ><span id="idSIT">Sign in</span></a>
+                            </div> 
+                                
+                            <div id="LocaleFlyout" class="LocaleFlyout">
+                                <div id="LocaleSelector">
+	<div id="TargetPanel">
+		<a>United States (English)</a><img class="DropDownArrow" src="http://i2.social.microsoft.com/globalresources/Images/trans.gif" />
+	</div><div id="PopupPanel" class="ContextMenuPanel">
+		<a href="/Forums/en-AU/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Australia (English)</a><a href="/Forums/pt-BR/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Brasil (Português)</a><a href="/Forums/cs-CZ/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Česká republika (Čeština)</a><a href="/Forums/da-DK/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Danmark (Dansk)</a><a href="/Forums/de-DE/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Deutschland (Deutsch)</a><a href="/Forums/es-ES/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">España (Español)</a><a href="/Forums/fr-FR/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">France (Français)</a><a href="/Forums/id-ID/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Indonesia (Bahasa Indonesia)</a><a href="/Forums/it-IT/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Italia (Italiano)</a><a href="/Forums/hu-HU/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Magyarország (Magyar)</a><a href="/Forums/pl-PL/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Polska (Polski)</a><a href="/Forums/ru-RU/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">Россия (Русский)</a><a href="/Forums/ko-KR/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">대한민국 (한국어)</a><a href="/Forums/zh-CN/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">中华人民共和国 (中文)</a><a href="/Forums/zh-TW/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">台灣 (中文)</a><a href="/Forums/ja-JP/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">日本 (日本語)</a><a href="/Forums/zh-HK/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?persist=True" class="ContextMenuItem">香港特别行政區 (中文)</a>
+	</div>
+</div>
+                            </div>
+                            
+                            <div class="Clear"> </div>
+
+                            
+                            <div class="UserName" id="UserName"><a id="ctl00_ctl00_ctl01_UserNameLink"></a></div>
+                             
+
+                        </div>
+                    
+                        <div class="Clear"> </div>
+
+                        <div id="NetworkTagLineArea" class="NetworkLogo">
+                            <a id="NetworkLink" href="http://Msdn.microsoft.com/en-US">
+                                <img id="NetworkTaglineLogo" src="http://i1.social.microsoft.com/Forums/GlobalResources/Images/Msdn/networklogo_Msdn.png" />
+                            </a>
+                            <span id="NetworkTaglineText"></span>
+                        </div>
+
+                        <div class="leftcap" xmlns:msxsl="urn:schemas-microsoft-com:xslt"> </div><div class="internav" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><a href="http://msdn.microsoft.com/en-us/ms348103.aspx">Home</a><a href="http://msdn.microsoft.com/en-us/library/default.aspx">Library</a><a href="http://msdn.microsoft.com/en-us/bb188199.aspx">Learn</a><a href="http://msdn.microsoft.com/en-us/aa570309.aspx">Downloads</a><a href="http://msdn.microsoft.com/en-us/aa570318.aspx">Support</a><a href="http://msdn.microsoft.com/en-us/aa497440.aspx">Community</a><a class="&#xA;          active&#xA;        " href="http://social.msdn.microsoft.com/Forums/en-US/categories">Forums</a></div>
+                    </div>
+                    
+                    <div class="Clear"> </div>
+                          
+                    <div class="topleftcorner"></div>           
+                    <div class="toprightcorner"></div>                                
+                    <div class="alley"> <!-- Left Side -->
+                        <div class="wrapper"> <!-- Right Side -->
+                            <div class="inner">  
+                            
+                                                 
+                                <div class="Clear"></div>   
+
+
+                                
+                                
+                                
+                                
+                                <div id="MainContent" class="Msdn">
+                                    
+    <div id="contentWrapper">
+        <div id="content">
+            <div id="forumsMessage"></div>
+            
+    
+<div class="bread">    
+    <a href="http://msdn.microsoft.com/en-us/ms348103.aspx">Microsoft Developer Network</a><span> &gt; </span>
+  
+    <a href="/Forums/en-US/categories" title="Forums Home">Forums Home</a>
+                <span>></span>
+        <a href="/Forums/en-US/category/archived" title="Archived Forums Forums">Archived Forums Forums</a>
+                <span>></span>
+        <a href="/Forums/en-US/xnagamestudioexpress/threads" title="XNA Game Studio Express">XNA Game Studio Express</a>
+                <span>></span>
+        
+            <span>Simple Bezier Curves</span>
+        
+</div>
+<!-- Scope: forum-->
+<div class="box discover">
+    <div class="content">
+        <a class="btn" title="Ask a question" href="/Forums/en-US/newthread?forum=xnagamestudioexpress" name="ask" rel="nofollow">
+        <img src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" alt="Ask a question" class="icon ask"/>Ask a question</a>
+        <div class="search">
+        <form action="/Forums/en-US/search" id="forumsSearch" method="post">Search Forums: <input type="text" value="" name="searchTerm" id="searchTerm" /><input type="image" src="http://i2.social.microsoft.com/Forums/resources/images/search.gif?cver=2.13.0068.0"/>
+            <a id="searchRefinements" name="searchRefinements" href="javascript:void(0);" class="popup" style="display:none;height: 16px;"></a>
+            <ul name="searchRefinementsPopup" class="popup" popupAlign="right">
+            
+	                    <li>
+		                    <a scopeType="Forum" scopeData="xnagamestudioexpress" href="#" title="Search XNA Game Studio Express Forum">
+		                    <img class="icon none" alt="Search XNA Game Studio Express Forum" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0">
+                            Search XNA Game Studio Express Forum
+		                    </a>
+	                    </li>
+                    
+	                    <li>
+		                    <a scopeType="Category" scopeData="archived" href="#" title="Search All Archived Forums Forums">
+   		                    <img class="icon none" alt="Search All Archived Forums Forums" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0">
+		                    Search All Archived Forums Forums
+		                    </a>
+	                    </li>
+                    
+	                <li>
+		                <a scopeType="Brand" scopeData="" href="#" title="Search All MSDN Forums">
+		                <img class="icon none" alt="Search All MSDN Forums" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0">
+		                Search All MSDN Forums
+		                </a>
+	                </li>
+            
+            </ul>
+            <input type="hidden" name="scopeType" value="Forum" id="scopeType" />
+            <input type="hidden" name="scopeData" value="xnagamestudioexpress" id="scopeData" />
+            <input type="hidden" name="currentScopeType" value="Forum" id="currentScopeType" />
+            <input type="hidden" name="currentScopeData" value="xnagamestudioexpress" id="currentScopeData" />
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("#forumsSearch #searchTerm").watermark("Search XNA Game Studio Express Forum");
+                $("#btnSubmit").attr("disabled", "disabled");
+                $("a#searchRefinements").show();
+
+                $("#forumsSearch").submit(function()
+                {
+                    var strippedVal = $("#forumsSearch #searchTerm").watermarkVal().replace(/^\s+|\s+$/g, "");
+                    return (strippedVal.length > 0)
+                });
+
+                $("#forumsSearch ul.popup a").click(function()
+                {
+                    $("#forumsSearch #scopeType").val($(this).attr("scopeType"));
+                    $("#forumsSearch #scopeData").val($(this).attr("scopeData"));
+                    $("#forumsSearch").submit();
+                    return false;
+                });
+            });
+        </script>
+        </div>
+    <div class="clear"> </div>
+    </div>
+</div>
+<h1 href="http://social.msdn.microsoft.com:80/Forums/en-US/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6"><img class="icon comment" alt="General Discussion" title="General Discussion" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><span name="subject">Simple Bezier Curves</span><a href="http://social.msdn.microsoft.com/Forums/en-US/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6?outputAs=rss" rel="nofollow"><image class="icon rss" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /></a></h1><ul class="message root"><li id="8048b77a-f5c7-4cc5-8f82-6d2a14100cc6" class="message  root"><div class="head"><span class="date">Friday, March 02, 2007 7:33 AM</span><a class="author" href="http://social.msdn.microsoft.com/Profile/en-US/?user=Nick+Gravelyn&amp;referrer=http%3a%2f%2fsocial.msdn.microsoft.com%2fforums%2fen-US%2fxnagamestudioexpress%2fthread%2f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2f&amp;rh=%2fmb%2b3nv3l4wdsvj11dIYGcoUkS%2bJQ0ZUNmPqMDJ%2ffSw%3d&amp;sp=forums" rel="nofollow"><img src="http://i3.social.microsoft.com/Image.avatr?size=Small&amp;user=Nick+Gravelyn&amp;id=00000000-0000-0000-0000-000000000000" /></a><span class="fullbadge"><a class="author" href="http://social.msdn.microsoft.com/Profile/en-US/?user=Nick+Gravelyn&amp;referrer=http%3a%2f%2fsocial.msdn.microsoft.com%2fforums%2fen-US%2fxnagamestudioexpress%2fthread%2f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2f&amp;rh=%2fmb%2b3nv3l4wdsvj11dIYGcoUkS%2bJQ0ZUNmPqMDJ%2ffSw%3d&amp;sp=forums" rel="nofollow"><span class="name">Nick Gravelyn</span></a><span class="affil"> </span><span class="medals"><img class="icon medalon" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /></span></span><div class="helpful">&nbsp;</div></div><div class="votingouterbox"><div class="voting"><img class="icon voteup" alt="Sign In to Vote" title="Sign In to Vote" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><div class="votecount">0</div></div><span class="votinglabel type"><a title="Sign In to Vote" href="http://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1271306976&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=Msdn%24Msdn%24Msdn&amp;wreply=http:%2F%2Fsocial.msdn.microsoft.com%2Fforums%2Fen-US%2Fxnagamestudioexpress%2Fthread%2F8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2F%3Fprof%3Drequired&amp;lc=1033&amp;cb=wizid%3Df4502d34-3b8f-4a04-b741-289e08aa1782%26returnurl%3Dhttp%253a%252f%252fsocial.msdn.microsoft.com%252fforums%252fen-US%252fxnagamestudioexpress%252fthread%252f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%252f%253fprof%253drequired%26wp%3DMCLBI%26lcid%3D1033&amp;id=254354">Sign In to Vote</a></span></div><div class="container"><div class="body">After a recent post about doing Bezier curves with XNA, I decided to
+give it a shot. With the help of some people getting the view set up
+and http://freespace.virgin.net/hugo.elias/graphics/x_bezier.htm for
+the equation, I managed to get a simple start to a hopefully powerful
+Bezier curve system for XNA.<br><br>The full thing is available at
+http://cis.gvsu.edu/~gravelyn/BezierCurves.zip. You can see a couple
+screenshots at http://cis.gvsu.edu/~gravelyn/bezier_screen_1.png and
+http://cis.gvsu.edu/~gravelyn/bezier_screen_2.png (sorry, I don't know
+how to make clickable links in these forums).<br><br>Right now the demo
+is just two points with one control point each. You can move the start
+and end as well as the control points. The system approximates 1000
+steps in between by default and that is easily changed. I also have
+options for drawing the points instead of lines as well as drawing
+without the controls (press 'D' in the demo to toggle). I wrapped the
+whole thing into a DrawableGameComponent as well to make things just a
+little easier.<br><br>I hope to extend it to a full Bezier system much
+like that of the pen tool in Photoshop or Illustrator. I'm also hoping
+to make functions for finding normals so that using this in a 2D game
+is possible.<br></div></div><div class="menu message"><ul class="menu" /><div class="clear">&nbsp;</div></div></li></ul><div class="replies"><h3>All Replies</h3><ul class="message"><li id="53b41935-2ca8-47d1-9faf-1d3fbdb5968d" class="message "><div class="head"><span class="date">Friday, March 02, 2007 11:13 AM</span><a class="author" href="http://social.msdn.microsoft.com/Profile/en-US/?user=Kyle_W&amp;referrer=http%3a%2f%2fsocial.msdn.microsoft.com%2fforums%2fen-US%2fxnagamestudioexpress%2fthread%2f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2f&amp;rh=%2fmb%2b3nv3l4wdsvj11dIYGcoUkS%2bJQ0ZUNmPqMDJ%2ffSw%3d&amp;sp=forums" rel="nofollow"><img src="http://i2.social.microsoft.com/Image.avatr?size=Small&amp;user=Kyle_W&amp;id=00000000-0000-0000-0000-000000000000" /></a><span class="fullbadge"><a class="author" href="http://social.msdn.microsoft.com/Profile/en-US/?user=Kyle_W&amp;referrer=http%3a%2f%2fsocial.msdn.microsoft.com%2fforums%2fen-US%2fxnagamestudioexpress%2fthread%2f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2f&amp;rh=%2fmb%2b3nv3l4wdsvj11dIYGcoUkS%2bJQ0ZUNmPqMDJ%2ffSw%3d&amp;sp=forums" rel="nofollow"><span class="name">Kyle_W</span></a><span class="affil"> </span><span class="medals"><img class="icon medalon" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medalon" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><img class="icon medaloff" alt="Users Medals" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /></span></span><div class="helpful">&nbsp;</div></div><div class="votingouterbox"><div class="voting"><img class="icon voteup" alt="Sign In to Vote" title="Sign In to Vote" src="http://i4.social.microsoft.com/Forums/resources/images/trans.gif?cver=2.13.0068.0" /><div class="votecount">0</div></div><span class="votinglabel type"><a title="Sign In to Vote" href="http://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1271306976&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=Msdn%24Msdn%24Msdn&amp;wreply=http:%2F%2Fsocial.msdn.microsoft.com%2Fforums%2Fen-US%2Fxnagamestudioexpress%2Fthread%2F8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%2F%3Fprof%3Drequired&amp;lc=1033&amp;cb=wizid%3Df4502d34-3b8f-4a04-b741-289e08aa1782%26returnurl%3Dhttp%253a%252f%252fsocial.msdn.microsoft.com%252fforums%252fen-US%252fxnagamestudioexpress%252fthread%252f8048b77a-f5c7-4cc5-8f82-6d2a14100cc6%252f%253fprof%253drequired%26wp%3DMCLBI%26lcid%3D1033&amp;id=254354">Sign In to Vote</a></span></div><div class="container"><div class="body">Nice work. Should come in handy.</div></div><div class="menu message"><ul class="menu" /><div class="clear">&nbsp;</div></div></li></ul></div>
+            <div class="clear"></div>
+        </div>
+    </div>    
+    <div id="rail">
+        <a href="/Forums/en-US/help" class="help" rel="Help">Need Help with Forums? (FAQ)</a>
+    </div>
+ 
+                                    <div class="Clear"></div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="Clearbottom"></div>          
+                    <div class="bottomleftcorner"></div>            
+                    <div class="bottomrightcorner"></div> 
+                    
+                    <div id="Footer">
+                        <div class="FooterLogoContainer"><a href="http://www.microsoft.com "><div class="FooterLogo" title="Microsoft Corporation"> </div></a></div><div class="FooterLinks"><div id="FooterCopyright" class="FooterCopyright">© 2010  Microsoft Corporation. All rights reserved.</div><a href="http://msdn.microsoft.com/cc300389.aspx">Terms of Use</a><span class="Pipe">|</span><a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a><span class="Pipe">|</span><a href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a><span class="Pipe">|</span><a href="http://go.microsoft.com/?linkid=8103551">Contact Us</a><span class="Pipe">|</span><a href="http://go.microsoft.com/?linkid=8786242&amp;amp;lcid=1033">Manage Your Profile</a></div>
+                        
+    
+ 
+                    </div>                             
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    
+ 
+    <script src="http://i2.social.microsoft.com/Forums/en-US/resources.js?cver=2.13.0068.0" type="text/javascript" language="javascript"></script>
+    <script src="http://i2.social.microsoft.com/Forums/resources/scripts/core.js?cver=2.13.0068.0" type="text/javascript" language="javascript"></script>
+    
+    
+
+<script type="text/javascript" src="http://Ads1.msn.com/library/dap.js"></script>
+
+
+<script type="text/javascript" language="javascript">
+    var railItems = ["/Forums/en-US/user/mylinks","/Forums/en-US/xnagamestudioexpress/ads","/Forums/en-US/search/RelatedThreadsByThread?forumName=xnagamestudioexpress&threadId=8048b77a-f5c7-4cc5-8f82-6d2a14100cc6","/Forums/en-US/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6/stats"];
+</script>
+
+    <script type="text/javascript" language="javascript">
+        var pageData = {"validUser":false,"autoSubscribe":true};
+    </script>
+    
+    <script src="http://i3.social.microsoft.com/Forums/resources/scripts/messages.js?cver=2.13.0068.0"  type="text/javascript" language="javascript"></script>
+    
+
+<script src="http://i3.social.microsoft.com/Forums/resources/tiny_mce/tiny_mce.js?cver=2.13.0068.0"  type="text/javascript" language="javascript"></script>
+<script type="text/javascript" language="javascript">
+    tinyMCE.init({
+        mode: "none",
+        theme: "advanced",
+        
+        plugins: "codeblock",
+        codeblock_colorizeUrl: "/Forums/en-US/stats/colorize?locale=en-US",
+        codeblock_langs: [
+            { name: "Unspecified", value: "" },
+            { name: "C++", value: "x-cpp" },
+            { name: "C#", value: "x-c#" },
+            { name: "VB.Net", value: "x-vbnet" },
+            { name: ".aspx", value: "x-aspx" },
+            { name: ".aspx.cs", value: "x-aspx.cs" },
+            { name: ".aspx.vb", value: "x-aspx.vb" },
+            { name: ".ashx", value: "x-ashx" },
+            { name: ".asax", value: "x-asax" },
+            { name: "Html", value: "x-html" },
+            { name: "Javascript", value: "x-js" },
+            { name: "Sql", value: "x-sql" },
+            { name: "Xml", value: "x-xml" }
+        ],
+        
+        init_instance_callback: "Forums.Rte.customInitInstance",
+        gecko_spellcheck: true,
+        convert_urls: false,
+        theme_advanced_toolbar_location: "top",
+        theme_advanced_toolbar_align: "left",
+        theme_advanced_statusbar_location: "bottom",
+        theme_advanced_resizing: true,
+        theme_advanced_resize_horizontal: false,
+        theme_advanced_buttons1: "bold,italic,underline,|,undo,redo,|,bullist,numlist,|,link,unlink,|,code,codeblock",
+        theme_advanced_buttons2: "",
+        theme_advanced_buttons3: "",
+        forced_root_block: false,
+        force_br_newlines: false,
+        force_p_newlines: true,
+        tab_focus: ':prev,:next', 
+        language: "en"
+    });
+</script>
+
+    
+
+<script src="http://i4.social.microsoft.com/Forums/GlobalResources/Scripts/MicrosoftAjax.js?cver=2.13.0068.0" type="text/javascript"></script>
+<script src="http://i3.social.microsoft.com/Forums/GlobalResources/Scripts/MicrosoftAjaxWebForms.js?cver=2.13.0068.0" type="text/javascript"></script>
+    <script type="text/javascript"> var gDomain='m.webtrends.com'; var gDcsId='dcsour5e80000008ybade4ttg_1i1l'; var gTrackEvents=1; var gFpc='WT_FPC'; if(document.cookie.indexOf(gFpc+'=') == -1) {document.write("<script type='text/javascript' src='http://m.webtrends.com/dcsour5e80000008ybade4ttg_1i1l/wtid.js'><\/script>");
+}
+</script>
+<script src="http://i4.social.microsoft.com/Forums/GlobalResources/Scripts/webtrends.js?cver=2.13.0068.0" type="text/javascript"></script>
+<noscript><img alt="" border="0" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsour5e80000008ybade4ttg_1i1l/njs.gif?dcsuri=/nojavascript&amp;WT.js=No"></noscript>
+
+    
+
+    
+    
+    <script type="text/javascript" src="http://i2.social.microsoft.com/Forums/GlobalResources/Scripts/omni_rsid_social.js?cver=2.13.0068.0"></script>
+    <noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+    src="http://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0"
+    height="1" width="1" border="0" alt="" /></a></noscript>
+    
+    
+</body>
+</html>

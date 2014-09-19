@@ -1,0 +1,1841 @@
+﻿#JelloSizer {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 440px;
+}
+
+a, h1, h2, h3, h4, h5, h6, hr, img, li, p, pre, table, td, th, tr, ol, ul
+{
+	border: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+a
+{
+	color: #0033cc;
+}
+
+a:hover,
+a:active,
+a:focus
+{
+	color: #ff6600;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+div.clear
+{
+	clear: both;
+	visibility: hidden;
+	height: 0px;
+}
+
+div.cleft
+{
+	clear: left;
+}
+
+input,
+textarea
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+textarea
+{
+	border: solid 1px #bbbbbb;
+}
+
+input[type="submit"],
+button
+{
+	border: solid 1px #bbbbbb;
+	background-color: #eeeeee;
+	margin: .25em;
+}
+
+h1
+{
+	font-size: 1.75em;
+	font-weight: bold;
+}
+h2
+{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+h3
+{
+	font-size: 1.25em;
+	font-weight: bold;
+}
+h4
+{
+	font-size: 1.25em;
+	font-weight: normal;
+}
+h5
+{
+	font-size: 1em;
+	font-weight: normal;
+}
+h6
+{
+	font-size: 1em;
+	font-weight: normal;
+}
+
+p 
+{
+	margin: 1em 0;
+}
+
+pre
+{
+	word-wrap: break-word;
+}
+
+span.date
+{
+	display: inline-block;
+	font-style: italic;
+	padding-left: .5em;
+}
+
+ul.error
+{
+	color: #ff0000;
+	margin: 1em;
+}
+
+ul.error > li
+{
+	list-style-type: disc;
+	margin: .25em;
+}
+
+/*Begin: Core Layout*/
+
+#contentWrapper 
+{
+	float:left;
+	width:100%;
+}
+
+#content
+{
+	float:none;
+	width:auto;
+	margin-right:325px;
+	margin-top: 11px;
+}
+
+#rail
+{
+	margin-top: 11px;
+	float: left;
+	margin-left:-300px;
+	width:300px;
+	
+}
+/*End: Core Layout*/
+
+a.help
+{
+	display: block;
+	font-size: 1.35em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+div.ask
+{
+	border: solid 2px #61AA34;
+	padding: .5em;
+	text-align: center;
+}
+
+div.ask > a[name='ask']
+{
+	background-color: #61AA34;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: .5em 1em;
+	margin-bottom: .5em;
+}
+
+div.ask > a[name='ask']:hover
+{
+	color: Yellow;
+	text-decoration: none;
+}
+div.ask > p
+{
+	margin: 0;
+}
+
+a.author
+{
+	color: Green;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.author:hover span.name,
+a:active span.name,
+a:focus span.name
+{
+	color: #ff6600;
+}
+
+a.author > span,
+a.author > abbr
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+li.forum a.author abbr,
+li.thread a.author abbr,
+li.message a.author abbr
+{
+	margin-left: .5em;
+}
+
+a.author > abbr
+{
+	color: #000000;
+}
+
+a.author > span > abbr
+{
+	color: #000000;
+	display: block;
+	font-size: .8em;
+}
+
+span.fullbadge
+{
+	display: inline-block;
+	padding-top: .25em;
+}
+
+div.medal,
+div.badge span.affil,
+span.fullbadge > span.affil,
+span.fullbadge > span.medals
+{
+	display: block;
+	padding-top: .25em;
+}
+
+a.btn > img,
+a.popup > img
+{
+	margin-right: .25em;
+}
+
+a.btn,
+a.popup
+{
+	border: solid 1px transparent;
+}
+
+a.btn:hover,
+a.popup:hover,
+a.btn:active,
+a.popup:active,
+a.btn:focus,
+a.popup:focus
+{
+	border: solid 1px #bbbbbb;
+}
+
+a.btn.selected
+{
+	background-color: #eeeeee;
+	border: solid 1px #bbbbbb;
+}
+
+div.bread
+{
+	margin-bottom: 1.75em;
+}
+
+div.pager a,
+div.pager span
+{
+	display: inline-block;
+	padding: .25em;
+	margin: .25em .25em .5em 0;
+}
+
+div.pager a
+{
+	border: solid 1px #bbbbbb;
+}
+
+hr,
+hr.sig
+{
+	border-top: solid 1px #bbbbbb;
+	height: 1px;
+	margin: .5em 0;
+	text-align: left;
+	width: 40%;
+}
+
+img.submitting
+{
+	background-image: url("../images/loading.gif");
+	background-repeat: no-repeat;
+	border: none;
+	height: 24px;
+	width: 24px;
+}
+
+img.icon
+{
+	background-image: url("../images/icons.png");
+	background-repeat: no-repeat;
+	border: none;
+	height: 20px;
+	width: 20px;
+}
+
+img.icon.submitting
+{
+	background-image: url("../images/loading.gif");
+	background-position: 0 0;
+	height: 24px;
+	width: 24px;
+}
+
+img.abusive
+{
+	background-position: -20px 0;
+}
+
+img.alltypes
+{
+	background-position: -740px 0;
+}
+
+img.ascending
+{
+	background-image: url("../images/expandcollapse.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-position: -20px 0;
+}
+
+img.inmaintenance
+{
+	background-position: -700px 0;
+}
+
+img.ascending > hover
+{
+	background-position: -40px 0;
+}
+
+img.descending
+{
+	background-image: url("../images/expandcollapse.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-position: 0px 0;
+}
+
+img.autoupdates
+{
+	background-position: -500px 0;
+}
+
+img.close
+{
+	background-position: -620px 0;
+}
+
+img.comment
+{
+	background-position: -120px 0;
+}
+
+img.helpful
+{
+	background-position: -200px 0;
+}
+
+img.list
+{
+	background-position: -760px 0;
+}
+
+img.markread
+{
+	background-position: -800px 0;
+}
+
+img.none
+{
+	background-position: 0 0;
+}
+
+img.noreplies
+{
+	background-position: -340px 0;
+}
+
+img.options
+{
+	background-position: -740px 0;
+}
+
+img.pause
+{
+	background-position: -360px 0;
+}
+
+img.rss
+{
+	background-position: -640px 0;
+}
+
+img.sort
+{
+	background-position: -500px 0;
+}
+
+img.split
+{
+	background-position: -740px 0;
+}
+
+img.tag
+{
+	background-position: -100px 0;
+}
+
+img.threaded
+{
+	background-position: -780px 0;
+}
+
+img.unread
+{
+	background-position: -300px 0;
+}
+
+img.user
+{
+	background-position: -560px 0;
+}
+
+/*Begin: New Icon Strip*/
+img.alert,
+img.answer,
+img.answered,
+img.ask,
+img.assign,
+img.changetype,
+img.delete,
+img.edit,
+img.escalate,
+img.folder,
+img.hascode,
+img.join,
+img.locked,
+img.medalon,
+img.merge,
+img.move,
+img.nntp,
+img.propose,
+img.proposed,
+img.quote,
+img.question,
+img.reply,
+img.unanswered,
+img.sticky,
+img.split,
+img.voteup
+{
+	background-image: url("../images/icon_strip.png");
+}
+
+img.alert { background-position: -80px 0; }
+img.answer,
+img.answered { background-position: -60px 0; }
+img.ask { background-position: 0 0; }
+img.assign { background-position: -300px; }
+img.changetype { background-position: -260px; }
+img.delete { background-position: -160px 0; }
+img.edit { background-position: -140px 0; }
+img.escalate { background-position: -380px 0; }
+img.folder { background-position: -480px 0; }
+img.hascode { background-position: -360px 0; }
+img.join { background-position: -440px 0; }
+img.locked { background-position: -220px 0; }
+img.medalon { background-position: -180px 0; }
+img.merge { background-position: -280px 0; }
+img.move { background-position: -240px 0; }
+img.nntp { background-position: -460px 0; }
+img.propose,
+img.proposed { background-position: -340px 0; }
+img.quote { background-position: -20px 0; }
+img.question,
+img.unanswered { background-position: -40px 0; }
+img.reply { background-position: -100px 0; }
+img.sticky { background-position: -120px 0; }
+img.split { background-position: -320px 0; }
+img.voteup { background-position: -420px 0; }
+
+/*End: New Icon Strip*/
+
+
+.hover
+{
+	cursor: pointer;
+}
+
+a.expcol,
+img.expcol
+{
+	background-image: url("../images/expandcollapse.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}
+
+.expanded a.expcol,
+img.expcol
+{
+	background-position: -20px 0;
+}
+
+.hover.expanded a.expcol,
+.expanded a.expcol:active,
+.expanded a.expcol:focus
+{
+	background-position: -40px 0;
+}
+
+a.expcol, 
+.popup img.expcol 
+{
+	background-position: 0 0;
+}
+
+.hover a.expcol,
+a.expcol:active,
+a.expcol:focus,
+.popup:hover img.expcol,
+.popup:active img.expcol,
+.popup:focus img.expcol
+{
+	background-position: -60px 0;
+}
+
+div.box,
+li.box
+{
+	border: solid 1px #bbbbbb;
+}
+
+
+div.box > h4
+{
+	background-color: #eeeeee;
+	padding: .5em;
+}
+
+div.box > h4 > .help
+{
+	font-size: .75em;
+	font-weight: normal;
+	margin-left: 1em;
+}
+
+
+
+div.box > .help
+{
+	font-size: .8em;
+	margin: .25em 1em;
+}
+
+div.box > .content
+{
+	margin: .5em;
+}
+
+div.box > ul.content > li
+{
+	padding-bottom: .25em;
+}
+
+div.box > table
+{
+	width: 95%;
+}
+
+div.box > hr
+{
+    width: 100%;
+}
+
+div.box.stats > table th
+{
+	padding-bottom: .25em;
+	text-align: right;
+	text-decoration: underline;
+}
+
+div.box.stats > table td:first-child
+{
+	text-align: left;
+}
+
+div.box.stats > table td
+{
+	padding-bottom: .25em;
+	text-align: right;
+}
+
+div.menu.thread
+{
+	border-bottom: solid 1px #bbbbbb;
+	background-color: #eeeeee;
+}
+
+li.message ul.menu.thread > li
+{
+	float: left;
+}
+
+div.expcol
+{
+	display: none;
+	font-size: .8em;
+	text-align: right;
+}
+
+div.form label,
+div.form input
+{
+	margin: .25em .5em
+}
+
+div.form textarea
+{
+	width: 98%;
+}
+
+div.body ol,
+div.body ul
+{
+	margin-left: 3em;
+}
+
+div.body ol li
+{
+	list-style-type: decimal;
+}
+div.body ul li
+{
+	list-style-type: disc;
+}
+
+/*Begin: Categories*/
+ul.category
+{
+	clear: both;
+	padding-top: 1em;
+}
+
+li.category
+{
+	margin-bottom: 1em;
+}
+
+li.category > h2
+{
+	padding: .25em .5em;
+}
+
+li.category > h2 > a
+{
+	color: #000000;
+}
+
+li.category > h2 > a:hover,
+li.category > h2 > a:active,
+li.category > h2 > a:focus
+{
+	color: #ff6600;
+}
+
+
+
+li.forum
+{
+	margin: 1em 1em;
+}
+
+li.forum p
+{
+	clear: left;
+	margin: 0;
+}
+
+.category ul.forum li.forum p{
+     max-width:70%;
+}
+
+li.forum h3
+{
+	float: left;
+	max-width: 67%;
+}
+
+
+
+li.forum .stat
+{
+	display: inline-block;
+	margin-left: 1em;
+}
+
+div.statGroup > a > img
+{
+	vertical-align: text-bottom;
+}
+
+div.statGroup > a > img
+{
+	margin-left: 1em;
+}
+
+div.statGroup
+{
+	padding-bottom: .5em;
+}
+
+
+/*Begin: Script Styles*/
+li.forum div.stats,
+li.thread div.stats
+{
+	float: right;
+	text-align: right;
+}
+
+li.thread.hover div.stats
+{
+	font-weight: bold;
+}
+
+li.category > h2 > a.expcol
+{
+	float: right;
+}
+
+/*End: Script Styles*/
+/*End: Categories*/
+
+/*Begin: Threads*/
+
+div.announcement
+{
+	clear: both;
+	margin-top: .5em;
+}
+
+.announcement > a
+{
+	float: right;
+	font-size: .8em;
+	margin: .25em;
+	position: relative;
+	z-index: 1;
+}
+
+ul.announcement > li > h4 > a
+{
+	vertical-align: middle;
+}
+
+ul.announcement > li > div.body
+{
+	display: none;
+	margin: 0 .25em 0 20px;
+	padding: .25em;
+}
+
+li.announcement div.head
+{
+	display: none;
+	margin-left: 20px;
+}
+
+li.thread
+{
+	border-top: solid 1px #bbbbbb;
+	margin-bottom: .5em;
+	padding-top: .25em;
+}
+
+li.thread > div.searchresult
+{
+	margin-left:21px;
+}
+
+li.thread > div.searchresult.author
+{
+	margin-top:3.5px;
+}
+
+li.thread.new
+{
+	background-color: #f0e68c;
+}
+
+li.thread > h3
+{
+	margin-left: 20px;
+	margin-right: 10em;
+}
+
+li.thread.hasUnread > h3
+{
+	font-weight: bold;
+	font-style: italic;
+}
+
+li.thread.viewed > h3
+{
+	font-weight: normal;
+}
+
+li.thread > h3 > img.alert
+{
+	margin-left: .5em;
+}
+
+li.thread > img.icon
+{
+	float: left;
+}
+
+li.thread > div[name='created'],
+li.thread > div[name='replied'],
+li.thread > div[name='forum']
+{
+	margin-left: 40px;
+}
+
+a > img.icon,
+a > img.expcol,
+li.thread a.expcol,
+li.thread img.icon,
+div.container img.icon,
+div.section img.icon
+{
+	vertical-align: middle;
+}
+
+li.thread div.preview
+{
+	display: none;
+	margin-top: .5em;
+	margin-left: 40px;
+}
+
+li.thread.loading div.preview
+{
+	background-image: url("../images/loading.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	display: block;
+	height: 24px;
+	width: 24px;
+}
+
+div.preview div.menu.thread
+{
+	display: none;
+}
+
+div.preview div.links
+{
+	text-align: right;
+}
+div.threads 
+{
+	text-align: right;
+}
+
+div.threads .pager
+{
+	float: left;
+}
+
+div.threads > span,
+li.thread > div.stats > span
+{
+	display: inline-block;
+	padding: .25em 0;
+	text-align: center;
+	width: 7em;
+}
+
+#controls
+{
+	clear: right;
+	margin: 1em 0;
+}
+
+#controls .menu[name='filters']
+{
+	float: left;
+}
+
+#controls .menu[name='advancedFilters']
+{
+	float: left;
+	width: 50%;
+}
+
+#controls .menu[name='options']
+{
+	float: right;
+	text-align: right;
+	width:20%;
+}
+
+#controls .menu[name='sorts']
+{
+	float: right;
+	text-align: right;
+}
+
+#controls ul.menu > li
+{
+	display: inline;
+}
+
+#controls ul.menu > li > a
+{
+	display: inline-block;
+	padding: .5em;
+}
+
+a.popup > img.drop
+{
+	margin-left: .25em;
+}
+
+ul.popup
+{
+	font-family: Verdana,Arial;
+	border: solid 1px #bbbbbb;
+	background-color: #eeeeee;
+	display: none;
+	padding: .5em;
+	position: absolute;
+	text-align: left;
+	filter: alpha(opacity=95);
+	opacity: .95;
+	z-index: 1000;
+}
+
+ul.popup > li > a
+{
+	display: block;
+}
+
+p.tag > span.tag
+{
+	margin-left: .5em;
+}
+
+/*End: Threads*/
+
+/*Begin: Messages*/
+ul.message
+{
+	clear: right;
+}
+
+ul.root
+{
+	margin-top: 1em;
+}
+
+div.answers
+{
+	border-top: solid 2px #61AA34;
+	padding-top: 1em;
+}
+
+div.replies
+{
+	border-top: solid 2px #bbbbbb;
+	padding-top: 1em;
+}
+
+div.answers > h3,
+div.replies > h3
+{
+	margin-bottom: 3px;
+}
+
+div.answers ul.message,
+div.replies ul.message
+{
+	margin-left: 1em;
+}
+
+ul.message.answers > li.message div.menu,
+ul.message.answers div.head,
+li.message.answer > div.menu,
+li.message.answer div.head
+{
+	background-color: #E0F0C0;
+}
+
+li.children
+{
+	margin-left: 3em;
+}
+
+li.message
+{
+	background-color: #ffffff;
+	border: solid 1px #bbbbbb;
+	margin-bottom: 1em;
+}
+
+li.message.answer
+{
+	border: solid 2px #61AA34;
+}
+
+li.message.abusive
+{
+	border: solid 2px #ff0000;
+}
+
+li.message.propose
+{
+	border: solid 2px #0D86B9;
+}
+
+li.message.new
+{
+	border: solid 2px #888888;
+}
+
+li.message.submitting 
+{
+	position: relative;
+}
+
+li.message div.deleted *
+{
+	vertical-align: middle;
+}
+
+li.message.submitting > div.submitting
+{
+	background-color: #ffffff;
+	background-image: url("../images/loading.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	filter: alpha(opacity=75);
+	opacity: .75;
+}
+
+li.message > div.head
+{
+	position: relative;
+}
+
+li.message > div.head > div.helpful
+{
+	padding: .5em;
+	position: absolute;
+	text-align: right;
+	right: 0;
+	top: 0;
+}
+
+li.message > div.head > div.helpful > span
+{
+	font-size: 1.5em;
+}
+
+li.message > div.head > div.helpful > span > img
+{
+	background-color: #eeeeee;
+	filter: alpha(opacity=35);
+	opacity: .35;
+	vertical-align: middle;
+}
+
+li.message > div.head > div.helpful > span > img.submitting
+{
+	background-color: #ffffff;
+	background-image: url("../images/loading.gif");
+	background-position: 0 0;
+	filter: alpha(opacity=100);
+	opacity: 1;
+	height: 24px;
+	width: 24px;
+}
+
+li.message > div.head > div.helpful > a
+{
+	display: block;
+	margin-left: .5em;
+}
+
+li.message > div.abusive
+{
+	font-size: .85em;
+	text-align: right;
+	margin-right: .25em;
+}
+
+li.message > div.menu
+{
+	background-color: #eeeeee;
+}
+
+li.message > div.menu > ul.menu
+{
+	display: block;
+}
+
+.IE7 li.message > div.menu > ul.menu
+{
+	display: inline-block;
+}
+
+li.message > img.answer,
+li.message > img.proposed,
+li.message > img.hascode
+{
+	clear: left;
+	float: left;
+	margin: 1em 8px;
+}
+
+li.message ul.menu > li
+{
+	display: inline;
+}
+
+li.message ul.menu > li > a
+{
+	display: inline-block;
+	padding: .25em .5em;
+	white-space: nowrap;
+}
+
+li.message > div.head > a.author 
+{
+	display: inline-block;
+	padding: .25em;
+}
+
+li.message > div.head > span.date
+{
+	padding-top: .25em;
+	vertical-align: top;
+}
+
+li.message a.author img
+{
+	margin-right: .5em;
+}
+
+li.message a.author
+{
+	vertical-align: top;
+}
+
+li.message > div.container
+{
+    margin: 1.0em 2.0em 0em 4.5em; 
+}
+
+li.message  div.body
+{
+    overflow: visible;
+	margin-bottom: 2.0em;
+}
+
+li.message.deleted  div.body
+{
+	text-decoration: line-through;
+}
+
+li.message  div.body blockquote,
+li.message  div.body div.quote
+{
+	background-color: #d0d0d0;
+	margin: 1em 2em;
+	padding: 1em;
+}
+
+ul.history
+{
+	margin-left: 20px;
+}
+
+ul.history > li
+{
+	padding: .25em 0;
+}
+
+ul.history > li > span
+{
+	font-size: .9em;
+	padding-right: .5em;
+}
+
+ul.history > li > span.type
+{
+	color: #444444;
+}
+
+ul.history > li > span.date
+{
+	color: #444444;
+}
+
+/*End: Messages*/
+
+/*Begin: Profile*/
+.profile .badge,
+.profile div.userInfo
+{
+	float: left;
+	margin-right: 1em;
+}
+.profile div.userInfo
+{
+	margin-top: .5em;
+}
+
+.profile a.profLink
+{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.profile .content > div
+{
+	margin-bottom: 1em;
+}
+
+.profile div.setting
+{
+	margin: .25em 0 0 2em;
+}
+
+.profile .box
+{
+	margin-bottom: 1em;
+}
+
+.profile .box > h4 > a
+{
+	font-weight: normal;
+	font-size: .8em;
+	float: right;
+}
+
+.profile label
+{
+	padding-right: 1em;
+}
+
+/*End: Profile*/
+
+/*Begin: Badge*/
+div.badge
+{
+	border: solid 1px #bbbbbb;
+	margin: .5em 0;
+	padding: 1em;
+}
+
+div.badge > img
+{
+	vertical-align: top;
+}
+
+div.badge > span
+{
+	display: inline-block;
+}
+/*End: Badge*/
+
+/*Begin: Tag Cloud*/
+.tagCloud
+{
+	border: solid 2px #bbbbbb;
+	text-align: center;
+}
+
+.tagCloud > h4
+{
+	background-color: #eeeeee;
+	padding: .25em .25em;
+	text-align: left;
+}
+
+.tagCloud > .tags
+{
+	margin: 0 .2em;
+}
+
+a.w1
+{
+	font-size: .85em;
+}
+
+a.w2
+{
+	font-size: 1em;
+}
+
+a.w3
+{
+	font-size: 1.25em;
+}
+
+a.w4
+{
+	font-size: 1.5em;
+}
+
+a.w5
+{
+	font-size: 2em;
+}
+/*End: Tag Cloud*/
+
+/*Begin: TagIt*/
+div.tagit > div.content > div
+{
+	margin: .25em 0;
+}
+
+div.tagit > div.content > div.submit
+{
+	text-align: center;
+}
+
+/*End: TagIt*/
+/*Begin: Users*/
+div.users > .pager
+{
+	float: left;
+}
+
+table.users
+{
+	width:100%;
+	border-collapse: collapse;
+	border-bottom: solid 1px #bbbbbb;
+}
+
+tr.userstitle
+{
+	font-size: 1.25em;
+	font-weight:bold;
+	text-align:center;
+}
+
+tr.userstitle td a img
+{
+	vertical-align:middle;
+}
+
+tr.userslist
+{
+	text-align: center;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	height: 50px;
+}
+
+tr.userslist td
+{
+	border-top: 1px solid #bbbbbb;
+}
+
+td.displayname
+{
+	text-align:left;
+}
+td.displayname > a
+{
+	padding-left: .5em;
+	vertical-align: top;
+}
+
+/*End: User*/
+
+#rail > div
+{
+	margin-bottom: 1em;
+	width: 100%;
+	
+}
+
+#rail > div
+{
+	overflow: hidden;
+}
+
+#rail div.leaderboards > .box
+{
+	display: none;
+}
+
+#rail div.leaderboards th,
+#rail div.leaderboards td.num,
+#rail div.leaderboards td.date
+{
+	text-align: right;
+}
+
+#rail div.leaderboards td.img
+{
+	text-align: center;
+}
+
+#rail div.leaderboards td.name
+{
+	padding-left: .5em;
+	width: 100%;
+}
+
+.editor 
+{
+	margin-top: .5em;
+	position: relative;
+}
+
+.editor > .commands
+{
+	text-align: left;
+	margin-top: .25em;
+	padding: .25em;
+}
+
+.editor > .commands > a
+{
+	border: solid 1px #bbbbbb;
+	display: inline-block;
+	margin: 0 .5em;
+	padding: .5em;
+}
+
+.editor > .commands > input
+{
+	vertical-align: middle;
+}
+
+.rte
+{
+	border: solid 1px #bbbbbb;
+	height: 300px;
+	margin: .5em;
+	width: 98%;
+}
+
+.discover
+{
+	padding-top: .25em;
+	margin-bottom: .5em;
+}
+
+.discover a.btn
+{
+	display: inline-block;
+	float: left;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: .5em;
+}
+
+.discover .search
+{
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+	vertical-align: middle;
+	padding: .5em;
+}
+
+.colorize .code
+{
+	margin: 1em;
+	width: 96%;
+}
+
+.colorize div.code
+{
+	border: solid 1px #000000;
+}
+
+.textbox {
+    border: solid 1px #000000;
+}
+
+.disabled
+{
+    background-color: #CCCCCC;
+}
+
+div.section .errorMessage
+{
+	color: Red;
+	font-weight: bold;
+	position: relative;
+	list-style-type: disc;
+	margin-left: 2em;
+    font-size: 1em;
+    display: none;
+}
+
+.errorBox
+{
+    border:solid .25em red;
+}
+
+div.section,
+div.helpbubble { 
+    font-size: 1.2em;
+}
+
+div.section p,
+div.helpbubble p,
+div.helpbubble ul { 
+    margin: 0 0 1em 0;
+}
+
+div.helpbubble ul { 
+    margin-left: 1.2em;
+}
+
+div.helpbubble ul li { 
+    list-style-type:disc;
+}
+
+div.section h3,
+div.helpbubble h3 { 
+    font-size: 1em;
+}
+
+div.section {
+    padding: 0.5em 1em;  
+}
+
+div.section img {
+    margin-right:.3em;
+}
+
+div.section select {
+    width: 400px;
+}
+
+div.section input {
+    vertical-align:middle;
+}
+
+div.section ul.relatedThreads {
+    margin-left: 1em;
+}
+
+ul.relatedThreads li {
+  text-indent: -20px;
+ margin-left: 20px;
+}
+
+ul.relatedThreads li img {
+ vertical-align:middle;
+}
+
+div#relatedThreads h4 {
+    font-size: 1em;
+}
+
+div.section a.expForumSelector {
+    font-size: .75em;
+}
+
+
+div.section button#btnSubmit {
+    border: solid 1px #11A809;
+    background-color: #DCFDD5;
+    padding: 0.3em;
+}
+
+div.helpbubble {
+    position:absolute;
+    left: 745px;
+    width:247px;
+    display:none;
+    z-index:100;
+}
+
+div.innerbubble {
+    border:solid 2px #9d9d9d;
+    padding: 1em 1em 0em 1em;
+    background-color:#ffffe0;
+    width: 200px;
+    position:absolute;
+    top:0px;
+    left:19px;
+}
+
+div.innerbubble div.close {
+    float:right;
+}
+
+div#forumNameLine span.DefaultForumTitle
+{
+    font-weight: bold;
+}
+
+div.callout {
+    position:absolute;
+    top:10px;
+    left:0px;
+    background-image:url(../images/callout_arrow.png);
+    z-index: 20;
+    width:21px;
+    height:29px;
+}
+
+.helpHighlight {
+    background-color:#ffffe0;
+}
+
+div#unauthorized
+{
+    padding-top: 3em;
+    font-size:1.5em;
+    font-weight: bold;
+}
+
+.watermark 
+{
+	font-style: italic;
+	color: #999999;
+}
+
+#forumsSearch input[type="text"]
+{
+    height: 16px;
+	width: 300px;
+	font-size: 1.2em;
+	font-family: 'Segoe UI', Tahoma;
+	border-top: solid 1px #849cb1;
+	border-bottom: solid 1px #849cb1;
+	border-left: solid 1px #849cb1;
+	margin: 0px;
+	margin-right: -2px;
+	vertical-align:middle;
+}
+
+#forumsSearch input[type="image"] 
+{
+    margin: 0px;
+   	vertical-align:middle;
+}
+
+
+li.message div.voting
+{
+	clear: left;
+	color: #63AC06;
+	float: left;
+	margin: .5em 0 .25em .25em;
+	min-width: 2.1em;
+	font-size: 1.5em;
+	text-align: center;
+	border: solid 1px #e5e5e5;
+	padding: 0 0 0 0;
+}
+
+li.message span.votinglabel
+{
+	clear: left;
+	float: left;
+	font-size: 0.9em;
+	width:50px;
+}
+
+li.message div.votingouterbox
+{
+	clear: left;
+	float: left;
+	margin: .5em .25em .25em .25em;
+	padding: 0 .25em 0 .25em;
+	width:50px;
+}
+
+.votecount
+{
+   margin: -.3em 0 0 0;
+   display:block;
+}
+
+
+
+li.message > div.head
+{
+	background-color: #eeeeee;
+	padding-bottom: .5em;
+	border-bottom: solid 1px #c0c0c0;
+}
+
+li.message > div.head > span.date
+{
+	padding: 35px .5em 0 0;
+	float: right;
+}
+
+li.message  div.body
+{
+	clear: right;
+    font-size: 1em;
+}
+
+span.fullbadge span.name
+{
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+span.fullbadge > span.affil
+{
+	display: inline-block;
+	margin-left: 1em;
+}
+
+li.message > div.menu
+{
+	clear: left;
+}
+
+.voteuphreflink 
+{
+    color:#63AC06;
+    display:block;
+ 
+}
+
+.voteuphreflink:hover
+{
+    text-decoration:none;
+}
+
+li.message span.join,
+li.thread span.join,
+li.thread span.joined
+{
+    background-color: #8CC63E;
+    vertical-align:middle;
+    display: inline-block;
+    padding-right: 0.25em;
+    color: White;
+    font-weight:bold;
+}
+
+li.thread span.join
+{
+    margin-left: 0.5em;
+}
+
+li.message span.join
+{
+    padding:0.25em;
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+li.message img.join {
+    margin-right: 0.25em;
+}
+
+li.message span.join a
+{
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    margin-left: 0.5em;
+    border:1px solid #737173;
+    font-weight: bold;
+    color: Black;
+    background-color: #7BBA29;
+    background-image: url("../images/button_bg_green.png");
+	background-repeat: repeat-x;
+}
+
+li.message span.join a.undo
+{
+    background-color:#8C8A8C;
+    background-image: url("../images/button_bg_gray.png");
+	background-repeat: repeat-x;
+}
+
+.IEMobile #JelloWrapper
+{
+	background-image: none;
+}
+
+.IEMobile .PassportScarab a
+{
+	color: Blue;
+}
+
+/* For non IE Browsers */
+.AnnouncementTitle
+{
+	width:99.3%;
+}
+
+.IE .AnnouncementTitle
+{		
+	width:99%;
+	float:right;/* for IE7 */
+}
+

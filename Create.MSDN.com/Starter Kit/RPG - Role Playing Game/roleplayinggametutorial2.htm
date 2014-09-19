@@ -1,0 +1,1285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+<title>XNA Creators Club Online - role-playing game tutorial: re-using the tile engine</title><script src="roleplayinggametutorial2_files/common.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="roleplayinggametutorial2_files/main_Default_FF.css"><link type="text/css" rel="stylesheet" href="roleplayinggametutorial2_files/CmsControls_Default_FF.css"><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://creators.xna.com/favicon.ico"><meta name="keywords" value="XNA, XNA Game Studio, XNA Game Studio Express, XNA Framework, XNA partners, XACT, PIX, DirectX, Direct3D, XNA games, XNA gaming, XNA GSE, game studio, XNA articles, XNA tutorials, game tutorials, starter kit, game engine, game physics, XNA Creators Club Online, creators club, C# express, C#, game creator, game development, game developer, game programming, game programmer, videogame, video game, ai, artificial intelligence, 3D animation, game design, 3D modeling, game development software, 3D technology, game audio, game animation, PC game, Windows game, Xbox game, new game, arcade development, Gamefest, game industry, game publishing, online games, casual games, Xbox Live Arcade, digital assets, game library, 3D models, shaders"><meta name="description" value="XNA Creators Club Online is the premier online resource for game developers on Microsoft Windows and Xbox 360."><link rel="alternate" type="application/rss+xml" title="Creators Club Online - All Feeds" href="http://public.xna.com/Feeds/AllFeeds.ashx">
+</head><body>
+    <div id="ctl00_xnaCgpShellBackground" class="XnaCgp_shell_background">
+        <div id="ctl00_xnaCgpShellHeaderContainer" class="XnaCgp_shell_header">
+            
+ 
+            <a href="http://creators.xna.com/en-US" class="XnaCgp_shell_header_logolink"><img src="roleplayinggametutorial2_files/cco_shell_default_header_xna_logo_print.jpg" alt="XNA Creators Club Online" class="XnaCgp_DisplayNone"></a><div class="XnaCgp_shell_header_TopLinks"><div style="" id="cultureMenu" class="radmenu RadMenu_CultureMenu"><!-- 4.4.5 --><script type="text/javascript" src="roleplayinggametutorial2_files/RadMenu.js"></script><span id="cultureMenuStyleSheetHolder" style="display: none;"></span><script type="text/javascript">RadControlsNamespace.AppendStyleSheet(false, 'cultureMenu', '/assets/RadControls/Menu/Scripts/4_4_5/menu.css');</script><link rel="stylesheet" type="text/css" href="roleplayinggametutorial2_files/menu.css"><ul class="horizontal rootGroup"><li class="item first last"><a href="javascript:void(0)" id="cultureMenu_m0" class="link"><span class="text expandTop">United States (English)                                                                             </span></a><div style="z-index: 10;" class="slide"><ul style="z-index: 10;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-CA" id="cultureMenu_m0_m0" class="link"><span class="text">Canada (English)                                                                                    </span></a></li><li class="item"><a href="http://creators.xna.com/fr-CA" id="cultureMenu_m0_m1" class="link"><span class="text">Canada (Français)                                                                                   </span></a></li><li class="item"><a href="http://creators.xna.com/de-DE" id="cultureMenu_m0_m2" class="link"><span class="text">Deutschland (Deutsch)                                                                               </span></a></li><li class="item"><a href="http://creators.xna.com/es-ES" id="cultureMenu_m0_m3" class="link"><span class="text">España (Español)                                                                                    </span></a></li><li class="item"><a href="http://creators.xna.com/fr-FR" id="cultureMenu_m0_m4" class="link"><span class="text">France (Français)                                                                                   </span></a></li><li class="item"><a href="http://creators.xna.com/it-IT" id="cultureMenu_m0_m5" class="link"><span class="text">Italia (Italia)                                                                                     </span></a></li><li class="item"><a href="http://creators.xna.com/en-GB" id="cultureMenu_m0_m6" class="link"><span class="text">United Kingdom (English)                                                                            </span></a></li><li class="item"><a href="http://creators.xna.com/en-US" id="cultureMenu_m0_m7" class="link"><span class="text">United States (English)                                                                             </span></a></li><li class="item last"><a href="http://creators.xna.com/ja-JP" id="cultureMenu_m0_m8" class="link"><span class="text">日本 (日本語)                                                                                            </span></a></li></ul></div></li></ul><input id="cultureMenu_Hidden" name="cultureMenu" type="hidden"><script type="text/javascript">window["cultureMenu"] = RadMenu.Create("cultureMenu");window["cultureMenu"].Initialize({"Skin":"CultureMenu","Enabled":true},{});</script></div><a href="http://forums.xna.com/forums/">Forums</a><span class="XnaCgp_DisplayNone"> </span><span>Hi, </span><a class="XnaCgp_shell_header_profilelink" href="http://profile.xna.com/en-US/MyProfile.aspx">Visitor</a><span class="XnaCgp_DisplayNone"> </span><a href="http://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1255091890&amp;rver=5.5.4177.0&amp;wp=MBI&amp;wreply=https:%2F%2Fprofile.xna.com%2F%2FLiveSignIn.aspx%3Fradr%3Dhttp:%2F%2Fcreators.xna.com%2Fen-US%2Ftutorial%2Froleplayinggametutorial2&amp;lc=1033&amp;id=256908" class="XnaCgp_shell_header_passportlink"><span>Sign In</span></a></div><div class="XnaCgp_shell_header_LiveSearch"><form action="http://creators.xna.com/en-US/SearchResults.aspx" onsubmit="return ValidateSearchKeyword()"><input name="keyword" id="keyword" title="Enter search keywords" maxlength="100" type="text"><input src="roleplayinggametutorial2_files/cco_global_live_search_button.jpg" alt="Submit search" type="image"></form><script type="text/javascript" src="roleplayinggametutorial2_files/shellHeader.js"></script></div><div style="" id="xnaMenu" class="radmenu RadMenu_MainMenu"><!-- 4.4.5 --><span id="xnaMenuStyleSheetHolder" style="display: none;"></span><ul class="horizontal rootGroup"><li class="item first"><a href="http://creators.xna.com/en-US/" id="xnaMenu_m0" class="link"><span class="text expandTop">Home</span></a><div style="z-index: 10;" class="slide"><ul style="z-index: 10;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/quickstart_main" id="xnaMenu_m0_m0" class="link"><span class="text">Quick Start Guide</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/community/news/" id="xnaMenu_m0_m1" class="link"><span class="text">News</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/membership" id="xnaMenu_m0_m2" class="link"><span class="text">Membership</span></a></li></ul></div></li><li class="item"><a href="http://catalog.xna.com/en-US/" id="xnaMenu_m1" class="link"><span class="text expandTop">Games</span></a><div style="z-index: 14;" class="slide"><ul style="z-index: 14;" class="vertical group level1"><li class="item first"><a href="http://catalog.xna.com/en-US/gamescatalog.aspx" id="xnaMenu_m1_m0" class="link"><span class="text">Games Catalog</span></a></li><li class="item"><a href="http://catalog.xna.com/en-US/myprojects.aspx" id="xnaMenu_m1_m1" class="link"><span class="text">Submit Game</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/ReviewAGame.aspx" id="xnaMenu_m1_m2" class="link"><span class="text">Review Game</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/PlaytestAGame.aspx" id="xnaMenu_m1_m3" class="link"><span class="text">Playtest Game</span></a></li></ul></div></li><li class="item"><a href="http://profile.xna.com/en-US/" id="xnaMenu_m2" class="link"><span class="text expandTop">Creators</span></a><div style="z-index: 19;" class="slide"><ul style="z-index: 19;" class="vertical group level1"><li class="item first"><a href="http://profile.xna.com/en-US/myprofile.aspx" id="xnaMenu_m2_m0" class="link"><span class="text">My Profile</span></a></li><li class="item last"><a href="https://profile.xna.com/en-US/mybusiness.aspx" id="xnaMenu_m2_m1" class="link"><span class="text">My Business</span></a></li></ul></div></li><li class="item"><a href="http://creators.xna.com/en-US/community/" id="xnaMenu_m3" class="link"><span class="text expandTop">Community</span></a><div style="z-index: 22;" class="slide"><ul style="z-index: 22;" class="vertical group level1"><li class="item first"><a href="http://forums.xna.com/forums/" id="xnaMenu_m3_m0" class="link"><span class="text">Forums</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/community/spotlight/" id="xnaMenu_m3_m1" class="link"><span class="text">Community Spotlight</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/community_resources" id="xnaMenu_m3_m2" class="link"><span class="text">Community Resources</span></a></li></ul></div></li><li class="item"><a href="http://creators.xna.com/en-US/education/" id="xnaMenu_m4" class="link current"><span class="text expandTop">Education</span></a><div style="z-index: 26;" class="slide"><ul style="z-index: 26;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/education/gettingstarted" id="xnaMenu_m4_m0" class="link"><span class="text">Getting Started</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/education/catalog/" id="xnaMenu_m4_m1" class="link"><span class="text">Education Catalog</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/education/starterkits/" id="xnaMenu_m4_m2" class="link"><span class="text">Starter Kits</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/education/utilities/" id="xnaMenu_m4_m3" class="link"><span class="text">Utilities</span></a></li></ul></div></li><li class="item last"><a href="http://creators.xna.com/en-US/resources/" id="xnaMenu_m5" class="link"><span class="text expandTop">Resources</span></a><div style="z-index: 31;" class="slide"><ul style="z-index: 31;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/faq" id="xnaMenu_m5_m0" class="link"><span class="text">FAQ</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/partners" id="xnaMenu_m5_m1" class="link"><span class="text">Partners</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/downloads" id="xnaMenu_m5_m2" class="link"><span class="text">Download</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/feedback" id="xnaMenu_m5_m3" class="link"><span class="text">Feedback</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/press" id="xnaMenu_m5_m4" class="link"><span class="text">Press Site</span></a></li></ul></div></li></ul><input id="xnaMenu_Hidden" name="xnaMenu" type="hidden"><script type="text/javascript">window["xnaMenu"] = RadMenu.Create("xnaMenu");window["xnaMenu"].Initialize({"Skin":"MainMenu","Enabled":true},{"xnaMenu_m4":{"CssClass":"current"}});</script></div>
+        </div>
+        <div id="ctl00_xnaCgpShellBodyShadow" class="XnaCgp_shell_body_shadow">
+            <div id="ctl00_xnaCgpShellBody" class="XnaCgp_shell_body">
+                
+
+<div id="ctl00_BodyContent_Panel1" class="XnaCgp_Global_col_680">
+        <div class="XnaCgp_Cms_Page_Header"><h1 class="XnaCgp_Global_PageTitle">tutorial details</h1></div>
+        <div id="ctl00_BodyContent_Panel2" class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Details_Wrapper">                       
+            <div class="XnaCgp_Cms_Content_Details_Container"><div class="XnaCgp_Cms_Content_Details_Container_Main_Info"><div class="XnaCgp_Cms_Float_Left"><img alt="" src="roleplayinggametutorial2_files/DevEd_thumbnail_RPG_game3_64x64.png" class="XnaCgp_Cms_Content_Image"></div><div class="XnaCgp_Cms_Content_Details_Container_Title"><div class="XnaCgp_Cms_Float_Left"><span class="XnaCgp_Global_Large_Subtitle XnaCgp_Cms_Large_Subtitle">Role-Playing Game Tutorial: Re-using the Tile Engine</span></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Align_Right"><span class="XnCgp_Cms_Content_Repeater_Type XnaCgp_Global_Small_Type">Tutorial</span></div></div><div class="XnaCgp_Cms_Content_Details_Container_Area"><div class="XnaCgp_Cms_Content_Details_Container_Area_Inner"><div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left">area</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a>, <a href="http://creators.xna.com/en-US/education/catalog/?devarea=8">Collision</a></div></div><div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left">submitted</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right">6/16/2008</div></div></div><div class="XnaCgp_Cms_Content_Detail_Platform_Logo"><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Windows"><img src="roleplayinggametutorial2_files/cco_global_logo_windows.png" alt=""></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Xbox"><img src="roleplayinggametutorial2_files/cco_global_logo_xbox.png" alt=""></div></div></div></div><div class="XnaCgp_Cms_Content_Detail_Blob">
+		<p>
+				<i>
+						<b>Note:</b> This is a long tutorial, and there is a link to the downloadable version at the end of this page.</i> </p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Introduction</h3>
+<p>In this tutorial, you are going to extract the two-dimensional tile-based rendering and collision system from the <a href="http://creators.xna.com/starterkit/roleplayinggame">Role-Playing Game (RPG) starter kit</a>, and add it to a new XNA Game Studio 2.0 game. The tutorial makes the following assumptions about the needs of your game:</p>
+<ol>
+    <li>You are comfortable working with C# and developing your own game. </li>
+    <li>You are interested in re-using the RPG starter kit’s tile-based rendering and collision system (the “tile engine”). </li>
+    <li>You will define the map layers in the same manner as the RPG starter kit. </li>
+    <li>You still need portals to move between maps. </li>
+    <li>You
+are not interested in any of the other components of the RPG starter
+kit, including animated sprites, treasure chests, monsters, and quests.
+If you are interested in any of these, you can add them to your new
+project later, as needed. </li>
+    <li>You will tie the tile engine into your own game logic, which may or may not be based on the <b>Session</b> type in the RPG starter kit. </li>
+</ol>
+<p>Though this tutorial adds the tile engine to an empty XNA Game
+Studio project, you can adjust the steps as appropriate for your own
+game. You may also feel free to adjust namespace, class, or other names
+within the RPG starter kit code to match your own conventions. However,
+be careful to accommodate those changes as you work through the
+tutorial.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">How Does the Tile Engine Work?</h3>
+<p>The tile engine is a code system that consumes two-dimensional map
+specifications and supports rendering and collision-check operations.
+The run-time code that serves this purpose can be found in the
+RolePlayingGame project for your platform, in TileEngine\TileEngine.cs.
+Since you can only have one tile engine at a time, and it does not own
+the lifetime of any external objects, the entire type is specified
+statically in the TileEngine type.</p>
+<p>The tile engine tracks one position in the world. This position is
+used to center the camera, determine visibility, and test for
+collisions. This position is specified in the <b>PlayerPosition</b>
+type in the TileEngine\PlayerPosition.cs file. It has three components:
+a tile position, with integer indices given in map coordinates
+specifying which tile the “player” is in; an offset, with
+floating-point indices specifying the player’s exact location relative
+to the center of the current tile; and a <b>Direction</b>-enumeration value specifying which way the player is currently facing based on the most recent movement.</p>
+<p>The RolePlayingGameData project for your platform in Maps\Map.cs specifies the <b>Map</b> type. It contains the full set of data for a given map. The most important data are four two-dimensional arrays of integers:</p>
+<ul>
+    <li><b>Base Layer:</b> A numerical index into the tiles in
+the map’s texture, specifying the first sprite drawn in the space.
+Typically, this is the ground. </li>
+    <li><b>Fringe Layer:</b> A
+numerical index into the tiles in the map’s texture, specifying the
+second sprite drawn in the space. Typically, these sprites are trees,
+buildings, fences – anything that is at ground level, but might be
+matched up with various ground tiles. The separation between the base
+and fringe layers means you can have one tree sprite (fringe layer)
+that can sit on top of any kind of ground sprite (base layer). </li>
+    <li><b>Object Layer:</b>
+A numerical index into the tiles in the map’s texture, specifying the
+sprite drawn in the space after all objects have been drawn. These
+sprites always appear on top of all other objects in the same tile –
+characters, chests, and so on. These include treetops and signs. </li>
+    <li><b>Collision Layer:</b>
+An integer of value 0 (false) or nonzero (true), used as a Boolean
+value representing whether that tile can be entered by the player. </li>
+</ul>
+<p>When these layers are drawn with <b>TileEngine.DrawLayer</b>, the
+view will be centered on the current position, if possible. It will
+constrain the view to a given viewport so that the background color is
+never seen.</p>
+<p>The <b>Map</b> object also contains lists of the objects with which
+the player may interact. The only relevant one to this tutorial is the
+list of portals – gateways that move the player from one <b>Map</b> object to another. This data is stored in two lists. The first list contains a list of the <b>Portal</b> objects with their names, and the map name, portal names, and final destination to which they link. The second list contains <b>MapEntry&lt;Portal&gt;</b> objects, which represent instances of the portal at a particular tile position on the map. <b>MapEntry</b> objects also contain data about the direction that the object is facing, but facing direction does not matter for <b>Portal</b> objects.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">How is the Tile Engine Code Structured?</h3>
+<p>The tile engine depends on a three-project system that is common to many XNA Game Studio games.</p>
+<ul>
+    <li><b>Data Project:</b> A code library that defines the game
+types that will be used in the game’s data files and loaded by way of
+the XNA Content Pipeline at run-time. In the Role-Playing Game starter
+kit, the game types provide their own Content Pipeline reader types as
+nested classes within each data type. </li>
+    <li><b>Content Pipeline Extension Project:</b>
+A Content Pipeline extension library that provides content writers for
+the game types defined in the data project. The built-in importers and
+processors for XML files generally don’t need to be replaced. Objects
+such as <b>Portal</b> objects and <b>MapEntry</b> objects do not have
+their own separate content files. They are built and loaded as part of
+building and loading a map content file, and their readers and writers
+are invoked by the map reader and writer. The same is true of inherited
+types – the <b>MapEntry</b> reader and writer calls into the base type’s (<b>ContentEntry</b>) reader and writer. </li>
+    <li><b>Game Project:</b>
+The executable XNA Game Studio 2.0 game project, containing references
+to the data and extension projects, as well as game data stored as XML.
+A <b>Map</b> type will be defined in the data project, along with any
+supporting types that are necessary. Content Pipeline writer types for
+the <b>Map</b> type (and any supporting types) will be added to the
+extension project. Finally, the TileEngine type, and a few supporting
+types, will be added to the game project, along with a modified piece
+of content from the Role-Playing Game starter kit for testing purposes.
+</li>
+</ul>
+<p>Internally, the tile engine is defined statically. A single map is set into the tile engine, and calls to <b>TileEngine.Update</b> and <b>TileEngine.DrawLayer</b> will use that map’s data for movement/collision and rendering, respectively. The tile engine is not implemented as a XNA <b>GameComponent</b> subclass because the layers typically are interleaved with sprites from other sources.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Creating the Projects</h3>
+<p>First, make sure that you have an instance of the Role-Playing Game starter kit on your computer:</p>
+<ol>
+    <li>If you have not done so, download the <a href="http://creators.xna.com/starterkit/roleplayinggame">Role-Playing Game starter kit</a> from the XNA Creators Club Online, and install it on your computer. </li>
+    <li>Create a new “Role Playing Game – Windows” project in Visual Studio. </li>
+    <li>Open
+Windows Explorer and navigate to the RPG project’s directory. An
+alternate method is to open any code file in the project in Visual
+Studio, right click its tab, click <strong>Open Containing Folder</strong>, and then navigate to the root folder of the project. <i><b>Note:</b> The tutorial will refer to this window as the “RPG explorer window.”</i> </li>
+</ol>
+<p>You will notice three subdirectories in this root folder –
+RolePlayingGame, RolePlayingGameProcessors, and RolePlayingGameData –
+corresponding to the three projects in the RPG starter kit solution.</p>
+<p>Now let’s create the new Windows solution that will re-use the tile engine:</p>
+<ol>
+    <li>Create a new “Windows Game (2.0)” project in XNA Game Studio. Name it whatever you like. Make sure the <strong>Create Directory for Solution </strong>check box is checked. <i><b>Note:</b> The tutorial will refer to this original project as the “game project.”</i> </li>
+    <li>In the Solution Explorer, right click the solution node (the root node in the window), hover over the <strong>Add </strong>option, and click <strong>New Project</strong>. Select <strong>“Windows Game Library (2.0),”</strong> and give it a different name from the game project. <i><b>Note:</b> The tutorial will refer to this project as the “data project.”</i> Delete Class1.cs from the project. Right-click the data project root node and click <strong>Add Reference</strong>. In the new Add Reference window that pops up, click the <strong>.NET </strong>tab, scroll down and select <strong>System.Xml </strong>from the list, and click <strong>OK</strong>. </li>
+    <li>In Solution Explorer, right-click the solution node (the root node in the window), hover over the <strong>Add </strong>option, and click <strong>New Project</strong>. Select <strong>"Content Pipeline Extension Library (2.0),"</strong> and give it a different name from the game and data projects. Delete ContentProcessor1.cs from the project. <i><b>Note:</b> The tutorial will refer to this project as the “pipeline project.”</i> </li>
+    <li>Open
+Windows Explorer and navigate to the new project’s directory. An
+alternate method is to open any code file in the project in Visual
+Studio, right-click its tab, click <strong>Open Containing Folder</strong>, and then navigate up to the root folder of the project. <i><b>Note:</b> The tutorial will refer to this window as the “new-game explorer window.”</i> You will notice that each of the three projects you just created has its own subdirectory in this root folder. </li>
+</ol>
+<p>Next, set up the project references in the new game project:</p>
+<ol>
+    <li>The game project needs to know about the data types so it
+can load them at runtime. In Solution Explorer, right-click the game
+project node, and click <strong>Add Reference</strong>. In the Add Reference window that pops up, click the <strong>Projects </strong>tab, select your data project, and then click <strong>OK</strong>. </li>
+    <li>The
+pipeline project also needs to know about the data types so it can
+build them. In Solution Explorer, right-click the pipeline project
+node, and click <strong>Add Reference</strong>. In the Add Reference window that pops up, click the <strong>Projects </strong>tab, select your data project, and then click <strong>OK</strong>. </li>
+    <li>The
+game’s content project needs to know about the processor library so it
+can build the content. In Solution Explorer, right-click the <strong>Content </strong>node under game project node, and then click <strong>Add Reference</strong>. In the Add Reference window that pops up, click the <strong>Projects </strong>tab, select your pipeline project, and then click <strong>OK</strong>. </li>
+</ol>
+<h3 class="XnaCgp_Global_Large_Subtitle">Copying the Code</h3>
+<p>You need to copy the tile engine code and the necessary related
+components from the RPG project to the new game project. Copy the
+following files from the specified folders in the RPG explorer window
+in the appropriate folders in the new-game explorer window:</p>
+<ul>
+    <li><b>Data Project:</b>
+    <ul>
+        <li>RolePlayingGameData\Map\Map.cs </li>
+        <li>RolePlayingGameData\Map\Portal.cs </li>
+        <li>RolePlayingGameData\ContentEntry.cs </li>
+        <li>RolePlayingGameData\ContentObject.cs </li>
+        <li>RolePlayingGameData\Direction.cs </li>
+        <li>RolePlayingGameData\MapEntry.cs </li>
+    </ul>
+    </li>
+    <li><b>Pipeline Project:</b>
+    <ul>
+        <li>RolePlayingGameProcessors\Map\MapWriter.cs </li>
+        <li>RolePlayingGameProcessors\Map\PortalWriter.cs </li>
+        <li>RolePlayingGameProcessors\ContentEntryWriter.cs </li>
+        <li>RolePlayingGameProcessors\MapEntryWriter.cs </li>
+        <li>RolePlayingGameProcessors\RolePlayingGameWriter.cs </li>
+    </ul>
+    </li>
+    <li><b>Game Project:</b>
+    <ul>
+        <li>RolePlayingGame\TileEngine\PlayerPosition.cs </li>
+        <li>RolePlayingGame\TileEngine\TileEngine.cs </li>
+    </ul>
+    </li>
+</ul>
+<p>You do not need to preserve the same subdirectory structure inside
+the new project folders. For example, you may place Map.cs in the same
+directory as ContentEntry.cs, though both code files must be within the
+new data project’s directory.</p>
+<p>Now that the files are in the correct project directories, add the
+code files to their respective projects. You could do this by
+right-clicking on each project, and clicking <strong>Add Existing Item </strong>for
+each code file. However, since the code files are in the correct
+locations already, there is a faster way. For each project, select the
+root project node, go to the <strong>Projects </strong>menu, and then click <strong>Show All Files</strong>.
+This will show white rectangles with dashed outlines next to files that
+are present in the project’s directory, but are not yet included in the
+project. Select all the code files that you have copied in, right-click
+them, and then click <strong>Include in Project</strong>. You should toggle off <strong>Show All Files </strong>on
+each project after you are done. This ensures you do not accidentally
+include the “bin” or “obj” directories, or any other unintended
+content. Repeat this process for each project.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Copying the Test Data</h3>
+<p>Your own game will have its own maps and likely its own textures,
+but it will be easier to test the new game with maps and textures from
+the Role-Playing Game starter kit.</p>
+<p>In the new-game explorer window, enter the subdirectory for the game
+project, then the Content subdirectory. Create a new folder called
+Maps, and another new folder in the same directory called Textures.
+Enter the new Textures subdirectory, and create new subfolder called
+Maps. Enter the Maps subdirectory and create a new directory called
+NonCombat. After the tutorial is complete, you can feel free to edit
+the <b>MapReader.LoadContent</b> method in Map.cs to load the map texture from a different subdirectory.</p>
+<p>Copy the following files from the specified folders in the RPG explorer window into the new-game explorer window:</p>
+<ul>
+    <li><b>Game Project\Content\Maps:</b>
+    <ul>
+        <li>RolePlayingGame\Content\Maps\Map001.xml </li>
+        <li>RolePlayingGame\Content\Maps\Map002.xml </li>
+    </ul>
+    </li>
+    <li><b>GameProject\Content\Textures\Maps\NonCombat:</b>
+    <ul>
+        <li>RolePlayingGame\Content\Textures\Maps\NonCombat\ForestTiles.png </li>
+    </ul>
+    </li>
+</ul>
+<p>Repeat the process described in the “Copying the Code” section of
+this tutorial to include the content files in the content project.
+Select the <b>Content</b> node in the game project, go to the <b>Project</b> menu, and click <b>Show All Files</b>. Select the <b>Maps</b> and <b>Textures</b> subdirectories, right-click them, and then click <b>Include in Project</b>, which will automatically include all contents of those directories in the project as well.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Examining What You Have Made</h3>
+<p>You have created a new game with data and pipeline projects, and you
+have copied over the RPG starter kit’s tile engine code and some game
+content for testing.</p>
+<p>You only copied a small subset of the code from the RPG starter kit,
+and the code and data files that were copied – particularly the <b>Map</b>
+type and related types and content – reference types and methods that
+were left behind. These features may or may not be relevant to your
+game. This tutorial assumes they are not relevant. If you want, you can
+add those features and associated data back in after you complete this
+tutorial.</p>
+<p>The next several steps will remove these references from the copied
+code and content. In general, you will find the compiler to be your
+friend – if it does not know about a certain type of object, then
+chances are it’s referring to a line of code that should be removed. It
+will even underline each affected line, making them easy to identify.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Stripping Down the Data Types</h3>
+<p>First, let’s remove the data in MapEntry.cs that is not a part of the new game. The <strong>Graphics Data </strong>region within MapEntry.cs contains a definition for an <strong>AnimatingSprite </strong>object, which is used to hold clones of character sprites for independent animation and rendering. The new game doesn’t use the <strong>AnimatingSprite </strong>class. You need to remove the entire <strong>Graphics Data </strong>region.</p>
+<p>Next, let’s remove the data in Map.cs that is valid, but not a part
+of our new game. Open Map.cs, and examine its contents. You will notice
+that most of the data is implemented as a private member field and a
+public property, typically for read and write access. When you remove a
+given field, you need to remove the property that accesses it, which
+should always be implemented directly beneath the field declaration.</p>
+<p>The new game does not implement the RPG starter kit’s combat engine. Navigate to the Graphics Data region, and remove the <strong>combatTextureName </strong>and <strong>combatTexture </strong>fields, and the <strong>CombatTextureName </strong>and <strong>CombatTexture </strong>properties.</p>
+<p>The new game does not implement the audio manager or music system from the RPG starter kit. You need to remove the entire <strong>Music </strong>region.</p>
+The only map objects that are implemented in the new game are portals.
+Open the Map Contents region and remove everything except the <strong>portalEntries </strong>field, the associated <strong>PortalEntries </strong>property, and the <strong>FindPortal </strong>method. The removed fields and properties are <strong>MapEntry </strong>lists for chests, fixed-combats, non-player characters, inns, and stores, and the <strong>RandomCombat </strong>field and property. The portal data should be implemented first in the <strong>Map Contents </strong>region, so it should be easy to remove everything else inside that region.
+<p></p>
+<p>The <strong>Map </strong>and <strong>MapEntry </strong>types now
+only define the data in which you are interested. Now you have to edit
+the remaining methods to remove any references to the now-missing
+fields and properties. The easiest way to identify these is to let the
+compiler do the work. In the Solution Explorer, right-click the data
+project node, and click Build. You should see a number of compiler
+errors in the <strong>Error List </strong>window.</p>
+<p>Double-click the first listing in the <strong>Error List </strong>window. This will take you to the beginning of the <strong>Map.Clone </strong>method.
+Examine the method, and you will see a number of lines that have
+segments underlined – these are references to the recently-removed
+fields. Remove each of these lines, including the entire for-loop that
+iterates over the <strong>chestEntries </strong>list (since that list
+is gone). You can check that the lines removed correlate exactly to the
+fields that were removed earlier, and that all of the fields remaining
+are still copied or assigned in the <strong>Clone </strong>method. If you have done this correctly, the <strong>Clone </strong>method should look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">public</span> <span style="color: rgb(0, 0, 255);">object</span> Clone()</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(43, 145, 175);">Map</span> map = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">Map</span>();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.AssetName = AssetName;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.baseLayer = BaseLayer.Clone() <span style="color: rgb(0, 0, 255);">as</span> <span style="color: rgb(0, 0, 255);">int</span>[];</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.collisionLayer = CollisionLayer.Clone() <span style="color: rgb(0, 0, 255);">as</span> <span style="color: rgb(0, 0, 255);">int</span>[];</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.fringeLayer = FringeLayer.Clone() <span style="color: rgb(0, 0, 255);">as</span> <span style="color: rgb(0, 0, 255);">int</span>[];</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.mapDimensions = MapDimensions;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.name = Name;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.objectLayer = ObjectLayer.Clone() <span style="color: rgb(0, 0, 255);">as</span> <span style="color: rgb(0, 0, 255);">int</span>[];</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.portals.AddRange(Portals);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.portalEntries.AddRange(PortalEntries);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.spawnMapPosition = SpawnMapPosition;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.texture = Texture;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.textureName = TextureName;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.tileSize = TileSize;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.tilesPerRow = tilesPerRow;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> map;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p>Next, navigate to the <strong>Content Type Reader </strong>region, and examine the <strong>MapReader.Read </strong>method.
+Again, a number of lines have been underlined by the compiler,
+signifying errors due to our removed data. Remove each of the lines,
+including each loop that loads the missing lists of <strong>Map </strong>objects. As with the <strong>Clone </strong>method,
+you can check that the lines removed correlate exactly to the fields
+that were removed earlier, and that all of that fields remaining are
+still read in. If you have done this correctly, then the <strong>MapReader.Read </strong>method should look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span> <span style="color: rgb(128, 128, 128);">&lt;summary&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span><span style="color: rgb(0, 128, 0);"> Read a Map object from the content pipeline.</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span> <span style="color: rgb(128, 128, 128);">&lt;/summary&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">public</span> <span style="color: rgb(0, 0, 255);">class</span> <span style="color: rgb(43, 145, 175);">MapReader</span> : <span style="color: rgb(43, 145, 175);">ContentTypeReader</span>&lt;<span style="color: rgb(43, 145, 175);">Map</span>&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">protected</span> <span style="color: rgb(0, 0, 255);">override</span> <span style="color: rgb(43, 145, 175);">Map</span> Read(<span style="color: rgb(43, 145, 175);">ContentReader</span> input, </span></p>
+<p style="margin: 0in 0in 0pt 1in; line-height: normal;"><span style="font-size: 10pt; color: rgb(43, 145, 175); font-family: 'courier new';">Map</span><span style="font-size: 10pt; font-family: 'courier new';"> existingInstance)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Map</span> map = existingInstance;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (map == <span style="color: rgb(0, 0, 255);">null</span>)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">Map</span>();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.AssetName = input.AssetName;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.Name = input.ReadString();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.MapDimensions = input.ReadObject&lt;<span style="color: rgb(43, 145, 175);">Point</span>&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.TileSize = input.ReadObject&lt;<span style="color: rgb(43, 145, 175);">Point</span>&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.SpawnMapPosition = input.ReadObject&lt;<span style="color: rgb(43, 145, 175);">Point</span>&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.TextureName = input.ReadString();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.texture =
+input.ContentManager.Load&lt;<span style="color: rgb(43, 145, 175);">Texture2D</span>&gt;(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.IO.<span style="color: rgb(43, 145, 175);">Path</span>.Combine(<span style="color: rgb(163, 21, 21);">@"Textures\Maps\NonCombat"</span>,</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.TextureName));</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.tilesPerRow = map.texture.Width / map.TileSize.X;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;map.BaseLayer = input.ReadObject&lt;<span style="color: rgb(0, 0, 255);">int</span>[]&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.FringeLayer = input.ReadObject&lt;<span style="color: rgb(0, 0, 255);">int</span>[]&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.ObjectLayer = input.ReadObject&lt;<span style="color: rgb(0, 0, 255);">int</span>[]&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.CollisionLayer = input.ReadObject&lt;<span style="color: rgb(0, 0, 255);">int</span>[]&gt;();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+map.Portals.AddRange(input.ReadObject&lt;<span style="color: rgb(43, 145, 175);">List</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt;&gt;());</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map.PortalEntries.AddRange(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+input.ReadObject&lt;<span style="color: rgb(43, 145, 175);">List</span>&lt;<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt;&gt;&gt;());</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">foreach</span> (<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; portalEntry <span style="color: rgb(0, 0, 255);">in</span> map.PortalEntries)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portalEntry.Content
+= map.Portals.Find(</span></p>
+<p style="margin: 0in 0in 0pt 1.5in; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delegate</span><span style="font-size: 10pt; font-family: 'courier new';">(<span style="color: rgb(43, 145, 175);">Portal</span> portal)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: rgb(0, 0, 255);">return</span> (portal.Name == portalEntry.ContentName);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+});</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> map;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>We should be done with the data project, but let’s use the compiler
+to check that for us. In the Solution Explorer, right-click the data
+project node, and click <strong>Build</strong>. The build should be successful and return no errors.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Stripping Down the Pipeline Types</h3>
+<p>Next, you have to clean up the Content Pipeline writer types for the
+data objects, removing references to the now-missing data. First, you
+need to change how the Content Pipeline stores the name of the types to
+read.</p>
+<p>Open RolePlayingGameWriter.cs. This writer is the base type for all
+writers in the RPG starter kit, and its responsibility is to implement
+the runtime reader and type names. These names are how the Content
+Pipeline knows which types to instantiate when it loads a given .XNB
+binary file. The names are fully-qualified, which means that they
+include the name of the assembly that they are found in. It is probable
+your new data project is not named RolePlayingGameDataWindows or
+RolePlayingGameDataXbox. If this is the case, you need to modify this
+code for the new data project. Press Ctrl-H to replace names in this
+particular file, and replace the term RolePlayingGameDataWindows with
+the name of your data project.</p>
+<p>Next, you need to know what references to now-missing data need to
+be removed. In the Solution Explorer, right-click the pipeline project
+node, and click <strong>Build</strong>. You should see a number of compiler errors in the <strong>Error List </strong>window. </p>
+<p>Double-click the first entry. This should take you to the <strong>MapWriter.Write </strong>method. As with <strong>Map.Clone</strong>, remove all the lines that have been underlined. <em><strong>Note:</strong>
+In some cases, all of the incorrect lines might not be underlined. If
+you only see an underline under the currently selected line,
+double-click each of the entries in the <strong>Error List </strong>window. This will force Visual Studio to underline the affected lines. </em></p>
+<p>When you finish, then the second half of <strong>MapWriter.Write </strong>method (the output.Write calls, after the data validation) should look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.Write(value.Name);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.MapDimensions);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.TileSize);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.SpawnMapPosition);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.Write(value.TextureName);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.BaseLayer);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output.WriteObject(value.FringeLayer);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.ObjectLayer);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.CollisionLayer);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.Portals);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.WriteObject(value.PortalEntries);</span></p>
+<p>We should be done with the pipeline project, but let’s use the
+compiler to check that for us. In the Solution Explorer, right-click
+the pipeline project node, and click <strong>Build</strong>. The build should be successful and return no errors.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Stripping Down the Map Content</h3>
+<p>You have removed the missing features from the copied code. Your next step is to remove tags from the <strong>Map </strong>XML content files that reference those features.</p>
+<p>Remove the following tags from the XML file, including the end tag,
+if any, and content between the beginning and end tags, if any:
+&lt;CombatTextureName&gt;, &lt;MusicCueName&gt;,
+&lt;CombatMusicCueName&gt;, &lt;ChestEntries&gt;,
+&lt;FixedCombatEntries&gt;, &lt;RandomCombat&gt;,
+&lt;QuestNpcEntries&gt;, &lt;PlayerNpcEntries&gt;, &lt;InnEntries&gt;,
+and &lt;StoreEntries&gt;. Repeat this modification for both
+Maps\Map001.xml and Maps\Map002.xml.</p>
+<p>With the <strong>Map </strong>type, related types, and content cleaned up, it’s time to move on to the game project and fix the tile engine code itself.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Bringing the Tile Engine Under Control</h3>
+<p>To clean up the tile engine, you will have to remove references to
+code that was not ported to the new game, just like the data and
+pipeline projects. Navigate to the game project in the Solution
+explorer, and open TileEngine.cs.</p>
+<p>The first step is to remove references to the <strong>InputManager </strong>class,
+which is a complex input abstraction for the RPG starter kit that might
+cause your game have more complexity or exhibit a different
+functionality than you want. The tile engine code that takes user input
+is well-localized; it is all in <strong>TileEngine.UpdateUserMovement</strong>, in the <strong>Party </strong>region.
+Your game may not have a party of player characters, but the
+functionality is the same. You may wish to rename these methods and
+regions later. However, for consistency, the tutorial will refer to
+their original names.</p>
+<p>The new input-handling system will be gamepad-only, and it will use the left thumbstick for moving the current player position.</p>
+<p>First, add a using statement to the top of the function for the XNA
+Framework’s Input namespace. While you’re here, add an entry for the
+XNA Framework’s content namespace, which you will need later. The new
+using-statement block, found at the beginning of the code file, should
+look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">#region</span><span style="font-size: 10pt; font-family: 'courier new';"> Using Statements</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> System;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> System.Collections.Generic;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> Microsoft.Xna.Framework;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> Microsoft.Xna.Framework.Content;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> Microsoft.Xna.Framework.Input;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> Microsoft.Xna.Framework.Graphics;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> RolePlayingGameData;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">#endregion</span></p>
+<p>Start your modifications of <strong>TileEngine.UpdateUserMovement </strong>by adding a call to read the latest gamepad state to the beginning of the function:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">private</span> <span style="color: rgb(0, 0, 255);">static</span> <span style="color: rgb(43, 145, 175);">Vector2</span> UpdateUserMovement(</span><span style="font-size: 10pt; color: rgb(43, 145, 175); font-family: 'courier new';">GameTime</span><span style="font-size: 10pt; font-family: 'courier new';"> gameTime)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Vector2</span> desiredMovement = <span style="color: rgb(43, 145, 175);">Vector2</span>.Zero;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">GamePadState</span> gamePadState = <span style="color: rgb(43, 145, 175);">GamePad</span>.GetState(<span style="color: rgb(43, 145, 175);">PlayerIndex</span>.One);</span></p>
+<p>Then, replace each of the <strong>InputManager </strong>calls with equivalent comparisons to the <strong>gamePadState </strong>variable. For example, this is the old code:</p>
+<p><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (InputManager.IsActionPressed(InputManager.Action.MoveCharacterUp))</span></p>
+<p>And this is the new code:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (gamePadState.ThumbSticks.Left.Y &gt; 0f)</span></p>
+<p>The finished <strong>TileEngine.UpdateUserMovement </strong>should look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span> <span style="color: rgb(128, 128, 128);">&lt;summary&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span><span style="color: rgb(0, 128, 0);"> Update the user-controlled movement of the party.</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span> <span style="color: rgb(128, 128, 128);">&lt;/summary&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(128, 128, 128);">///</span> <span style="color: rgb(128, 128, 128);">&lt;returns&gt;</span><span style="color: rgb(0, 128, 0);">The controlled movement for this update.</span><span style="color: rgb(128, 128, 128);">&lt;/returns&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">private</span> <span style="color: rgb(0, 0, 255);">static</span> <span style="color: rgb(43, 145, 175);">Vector2</span> UpdateUserMovement(</span></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"><span style="font-size: 10pt; color: rgb(43, 145, 175); font-family: 'courier new';">GameTime</span><span style="font-size: 10pt; font-family: 'courier new';"> gameTime)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Vector2</span> desiredMovement = <span style="color: rgb(43, 145, 175);">Vector2</span>.Zero;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">GamePadState</span> gamePadState = <span style="color: rgb(43, 145, 175);">GamePad</span>.GetState(<span style="color: rgb(43, 145, 175);">PlayerIndex</span>.One);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// accumulate the desired direction from user input</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (gamePadState.ThumbSticks.Left.Y &gt; 0f)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (CanPartyLeaderMoveUp())</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+desiredMovement.Y -= partyLeaderMovementSpeed;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (gamePadState.ThumbSticks.Left.Y &lt; 0f)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (CanPartyLeaderMoveDown())</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+desiredMovement.Y += partyLeaderMovementSpeed;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 0, 255);">if</span> (gamePadState.ThumbSticks.Left.X &lt; 0f)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (CanPartyLeaderMoveLeft())</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+desiredMovement.X -= partyLeaderMovementSpeed;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (gamePadState.ThumbSticks.Left.X &gt; 0f)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (CanPartyLeaderMoveRight())</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+desiredMovement.X += partyLeaderMovementSpeed;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (desiredMovement == <span style="color: rgb(43, 145, 175);">Vector2</span>.Zero)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> <span style="color: rgb(43, 145, 175);">Vector2</span>.Zero;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> desiredMovement;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>You need to make several other changes to the tile engine, but let’s
+use the compiler again to find those problems. In the Solution
+Explorer, right-click the game project node, and click <strong>Build</strong>. You should see several compiler errors in the <strong>Error List </strong>window.</p>
+<p>Double-click the first entry in the <strong>Error List </strong>window, and you should be taken to this line:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 128, 0); font-family: 'courier new';">// adjust the map origin so that the party is at the center of the viewport</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">mapOriginPosition += viewportCenter - (partyLeaderPosition.ScreenPosition + </span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; Session.Party.Players[0].MapSprite.SourceOffset);</span></p>
+<p>The error text states that <strong>Session </strong>does not exist, but the real error is that we are no longer interested in a <strong>SourceOffset</strong>.
+This term is used by the tile engine to ensure that the camera is
+pointing at the center of the player sprite, not its feet. Remove that
+term and the operators that depend on it. The corrected code should
+look like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 128, 0); font-family: 'courier new';">// adjust the map origin so that the party is at the center of the viewport</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">mapOriginPosition += viewportCenter - partyLeaderPosition.ScreenPosition;</span></p>
+<p>The next entry in the<strong> Error List </strong>window&nbsp;takes you to this line:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">mapOriginPosition.Y += <span style="color: rgb(43, 145, 175);">MathHelper</span>.Max(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; (viewport.Y + viewport.Height - Hud.HudHeight) - </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; (mapOriginPosition.Y + map.MapDimensions.Y * map.TileSize.Y), 0f);</span></p>
+<p>As with the last one, the error text states that the <strong>Hud </strong>type
+does not exist, but the real error is that we are no longer interested
+in that term. In the RPG starter kit, the bottom of the screen is taken
+up by a heads-up display with information about the party. That’s not
+part of the new game, and the map display will take up the whole
+screen. You need to remove that term. The corrected code should look
+like this:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">mapOriginPosition.Y += <span style="color: rgb(43, 145, 175);">MathHelper</span>.Max(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; (viewport.Y + viewport.Height) - </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; (mapOriginPosition.Y + map.MapDimensions.Y * map.TileSize.Y), 0f);</span></p>
+<p>The third and final entry in the <strong>Error List </strong>window should take you to this line:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// check for anything that might be in the tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (<span style="color: rgb(43, 145, 175);">Session</span>.EncounterTile(mapPosition))</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>This line refers to a very important function in the RPG starter kit, <strong>Session.EncounterTile</strong>,
+which is defined in Session\Session.cs in the RolePlayingGame project.
+This function checks a given tile for anything with which the user can
+interact, and it responds appropriately. You need that functionality
+for portals. However, you do not want to bring in all of Session.cs, so
+you will need to add the functionality to the <strong>TileEngine </strong>class.</p>
+<p>You will need a <strong>ContentManager </strong>object to load the <strong>Map </strong>objects. The static <strong>TileEngine </strong>does not have any way to retrieve one from the new game’s <strong>Game </strong>object (the RPG starter kit made a <strong>ContentManager </strong>object available statically via the <strong>Session </strong>type). At the top of the <strong>TileEngine </strong>class, add a public static <strong>ContentManager </strong>field, which the <strong>Game1 </strong>object will eventually fill:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">static</span> <span style="color: rgb(0, 0, 255);">class</span> <span style="color: rgb(43, 145, 175);">TileEngine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">public</span> <span style="color: rgb(0, 0, 255);">static</span> <span style="color: rgb(43, 145, 175);">ContentManager</span> ContentManager = <span style="color: rgb(0, 0, 255);">null</span>;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+In your game, you may eventually make the content manager available to the tile engine in another manner.
+<p>Return to the <strong>TileEngine.MoveIntoTile </strong>method. Above the “if” statement, add a line to search for portals in the portal entry list, using the given position:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// search for portals in the new tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; portalEntry = map.PortalEntries.Find(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">delegate</span>(<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; entry)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> (entry.MapPosition == mapPosition);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// check for anything that might be in the tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (Session.EncounterTile(mapPosition))</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Then, change the “if” statement to check whether <strong>portalEntry </strong>is null, adding&nbsp;code to handle the null case:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// search for portals in the new tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; portalEntry = map.PortalEntries.Find(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">delegate</span>(<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; entry)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> (entry.MapPosition == mapPosition);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// if there is a portal, then move through it</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> ((portalEntry != <span style="color: rgb(0, 0, 255);">null</span>) &amp;&amp; (portalEntry.Content != <span style="color: rgb(0, 0, 255);">null</span>))</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> <span style="color: rgb(0, 0, 255);">false</span>;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; }</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Next, we need to make sure that the map name in the <strong>portalEntry </strong>object
+is a valid content path. If you have followed the directions to this
+point, then the map XML files are in the Content\Maps subdirectory
+inside your game project. Add code within the new if statement to make
+sure that the content name is correct:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// search for portals in the new tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; portalEntry = map.PortalEntries.Find(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">delegate</span>(<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; entry)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> (entry.MapPosition == mapPosition);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// if there is a portal, then move through it</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> ((portalEntry != <span style="color: rgb(0, 0, 255);">null</span>) &amp;&amp; (portalEntry.Content != <span style="color: rgb(0, 0, 255);">null</span>))</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// make sure the content name is valid</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">string</span> mapContentName = </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; portalEntry.Content.DestinationMapContentName;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (!mapContentName.StartsWith(<span style="color: rgb(163, 21, 21);">@"Maps\"</span>))</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapContentName = System.IO.Path.Combine(<span style="color: rgb(163, 21, 21);">@"Maps"</span>, mapContentName);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> <span style="color: rgb(0, 0, 255);">false</span>;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; }</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Finally, add calls to load the new map and to <strong>TileEngine.SetMap</strong>, passing in the new map and the new portal, if any:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// search for portals in the new tile</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; portalEntry = map.PortalEntries.Find(</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">delegate</span>(<span style="color: rgb(43, 145, 175);">MapEntry</span>&lt;<span style="color: rgb(43, 145, 175);">Portal</span>&gt; entry)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> (entry.MapPosition == mapPosition);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// if there is a portal, then move through it</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> ((portalEntry != <span style="color: rgb(0, 0, 255);">null</span>) &amp;&amp; (portalEntry.Content != <span style="color: rgb(0, 0, 255);">null</span>))</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// make sure the content name is valid</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">string</span> mapContentName = </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; portalEntry.Content.DestinationMapContentName;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (!mapContentName.StartsWith(<span style="color: rgb(163, 21, 21);">@"Maps\"</span>))</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapContentName = System.IO.Path.Combine(<span style="color: rgb(163, 21, 21);">@"Maps"</span>, mapContentName);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// load the new map</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Map</span> newMap = ContentManager.Load&lt;Map&gt;(mapContentName);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetMap(newMap, </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+newMap.FindPortal(portalEntry.Content.DestinationMapPortalName));</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">return</span> <span style="color: rgb(0, 0, 255);">false</span>;</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; }</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>We should be done with the pipeline project, but let’s use the
+compiler to check that for us. In the Solution Explorer, right-click
+the pipeline project node, and click <strong>Build</strong>. The build should be successful and return no errors.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Hooking it Up</h3>
+<p>Congratulations! You have modified the RPG starter kit code, and it
+builds all of the types and content without any errors. Press F5 to
+start running your game.</p>
+<p>Unfortunately, the game only renders the default CornflowerBlue
+background color. This is because there is nothing in the Game
+implementation that makes use of the <strong>Map </strong>or <strong>TileEngine </strong>types!</p>
+<p>Open Game1.cs within the game project. First, add “using” lines to
+the top of the file for the namespaces used by the tile engine (<strong>RolePlayingGame</strong>) and the data types (<strong>RolePlayingGameData</strong>).</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> RolePlaying;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">using</span><span style="font-size: 10pt; font-family: 'courier new';"> RolePlayingGameData;</span></p>
+<p><i><b>Note:</b> If you choose to rename the namespaces as you added the files to match your own project, then you might not need to do this.</i></p>
+<p>Next, add a line of code to fill the <strong>ContentManager </strong>object in the <strong>TileEngine </strong>type:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">public</span><span style="font-size: 10pt; font-family: 'courier new';"> Game1()</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; graphics = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">GraphicsDeviceManager</span>(<span style="color: rgb(0, 0, 255);">this</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; Content.RootDirectory = <span style="color: rgb(163, 21, 21);">"Content"</span>;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// configure the content manager for the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.ContentManager = Content;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">}</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>You need to perform two actions in <strong>Game1.LoadContent</strong>:</p>
+<ol>
+    <li>Load the initial test map, and set it into the tile
+engine. There is no portal, so pass in “null” for the new portal. This
+will use the spawn position defined within the Map type. </li>
+    <li>Set the current viewport into the tile engine using the static Viewport property. </li>
+</ol>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">protected</span><span style="font-size: 10pt; font-family: 'courier new';"> <span style="color: rgb(0, 0, 255);">override</span> <span style="color: rgb(0, 0, 255);">void</span> LoadContent()</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// Create a new SpriteBatch, which can be used to draw textures.</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">SpriteBatch</span>(GraphicsDevice);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// set the viewport for the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.Viewport = graphics.GraphicsDevice.Viewport;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// load the initial map and set it into the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.SetMap(Content.Load&lt;<span style="color: rgb(43, 145, 175);">Map</span>&gt;(<span style="color: rgb(163, 21, 21);">@"Maps\\Map001"</span>), <span style="color: rgb(0, 0, 255);">null</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">}</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>The tile engine needs to be updated. Call <strong>TileEngine.Update </strong>from <strong>Game1.Update</strong>:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">protected</span><span style="font-size: 10pt; font-family: 'courier new';"> <span style="color: rgb(0, 0, 255);">override</span> <span style="color: rgb(0, 0, 255);">void</span> Update(<span style="color: rgb(43, 145, 175);">GameTime</span> gameTime)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// Allows the game to exit</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">if</span> (<span style="color: rgb(43, 145, 175);">GamePad</span>.GetState(<span style="color: rgb(43, 145, 175);">PlayerIndex</span>.One).Buttons.Back == <span style="color: rgb(43, 145, 175);">ButtonState</span>.Pressed)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">this</span>.Exit();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// update the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.Update(gameTime);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">base</span>.Update(gameTime);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">}</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Finally, the tile engine needs to be drawn. Add calls to begin and end the <strong>SpriteBatch </strong>drawing,
+and draw the layers of the tile engine. You need to leave a spot for
+any gameplay rendering you might choose to add later. That spot would
+fit between the base and fringe layer&nbsp;drawing and the object
+layer&nbsp;drawing. Thus, you will need two <strong>DrawLayer </strong>calls:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">protected</span><span style="font-size: 10pt; font-family: 'courier new';"> <span style="color: rgb(0, 0, 255);">override</span> <span style="color: rgb(0, 0, 255);">void</span> Draw(<span style="color: rgb(43, 145, 175);">GameTime</span> gameTime)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; graphics.GraphicsDevice.Clear(<span style="color: rgb(43, 145, 175);">Color</span>.CornflowerBlue);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.Begin();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">//</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">//</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the base and fringe layers</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.DrawLayers(spriteBatch, <span style="color: rgb(0, 0, 255);">true</span>, <span style="color: rgb(0, 0, 255);">true</span>, <span style="color: rgb(0, 0, 255);">false</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// TODO: draw anything that goes on the map</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the object layer</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.DrawLayers(spriteBatch, <span style="color: rgb(0, 0, 255);">false</span>, <span style="color: rgb(0, 0, 255);">false</span>, <span style="color: rgb(0, 0, 255);">true</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.End();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">base</span>.Draw(gameTime);</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">}</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>That should be all of the modifications necessary. Press F5 to run the game.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Let’s Take This Tile Engine for a Spin!</h3>
+<p>Congratulations! You have modified the Role-Playing
+Game&nbsp;starter kit code. It builds all the types and content without
+any errors, and the tile engine is running. You should see the first
+map from the Role-Playing Game&nbsp;starter kit, and you can move
+around, scrolling the map.</p>
+<p>You’ll notice, however, that the tile engine does not always center
+the view on the current position. It will stop scrolling to avoid
+showing anything beyond the boundaries of the map. This can make it
+difficult to get your bearings. You can add a small signifier at the
+current location, using <strong>TileEngine.PartyLeaderPosition.ScreenPosition</strong> to get the actual screen coordinates of the player position. Internally, that function uses the very useful <strong>TileEngine.GetScreenPosition(Point mapPosition)</strong> static method to convert between map coordinates and actual screen coordinates.</p>
+<p>There are many ways to add a current-position marker. One way to add
+a simple rectangle without adding new textures or resources is to clear
+a small rectangle at the current position:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">protected</span><span style="font-size: 10pt; font-family: 'courier new';"> <span style="color: rgb(0, 0, 255);">override</span> <span style="color: rgb(0, 0, 255);">void</span> Draw(<span style="color: rgb(43, 145, 175);">GameTime</span> gameTime)</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">{</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; graphics.GraphicsDevice.Clear(<span style="color: rgb(43, 145, 175);">Color</span>.CornflowerBlue);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.Begin();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">//</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the tile engine</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">//</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the base and fringe layers</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.DrawLayers(spriteBatch, <span style="color: rgb(0, 0, 255);">true</span>, <span style="color: rgb(0, 0, 255);">true</span>, <span style="color: rgb(0, 0, 255);">false</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// TODO: draw anything that goes on the map</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// -- for now, clear a small rectangle to white</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// -- Clear cannot be called from within a SpriteBatch block</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.End();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Vector2</span> position = <span style="color: rgb(43, 145, 175);">TileEngine</span>.PartyLeaderPosition.ScreenPosition;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">Rectangle</span>[] clearRects = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">Rectangle</span>[1];</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; clearRects[0] = <span style="color: rgb(0, 0, 255);">new</span> <span style="color: rgb(43, 145, 175);">Rectangle</span>((<span style="color: rgb(0, 0, 255);">int</span>)position.X, (<span style="color: rgb(0, 0, 255);">int</span>)position.Y, </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;20, 20);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; graphics.GraphicsDevice.Clear(<span style="color: rgb(43, 145, 175);">ClearOptions</span>.Target, <span style="color: rgb(43, 145, 175);">Color</span>.White, </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0f, 0, clearRects);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.Begin();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 128, 0);">// draw the object layer</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(43, 145, 175);">TileEngine</span>.DrawLayers(spriteBatch, <span style="color: rgb(0, 0, 255);">false</span>, <span style="color: rgb(0, 0, 255);">false</span>, <span style="color: rgb(0, 0, 255);">true</span>);</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; spriteBatch.End();</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 255);">base</span>.Draw(gameTime);</span></p>
+<p style="margin: 0in 0in 10pt;"><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">}</span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Now you can easily see that the current position is blocked by the
+collision layer, when the tile engine scrolls, and when you reach the
+bottom of Map001 and move to Map002. Be careful when moving to the
+southern end of the bridge on Map002. Your game will probably attempt
+to load Map003, which you have not brought over.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Conclusion</h3>
+<p>We structured this tutorial to port the most functionality with the fewest steps. If your game would benefit from <strong>AnimatingSprite</strong>s,
+or any of the other functionality in the game, then you can port more
+code over. Also, there are many useful constants and other pieces of
+functionality to explore in the tile engine. Examine the code and make
+whatever modifications your game needs.</p>
+<p>The final step is to implement your own game, or to adapt these
+steps to add the tile engine to your existing project. The Role-Playing
+Game starter kit provides you with a tile engine that gives you a
+strong baseline for implementing your own two-dimensional game.</p>
+<p>You can discuss this tutorial in <a href="http://forums.xna.com/forums/t/13189.aspx">this thread</a> in our forums.</p>
+</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Panel_Top"><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Left"></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Middle"><span class="XnaCgp_Global_Section_Title">downloads</span></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Right"></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Body"><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Download_Wrapper"><div class="XnaCgp_Cms_Float_Left"><img class="XnaCgp_Global_New" src="roleplayinggametutorial2_files/cco_deved_content_download_rtf_icon.png" alt=""></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Info"><div><span class="XnaCgp_Global_Small_Subtitle"><a href="http://creators.xna.com/downloads/?id=15">Microsoft Permissive License.rtf</a></span></div><div></div><div>Size: 0.04MB</div><div><span class="XnaCgp_Global_Body_Small">All content and source code downloaded from this page is bound to the Microsoft Permissive License (Ms-PL).</span></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Platform_Logo"></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Detail_Download_Attributes"></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Download_Wrapper"><div class="XnaCgp_Cms_Float_Left"><img class="XnaCgp_Global_New" src="roleplayinggametutorial2_files/cco_deved_content_download_doc_icon.png" alt=""></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Info"><div><span class="XnaCgp_Global_Small_Subtitle"><a href="http://creators.xna.com/downloads/?id=148">RPG-ReusingTileEngine.doc</a></span></div><div></div><div>Size: 0.10MB</div><div><span class="XnaCgp_Global_Body_Small">A step-by-step walkthrough for re-using the Role-Playing Game starter kit's tile engine in a separate game.
+</span></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Platform_Logo"><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Windows"><img src="roleplayinggametutorial2_files/cco_global_logo_windows.png" alt=""></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Xbox"><img src="roleplayinggametutorial2_files/cco_global_logo_xbox.png" alt=""></div></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Detail_Download_Attributes"><div class="XnaCgp_Cms_Download_Container"><div class="XnaCgp_Cms_Float_Left XnaCgp_Global_Body_Small XnaCgp_Cms_Download_Detail_Column_Left">Framework</div><div class="XnaCgp_Global_Body_Small XnaCgp_Cms_Download_Detail_Column_Right"><p>GS 2.0</p></div></div></div></div></div></div>
+        </div>
+    </div>
+
+
+
+
+    <div id="ctl00_BodyContent_Panel3" class="XnaCgp_Global_col_240_nomargin">
+        <div id="ctl00_BodyContent_Panel4" class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Right_Container">                       
+            <div class="XnaCgp_Cms_DevArea_Filter_Top"><div class="XnaCgp_Cms_DevArea_Filter_Title">dev areas</div><div class="XnaCgp_Cms_DevArea_Filter_Subtitle">find content by dev area</div><div class="XnaCgp_Cms_DevArea_Filter_Divider"></div><div class="XnaCgp_Cms_DevArea_Filter_List"><ul><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=6">3D Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=11">Artificial Intelligence</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=12">Audio</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=8">Collision</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=13">Content Pipeline</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=10">Data Management</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=16">Gameplay</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=4">Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=7">Input</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=17">Math</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=19">Networking</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=9">Physics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=15">Postprocessing</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=14">Shaders</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=18">Storage</a></li></ul></div></div><div class="XnaCgp_Cms_DevArea_Filter_Bottom"></div>
+            <div id="ctl00_BodyContent_Panel5" class="XnaCgp_Cms_EducationSamples_Container">                           
+                <div class="XnaCgp_Cms_EducationSamples"><div class="XnaCgp_Cms_EducationSamples_Title"><p class="XnaCgp_Global_Section_Title">other tutorials</p></div><div class="XnaCgp_Cms_EducationSamples_Body"><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial2_files/DevEd_thumbnail_particle_3D_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/particlexml" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Authoring Particle Systems Using XML and the Content Pipeline</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=4">Graphics</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial2_files/Tutorials_thumbnail_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/optimization_highfrequency" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Optimization: Particles and High-Frequency Code</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=10">Data Management</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial2_files/DevEd_thumbnail_Collision2_PerPixel_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/collision2dperpixel" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Collision Series 2:  2D Per-Pixel Collision</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_More_Link"><a href="http://creators.xna.com/en-US/education/catalog/?contenttype=2">more...</a></div></div></div>
+            </div>
+            <div id="ctl00_BodyContent_Panel6" class="XnaCgp_Cms_Sidebar_Item">                           
+                <div class="XnaCgp_Cms_Sidebar_Ad"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+            </div>
+        </div>
+        <div id="ctl00_xnaCgpShellFooterContainer" class="XnaCgp_shell_footer XnaCgp_shell_footer_default_bg">
+            <div>© 2009 Microsoft Corporation. All rights reserved.</div><div class="XnaCgp_Shell_Footer_Links"><ul><li class="XnaCgp_Shell_Footer_li_First"><a target="_blank" href="http://creators.xna.com/en-US/help/termsofuse">Terms of Use</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/w3c/policy">Privacy Statement</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/help/conduct">Code of Conduct</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/feedback">Feedback</a></li></ul></div>
+            
+
+        </div>        
+    </div>
+<div id="XnaCgp_DisablePage" class="XnaCgp_DisplayNone">
+</div>
+
+<!-- Machine: -66117111  ID: 203 -->
+
+<script type="text/javascript">
+var gDomain='m.webtrends.com';
+var gDcsId='dcschd84w10000w4lw9hcqmsz_8n3x';
+var gTrackEvents=1;
+var gFpc='WT_FPC';
+/*<![CDATA[*/
+if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<scr"+"ipt type='text/javascript' src='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/scr"+"ipt>");}
+/*]]>*/
+
+</script><script src="roleplayinggametutorial2_files/WebTrends.js" type="text/javascript"></script><noscript><div><img
+alt="DCSIMG" id="DCSIMG" width="1" height="1"
+src="http://m.webtrends.com/dcschd84w10000w4lw9hcqmsz_8n3x/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No"
+/></div></noscript>
+</body></html>

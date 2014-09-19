@@ -1,0 +1,2 @@
+Simple Bezier Curves
+	http://social.msdn.microsoft.com/forums/en-US/xnagamestudioexpress/thread/8048b77a-f5c7-4cc5-8f82-6d2a14100cc6/

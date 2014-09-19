@@ -1,0 +1,390 @@
+<html lang="en-us"><head><link title="Microsoft Support Search" type="application/opensearchdescription+xml" rel="search" href="http://support.microsoft.com/common/opensearchdescriptor.aspx?ln=en-us"><meta name="DCSext.sup_cid" content="919829"><meta name="DCSext.sup_cln" content="en-us"><meta name="DCSext.sup_ct" content="kb"><meta name="DCSext.sup_ln" content="en-us"><meta name="DCSext.sup_sd" content="gn"><script type="text/javascript" src="919829_files/jquery-1.js"></script><script type="text/javascript" src="919829_files/default.js"></script><script type="text/javascript">setcookieval("gssSITE","gn",'',true);</script><script type="text/javascript">setcookieval("gssTHEME","gn",'',true);</script><script type="text/javascript">setcookieval("gssTOOLBAR","gn",'',true);</script><script type="text/javascript">var g_currentContent='kb\x3ben-us\x3b919829';</script><script type="text/javascript" src="919829_files/survey.js"></script><meta name="robots" content=""><meta name="Search.KeyWords" content="kbtshoot kbprb KB919829"><meta name="Search.Assets" content="3"><meta name="Search.Retire" content="0"><meta name="Search.ContentType" content="kb"><meta name="Search.Title" content="The Debug in Zone feature appears to remain enabled after you disable the Visual Studio hosting process in Visual Studio 2005"><meta name="Search.KBParents" content="9798 3041 1117 9343 9491 9488 9493"><meta name="Search.Description" content="Discusses the behavior that occurs when you enable the Debug in Zone feature and you disable the Visual Studio hosting process. The Debug in Zone feature appears to remain enabled, but it is not."><meta name="Search.DateModified" content="2006-07-28T20:43:00"><meta name="Search.QueryWords" content=""><meta name="Search.Audiences" content="kbAudDeveloper"><meta name="Search.Products" content="344272 323126 330359"><meta name="KBParents" content="9798 3041 1117 9343 9491 9488 9493"><meta name="Search.ContentID" content="919829"><meta name="Search.scid" content="kb;en-us;919829"><meta name="Search.MT" content="0"><meta name="Search.KB3" content="0"><meta name="Keywords" content="kbtshoot kbprb KB919829"><meta name="Description" content="Discusses the behavior that occurs when you enable the Debug in Zone feature and you disable the Visual Studio hosting process. The Debug in Zone feature appears to remain enabled, but it is not."><meta name="MS.LOCALE" content="en"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" src="919829_files/search.js"></script><script type="text/javascript" src="919829_files/ac.js"></script><script type="text/javascript">var gCookieDomain='';var url_exactMatch='/select/Default.aspx?target=assistance';</script><title>The Debug in Zone feature appears to remain enabled after you disable the Visual Studio hosting process in Visual Studio 2005</title><xmlreader></xmlreader><link rel="stylesheet" type="text/css" href="919829_files/default.css"><link rel="stylesheet" type="text/css" href="919829_files/XmlContent.css"><script type="text/javascript" src="919829_files/kb.js"></script><script type="text/javascript" src="919829_files/stickypanel.js"></script><link rel="stylesheet" type="text/css" href="919829_files/stickypanel.css"><link rel="stylesheet" type="text/css" href="919829_files/branding.css">
+<!-- RESG: 10/24/2010 1:42:13 PM - RESX: 1/1/0001 12:00:00 AM -->
+<!-- (c) 2010 Microsoft Corporation. All Rights Reserved -->
+<style type="text/css">html body, html select, html input, html form, html textarea{font-family : Verdana, Arial, Helvetica, Sans-Serif;}</style><script type="text/javascript">var PersonalizationInfo='a2I5MTk4MjkIZW4tdXMIVGhlIERlYnVnIGluIFpvbmUgZmVhdHVyZSA_';</script><link rel="stylesheet" type="text/css" href="919829_files/surveytrigger.css"><script type="text/javascript" src="919829_files/surveycookieutil.js"></script><script type="text/javascript" src="919829_files/surveytrigger.js"></script></head><body onload="thisLoad();" onunload="thisUnload();">
+<style type="text/css">  
+    body 
+    {
+        
+            background:url('/library/images/support/cn/parent_bkgnd.png') repeat-x #FFFFFF;
+        
+    }
+
+    
+    #gsfx_brnd_PageHeaderImage 
+    {
+        background:url('/library/images/support/cn/mso_energy.jpg') no-repeat top center;
+    }
+    
+    
+    #gsfx_brnd_SiteHeaderImage
+    {
+        height:0px;
+    }
+    
+    
+    
+    .gsfx_brnd_NetworkLink, .gsfx_brnd_NetworkLink:visited, .gsfx_brnd_NetworkLink a, .gsfx_brnd_NetworkLink a:visited
+    {
+        color: #FFFFFF;
+    }
+    
+    .gsfx_brnd_NetworkLink:hover, .gsfx_brnd_NetworkLink:active, .gsfx_brnd_NetworkLink:focus, 
+    .gsfx_brnd_NetworkLink a:hover, .gsfx_brnd_NetworkLink a:active, .gsfx_brnd_NetworkLink a:focus
+    #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink:hover span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink:active span, #gsfx_brnd_NetworkFooter.gsfx_brnd_NetworkLink:focus span, 
+    #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:hover span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:active span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:focus span
+    {
+        color: #FE5815;
+        border-bottom-color: #FE5815;
+    }
+    
+    #gsfx_brnd_NetworkHeader, #gsfx_brnd_NetworkHeaderLinks
+    {
+        color: #ffffff;
+    }
+
+    #gsfx_brnd_SiteHeader, #gsfx_brnd_PageLogoWrapper, #gsfx_brnd_PageTitle, #gsfx_brnd_SearchWrapper a, #gsfx_bsrch_poweredbycell span
+    {
+        color: #ffffff;
+    }
+    
+    #gsfx_bsrch_catsel a, #gsfx_bsrch_catsel span
+    {
+        border-color: #ffffff;
+    }
+
+    #gsfx_brnd_SiteFooter, #gsfx_brnd_SiteFooterWrap
+    {
+        color: #398DCA;
+    }
+
+    #gsfx_brnd_NetworkFooter, #gsfx_brnd_FooterLinkContainer, #gsfx_brnd_FooterLinkContainer span, 
+    #gsfx_brnd_copyright_container, #gsfx_brnd_copyright_container span
+    {
+        color: #398DCA;
+    }
+        
+    
+    </style>
+<!--[if lte IE 6]>
+<style type="text/css">
+    #gsfx_brnd_PageHeaderImage {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/mso_energy.jpg', sizingMethod='image');}
+    #gsfx_brnd_SiteImgWedge {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');}    
+    #gsfx_brnd_PageLogo {visibility:hidden;}
+    #gsfx_brnd_legacy_PageLogo {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='image');}
+    #gsfx_brnd_MSLogo {visibility:hidden;}
+    #gsfx_brnd_legacy_MSLogo {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/gsfx_brnd_ms_logo_sml_blk.png', sizingMethod='image');}
+</style>
+<![endif]-->
+
+
+<div id="gsfx_brnd_CenterContent">
+<div id="gsfx_brnd_PageWrapper">
+    <div style="height: 450px;" id="gsfx_brnd_PageContainer">
+        <div id="gsfx_brnd_PageHeaderImage"></div>    
+        <div id="gsfx_brnd_HeaderContainer">
+            <div id="gsfx_brnd_NetworkHeader">
+                <div id="gsfx_brnd_CorpMarketingContainer" class="gsfx_brnd_NetworkLeft">
+                    
+
+                    <div id="gsfx_brnd_CorpMarketingSpace" class="gsfx_brnd_NetworkLeft">
+                        
+                        <div class="gsfx_brnd_NetworkLink">
+                        
+                          <img src="919829_files/gsfx_EIE_icon_dkBG.png">
+                        
+                        <span>
+                        <a href="javascript:void(0);" id="L_191784">Experience a more beautiful web</a>
+                        </span>
+                        </div>
+                        <style type="text/css">
+                            #gsfx_brnd_CorpMarketingContainer
+                            {
+                                background : url('');
+                            }
+                            
+                            #gsfx_brnd_corpflyoutad_inner
+                            {
+                                width: 423;
+                                height: 133;
+                                background: url('/library/images/support/en-US/IE9_BG2-img.png');
+                            }
+                            #gsfx_brnd_corpflyoutad_go
+                            {
+                                position: absolute;
+                                left: 265;
+                                top: 96;
+                            }
+                            
+                        </style>                                                
+                        <script type="text/javascript">
+                            var gsfx_brnd_ad_pushenddate;
+                            var gsfx_brnd_ad_pushstartdate;
+                            try
+                            {
+                                gsfx_brnd_ad_pushenddate = new Date('July 1, 2011');
+                                gsfx_brnd_ad_pushstartdate = new Date('September 8, 2010');
+                            }
+                            catch(e)
+                            {
+                                gsfx_brnd_ad_pushenddate = null;
+                                gsfx_brnd_ad_pushstartdate = null;
+                            }
+                        </script>
+                        <div style="opacity: 0; width: 0px; display: block; height: 0px;" id="gsfx_brnd_corpflyoutad">
+                            <div style="display: none;" id="gsfx_brnd_corpflyoutad_inner">
+                                <a href="javascript:void(0);" id="gsfx_brnd_corpflyoutad_close">
+                                    <img src="919829_files/gsfx_corpflyoutad_btn_close.png" alt="" onmouseover="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close_hover.png';" onmouseout="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close.png';" onmousedown="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close_hover.png';">
+                                </a><a href="http://clk.atdmt.com/MRT/go/264390693/direct;wi.1;hi.1/01/" id="gsfx_brnd_corpflyoutad_go">
+                                    <img src="919829_files/gsfx_corpflyoutad_go.png" alt="" onmouseover="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go_hover.png';" onmouseout="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go.png';" onmousedown="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go_hover.png';">
+                                </a><a href="javascript:void(0);" id="gsfx_brnd_corpflyoutad_dontshow">
+                                    
+                                    <span>
+                                        Don't show me this again
+                                    </span>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->
+                <table summary="Network Header Links" id="gsfx_brnd_NetworkHeaderLinks" class="gsfx_brnd_NetworkRight">
+                    <tbody><tr>
+                        <td class="gsfx_brnd_NetworkLinkContainer">
+                            <span id="gsfx_brnd_LocalName">
+                                United States
+                            </span>
+                        </td>
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink">
+                            <a href="http://support.microsoft.com/common/international.aspx" id="L_153552">Change</a>
+                        </td>
+                        
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_HeaderSeperator">|</td>
+                        
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink">
+                            <a href="http://www.microsoft.com/en/us/sitemap.aspx" id="L_153551">All Microsoft Sites</a>
+                        </td>
+                        
+                        
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="gsfx_brnd_SiteHeader">            
+                <div id="gsfx_brnd_SiteHeaderImageContainer">
+                    <div id="gsfx_brnd_SiteHeaderImage">
+                    
+                    </div>
+                </div>
+                
+                <div id="gsfx_brnd_PageLogoWrapper" class="gsfx_brnd_NetworkLeft">
+                    <a id="gsfx_brnd_PageLogoLink" href="http://www.microsoft.com/"></a>
+                    <span id="gsfx_brnd_PageTitle"><a href="http://support.microsoft.com/" style="color: white; text-decoration: none;">Microsoft Support</a></span>
+                </div>
+                <div id="gsfx_brnd_SearchWrapper" class="gsfx_brnd_NetworkRight">
+                    
+<form id="frmsrch" action="/search/default.aspx" onsubmit="return SaveSimpleSearch();" method="get">
+    <style type="text/css">
+    #gsfx_cat_sel_ie6
+    {
+    	visibility:hidden;
+    }
+    </style>
+    <script type="text/javascript">setACStartChars('4:');</script>    
+    <!--[if lte IE 6]>
+    <style type="text/css">
+    .gsfx_bsrch_container
+    {
+        background-image:none;
+    }
+    .gsfx_bsrch_container1
+    {
+        display:none;
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_live_glass_border.png');
+    }
+    #gsfx_cat_sel
+    {
+        background-image:none;
+    }
+    #gsfx_cat_sel_ie6
+    {
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_dd_select1.png');
+        visibility:visible;
+        width:12px;
+        height:24px;
+    }
+    </style>
+    <div id="gsfx_bsrch_bg_ie6" class="gsfx_bsrch_container gsfx_bsrch_container1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_live_glass_border.png');"></div>
+<![endif]-->
+    <div id="gsfx_bsrch_bg" class="gsfx_bsrch_container">
+    <div id="gsfx_bsrch_divQuery" style="width: 304px;">
+        <input id="idTxtFld" type="hidden"><input id="gsfx_bsrch_query" style="width: 272px;" name="query" maxlength="200" value="Search Microsoft Support" class="siteseltxt" autocomplete="off" type="text">
+        <!--span class="gsfx_bsrch_buttonwrap" id="gsfx_bsrch_websrch"-->
+            <!--input type="image" id="gsfx_bsrch_btnimg" onclick="submitSimpleSearch('http://www.bing.com/search?mkt=en-us&q=', $('#gsfx_bsrch_query').get(0).value);" /-->
+            <input alt="" class="gsfx_img_png" style="width: 20px; height: 20px;" src="919829_files/ss_live_button.png" onclick="SaveSimpleSearch();" id="gsfx_bsrch_btnimg" type="image"><!--[if lte IE 6]><input type="image" src="/library/images/support/cn/onepix.gif" alt="" class="gsfx_div_png" style="width:20px;height:20px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/CN/ss_live_button.png', sizingMethod='scale');" onclick="SaveSimpleSearch();" id="gsfx_bsrch_btnimg" /><![endif]-->
+            
+        <!--/span-->
+    <div style="position: relative; width: 150px; height: 0px; margin-left: -1px;" id="acListWrappergsfx_bsrch_query"><div style="padding: 6px 1px 6px 10px; margin: 0px; visibility: hidden; z-index: 99; position: absolute; line-height: 18px; width: 150px; border-width: 0px 1px; border-style: none solid; border-color: rgb(51, 107, 149); overflow: hidden; background: url(&quot;/library/images/support/cn/ss_section2.png&quot;) no-repeat scroll left top rgb(255, 255, 255); font-size: 0.7em; font-family: Verdana,Arial,Helvetica,Sans-Serif;" id="acListDivgsfx_bsrch_query"></div><div style="display: none;" id="gsfx_bsrch_options"><div style="width: 306px;" id="gsfx_bsrch_options_subcntr"><div style="cursor: default;" class="gsfx_optsub_cotnr"><div class="gsfx_srchoptimg_cotnr"><img style="display: block;" class="gsfx_bsrch_chkimg" src="919829_files/ss_check.png" id="gsfx_bsrch_sitesel_img0"></div><div style="font-weight: bold;" class="gsfx_srchsitename_cotnr" id="gsfx_srchsitename_div0">Search Microsoft Support</div></div><div class="gsfx_optsub_cotnr"><div class="gsfx_srchoptimg_cotnr"><img class="gsfx_bsrch_chkimg" src="919829_files/ss_check.png" id="gsfx_bsrch_sitesel_img1"></div><div class="gsfx_srchsitename_cotnr" id="gsfx_srchsitename_div1">Search Microsoft.com</div></div><div class="gsfx_optsub_cotnr"><div class="gsfx_srchoptimg_cotnr"><img class="gsfx_bsrch_chkimg" src="919829_files/ss_check.png" id="gsfx_bsrch_sitesel_img2"></div><div class="gsfx_srchsitename_cotnr" id="gsfx_srchsitename_div2">Search the web</div></div></div></div></div></div>
+    
+    <div id="gsfx_cat_sel" onmouseover="ChangeBackground(this, true)" onmouseout="ChangeBackground(this, false)" onclick="ShowHideLangSel(event)" style="display: none;">
+    <div id="gsfx_cat_sel_ie6" onmouseover="ChangeBackground(this, true)" onmouseout="ChangeBackground(this, false)" style="display: none;"></div>
+    
+        
+                <input id="catalog" name="catalog" value="LCID=1033" type="hidden">
+    
+
+    </div>
+    <div id="gsfx_bsrch_logo_div">
+    <img alt="" class="gsfx_img_png" style="width: 51px; height: 17px;" src="919829_files/bing_logo_white.png" onclick="CallWebSearch('http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d','http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d');" id="gsfx_bsrch_logo"><!--[if lte IE 6]><div alt="" class="gsfx_div_png" style="width:51px;height:17px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/CN/bing_logo_white.png', sizingMethod='scale');" onclick="CallWebSearch('http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d','http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d');" id="gsfx_bsrch_logo"></div><![endif]-->
+    </div>
+    <br>
+    </div>
+    <script type="text/javascript">try{MS.Support.AC.MakeAutoComplete({id:'gsfx_bsrch_query', lcid:'1033', acURL:'http://autocomplete.support.microsoft.com', statsObj:StatsDotNet, startChar:'4', bubbleside:'left'});}catch(e){}</script><script type="text/javascript">supportedSites.push(new Site('Search Microsoft Support', '\x2fsearch\x2fdefault.aspx', true));supportedSites.push(new Site('Search Microsoft.com', 'http\x3a\x2f\x2fsearch.microsoft.com\x2fresults.aspx\x3fmkt\x3den-us\x26q\x3d', false));supportedSites.push(new Site('Search the web', 'http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d', false));</script>
+    
+        <!--div id="gsfx_bsrch_poweredbycell" class="gsfx_brnd_NetworkTextRight">
+            
+        </div-->
+    
+        
+    <div class="hiddenformels">
+        <input name="mode" value="r" type="hidden">
+    </div>
+    <noscript>
+        <style type="text/css">
+            #gsfx_bsrch_catsel a {display:none;} 
+            #gsfx_bsrch_websrch {display:none;}
+            #gsfx_bsrch_query{font-style:normal;color:Black;}
+        </style>
+        <!--[if lte IE 6]>
+        <style>
+        #gsfx_bsrch_bg_ie6{display:block;right:1px}
+        </style><![endif]-->
+    </noscript>
+</form>
+                </div>
+            </div>
+        </div>
+        <div id="gsfx_brnd_TopCorners" class="gsfx_brnd_CornerContainer">
+            <div class="gsfx_brnd_TBBorders gsfx_brnd_TransBG" id="gsfx_brnd_TopBorder">
+            </div>
+            <div class="gsfx_brnd_Corner" id="gsfx_brnd_LUpperCorner">
+            </div>
+        </div>
+        <div id="gsfx_brnd_LocalToolBar" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder"><ul id="gsfx_brnd_LocalLinks"><li class="gsfx_brnd_LocalLink"><a href="http://support.microsoft.com/" id="L_153581"><span>Support Home</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="http://support.microsoft.com/select/?target=hub" id="L_153582"><span>Solution Centers</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="http://support.microsoft.com/search/?adv=1" id="L_153583"><span>Advanced Search</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="http://store.microsoft.com/home.aspx?WT.mc_id=SMCBAR_ENUS_TEXT_BUY" id="L_195944"><span>Shop</span></a></li></ul></div>
+        
+        <div id="gsfx_brnd_ToolbarShadow" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder"><div id="gsfx_brnd_shadow"></div></div>
+        
+        <div id="gsfx_brnd_ContentContainer" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder">
+            <div style="height: 266px;" id="contentArea">            
+
+<div id="mainRow"><div class="primaryTable"><table class="primaryTable" cellpadding="0" cellspacing="0"><tbody><tr><td class="primaryMainColumn"><div id="mainColumn"><div style="display: block;" class="SocialMedia"><div class="SocialMedia_out"><div class="smlist"><a href="mailto:?subject=The%20Debug%20in%20Zone%20feature%20appears%20to%20remain%20enabled%20after%20you%20disable%20the%20Visual%20Studio%20hosting%20process%20in%20Visual%20Studio%202005&amp;body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%2fkb%2f919829" id="EmailPage" title="E-mail this page" onclick="return MS_HandleClick(this,'SupportTools', true);"><img alt="E-mail this page" class="gsfx_img_png" src="919829_files/email_20x.png"></a></div><div class="smlist"><a href="http://support.microsoft.com/gp/noscript" id="PrintPage" title="Print this page" onclick="return MS_HandleClick(this,'SupportTools', true);"><img alt="Print this page" class="gsfx_img_png" src="919829_files/printer_20x.png"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Windows%20Live','smcsocialbookmark','https://favorites.live.com/quickadd.aspx?marklet=1&amp;url=','&amp;title=');"><img src="919829_files/windows_16.png" alt="Share on Windows Live"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Facebook','smcsocialbookmark','http://www.facebook.com/share.php?u=','');"><img src="919829_files/facebook_16.png" alt="Share on Facebook"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Twitter','smcsocialbookmark','http://twitter.com/share/?url=','&amp;text=');"><img src="919829_files/twitter_16.png" alt="Share on Twitter"></a></div><div name="gss_socialmedia" class="gss_socialmedia"><a class="SM_Collapse" href="javascript:void(0);" onclick="SMCollapseExpand(this)"></a><div class="SMdetail" name="gss_SocialMedia_detail" style="display: none;"><div class="SMdetail_inner"><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Linkedin','smcsocialbookmark','http://www.linkedin.com/shareArticle?url=','&amp;title=');"><img src="919829_files/linkedin_16.png" alt="Share on Linkedin"><span>Linkedin</span></a></div><div><a href="javascript:AddtoSocialMedia('Digg%20it','smcsocialbookmark','http://digg.com/submit?url=','&amp;title=');"><img src="919829_files/digg_alt_16.png" alt="Share on Digg it"><span>Digg it</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Yahoo','smcsocialbookmark','http://bookmarks.yahoo.com/toolbar/savebm?u=','&amp;t=');"><img src="919829_files/yahoo_16.png" alt="Share on Yahoo"><span>Yahoo</span></a></div><div><a href="javascript:AddtoSocialMedia('Delicious','smcsocialbookmark','http://www.delicious.com/save?url=','&amp;title=');"><img src="919829_files/delicious_16.png" alt="Share on Delicious"><span>Delici..</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('StumbleUpon','smcsocialbookmark','http://www.stumbleupon.com/submit?url=','&amp;title=');"><img src="919829_files/stumbleupon_16.png" alt="Share on StumbleUpon"><span>Stumbl..</span></a></div><div><a href="javascript:AddtoSocialMedia('Yammer','smcsocialbookmark','https://www.yammer.com/home/bookmarklet?v=1&amp;u=','&amp;t=');"><img src="919829_files/yammer_16.png" alt="Share on Yammer"><span>Yammer</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Reddit','smcsocialbookmark','http://www.reddit.com/submit?url=','&amp;title=');"><img src="919829_files/reddit_16.png" alt="Share on Reddit"><span>Reddit</span></a></div><div><a href="javascript:AddtoSocialMedia('Technorati','smcsocialbookmark','http://technorati.com/faves?add=','');"><img src="919829_files/technorati_16.png" alt="Share on Technorati"><span>Techno..</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('FriendFeed','smcsocialbookmark','http://friendfeed.com/share?url=','');"><img src="919829_files/friendfeed_16.png" alt="Share on FriendFeed"><span>Friend..</span></a></div></div></div></div></div></div></div><div id="kb" class="kb"><div id="kb_default" class="kb_default ltr"><!-- - -KB 3 start- - --><a id="top"></a><div class="articleProperty">Article ID: 919829 - Last Review: July 28, 2006 - Revision: 1.0</div><h1 class="title">The Debug in Zone feature appears to remain enabled after you disable the Visual Studio hosting process in Visual Studio 2005</h1><div class="appliesToLink"><a href="#appliesto">View products that this article applies to.</a></div><script type="text/javascript">if (!loadTOCNode) {var loadTOCNode = function(){}}</script><div class="notice"></div><div id="kb_section" class="section"><div id="kb_expandcollapseall" class="expandcollapseall_open"><a href="javascript:void(0);" class="expandalltext">Expand all</a> | <a href="javascript:void(0);" class="collapsealltext">Collapse all</a><script type="text/javascript">
+                    if (kb_page_object)
+                    {
+                    kb_page_object.kb_imageExpandHoverText = 'Click to expand this image';
+                    }
+                </script></div><h2 class="subTitle" id="tocHeadRef"><div class="kb_tabs_toggle kb_tabs_toggle_open"></div><span><a href="javascript:void(0);">SYMPTOMS</a></span><div class="sectionpreview_closed">Consider the following scenario. You create a solution in Microsoft Visual Studi...</div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'symptoms');
+                        </script><div style="margin-left: 195px;" class="sbody">Consider
+ the following scenario. You create a solution in Microsoft Visual 
+Studio 2005. You enable the Debug in Zone feature on the <strong class="uiterm">Security</strong> tab for the project properties. You disable the Visual Studio hosting process on the <strong class="uiterm">Debug</strong> tab for the project properties. You press F5 to debug the solution. You receive an error message that resembles the following:<div class="kb_errormsgbody"><div class="kb_errorcontent"><div class="errormsg">The
+ security debugging option is set but it requires the Visual Studio 
+hosting process which is unavailable in this debugging configuration. 
+The security debugging option will be disabled. This option may be 
+re-enabled in the Security property page. The debugging session will 
+continue without security debugging.</div></div></div>In this scenario, when you click <strong class="uiterm">OK</strong>, the Debug in Zone feature is disabled. However, when you click the <strong class="uiterm">Security</strong> tab for the project properties, the Debug in Zone feature appears to be enabled.<div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><div class="kb_tabs_toggle kb_tabs_toggle_open"></div><span><a href="javascript:void(0);">CAUSE</a></span><div class="sectionpreview_closed">The Debug in Zone feature requires the Visual Studio hosting process. When you e...</div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'cause');
+                        </script><div style="margin-left: 195px;" class="sbody">The
+ Debug in Zone feature requires the Visual Studio hosting process. When 
+you enable the Debug in Zone feature and you disable the Visual Studio 
+hosting process, Visual Studio 2005 disables the Debug in Zone feature.<br><br>However, Visual Studio 2005 does not disable the Debug in Zone feature by clearing the <strong class="uiterm">Enable ClickOnce Security Settings</strong> check box on the <strong class="uiterm">Security</strong>
+ tab for the project properties. This check box must remain selected to 
+make sure that manifest data is generated correctly for ClickOnce 
+application deployment. The Debug in Zone feature may appear to be 
+enabled. However,  it is not enabled.
+  <br><br>Instead, Visual Studio 2005 disables the Debug in Zone feature by clearing the <strong class="uiterm">Debug this application with the selected permission set</strong> check box in the advanced properties on the <strong class="uiterm">Security</strong> tab.<div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><div class="kb_tabs_toggle kb_tabs_toggle_open"></div><span><a href="javascript:void(0);">RESOLUTION</a></span><div class="sectionpreview_closed">To use the Debug in Zone feature, you must reenable the Visual Studio hosting pr...</div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'resolution');
+                        </script><div style="margin-left: 195px;" class="sbody">To
+ use the Debug in Zone feature, you must reenable the Visual Studio 
+hosting process. To reenable the Visual Studio hosting process, follow 
+these steps:<ol><li>Start Visual Studio 2005.</li><li>On the <strong class="uiterm">File</strong> menu, point to <strong class="uiterm">Open</strong>, and then click <strong class="uiterm">Project/Solution</strong>.</li><li>Locate the project that you want to open, and then click <strong class="uiterm">Open</strong>.</li><li>On the <strong class="uiterm">Project</strong> menu, click <strong class="uiterm"><var>Project</var> Properties</strong>.<br><br><b>Note </b><var>Project</var> represents the name of the project.</li><li>Click the <strong class="uiterm">Debug</strong> tab.</li><li>In the <strong class="uiterm">Enable Debuggers</strong> group, click to select the <strong class="uiterm">Enable the Visual Studio hosting process</strong> check box.</li></ol>After
+ you enable the Visual Studio hosting process, you can reenable the 
+Debug in Zone feature. To reenable the Debug in Zone feature after it 
+has been disabled by Visual Studio 2005, follow these steps:<ol><li>Start Visual Studio 2005.</li><li>On the <strong class="uiterm">File</strong> menu, point to <strong class="uiterm">Open</strong>, and then click <strong class="uiterm">Project/Solution</strong>.</li><li>Locate the project that you want to open, and then click <strong class="uiterm">Open</strong>.</li><li>On the <strong class="uiterm">Project</strong> menu, click <strong class="uiterm"><var>Project</var> Properties</strong>.<br><br><b>Note </b><var>Project</var> represents the name of the project.</li><li>Click the <strong class="uiterm">Security</strong> tab.</li><li>Click to select the <strong class="uiterm">Enable ClickOnce Security Settings</strong> check box, and then click to select the <strong class="uiterm">This is a partial trust application</strong> check box.</li><li>Click <strong class="uiterm">Advanced</strong>.</li><li>Click to select the <strong class="uiterm">Debug this application with the selected permission set</strong> check box, and then click <strong class="uiterm">OK</strong>.</li></ol><div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><div class="kb_tabs_toggle kb_tabs_toggle_open"></div><span><a href="javascript:void(0);">STATUS</a></span><div class="sectionpreview_closed">This behavior is by design.</div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'status');
+                        </script><div style="margin-left: 195px;" class="sbody"> This behavior is by design.<div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><div class="kb_tabs_toggle kb_tabs_toggle_open"></div><span><a href="javascript:void(0);">MORE INFORMATION</a></span><div class="sectionpreview_closed">For more information about debugging and the Visual Studio hosting process, visi...</div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'moreinformation');
+                        </script><div style="margin-left: 195px;" class="sbody">For
+ more information about debugging and the Visual Studio hosting process,
+ visit the following Microsoft Developer Network (MSDN) Web site:
+<div class="indent"><a href="http://msdn2.microsoft.com/en-us/library/ms242202.aspx">http://msdn2.microsoft.com/en-us/library/ms242202.aspx</a><span class="pLink">
+            (http://msdn2.microsoft.com/en-us/library/ms242202.aspx)
+        </span><span class="kb_space"></span></div><div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div></div><div style="margin-left: 195px;" class="sbody norollup"><div class="appliesTo"><hr><a id="appliesto"></a><h5>APPLIES TO</h5><ul><li>Microsoft Visual Studio 2005 Express Edition</li><li>Microsoft Visual Studio 2005 Professional Edition</li><li>Microsoft Visual Studio 2005 Standard Edition</li><li>Microsoft Visual Studio 2005 Team Foundation</li></ul></div><div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div><div class="keywords"><table><tbody><tr><td class="header"><h5>Keywords:&nbsp;
+                            </h5></td><td class="text">kbtshoot kbprb KB919829</td></tr></tbody></table></div><div class="topOfPage"><a href="#top"><img src="919829_files/uparrow.gif" alt="">Back to the top</a></div></div><!-- - -KB 3 end- - --></div></div><span class="bookmark"><a id="survey" name="survey">&nbsp;</a></span><div class="wp" id="fmsSurvey" style="display: block;"><div class="fms"><noscript><div class="SURVEYNOSCRIPT"></div></noscript><input id="surveyname" name="surveyname" value="" type="hidden"><input id="showpage" name="showpage" value="1" type="hidden"><div id="SURVEYSECTIONCONTAINER"><div id="SURVEYSECTION_132" class="SURVEYSECTION" style="display: block;" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><input name="id" value="132" type="hidden"><input name="CompoundingBranchRules" value="" type="hidden"><input name="NextSectionByTopicRef" value="0" type="hidden"><div id="SURVEYQUESTION_9089" class="QUESTIONCONTAINER"><input name="id" value="9089" type="hidden"><input name="type" value="LABEL" type="hidden"><input name="required" value="0" type="hidden"><div class="QUESTIONTEXT"><h5>Provide feedback on this information</h5></div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div></div><div id="SURVEYQUESTION_9088" class="QUESTIONCONTAINER"><input name="id" value="9088" type="hidden"><input name="type" value="CHOICE" type="hidden"><input name="required" value="0" type="hidden"><div class="QUESTIONTEXT">Did this information solve your problem?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input name="randomization" value="" type="hidden"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr style="display: table-row;"><td style="display: table-cell;" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="CHOICEROW" valign="top"><input name="QUESTION_132_90889088" id="14471" value="0" type="radio"></td><td class="ANSWERTEXT">Yes</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td style="display: table-cell;" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="CHOICEROW" valign="top"><input name="QUESTION_132_90889088" id="14472" value="1" type="radio"></td><td class="ANSWERTEXT">No</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td style="display: table-cell;" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="CHOICEROW" valign="top"><input name="QUESTION_132_90889088" id="14473" value="2" type="radio"></td><td class="ANSWERTEXT">I don't know</td></tr></tbody></table></td></tr></tbody></table></div><div id="SURVEYQUESTION_9086" class="QUESTIONCONTAINER"><input name="id" value="9086" type="hidden"><input name="type" value="CHOICE" type="hidden"><input name="required" value="0" type="hidden"><div class="QUESTIONTEXT">Was this information relevant?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input name="randomization" value="" type="hidden"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr style="display: table-row;"><td style="display: table-cell;" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="CHOICEROW" valign="top"><input name="QUESTION_132_90869086" id="14471" value="0" type="radio"></td><td class="ANSWERTEXT">Yes</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td style="display: table-cell;" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="CHOICEROW" valign="top"><input name="QUESTION_132_90869086" id="14472" value="1" type="radio"></td><td class="ANSWERTEXT">No</td></tr></tbody></table></td></tr></tbody></table></div><div id="SURVEYQUESTION_9087" class="QUESTIONCONTAINER"><input name="id" value="9087" type="hidden"><input name="type" value="TEXT-BLOCK" type="hidden"><input name="required" value="0" type="hidden"><div class="QUESTIONTEXT">What can we do to improve this information?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><textarea class="ANSWERBOX" name="TEXTBLOCK_9087" rows="6" cols="80" onpaste="enforceMaxLength(this,500,event)" onkeydown="enforceMaxLength(this,500,event)"></textarea></div><div id="SURVEYQUESTION_7813" class="QUESTIONCONTAINER"><input name="id" value="7813" type="hidden"><input name="type" value="LABEL" type="hidden"><input name="required" value="0" type="hidden"><div class="QUESTIONTEXT">To protect your privacy, do not include contact information in your feedback.</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER"><tbody><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL"><input class="NAVBUTTON" value="Submit" onclick="kbSurvey.next();this.blur();" type="button"></td><td class="ENDPADDINGCELL"></td></tr></tbody></table></div></div><div id="DIV_CLOSE" style="display: none;" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><div class="SURVEYTHANKYOUCONTAINER"><div class="SURVEYINTROTEXT">Thank you! Your feedback is used to help us improve our support content. For more assistance options, please visit the <a href="http://support.microsoft.com/">Help and Support Home Page</a>.</div></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER" nowrap="yes"><tbody><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL"></td><td class="ENDPADDINGCELL"></td></tr></tbody></table></div></div></div></div></div><script type="text/javascript">
+			var kbSurvey = new MS.Support.Fms.Survey("fmsSurvey");
+			kbSurvey.isKBEmbedded = true;
+			kbSurvey.addSubmitField('REGIONID', 'en-us');
+			kbSurvey.addSubmitField('SITE', 'gn');
+			kbSurvey.addSubmitField('SURVEYSCID', 'sw;en;1496');
+			kbSurvey.addSubmitField('SURVEYID', '1496');
+			kbSurvey.addSubmitField('SURVEYNAME', '');
+			kbSurvey.addSubmitField('BROWSERLANGCODE', 'en-us,en\x3bq\x3d0.5');
+			kbSurvey.addSubmitField('SURVEYLANGCODE', 'en');
+			kbSurvey.addSubmitField('FMSURL', '%252fdefault.aspx%252fkb%252f919829');
+			kbSurvey.parameters = ['kb','en-us','919829','','','','','','',''];
+			kbSurvey.maxKBsInCookie = '10';
+			kbSurvey.kbvisited = '';
+		</script><div style="display: block;" class="SocialMedia"><div class="SocialMedia_out"><div class="smlist"><a href="mailto:?subject=The%20Debug%20in%20Zone%20feature%20appears%20to%20remain%20enabled%20after%20you%20disable%20the%20Visual%20Studio%20hosting%20process%20in%20Visual%20Studio%202005&amp;body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%2fkb%2f919829" id="EmailPage" title="E-mail this page" onclick="return MS_HandleClick(this,'SupportTools', true);"><img alt="E-mail this page" class="gsfx_img_png" src="919829_files/email_20x.png"></a></div><div class="smlist"><a href="http://support.microsoft.com/gp/noscript" id="PrintPage" title="Print this page" onclick="return MS_HandleClick(this,'SupportTools', true);"><img alt="Print this page" class="gsfx_img_png" src="919829_files/printer_20x.png"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Windows%20Live','smcsocialbookmark_footer','https://favorites.live.com/quickadd.aspx?marklet=1&amp;url=','&amp;title=');"><img src="919829_files/windows_16.png" alt="Share on Windows Live"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Facebook','smcsocialbookmark_footer','http://www.facebook.com/share.php?u=','');"><img src="919829_files/facebook_16.png" alt="Share on Facebook"></a></div><div class="smlist"><a href="javascript:AddtoSocialMedia('Twitter','smcsocialbookmark_footer','http://twitter.com/share/?url=','&amp;text=');"><img src="919829_files/twitter_16.png" alt="Share on Twitter"></a></div><div name="gss_socialmedia" class="gss_socialmedia"><a class="SM_Collapse" href="javascript:void(0);" onclick="SMCollapseExpand(this)"></a><div class="SMdetail" name="gss_SocialMedia_detail" style="display: none;"><div class="SMdetail_inner"><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Linkedin','smcsocialbookmark_footer','http://www.linkedin.com/shareArticle?url=','&amp;title=');"><img src="919829_files/linkedin_16.png" alt="Share on Linkedin"><span>Linkedin</span></a></div><div><a href="javascript:AddtoSocialMedia('Digg%20it','smcsocialbookmark_footer','http://digg.com/submit?url=','&amp;title=');"><img src="919829_files/digg_alt_16.png" alt="Share on Digg it"><span>Digg it</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Yahoo','smcsocialbookmark_footer','http://bookmarks.yahoo.com/toolbar/savebm?u=','&amp;t=');"><img src="919829_files/yahoo_16.png" alt="Share on Yahoo"><span>Yahoo</span></a></div><div><a href="javascript:AddtoSocialMedia('Delicious','smcsocialbookmark_footer','http://www.delicious.com/save?url=','&amp;title=');"><img src="919829_files/delicious_16.png" alt="Share on Delicious"><span>Delici..</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('StumbleUpon','smcsocialbookmark_footer','http://www.stumbleupon.com/submit?url=','&amp;title=');"><img src="919829_files/stumbleupon_16.png" alt="Share on StumbleUpon"><span>Stumbl..</span></a></div><div><a href="javascript:AddtoSocialMedia('Yammer','smcsocialbookmark_footer','https://www.yammer.com/home/bookmarklet?v=1&amp;u=','&amp;t=');"><img src="919829_files/yammer_16.png" alt="Share on Yammer"><span>Yammer</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('Reddit','smcsocialbookmark_footer','http://www.reddit.com/submit?url=','&amp;title=');"><img src="919829_files/reddit_16.png" alt="Share on Reddit"><span>Reddit</span></a></div><div><a href="javascript:AddtoSocialMedia('Technorati','smcsocialbookmark_footer','http://technorati.com/faves?add=','');"><img src="919829_files/technorati_16.png" alt="Share on Technorati"><span>Techno..</span></a></div></div><div class="smrow"><div><a href="javascript:AddtoSocialMedia('FriendFeed','smcsocialbookmark_footer','http://friendfeed.com/share?url=','');"><img src="919829_files/friendfeed_16.png" alt="Share on FriendFeed"><span>Friend..</span></a></div></div></div></div></div></div></div></div></td><td class="primaryThinColumn gss_rightnav_withshadow"><div id="thinColumn" style="float: none;"><div id="MiniRouter"><span class="Mtitle">Other Resources</span><h3><span class="subtit">Other Support Sites</span><div class="MR_down"></div></h3><ul style="display: none;" id="OSS_MR"><li><a href="http://support.microsoft.com/select/?target=hub" id="L_206797">Solution Centers</a></li><li><a href="http://support.microsoft.com/fixit" id="L_206798">Microsoft Fix It Solutions</a></li><li><a href="http://windows.microsoft.com/en-us/windows/help" id="L_206799">Windows Help and How-to</a></li><li><a href="http://office.microsoft.com/" id="L_206800">Office Online</a></li><li><a href="https://partner.microsoft.com/" id="L_206801">Microsoft Partner Network</a></li></ul><h3><span class="subtit">Community</span><div class="MR_down"></div></h3><ul style="display: none;" id="Community_MR"><li><a href="http://answers.microsoft.com/" id="L_206802">Answers Forums</a></li><li><a href="http://social.technet.microsoft.com/Forums" id="L_206803">Technet Forums</a></li><li><a href="http://social.msdn.microsoft.com/Forums" id="L_206804">Microsoft Developer Network (MSDN)</a></li></ul><h3><span class="subtit">Get Help Now</span><div class="MR_down"></div></h3><div style="display: none;" class="gethelp" id="GetHelp_MR"><a href="http://support.microsoft.com/gethelp/default.aspx?content=kb;en-us;919829" id="L_206805" class="imglink"><img alt="" class="gsfx_img_png" src="919829_files/help_icon_48x48.png"></a><a href="http://support.microsoft.com/gethelp/default.aspx?content=kb;en-us;919829" id="L_206805" class="txtlink">Contact a Support Professional by Email, Online, or Phone</a></div><div class="space"></div></div><div class="wp articleTrans"><h3 style="background: none repeat scroll 0% 0% transparent;"><span class="MRlinkCon">Article Translations</span></h3></div><div id="ArticleTranslations"><div onclick="DisplayATList()" class="ATtext"><span>Arabic</span><a style="background-image: url(&quot;/library/images/support/CN/kb_dropdown_icon.png&quot;);"></a></div><div style="display: none; position: absolute;" id="ATList" name="scid"><ul><li><a href="http://support.microsoft.com/kb/919829/ar" onclick="ATClick('29803',this)">Arabic</a></li><li><a href="http://support.microsoft.com/kb/919829/cs" onclick="ATClick('29803',this)">Czech</a></li><li><a href="http://support.microsoft.com/kb/919829/fr" onclick="ATClick('29803',this)">French</a></li><li><a href="http://support.microsoft.com/kb/919829/de" onclick="ATClick('29803',this)">German</a></li><li><a href="http://support.microsoft.com/kb/919829/it" onclick="ATClick('29803',this)">Italian</a></li><li><a href="http://support.microsoft.com/kb/919829/ja" onclick="ATClick('29803',this)">Japanese</a></li><li><a href="http://support.microsoft.com/kb/919829/ko" onclick="ATClick('29803',this)">Korean</a></li><li><a href="http://support.microsoft.com/kb/919829/pt-br" onclick="ATClick('29803',this)">Portuguese (Brazil)</a></li><li><a href="http://support.microsoft.com/kb/919829/pt" onclick="ATClick('29803',this)">Portuguese (Portugal)</a></li><li><a href="http://support.microsoft.com/kb/919829/zh-cn" onclick="ATClick('29803',this)">Simplified Chinese</a></li><li><a href="http://support.microsoft.com/kb/919829/es" onclick="ATClick('29803',this)">Spanish</a></li><li><a href="http://support.microsoft.com/kb/919829/zh-tw" onclick="ATClick('29803',this)">Traditional Chinese</a></li><li><a href="http://support.microsoft.com/kb/919829/tr" onclick="ATClick('29803',this)">Turkish</a></li></ul></div></div><div id="gss_sticky_container_div"><img src="919829_files/gss_sticky_panel_top.png" id="gss_stickyheader_img"><div id="gss_stickyinner_div"><div class="gss_stickywebpart_div" id="divRelContent" style="display: block;"><div class="gss_stickytitle_div"><img src="919829_files/gss_sticky_panel_rc.png" class="gss_stickytitle_img"><span class="gss_stickytitle_span"><h6>View related content</h6></span></div><div class="wp" id="RelatedContent"><table class="LCT" cellspacing="0"><tbody><tr><td class="textColumn"><ul><li id="rc_0_tr"><span><a href="http://blogs.msdn.com/b/shawnfa/archive/2004/07/30/202468.aspx" id="rc_0" target="_blank" title="Whidbey's New SecurityException - .NET Security Blog - Site Home ..." onclick="return MS_HandleClick(this,'30001', true);">Whidbey's New SecurityException - .NET Security Blog - Site Home ...</a></span></li><li id="rc_1_tr"><span><a href="http://msdn.microsoft.com/en-us/library/aa923437.aspx" id="rc_1" target="_blank" title="UPnP AV Framework Debug Zones" onclick="return MS_HandleClick(this,'30001', true);">UPnP AV Framework Debug Zones</a></span></li><li id="rc_2_tr"><span><a href="http://msdn.microsoft.com/en-us/library/ms885451.aspx" id="rc_2" target="_blank" title="UPnP AV Framework Debug Zones" onclick="return MS_HandleClick(this,'30001', true);">UPnP AV Framework Debug Zones</a></span></li><li id="rc_3_tr"><span><a href="http://support.microsoft.com/kb/935935/en-us" id="rc_3" title="FIX: All the letters in the file name are displayed as lowercase ..." onclick="return MS_HandleClick(this,'30001', true);">FIX: All the letters in the file name are displayed as lowercase ...</a></span></li><li id="rc_4_tr"><span><a href="http://msdn.microsoft.com/en-us/library/ms247042.aspx" id="rc_4" target="_blank" title="Advanced Security Settings Dialog Box" onclick="return MS_HandleClick(this,'30001', true);">Advanced Security Settings Dialog Box</a></span></li></ul></td></tr></tbody></table></div></div><div class="gss_stickywebpart_div gss_stickywebpart_bottom_div" id="divRelTags" style="display: block;"><div class="gss_stickytitle_div"><img src="919829_files/gss_sticky_panel_rtags.png" class="gss_stickytitle_img"><span class="gss_stickytitle_span"><h6>Search related topics</h6></span></div><div class="wp" id="RelatedTags"><table class="LCT" cellspacing="0"><tbody><tr><td class="textColumn"><ul><li id="rt_0_tr"><span><a href="http://support.microsoft.com/search/default.aspx?query=Visual%20studio%202005%20debug%20in%20zone&amp;catalog=LCID%3D1033" id="rt_0" title="Visual studio 2005 debug in zone" onclick="return MS_HandleClick(this,'30000', true);">Visual studio 2005 debug in zone</a></span></li><li id="rt_1_tr"><span><a href="http://support.microsoft.com/search/default.aspx?query=Debug%20in%20zone&amp;catalog=LCID%3D1033" id="rt_1" title="Debug in zone" onclick="return MS_HandleClick(this,'30000', true);">Debug in zone</a></span></li><li id="rt_2_tr"><span><a href="http://support.microsoft.com/search/default.aspx?query=How%20to%20disable%20debug%20messages&amp;catalog=LCID%3D1033" id="rt_2" title="How to disable debug messages" onclick="return MS_HandleClick(this,'30000', true);">How to disable debug messages</a></span></li><li id="rt_3_tr"><span><a href="http://support.microsoft.com/search/default.aspx?query=Process%20security%20start%20session&amp;catalog=LCID%3D1033" id="rt_3" title="Process security start session" onclick="return MS_HandleClick(this,'30000', true);">Process security start session</a></span></li><li id="rt_4_tr"><span><a href="http://support.microsoft.com/search/default.aspx?query=SET%20PRINT%20ZONE&amp;catalog=LCID%3D1033" id="rt_4" title="SET PRINT ZONE" onclick="return MS_HandleClick(this,'30000', true);">SET PRINT ZONE</a></span></li></ul></td></tr></tbody></table></div></div><img src="919829_files/gss_sticky_panel_watermark.png" id="gss_stickywatermark_img"></div><img src="919829_files/gss_sticky_panel_footer.png" id="gss_stickyfooter_img"></div><div class="wp" id="RelatedSupportCenters"><table class="LCT" cellspacing="0"><tbody><tr><td class="textColumn"><h3 style="background: none repeat scroll 0% 0% transparent;"><span class="MRlinkCon">Related Support Centers</span></h3><ul><li><span><a href="http://support.microsoft.com/ph/3041">Visual Studio 2005</a></span></li><li><span><a href="http://support.microsoft.com/ph/1117">Visual Studio</a></span></li><li><span><a href="http://support.microsoft.com/ph/9488">Visual Studio 2005 Team System</a></span></li></ul></td></tr></tbody></table></div></div></td></tr></tbody></table></div></div><div id="bottomRow"><div class="wp getHelp"><table align="center" cellpadding="0" cellspacing="0"><tbody><tr><td class="image"><a href="http://support.microsoft.com/gethelp/default.aspx?content=kb;en-us;919829" id="L_174092"><img alt="" class="gsfx_img_png" src="919829_files/help_icon_48x48.png"></a></td><td class="text"><h3>Get Help Now</h3><a href="http://support.microsoft.com/gethelp/default.aspx?content=kb;en-us;919829" id="L_174092">Contact a support professional by E-mail, Online, or Phone</a></td></tr></tbody></table></div></div>
+                        
+            </div>
+        </div>
+        
+        <div id="gsfx_brnd_BottomCorners" class="gsfx_brnd_CornerContainer">
+            <div class="gsfx_brnd_TBBorders gsfx_brnd_TransBG" id="gsfx_brnd_BottomBorder"></div>
+            <div class="gsfx_brnd_Corner" id="gsfx_brnd_LLowerCorner"></div>
+        </div>
+        
+        <div id="gsfx_brnd_WidthFix"></div>
+        
+        <div id="gsfx_brnd_FooterContainer">
+            <div id="gsfx_brnd_SiteFooter" class="gsfx_brnd_NetworkLeft">
+                Microsoft Support
+            </div>
+
+            <table id="gsfx_brnd_NetworkFooter" class="gsfx_brnd_NetworkRight"><tbody><tr>
+                <td id="gsfx_brnd_FooterLinkContainer">
+                    <!--Table is wrapped in a div tag to facilitate proper alignment and stacking-->
+                    <div class="gsfx_brnd_FooterLinks" id="gsfx_brnd_SiteFooterLinks">
+                        <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->                        
+                        <table summary="Site Footer Links" class="gsfx_brnd_NetworkRight"><tbody><tr><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="javascript:window.open('http://mymfe.microsoft.com/support.microsoft.com/feedback.aspx?formid=24'%20+%20'&amp;UrlReferrer='%20%20+%20%20escape(document.referrer.toString()),%20'Feedback',%20'scrollbars=yes,menubar=no,titlebar=no,location=no,width=500,height=600,resizable=yes');void(0);" id="L_184649"><span>Feedback</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://support.microsoft.com/gp/csa" id="L_157327"><span>Services Agreement</span></a></td></tr></tbody></table>                        
+                    </div>
+                    
+
+                    <!--Table is wrapped in a div tag to facilitate proper alignment and stacking-->
+                    <div class="gsfx_brnd_FooterLinks" id="gsfx_brnd_NetworkFooterLinks">
+                        <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->
+                        <table summary="Network Footer Links" class="gsfx_brnd_NetworkRight"><tbody><tr><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://support.microsoft.com/contactus/?ws=support" id="L_153553"><span>Contact Us</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412892" id="L_153554"><span>Terms of Use</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412893" id="L_153555"><span>Trademarks</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412894" id="L_153556"><span>Privacy Statement</span></a></td></tr></tbody></table>
+                    </div>
+                </td>
+                <td id="gsfx_brnd_copyright_container">
+                    <div id="gsfx_brnd_MSLogoContainer">
+                        <!--[if lte IE 6]><div id="gsfx_brnd_legacy_MSLogo"></div><![endif]-->
+                        <img id="gsfx_brnd_MSLogo" alt="Microsoft" src="919829_files/gsfx_brnd_ms_logo_sml_blk.png">
+                        <img id="gsfx_brnd_MSLogoPrint" alt="Microsoft" src="919829_files/gsfx_brnd_ms_logo_sml_blk.png">
+                    </div>
+                    <span id="gsfx_brnd_copyright">©2010 Microsoft</span>
+                </td>
+            </tr></tbody></table>
+        </div>
+    </div>
+</div>
+</div>
+<style type="text/css">   
+    #gsfx_brnd_CenterContent, #gsfx_brnd_PageWrapper
+    {
+        background: url('') repeat-x bottom;
+    }    
+</style>
+<script type="text/javascript" src="919829_files/branding.js"></script><script type="text/javascript" src="919829_files/wtInit.js"></script><script type="text/javascript" src="919829_files/wtCore.js"></script><noscript><img alt="" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsxia05c00000s926v0z4tru_3w4l/njs.gif?dcsuri=/nojavascript&WT.js=No" /></noscript><img id="webmetriximg" alt="" src="919829_files/trans_pixel.gif"><noscript><img id="StatsDotNetImgNoScript" alt="" src="http://support.microsoft.com/LTS/default.aspx?SSID=1&#38;SiteLCID=1033&#38;SsVersion=GSS6.2&#38;SiteCulture=en-us&#38;ContentCulture=en-us&#38;In404Url=&#38;EventCollectionID=1&#38;URL=%2fdefault.aspx&#38;ContentType=kb&#38;ContentLCID=1033&#38;ContentID=919829&#38;Platform=windows%20nt%205.1&#38;BrandID=1&#38;flexValue2=64&#38;flexValue8=0&#38;ContentProperties=6%3d9%7c7%3d1.0%7c9%3dkbAudDeveloper%20%20%7c" /></noscript><img id="StatsDotNetImg" name="StatsDotNetImg" alt="" src="919829_files/default.gif"><script type="text/javascript">StatsDotNet.disabled=false;StatsDotNet.enableCollTierParams=true;StatsDotNet.host='http\x3a\x2f\x2fsupport.microsoft.com\x2fLTS\x2fdefault.aspx';StatsDotNet.ssId='1';StatsDotNet.siteLcId='1033';StatsDotNet.SiteCulture='en-us';StatsDotNet.SsVersion='GSS6.2';StatsDotNet.url='\x2fdefault.aspx';StatsDotNet.ContentCulture ='en-us';StatsDotNet.contentType='kb';StatsDotNet.contentLn='1033';StatsDotNet.contentId='919829';StatsDotNet.platform='windows nt 5.1';StatsDotNet.eventCollectionId=1;StatsDotNet.siteBrandId='1';StatsDotNet.onUnloadTimeout=300;StatsDotNet.ltsIdleTimeout=5000;StatsDotNet.userAgentString='mozilla\x2f5.0 \x28windows\x3b u\x3b windows nt 5.1\x3b en-us\x3b rv\x3a1.9.2.11\x29 gecko\x2f20101012 firefox\x2f3.6.11';StatsDotNet.ContentProperties='6\x3d9\x7c7\x3d1.0\x7c9\x3dkbAudDeveloper  \x7c';StatsDotNet.flexValue2='64';StatsDotNet.flexValue8='0';</script><script type="text/javascript">var enableSiteSurvey = true;function isDomainTracking(){var entry = MS.Support.Fms.CookieUtil.getCookie('fmshb');if (entry){try{return entry.split(',')[0] == '1' ? true : false;}catch (e){return false;}}return false;};window.setInterval(function(){MS.Support.Fms.CookieUtil.setSessionCookie('fmshb', (isDomainTracking() ? '1' : '0') + ',' + (new Date()).getTime());}, 1000);function fmsLastExp(){var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts =  visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return 0;}return parseInt(parts[2]);};function fmsSurveyExpired(days){var MiliDay = 86400000;var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts = visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return true;};var origDate = parseInt(parts[1]);var curDate = new Date();return (curDate.getTime()/MiliDay - days) >= origDate;};function activateSiteSurvey (){if(window.top == window && !isDomainTracking() && typeof(enableSiteSurvey) != "undefined" && enableSiteSurvey && fmsSurveyExpired(fmsLastExp())){document.write('<script language="javascript" src="/library/svy/broker.js"></scr'+'ipt>');}};var triggerEntity = {CookieDef:'ST_GN_EN-US',Site:'gn',Region:'en-us',IsRTL:false,Scid:"sw;en;1699",Xsl:"",Path:"/common/survey.aspx",IdValue: '',EmbedSurveyPrompt: 'nothing',Expiration:90,Delay:0,Frequency:336,SurveyStyle:"popup",DisplayIntroPage:1,EmailStyle:0,EmailSurveyID:"",ReferringURL:'http\x3a\x2f\x2fsupport.microsoft.com\x2fdefault.aspx\x2fkb\x2f919829',Event:"OnUnload",TriggerId:"12243",IntervalType:"session",Redirect:"",OptOut:0,AltStyle: '',RenderOption: '',InvitationWidth: 0,PageWidth: 0,PageHeight: 0,AnimationDuration:0.5,Parameters:['kb','en-us','919829','','','','','','',''],Theme:"gn",Toolbar:"",Contains:"sub-domain",Pages:[],TrackingText:'Thank you for agreeing to participate in the Microsoft online survey.\u00a0 Please look at the support.microsoft.com Web site the way you normally would and then come back and answer the survey questions that will appear in this window.\u00a0 The questions will appear after you leave the web pages for which Microsoft is seeking your feedback.'};new MS.Support.Fms.SurveyTrigger(triggerEntity, typeof config != "undefined" ? config : null);</script><script language="javascript" src="919829_files/broker.js"></script><script language="JavaScript" src="919829_files/SiteRecruit_PageConfiguration_2944mt.js"></script><script type="text/javascript">function thisLoad(){SocialMediaInit();SocialMediaInit();makeAjaxCall('LoadRelatedContent','919829\x3ben-us');makeAjaxCall('LoadRelatedTags','919829\x3ben-us');KBFeedBackShowSurvey();CreateSearchOptions('acListWrappergsfx_bsrch_query', 306);SetCatLangPos();InitSrch();InitAC('gsfx_bsrch_query');$(document).ready(function() {gsfx_bsrch_InitCatSelection('gsfx_bsrch_query', '4:');});MS_WebMetrix('http\x3a\x2f\x2fc.microsoft.com\x2ftrans_pixel.asp\x3fTYPE\x3dSSPV\x26SOURCE\x3dSUPPORT\x26GUID\x3d1F4FC18C-F71E-47fb-8FC9-612F8EE59C61\x26URI\x3d\x252fgn\x252fen-us\x252fkb_en-us_919829\x26R\x3dhttp\x253a\x252f\x252fwww.google.com\x252furl\x253fsa\x253dt\x2526source\x253dweb\x2526cd\x253d1\x2526ved\x253d0CBUQFjAA\x2526url\x253dhttp\x25253A\x25252F\x25252Fsupport.microsoft.com\x25252Fkb\x25252F919829\x2526rct\x253dj\x2526q\x253dsceurity\x252520debugging\x252520option\x252520will\x252520be\x252520disabled\x252520xna\x2526ei\x253dAZrETPP_CYSOvQPB_4HgCA\x2526usg\x253dAFQjCNHoS-0cj_lino9wtqWcB79hHF3FiQ\x2526sig2\x253dhN4OYbpM30MHs8EPKdh0kA\x2526cad\x253drja');StatsDotNet.LogPageOnLoad();}function thisUnload(){}</script><script src="919829_files/gsfxsurvey.js" type="text/javascript"></script></body></html>

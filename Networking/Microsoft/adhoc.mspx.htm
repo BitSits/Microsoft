@@ -1,0 +1,196 @@
+<html dir="LTR"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><meta name="MS.LOCALE" content="en-us"><title>Windows XP: Set up a wireless network without a router</title><meta name="description" content="If you have more than one computer, you can set up a wireless network without using a wireless router."><meta name="keywords" content="Windows XP, home network, wireless network, Internet Connection Sharing"><meta name="search.mnp.template" content="MNP2.GenericArticle"><link type="text/css" rel="Stylesheet" href="adhoc.mspx_files/templatecss.css"><style>
+          #contentTableDIV{padding: 0px 15px 0px 20px}
+        </style><meta name="title" content="Windows XP: Set up a wireless network without a router" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="pageTitle" content="Set up a wireless network without a router" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="description" content="If you have more than one computer, you can set up a wireless network without using a wireless router." xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="keywords" content="Windows XP, home network, wireless network, Internet Connection Sharing" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="publishedDate" content="2006-08-15" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="owner" content="Microsoft Corporation" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="author" content="Microsoft" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas">
+<link type="text/css" rel="Stylesheet" href="adhoc.mspx_files/css.css">
+<script type="text/javascript" language="Javascript" src="adhoc.mspx_files/menujs"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><link rel="stylesheet" type="text/css" href="adhoc.mspx_files/css_002.css"><script language="JavaScript">var doImage=doImage;var TType=TType;var defaultSearchLable;
+function mhHover(tbl,idx,cls){var t,d;if(document.getElementById)t=document.getElementById(tbl);else t=document.all(tbl);if(t==null)return;if(t.getElementsByTagName)d=t.getElementsByTagName("TD");else d=t.all.tags("TD");if(d==null)return;if(d.length<=idx)return;d[idx].className=cls;}
+function footerjs(doc){if(doImage==null){var tt=TType==null?"PV":TType;doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=www&TYPE=' + tt + '&p=windowsxp_using_networking_setup&URI=%2fwindowsxp%2fusing%2fnetworking%2fsetup%2fadhoc.mspx&GUID=1F4FC18C-F71E-47FB-8FC9-612F8EE59C61&lc=en-us" width=0 height=0 hspace=0 vspace=0 border=0 alt=""/></div></layer>');}}
+var rsltextbox = 'msviLSBtbox'; var wtflag = false;
+function stripSymbols () { var objrslttextbox = getObjectById(rsltextbox); if (objrslttextbox) { var form = objrslttextbox.form; var s = objrslttextbox.value; filteredValues = "<>!@^*"; var i; var returnString = ""; for (i = 0; i < s.length; i++) { var c = s.charAt(i); if (filteredValues.indexOf(c) == -1) { returnString += c; } else { returnString += " "; } } objrslttextbox.value = returnString; } if(!wtflag) { trackLSB("Site"); } } 
+function addSubmitEvent() {
+ msviLSBtbox=document.getElementById("msviLSBtbox")
+ if(msviLSBtbox)
+ {
+    defaultSearchLable = msviLSBtbox.value;
+ }
+ var objrslttextbox = getObjectById(rsltextbox); 
+ if (objrslttextbox) 
+ { 
+    var form = objrslttextbox.form;
+     if (window.attachEvent) 
+     { 
+         form.attachEvent("onsubmit",stripSymbols); 
+     }
+     else 
+     { 
+        form.addEventListener("submit",stripSymbols,false);
+     }
+  } 
+} 
+function getObjectById(elid) 
+{ 
+    if (document.getElementById) 
+    { 
+        return document.getElementById(elid); 
+    } 
+    else if (document.all) 
+    { 
+        return document.all[elid]; 
+    } 
+    else if (document.layers) 
+    { 
+        return document.layers[elid];
+    } 
+} 
+if (window.attachEvent) { window.attachEvent("onload",addSubmitEvent); } else { window.addEventListener("load",addSubmitEvent,false); } 
+var FromWeb = false;
+function trackLSB(type)
+{
+
+  clearDefaultSearchLable();
+ 
+  if(type=="Web")
+    FromWeb = true;
+  var tmp = document.getElementById("msviLSBtbox");
+  var errorInfo = document.getElementById("errorInfo");
+  if(type=="Site" && tmp.value.length==0 && !FromWeb)
+  {
+       tmp.value=errorInfo.value;
+       tmp.style.color='#bc2b2b';
+       ajustWidth();
+  }
+  if (typeof dcsMultiTrack == "function")
+  { 
+      var qu = document.getElementById("msviLSBtbox").value;
+      var dcsuri = "results.aspx";
+      var dcssip, ti;
+      if (type == "Site")
+      {
+        dcssip = "search.microsoft.com";
+        ti = "SearchButton: OnSite"; 
+      }
+      else if (type == "Web")
+      {
+         dcssip = "bing.com";
+         ti = "SearchButton: Web";
+      }
+      dcsMultiTrack("DCS.dcsuri", dcsuri, "DCS.dcssip", dcssip, "WT.ti", ti, "WT.dl", "2", "WT.z_srch_t", qu, "DCS.dcsqry", "", "WT.ad", "", "WT.mc_id", ""); 
+      wtflag = true; DCS.dcsuri=DCS.dcssip=DCS.dcsqry=WT.ti=WT.z_srch_t="";
+  }
+}
+
+var isInputqu = false;
+var searchBoxWidthWithKievLogo = 0;
+var searchBoxWidthWithoutKievLogo = 0;
+function clearDefaultSearchLable()
+{var searchBox = document.getElementById("msviLSBtbox");
+if(!isInputqu){searchBox.value = "";}}
+var kievImageWidth = 47;
+var isAdTboxWidth = false;
+var isInitailed = false;
+function ajustWidth()
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(!isInitailed)
+    {
+         searchBoxWidthWithKievLogo = searchBoxInput.style.width;
+         searchBoxWidthWithoutKievLogo = searchBoxInput.clientWidth + (kievImageWidth - 1);
+         isInitailed = true;
+    }
+    var width = kievImage.clientWidth-1;
+    kievImage.style.width = '1px';
+    var tBoxAloneWidth = searchBoxInput.clientWidth + width;
+    searchBoxInput.style.width = tBoxAloneWidth;
+    isAdTboxWidth = true;
+    
+      
+    
+}
+
+function searchBoxFocused(defaultSearchLabel)
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(searchBoxInput.value == defaultSearchLabel || searchBoxInput.value==document.getElementById("errorInfo").value)
+    {
+        searchBoxInput.value = '';
+        searchBoxInput.style.fontStyle = '';
+        searchBoxInput.style.color='#000000';
+        kievImage.style.width = '1px';
+        if(searchBoxWidthWithKievLogo == 0 && !isAdTboxWidth &&!isInitailed)
+        {
+            searchBoxWidthWithKievLogo = searchBoxInput.style.width;
+            searchBoxWidthWithoutKievLogo = searchBoxInput.clientWidth + (kievImageWidth - 1);
+            isInitailed = true;
+        }
+        searchBoxInput.style.width = searchBoxWidthWithoutKievLogo;
+    }
+}
+
+function searchBoxBlur(defaultSearchLabel)
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(searchBoxInput.value.replace(/(^\s*)|(\s*$)/g, '')=='') 
+    {
+        searchBoxInput.value=defaultSearchLabel;searchBoxInput.style.fontStyle ='Italic';
+        searchBoxInput.style.color = "#a1a1a1";
+        kievImage.style.width = kievImageWidth;
+        
+        searchBoxInput.style.width = searchBoxWidthWithKievLogo;
+        isInputqu = false;
+     }
+     else
+     {
+        isInputqu = true;
+     }
+}
+
+function Test()
+{
+    var searchBox = document.getElementById(rsltextbox);
+    var go = document.getElementById("errorInfo");
+    if(searchBox.value==go.value)
+        return false;
+    return true; 
+}</script><meta name="WT.sp" content="_windowsxp_using_"><script language="JavaScript" src="adhoc.mspx_files/broker.js"></script><script language="Javascript">
+					if (self.name == "MNPMainFrame") top.location.href = self.location.href;
+				</script><meta name="save" content="favorite"></head><body topmargin="0" leftmargin="0" bgcolor="#ffffff" marginheight="0" marginwidth="0"><!--NOINDEX_START--><a name="top"></a><div id="msviMasthead"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="100%"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="22"><tbody><tr><td id="msviMarketing" bgcolor="#ffffff" nowrap="nowrap"><a href="http://go.microsoft.com/fwlink/?LinkID=92799">Click Here to Install Silverlight</a></td><td width="100%" bgcolor="#6487db"><img src="adhoc.mspx_files/gradient.jpg" alt="*" title="" width="250" height="22"></td></tr></tbody></table></td><td id="msviGlobalToolbar" dir="ltr" align="left" bgcolor="#6487db" height="22" nowrap="nowrap"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td id="msviRegionId" nowrap="nowrap">United States</td><td id="msviRegionSelector" nowrap="nowrap"><a href="http://www.microsoft.com/worldwide">Change</a></td><td class="gtsep">|</td><td id="msviSiteMap" nowrap="nowrap"><a href="http://www.microsoft.com/en/us/sitemap.aspx">All Microsoft Sites</a></td><td><span class="gtsep">|</span></td><td class="msviPassport" nowrap="nowrap"><a id="idPPScarab" href="http://login.live.com/logout.srf?ct=1282057710&amp;rver=6.0.5276.0&amp;lc=1033&amp;id=74335&amp;ru=http:%2F%2Fwww.microsoft.com%2Fwindowsxp%2Fusing%2Fnetworking%2Fsetup%2Fadhoc.mspx"><span id="idSOT">Sign out</span></a></td></tr></tbody></table></td></tr></tbody></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td><table style="" width="100%" border="0" cellpadding="0" cellspacing="0" height="42"><tbody><tr valign="top"><td id="msviBrandBanner" bgcolor="#ffffff"><a href="http://www.microsoft.com/windowsxp"><img src="adhoc.mspx_files/windowsXP_masthead_ltr.gif" alt="Windows XP" title="" width="225" border="0" height="42"></a></td></tr></tbody></table></td><td id="msviGlobalSearch" width="100%" bgcolor="#b6c5ee"><div class="msviLSBsform"><form id="msviLSBForm" action="/library/toolbar/3.0/search.aspx" target="_top"><div id="msKiev"><input name="View" value="en-us" type="hidden"><input name="charset" value="iso-8859-1" type="hidden"><input id="msviLSBtbox" style="font-style: italic; color: rgb(161, 161, 161);" onkeydown="if(event.keyCode == 13)searchBoxBlur('Search Microsoft.com')" onfocus="searchBoxFocused('Search Microsoft.com')" onblur="searchBoxBlur('Search Microsoft.com')" name="qu" value="Search Microsoft.com" autocomplete="off" type="text"><span id="msviLSBlogo" class="msviLSBlogo" title="Results by Bing"></span><input id="msviLSBssearch" title="Search Microsoft.com" name="site" src="adhoc.mspx_files/Search_icon.gif" onclick="trackLSB('Site')" align="absmiddle" type="image"></div><input id="msviLSBWeb" title="Search the Web" name="sweb" value="" onclick="trackLSB('Web')" align="absmiddle" type="submit"></form></div></td></tr></tbody></table><div id="msviLocalToolbar"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="19"><tbody><tr><td id="msviHomePageLink" nowrap="nowrap"><a href="http://www.microsoft.com/windowsxp/default.mspx">Windows XP Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/athome/security/default.mspx">Security At Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/athome/default.mspx">Microsoft At Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/atwork/default.mspx">Microsoft At Work</a></td><td width="100%"></td></tr></tbody></table></div></div><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td style="overflow-x: hidden;" width="181" height="100%"><div id="mnpMenuTop" class="mnpMenuTop" style="overflow-x: hidden; width: 181px;" url="/windowsxp/using/networking/setup/adhoc.mspx" dir="LTR" parent="/windowsxp/using/networking/default.mspx"><div class="mnpInherit"><div class="mnpMenuLabel">Windows XP Editions</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/home/default.mspx">Home Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/pro/default.mspx">Professional</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/mediacenter/default.mspx">Media Center Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/tabletpc/default.mspx">Tablet PC Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/64bit/default.mspx">Professional x64 Edition</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuLabel">Information For</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/homeusers/defaultm.mspx">Home Users</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/students/default.mspx">Students</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/business/default.mspx">Small Businesses</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/technet/prodtechnol/winxppro/default.mspx">IT Professionals</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://msdn2.microsoft.com/en-us/library/aa286545">Developers</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuLabel">Resources</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m90f0c3765598a8f6d936ceb105f60def"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/using/default.mspx">Using Windows XP</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m0ab75ea5c65258a4d0f711a14581bde7"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/downloads/default.mspx">Downloads</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/support/default.mspx">Support</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m79bcb962cfe9a15079154b3f186bd916"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/expertzone/default.mspx">Expert Zone</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/worldwide/default.mspx">Worldwide Sites</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://update.microsoft.com/microsoftupdate/">Microsoft Update</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.windowsmarketplace.com/">Windows Marketplace</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m830408569122205f4691f65de881aef3"><img alt="*" title="" class="mnpMenuArrow" src="adhoc.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windows/default.asp">Windows Family</a></div><div class="mnpMenuBorder" style="width: 180px; margin-bottom: 0px;"></div></div></div><div class="mnpAds" style="border-style: solid; border-color: rgb(153, 153, 153); border-width: 0px 1px 0px 0px; background: rgb(241, 241, 241) none repeat scroll 0% 0%; width: 181px; height: 100%; padding-bottom: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"><center><script type="text/javascript" src=""></script></center></div></td><td dir="LTR" width="100%">
+<table class="bodyTable" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top"><table class="containerTable" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div id="contentTableDIV"><div class="ancestorLinks"><nobr><a href="http://www.microsoft.com/windowsxp/using/default.mspx">Using Windows XP</a>
+        &gt;
+      </nobr><nobr><a href="http://www.microsoft.com/windowsxp/using/networking/default.mspx">Home and Small Business Networking</a></nobr></div><h1>Set up a wireless network without a router</h1><div class="date">Published: August 15, 2006</div><div style="height: 18px;"></div><p>Wireless
+networks are helpful because they let you use your computer and connect
+to the Internet anywhere in your home or office. However, most wireless
+networks use a wireless router, which can be expensive. If you have
+more than one computer, you can set up a wireless network without
+buying a wireless router and save yourself some money.</p><p>In a
+traditional wireless network, a wireless router acts as a base station,
+much like the base station for cordless phones. All wireless
+communications go through the wireless router, allowing nearby
+computers to connect to the Internet or to each other.</p><p><img src="adhoc.mspx_files/68588-diagram-ap.gif" alt="Diagram showing a traditional wireless network" width="501" border="0" height="349"></p><p>Ad hoc wireless networks work more like walkie-talkies, because the computers communicate directly with each other. By enabling <a href="#1">Internet Connection Sharing</a> on one of the computers, you can share Internet access.</p><p><img src="adhoc.mspx_files/68588-diagram-ad-hoc.gif" alt="Diagram showing an ad hoc wireless network" width="501" border="0" height="324"></p><p>Ad
+hoc networking might seem like a much smarter alternative to using a
+wireless router, but it does have a couple of disadvantages:</p><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="listBullet" valign="top">&#8226;</td><td class="listItem"><p>If
+the computer connected to the Internet is shut down, all computers that
+are part of the ad hoc network lose their Internet access.</p></td></tr><tr><td class="listBullet" valign="top">&#8226;</td><td class="listItem"><p>To connect to the Internet, one computer always needs a wired network connection.</p></td></tr></tbody></table><p>To
+connect your computers to the Internet using an ad hoc wireless
+network, follow these high-level steps (described in more detail later
+in this article):</p><table class="numberedList" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>1.</p></td><td><p><a href="#1"><b>Enable Internet Connection Sharing on the Internet-connected computer.</b></a> You can skip this step if you don't need to access the Web.</p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>2.</p></td><td><p><a href="#2"><b>Set up the ad hoc wireless network on the Internet-connected computer.</b></a></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>3.</p></td><td><p><a href="#3"><b>Add your other computers to the wireless network.</b></a></p></td></tr></tbody></table><div id="1"><a name="EGC"></a><h2>How to enable Internet Connection Sharing</h2><p>On
+networks with wireless routers, the router has the important job of
+forwarding communications from the computers on your home network to
+the Internet. On ad hoc networks, you must designate one computer to
+serve this role. The computer you choose must have a wired connection
+to the Internet, and it should be left on whenever you want to be able
+to use your other computers.</p></div><div id="2"><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="adhoc.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EKC"></a><h2>How to set up the first computer</h2><p><b>To set up an ad hoc wireless network that allows computers to share an Internet connection without a router</b></p><table class="numberedList" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>1.</p></td><td><p>If necessary, <a href="http://www.microsoft.com/windowsxp/using/networking/setup/wirelessadapter.mspx">install a wireless network adapter</a>.</p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>2.</p></td><td><p>Click <b>Start</b>, and then click <b>Control Panel</b>.</p><p><img src="adhoc.mspx_files/68588-click-control-panel.gif" alt="Start menu with Control Panel selected" width="386" border="0" height="507"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>3.</p></td><td><p>Under <b>Pick a category</b>, click <b>Network and Internet Connections</b>.</p><p><img src="adhoc.mspx_files/68588-click-network-and-internet-connections.gif" alt="Control Panel with Network and Internet Connections selected" width="401" border="0" height="404"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>4.</p></td><td><p>Under <b>or pick a Control Panel icon</b>, click <b>Network Connections</b>.</p><p><img src="adhoc.mspx_files/68588-click-network-connections.gif" alt="Or pick a Control Panel icon page with Network Connections selected" width="401" border="0" height="404"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>5.</p></td><td><p>Right-click your wireless network connection, and then click <b>Properties</b>.</p><p><img src="adhoc.mspx_files/68588-wireless-network-connections-click-properties.gif" alt="Wireless Network Connection options menu with pointer on Properties" width="468" border="0" height="421"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>6.</p></td><td><p>In the <b>Wireless Network Connection Properties</b> dialog box, click the <b>Wireless Networks</b> tab.</p><p><img src="adhoc.mspx_files/68588-click-wireless-networks-tab.gif" alt="Wireless Networks tab in Wireless Network Connection Properties dialog box" width="367" border="0" height="450"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>7.</p></td><td><p>On the <b>Wireless Networks</b> tab, under <b>Preferred networks</b>, click <b>Add</b>.</p><p><img src="adhoc.mspx_files/68588-click-add.gif" alt="Wireless Networks tab in Wireless Network Connection Properties dialog box with pointer on Add button" width="367" border="0" height="450"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>8.</p></td><td><p>In the <b>Wireless network properties</b> dialog box, on the <b>Association</b> tab, type the name of your ad hoc wireless network in <b>Network name (SSID)</b> box (shown in step 10). For example, you could name your wireless network <i>MyHomeNetwork</i>.</p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>9.</p></td><td><p>Clear the <b>The key is provided for me automatically</b> check box and select the <b>This is a computer-to-computer (ad hoc) network</b> check box.</p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>10.</p></td><td><p>Create a 13-digit password and type it in both the <b>Network key</b> and <b>Confirm network key</b> boxes. For the best security, include letters, numbers, and punctuation. Then click <b>OK</b>.</p><p><img src="adhoc.mspx_files/68588-click-ok-wep.gif" alt="Association tab in Wireless network properties dialog box" width="368" border="0" height="459"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>11.</p></td><td><p>Click <b>OK</b> again to save your changes.</p><p><img src="adhoc.mspx_files/68588-wireless-networks-click-ok.gif" alt="Wireless Networks tab in Wireless Network Connection Properties dialog box" width="367" border="0" height="455"></p></td></tr></tbody></table></div><div id="3"><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="adhoc.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EYG"></a><h2>How to set up additional computers</h2><p>If the computer you want to add to your network does not have built-in wireless network support, <a href="http://www.microsoft.com/windowsxp/using/networking/setup/wirelessadapter.mspx">install a wireless network adapter</a>.</p><p>Windows XP automatically detects the new adapter and notifies you that it found a wireless network.</p><p><img src="adhoc.mspx_files/68588-wireless-network-detected.gif" alt="Wireless networks detected notification" width="399" border="0" height="113"></p><p><b>Now connect your computer to your wireless network</b></p><p><b>Note</b>: These steps apply only if you're using Windows XP Service Pack 2 (SP2). If you haven't installed SP2, visit <a href="http://update.microsoft.com/">Microsoft Update</a> to install it before connecting to the ad hoc network.</p><table class="numberedList" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>1.</p></td><td><p>Right-click the <b>Wireless Network</b> icon in the lower right corner of your screen, and then click <b>View Available Wireless Networks</b>.</p><p><img src="adhoc.mspx_files/68588-click-view-available-wireless-networks.gif" alt="Wireless Network icon shortcut menu with View Available Wireless Networks selected" width="363" border="0" height="117"></p><p><b>Note</b>:
+If you run into any problems, consult the documentation that came with
+your network adapter. Don't be afraid to call the manufacturer's
+technical support department for help.</p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>2.</p></td><td><p>The <b>Wireless Network Connection</b> window appears and displays your wireless network listed with the SSID you chose. If you don't see your network, click <b>Refresh Network List</b> in the upper left corner. Click your network, and then click <b>Connect</b> in the lower right corner.</p><p><img src="adhoc.mspx_files/68588-click-connect-ad-hoc-scaled.gif" alt="Wireless Network Connection window Choose a wireless network page, with pointer on Connect" width="530" border="0" height="406"></p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>3.</p></td><td><p>Windows XP prompts you to enter a key. Type your encryption key in both the <b>Network key</b> and <b>Confirm network key</b> boxes, and then click <b>Connect</b>.</p><p><img src="adhoc.mspx_files/68588-type-key-ad-hoc.gif" alt="Wireless Network Connection window, Network key prompt, with pointer on Connect" width="456" border="0" height="214"></p></td></tr></tbody></table><p>Windows XP shows its progress as it connects to your network. After you're connected, you can close the <b>Wireless Network Connection</b> window.</p><p>Repeat these three steps on each computer that you want to connect to your ad hoc wireless network.</p><p>Now you're ready to browse the Web wirelessly, from any computer you add to your home network.</p></div><br style="font-size: 0pt;" clear="all"><div style="margin-top: 16px; margin-bottom: 20px; width: 100%;"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="#top"><img src="adhoc.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></td></tr></tbody></table></div></div><form name="aspnetForm" method="post" action="adhoc.mspx" id="aspnetForm">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMGRkqCFB1hhjCq7nNzu+fgq4uoCBExc=" type="hidden">
+</div>
+
+</form></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><br style="overflow: hidden; line-height: 1px;" clear="all"><table id="msviFooter" width="100%" cellpadding="0" cellspacing="0"><tbody><tr valign="bottom"><td id="msviFooter2" style=""><div id="msviLocalFooter"><nobr><a href="http://go.microsoft.com/?linkid=317027" target="_top">Manage Your Profile</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=2028376" target="_parent">Contact Us</a> |</nobr><wbr><nobr><a href="http://www.microsoft.com/windowsxp/newsletters/default.mspx?mg_id=10025" target="_top">Free Newsletter</a> |</nobr><wbr><nobr><a href="http://www.microsoft.com/windows/rss/" target="_parent">RSS Feeds</a></nobr></div><div id="msviGlobalFooter"><span dir="ltr">© 2010 Microsoft Corporation. All rights reserved.&nbsp;</span><nobr><a href="http://support.microsoft.com/contactus/?ws=mscom" target="_parent">Contact Us</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412892" target="_parent">Terms of Use</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412893" target="_parent">Trademarks</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412894" target="_parent">Privacy Statement</a></nobr></div></td><td width="105" bgcolor="#6487db"><img src="adhoc.mspx_files/text.jpg" alt="Microsoft" title="" width="105" border="0" height="29"></td></tr></tbody></table><div style="display: none;"><script type="text/javascript">var gDomain="m.webtrends.com";var gDcsId="dcsjwb9vb00000c932fd0rjc7_5p3t";var gFpc="WT_FPC";if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}</script><script src="adhoc.mspx_files/wt.js" type="text/javascript"></script><noscript><img
+border="0" name="DCSIMG" width="1" height="1"
+src="http://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&WT.js=No"/></noscript></div><layer visibility="hide"><div style="display: none;"><img alt="" src="adhoc.mspx_files/trans_pixel.gif" vspace="0" width="0" border="0" height="0" hspace="0"></div></layer><script src="adhoc.mspx_files/broker-config.js"></script></body></html>

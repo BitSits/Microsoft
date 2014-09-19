@@ -1,0 +1,260 @@
+<html dir="LTR"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><meta name="MS.LOCALE" content="en-us"><title>Making the Wireless Home Network Connection in Windows XP Without a Router</title><meta name="description" content="Describes how to use FTP or WebDAV to publish content to the Web."><meta name="keywords" content="Microsoft Windows XP Professional, Home Edition, Whistler, Web publishing, WebDAV, FTP, MSN Communities"><meta name="search.mnp.template" content="MNP2.GenericArticle"><link type="text/css" rel="Stylesheet" href="bowman_02april08.mspx_files/templatecss.css"><style>
+          #contentTableDIV{padding: 0px 15px 0px 20px}
+        </style><meta name="keywords" content="Microsoft Windows XP Professional, Home Edition, Whistler, Web publishing, WebDAV, FTP, MSN Communities" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="title" content="Making the Wireless Home Network Connection in Windows XP Without a Router" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="description" content="Describes how to use FTP or WebDAV to publish content to the Web." xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="publishedDate" content="2002-04-08" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="pageTitle" content="Making the Wireless Home Network Connection in Windows XP Without a Router" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="owner" content="Microsoft Corporation" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="author" content="Microsoft" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas"><meta name="migratedFrom" content="http://www.microsoft.com/windowsxp/expertzone/columns/bowman/02april08.asp" xmlns="http://www.microsoft.com/MSCOM/MNP2/Schemas">
+<link type="text/css" rel="Stylesheet" href="bowman_02april08.mspx_files/css.css">
+<script type="text/javascript" language="Javascript" src="bowman_02april08.mspx_files/menujs"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><link rel="stylesheet" type="text/css" href="bowman_02april08.mspx_files/css_002.css"><script language="JavaScript">var doImage=doImage;var TType=TType;var defaultSearchLable;
+function mhHover(tbl,idx,cls){var t,d;if(document.getElementById)t=document.getElementById(tbl);else t=document.all(tbl);if(t==null)return;if(t.getElementsByTagName)d=t.getElementsByTagName("TD");else d=t.all.tags("TD");if(d==null)return;if(d.length<=idx)return;d[idx].className=cls;}
+function footerjs(doc){if(doImage==null){var tt=TType==null?"PV":TType;doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=www&TYPE=' + tt + '&p=windowsxp_using_networking_expert_bowman&URI=%2fwindowsxp%2fusing%2fnetworking%2fexpert%2fbowman_02april08.mspx&GUID=1F4FC18C-F71E-47FB-8FC9-612F8EE59C61&r=http%3a%2f%2fwww.velocityreviews.com%2fforums%2ft4290-cannot-connect-two-computers-via-ad-hoc-wireless-connection.html&lc=en-us" width=0 height=0 hspace=0 vspace=0 border=0 alt=""/></div></layer>');}}
+var rsltextbox = 'msviLSBtbox'; var wtflag = false;
+function stripSymbols () { var objrslttextbox = getObjectById(rsltextbox); if (objrslttextbox) { var form = objrslttextbox.form; var s = objrslttextbox.value; filteredValues = "<>!@^*"; var i; var returnString = ""; for (i = 0; i < s.length; i++) { var c = s.charAt(i); if (filteredValues.indexOf(c) == -1) { returnString += c; } else { returnString += " "; } } objrslttextbox.value = returnString; } if(!wtflag) { trackLSB("Site"); } } 
+function addSubmitEvent() {
+ msviLSBtbox=document.getElementById("msviLSBtbox")
+ if(msviLSBtbox)
+ {
+    defaultSearchLable = msviLSBtbox.value;
+ }
+ var objrslttextbox = getObjectById(rsltextbox); 
+ if (objrslttextbox) 
+ { 
+    var form = objrslttextbox.form;
+     if (window.attachEvent) 
+     { 
+         form.attachEvent("onsubmit",stripSymbols); 
+     }
+     else 
+     { 
+        form.addEventListener("submit",stripSymbols,false);
+     }
+  } 
+} 
+function getObjectById(elid) 
+{ 
+    if (document.getElementById) 
+    { 
+        return document.getElementById(elid); 
+    } 
+    else if (document.all) 
+    { 
+        return document.all[elid]; 
+    } 
+    else if (document.layers) 
+    { 
+        return document.layers[elid];
+    } 
+} 
+if (window.attachEvent) { window.attachEvent("onload",addSubmitEvent); } else { window.addEventListener("load",addSubmitEvent,false); } 
+var FromWeb = false;
+function trackLSB(type)
+{
+
+  clearDefaultSearchLable();
+ 
+  if(type=="Web")
+    FromWeb = true;
+  var tmp = document.getElementById("msviLSBtbox");
+  var errorInfo = document.getElementById("errorInfo");
+  if(type=="Site" && tmp.value.length==0 && !FromWeb)
+  {
+       tmp.value=errorInfo.value;
+       tmp.style.color='#bc2b2b';
+       ajustWidth();
+  }
+  if (typeof dcsMultiTrack == "function")
+  { 
+      var qu = document.getElementById("msviLSBtbox").value;
+      var dcsuri = "results.aspx";
+      var dcssip, ti;
+      if (type == "Site")
+      {
+        dcssip = "search.microsoft.com";
+        ti = "SearchButton: OnSite"; 
+      }
+      else if (type == "Web")
+      {
+         dcssip = "bing.com";
+         ti = "SearchButton: Web";
+      }
+      dcsMultiTrack("DCS.dcsuri", dcsuri, "DCS.dcssip", dcssip, "WT.ti", ti, "WT.dl", "2", "WT.z_srch_t", qu, "DCS.dcsqry", "", "WT.ad", "", "WT.mc_id", ""); 
+      wtflag = true; DCS.dcsuri=DCS.dcssip=DCS.dcsqry=WT.ti=WT.z_srch_t="";
+  }
+}
+
+var isInputqu = false;
+var searchBoxWidthWithKievLogo = 0;
+var searchBoxWidthWithoutKievLogo = 0;
+function clearDefaultSearchLable()
+{var searchBox = document.getElementById("msviLSBtbox");
+if(!isInputqu){searchBox.value = "";}}
+var kievImageWidth = 47;
+var isAdTboxWidth = false;
+var isInitailed = false;
+function ajustWidth()
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(!isInitailed)
+    {
+         searchBoxWidthWithKievLogo = searchBoxInput.style.width;
+         searchBoxWidthWithoutKievLogo = searchBoxInput.clientWidth + (kievImageWidth - 1);
+         isInitailed = true;
+    }
+    var width = kievImage.clientWidth-1;
+    kievImage.style.width = '1px';
+    var tBoxAloneWidth = searchBoxInput.clientWidth + width;
+    searchBoxInput.style.width = tBoxAloneWidth;
+    isAdTboxWidth = true;
+    
+      
+    
+}
+
+function searchBoxFocused(defaultSearchLabel)
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(searchBoxInput.value == defaultSearchLabel || searchBoxInput.value==document.getElementById("errorInfo").value)
+    {
+        searchBoxInput.value = '';
+        searchBoxInput.style.fontStyle = '';
+        searchBoxInput.style.color='#000000';
+        kievImage.style.width = '1px';
+        if(searchBoxWidthWithKievLogo == 0 && !isAdTboxWidth &&!isInitailed)
+        {
+            searchBoxWidthWithKievLogo = searchBoxInput.style.width;
+            searchBoxWidthWithoutKievLogo = searchBoxInput.clientWidth + (kievImageWidth - 1);
+            isInitailed = true;
+        }
+        searchBoxInput.style.width = searchBoxWidthWithoutKievLogo;
+    }
+}
+
+function searchBoxBlur(defaultSearchLabel)
+{
+    var searchBoxInput = document.getElementById("msviLSBtbox");
+    var kievImage = document.getElementById("msviLSBlogo");
+    if(searchBoxInput.value.replace(/(^\s*)|(\s*$)/g, '')=='') 
+    {
+        searchBoxInput.value=defaultSearchLabel;searchBoxInput.style.fontStyle ='Italic';
+        searchBoxInput.style.color = "#a1a1a1";
+        kievImage.style.width = kievImageWidth;
+        
+        searchBoxInput.style.width = searchBoxWidthWithKievLogo;
+        isInputqu = false;
+     }
+     else
+     {
+        isInputqu = true;
+     }
+}
+
+function Test()
+{
+    var searchBox = document.getElementById(rsltextbox);
+    var go = document.getElementById("errorInfo");
+    if(searchBox.value==go.value)
+        return false;
+    return true; 
+}</script><meta name="WT.sp" content="_windowsxp_using_"><script language="JavaScript" src="bowman_02april08.mspx_files/broker.js"></script><script language="Javascript">
+					if (self.name == "MNPMainFrame") top.location.href = self.location.href;
+				</script><meta name="save" content="favorite"></head><body topmargin="0" leftmargin="0" bgcolor="#ffffff" marginheight="0" marginwidth="0"><!--NOINDEX_START--><a name="top"></a><div id="msviMasthead"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="100%"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="22"><tbody><tr><td id="msviMarketing" bgcolor="#ffffff" nowrap="nowrap"><a href="http://go.microsoft.com/fwlink/?LinkID=92799">Click Here to Install Silverlight</a></td><td width="100%" bgcolor="#6487db"><img src="bowman_02april08.mspx_files/gradient.jpg" alt="*" title="" width="250" height="22"></td></tr></tbody></table></td><td id="msviGlobalToolbar" dir="ltr" align="left" bgcolor="#6487db" height="22" nowrap="nowrap"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td id="msviRegionId" nowrap="nowrap">United States</td><td id="msviRegionSelector" nowrap="nowrap"><a href="http://www.microsoft.com/worldwide">Change</a></td><td class="gtsep">|</td><td id="msviSiteMap" nowrap="nowrap"><a href="http://www.microsoft.com/en/us/sitemap.aspx">All Microsoft Sites</a></td><td><span class="gtsep">|</span></td><td class="msviPassport" nowrap="nowrap"><a id="idPPScarab" href="http://login.live.com/logout.srf?ct=1282355397&amp;rver=6.0.5276.0&amp;lc=1033&amp;id=74335&amp;ru=http:%2F%2Fwww.microsoft.com%2Fwindowsxp%2Fusing%2Fnetworking%2Fexpert%2Fbowman_02april08.mspx"><span id="idSOT">Sign out</span></a></td></tr></tbody></table></td></tr></tbody></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td><table style="" width="100%" border="0" cellpadding="0" cellspacing="0" height="42"><tbody><tr valign="top"><td id="msviBrandBanner" bgcolor="#ffffff"><a href="http://www.microsoft.com/windowsxp"><img src="bowman_02april08.mspx_files/windowsXP_masthead_ltr.gif" alt="Windows XP" title="" width="225" border="0" height="42"></a></td></tr></tbody></table></td><td id="msviGlobalSearch" width="100%" bgcolor="#b6c5ee"><div class="msviLSBsform"><form id="msviLSBForm" action="/library/toolbar/3.0/search.aspx" target="_top"><div id="msKiev"><input name="View" value="en-us" type="hidden"><input name="charset" value="iso-8859-1" type="hidden"><input id="msviLSBtbox" style="font-style: italic; color: rgb(161, 161, 161);" onkeydown="if(event.keyCode == 13)searchBoxBlur('Search Microsoft.com')" onfocus="searchBoxFocused('Search Microsoft.com')" onblur="searchBoxBlur('Search Microsoft.com')" name="qu" value="Search Microsoft.com" autocomplete="off" type="text"><span id="msviLSBlogo" class="msviLSBlogo" title="Results by Bing"></span><input id="msviLSBssearch" title="Search Microsoft.com" name="site" src="bowman_02april08.mspx_files/Search_icon.gif" onclick="trackLSB('Site')" align="absmiddle" type="image"></div><input id="msviLSBWeb" title="Search the Web" name="sweb" value="" onclick="trackLSB('Web')" align="absmiddle" type="submit"></form></div></td></tr></tbody></table><div id="msviLocalToolbar"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="19"><tbody><tr><td id="msviHomePageLink" nowrap="nowrap"><a href="http://www.microsoft.com/windowsxp/default.mspx">Windows XP Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/athome/security/default.mspx">Security At Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/athome/default.mspx">Microsoft At Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')" nowrap="nowrap"><a href="http://www.microsoft.com/atwork/default.mspx">Microsoft At Work</a></td><td width="100%"></td></tr></tbody></table></div></div><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td style="overflow-x: hidden;" width="181" height="100%"><div id="mnpMenuTop" class="mnpMenuTop" style="overflow-x: hidden; width: 181px;" url="/windowsxp/using/networking/expert/bowman_02april08.mspx" dir="LTR" parent="/windowsxp/using/networking/default.mspx"><div class="mnpInherit"><div class="mnpMenuLabel">Windows XP Editions</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/home/default.mspx">Home Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/pro/default.mspx">Professional</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/mediacenter/default.mspx">Media Center Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/tabletpc/default.mspx">Tablet PC Edition</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/64bit/default.mspx">Professional x64 Edition</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuLabel">Information For</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/homeusers/defaultm.mspx">Home Users</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/students/default.mspx">Students</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/business/default.mspx">Small Businesses</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/technet/prodtechnol/winxppro/default.mspx">IT Professionals</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://msdn2.microsoft.com/en-us/library/aa286545">Developers</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuLabel">Resources</div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m90f0c3765598a8f6d936ceb105f60def"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/using/default.mspx">Using Windows XP</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m0ab75ea5c65258a4d0f711a14581bde7"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/downloads/default.mspx">Downloads</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/support/default.mspx">Support</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m79bcb962cfe9a15079154b3f186bd916"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/expertzone/default.mspx">Expert Zone</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windowsxp/worldwide/default.mspx">Worldwide Sites</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://update.microsoft.com/microsoftupdate/">Microsoft Update</a></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.windowsmarketplace.com/">Windows Marketplace</a></div><div class="mnpMenuBorder" style="width: 180px;"></div><div class="mnpMenuRow" style="border-color: rgb(241, 241, 241); background: rgb(241, 241, 241) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 153px; overflow-x: hidden;" menu="m830408569122205f4691f65de881aef3"><img alt="*" title="" class="mnpMenuArrow" src="bowman_02april08.mspx_files/arrowLTR.gif" style="left: 166px; visibility: hidden;" width="4" border="0" height="7"><a href="http://www.microsoft.com/windows/default.asp">Windows Family</a></div><div class="mnpMenuBorder" style="width: 180px; margin-bottom: 0px;"></div></div></div><div class="mnpAds" style="border-style: solid; border-color: rgb(153, 153, 153); border-width: 0px 1px 0px 0px; background: rgb(241, 241, 241) none repeat scroll 0% 0%; width: 181px; height: 100%; padding-bottom: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"><center><script type="text/javascript" src="bowman_02april08.mspx_files/dap.js"></script><div id="CMSCX5" style="background: inherit inherit inherit inherit inherit; padding-top: 20px; -moz-background-clip: inherit; -moz-background-origin: inherit; -moz-background-inline-policy: inherit;"><iframe src="bowman_02april08.mspx_files/a.htm" name="dapIfM0" id="dapIfM0" width="120" frameborder="0" height="90" scrolling="no"></iframe></div><script type="text/javascript">dapMgr.enableACB("CMSCX5", false);dapMgr.renderAd("CMSCX5", "&PG=CMSCX5&SC=F2&AP=1027",120,90);
+    </script></center></div></td><td dir="LTR" width="100%">
+<table class="bodyTable" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top"><table class="containerTable" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div id="contentTableDIV"><div class="ancestorLinks"><nobr><a href="http://www.microsoft.com/windowsxp/using/default.mspx">Using Windows XP</a>
+        &gt;
+      </nobr><nobr><a href="http://www.microsoft.com/windowsxp/using/networking/default.mspx">Home and Small Business Networking</a></nobr></div><h1>Making the Wireless Home Network Connection in Windows XP Without a Router</h1><div class="date">Published: April 8, 2002</div><div class="byline">By Barb Bowman, Expert Zone Columnist</div><div style="height: 18px;"></div><table class="sideContainer" style="margin-left: 15px;" width="165" align="right" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><table dir="LTR" class="containerHeader" width="165" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="left"><img src="bowman_02april08.mspx_files/l_corner.gif" alt="*" title="" width="2" border="0" height="3"></td><td align="right"><img src="bowman_02april08.mspx_files/r_corner.gif" alt="*" title="" width="2" border="0" height="3"></td></tr></tbody></table><div style="padding: 8px 7px; width: 165px;" class="sidebarContent"><h5>Related Links</h5><table style="margin-top: 10px; margin-bottom: -2px;" class="relatedLinksContainer" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.microsoft.com/windowsxp/expertzone/newsgroups/reader.mspx">Ask questions or discuss this topic in the Windows XP Expert Zone Newsgroups</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.microsoft.com/technet/prodtechnol/winxppro/evaluate/wrlsxp.mspx">Wireless LAN Technologies and Windows&nbsp;XP</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://go.microsoft.com/?linkid=3646727">Microsoft Update</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.orinocowireless.com/template.html?section=m57&amp;envelope=93&amp;page=126">Orinoco Wireless PC Card</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.microsoft.com/windowsxp/expertzone/newsgroups/reader.mspx?dg=microsoft.public.windowsxp.network_web">Windows XP Networking and the Web Newsgroup</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.microsoft.com/windowsxp/expertzone/newsgroups/reader.mspx?dg=microsoft.public.windowsxp.work_remotely">Windows XP Working Remotely Newsgroup</a></td></tr><tr valign="top"><td class="rlBullet">&#8226;</td><td class="relatedLink"><a href="http://www.microsoft.com/windowsxp/expertzone/meetexperts/bowman.mspx">Previous Columns by Barb Bowman</a></td></tr></tbody></table></div><table dir="LTR" class="containerFooter" width="165" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="left"><img src="bowman_02april08.mspx_files/l_b.gif" alt="*" title="" width="2" border="0" height="3"></td><td align="right"><img src="bowman_02april08.mspx_files/r_b.gif" alt="*" title="" width="2" border="0" height="3"></td></tr></tbody></table></td></tr></tbody></table><img src="bowman_02april08.mspx_files/hs_bowman_lg.jpg" alt="Barb Bowman" title="Barb Bowman" class="nearGraphic" width="120" align="left" border="0" height="160"><p><i>Editor's
+Note: Articles by members of the online community are archived for your
+use, but the information may become outdated as technology changes. To
+find the most current information, please search the Web site or post a
+question in the newsgroups.</i></p><p><b>I've received many</b>
+inquiries from Windows XP residential users asking how to wirelessly
+network a second or third computer without the expense of a wireless
+router or a router and a stand-alone wireless access point (WAP). This
+is sometimes called an <i>ad hoc</i> wireless network. Building an ad
+hoc 802.11b wireless network using the graphical user interface in
+Windows XP takes just a few minutes. Because it's powered by wireless
+zero configuration, you won't need to run a single cable or hunt for an
+electrical outlet! Add Internet Connection Sharing on the host computer
+and all connected computers will be surfing the net wirelessly in no
+time at all.</p><p>We'll start with a single computer that already has
+a wired Ethernet broadband connection to the Internet. Then we'll build
+the ad hoc wireless network in three steps:</p><table class="numberedList" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>1.</p></td><td><p>The
+first step will be to install an 802.11b wireless card in the main
+computer and configure it as a computer-to-computer (ad hoc) wireless
+connection. </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>2.</p></td><td><p>The second step will be to install a wireless card in a second computer. </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>3.</p></td><td><p>To
+complete the network and provide connectivity to the Internet, Internet
+Connection Sharing (ICS) will be enabled on the host. </p></td></tr></tbody></table><p>As
+you read through the procedures below, note that the accompanying
+images are captured from both the host and client computers and that
+the screen shots of the host computer contain a silver title bar, while
+the client computer screen shots contain a blue title bar.</p><a name="EIC"></a><h2>Configuring the Host Computer</h2><p>After
+you install an 802.11b adapter (such as an Orinoco or Cisco wireless
+network card) on a computer, Windows XP will automatically detect the
+card, install drivers, and display an icon in the notification area. (I
+am using <a href="http://www.orinocowireless.com/template.html?section=m57&amp;envelope=93&amp;page=126">Agere's Orinoco Silver</a>
+cards to construct the ad hoc wireless network here. Although they have
+native, in-box support in Windows XP, these cards can be updated with
+even newer drivers and firmware through <a href="http://go.microsoft.com/?linkid=3646727">Microsoft Update</a>).
+If the computer is in an environment where other wireless networks are
+in range, Windows should display a list of available networks
+automatically. However, if no wireless networks are in range, the
+wireless connection icon may display a red &#8220;X&#8221; and may not
+automatically open a <b>View Wireless Networks</b> window. To open this window, click the icon for the wireless connection.</p><p>Do not select an available network at this time if any are displayed in the <b>Available networks</b>
+listing. If your computer previously connected to a preferred access
+point, remove all preferred access points. This will ensure that a
+connection is made only to the ad hoc network that you are trying to
+configure.</p><div style="width: 265px;"><img src="bowman_02april08.mspx_files/adhoc01.gif" alt="Figure 1" width="265" border="0" height="324"><br><p class="figureCaption"><b>Figure 1</b></p><div class="figureRule"></div></div><p>Next, click the <b>Advanced</b> tab at the top of the window. Select <b>Computer to computer (ad hoc) networks only</b> and clear the <b>Automatically connect to non-preferred networks</b> box if it is selected. This setting, along with removing preferred networks, ensures connection to the ad hoc network only.</p><p>Click the <b>Wireless Networks</b> tab again. Under Preferred Networks, click <b>Add</b>, as shown in Figure 1. In the <b>Wireless Network Properties</b> dialog box, specify a <b>Network name (SSID)</b>.
+Use any name desired, but be sure to use it to configure all computers.
+Note that the network type is already marked as a computer-to-computer
+network and that this cannot be changed since it has already been
+specified that a connection should be made to only ad hoc networks.</p><div style="width: 265px;"><img src="bowman_02april08.mspx_files/adhoc02.gif" alt="Figure 2" width="265" border="0" height="339"><br><p class="figureCaption"><b>Figure 2</b></p><div class="figureRule"></div></div><p>Wireless Equivalency Protocol (<b>WEP</b>)
+settings are not being configured at this time because it's easier to
+get an ad hoc wireless network running smoothly before attempting to
+configure WEP data encryption. The decision on whether or not to use
+WEP should be based on your environment. In most cases, for optimum
+protection and security, after your ad hoc network is running properly,
+you should return to <b>Wireless Network Properties</b> and specify WEP settings.</p><p>After
+configuring the network name (SSID) in the Wireless Network Properties
+dialog box, the new ad hoc network will be displayed with a PC Card
+icon to designate that this is a computer-to-computer network.</p><div style="width: 265px;"><img src="bowman_02april08.mspx_files/adhoc03.gif" alt="Figure 3" width="265" border="0" height="324"><br><p class="figureCaption"><b>Figure 3</b></p><div class="figureRule"></div></div><p>Note the red <b>X</b>.
+When a second computer is in range and the new ad hoc network is
+connected, the display changes to show a working computer-to-computer
+network without the <b>X</b>.</p><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="bowman_02april08.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EZE"></a><h2>Configuring a Client Computer</h2><p>After
+installing an Agere Orinoco 802.11b Silver PC Card in a second
+computer, the Wireless Networks tab displays a list of in-range
+wireless access points or ad hoc wireless networks, as shown in Figure
+4.</p><div style="width: 265px;"><img src="bowman_02april08.mspx_files/adhoc04.gif" alt="Figure 4" width="265" border="0" height="300"><br><p class="figureCaption"><b>Figure 4</b></p><div class="figureRule"></div></div><p>The new ad hoc network <b>aloha4321</b> is listed (and is identified by the PC Card icon). Highlight the network name, and then click <b>Configure</b>. Because WEP will not be configured at this time, click <b>OK</b>.</p><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="bowman_02april08.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EOF"></a><h2>Sharing the Connection</h2><p>Now that a successful ad hoc wireless network has been created, we'll set up Internet Connection Sharing.</p><table class="numberedList" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>1.</p></td><td><p>Open <b>Network Connections</b> on the host computer. (Click <b>Start</b>, click <b>Control Panel</b>, click <b>Switch to classic view</b>, and then click <b>Network Connections</b>. </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>2.</p></td><td><p>Click the connection to be shared, and under <b>Network Tasks</b>, click <b>Change settings of this connection</b>. </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>3.</p></td><td><p>On the <b>Advanced</b> tab, select the <b>Allow other network users to connect through this computer's Internet connection</b> check box. </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>4.</p></td><td><p>If you are not using a third party firewall and have not already set up the <b>Internet Connection Firewall (ICF)</b>, be sure to check the box enabling this feature. (Read more about why to enable ICF in an earlier column, <a href="http://www.microsoft.com/windowsxp/using/networking/expert/bowman_november12.mspx">Don't Let the Defense Rest</a>.) </p></td></tr><tr valign="top"><td class="listNumber" align="right" nowrap="nowrap"><p>5.</p></td><td><p>Finally, optionally enable the setting to let other users control or enable this connection. </p></td></tr></tbody></table><p>After completing ICS configuration, the <b>Network Connection</b> window on the host computer will display the original wired Ethernet connection and display the status as <b>Shared</b> as well as <b>Enabled</b>. The Network Connection window on the client computer will display the connection on the host as an <b>Internet Gateway</b>.</p><div style="width: 365px;"><img src="bowman_02april08.mspx_files/adhoc05.gif" alt="Figure 5" width="365" border="0" height="227"><br><p class="figureCaption"><b>Figure 5</b></p><div class="figureRule"></div></div><p>The
+client computer(s) should now receive a private class, non-routable IP
+address in the 192.168.0.* address range via DHCP from the host
+computer and should have full Internet connectivity.</p><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="bowman_02april08.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EZH"></a><h2>Configuring WEP</h2><p>As connectivity has now been established successfully, the next step is to return to <b>Network Properties</b> and configure <b>WEP</b> settings to ensure the best security possible for the ad hoc network.</p><p>On the host computer, open the <b>Wireless Network Properties</b> dialog box and select the <b>Data encryption (WEP enabled)</b> check box. Consult the documentation provided by your wireless card manufacturer for the key format and key length.</p><div style="width: 265px;"><img src="bowman_02april08.mspx_files/adhoc06.gif" alt="Figure 6" width="265" border="0" height="339"><br><p class="figureCaption"><b>Figure 6</b></p><div class="figureRule"></div></div><p>Use
+the highest level of encryption possible (key length) that is supported
+by your hardware and drivers. Agere's Orinoco Silver cards are used
+here, and only support 64-bit WEP (also known as 40 bits). Using the
+latest drivers and firmware, Windows XP actually automatically detects
+that this hardware only supports 64-bit encryption and will not allow
+setting the key to 128 bit. Be sure that if you use an ASCII network
+key that you pick random characters and letters that can't be easily
+guessed. The final step is to use the same key and encryption settings
+and configure the client computer(s). Note: for additional security,
+consider changing the key on a regular weekly basis.</p><div style="margin-top: 3px; margin-bottom: 10px;"><a href="#top"><img src="bowman_02april08.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></div><a name="EUAAC"></a><h2>Instant Private Networking</h2><p>Not
+only does ad hoc wireless networking provide a lower cost method to
+share an Internet connection than a more expensive wireless
+router/router plus separate access point solution, but it affords a
+fast and simple way of establishing a means to share data and documents
+for groups with no external LAN or Internet connection. With no
+available DHCP server, Windows XP provides an automatic private IP
+address between 169.254.0.0 and 169.254.255.255 to network adapters. If
+you're sitting around a conference table with a group of colleagues and
+find that everyone is in desperate need of a Power Point presentation
+on an associate's computer on the other side of the room, setting up an
+instant ad hoc wireless network can be the solution, allowing everyone
+to copy the file to their computers over the wireless network. You'll
+need to have the same workgroup configured with appropriate permissions
+for file and print sharing, and you'll never have to wait again to get
+connected to the Internet or a corporate LAN to receive copies of
+urgently needed documents.</p><p><i>Barb Bowman enjoys sharing her own
+experiences and insights into today's leading edge technologies. She is
+a product development manager for AT&amp;T Broadband Internet Services,
+but her views here are strictly personal.</i></p><br style="font-size: 0pt;" clear="all"><div style="margin-top: 16px; margin-bottom: 20px; width: 100%;"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="#top"><img src="bowman_02april08.mspx_files/arrow_px_up.gif" alt="Top of page" width="7" border="0" height="9"></a><a class="topOfPage" href="#top">Top of page</a></td></tr></tbody></table></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><br style="overflow: hidden; line-height: 1px;" clear="all"><table id="msviFooter" width="100%" cellpadding="0" cellspacing="0"><tbody><tr valign="bottom"><td id="msviFooter2" style=""><div id="msviLocalFooter"><nobr><a href="http://go.microsoft.com/?linkid=317027" target="_top">Manage Your Profile</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=2028376" target="_parent">Contact Us</a> |</nobr><wbr><nobr><a href="http://www.microsoft.com/windowsxp/newsletters/default.mspx?mg_id=10025" target="_top">Free Newsletter</a> |</nobr><wbr><nobr><a href="http://www.microsoft.com/windows/rss/" target="_parent">RSS Feeds</a></nobr></div><div id="msviGlobalFooter"><span dir="ltr">© 2010 Microsoft Corporation. All rights reserved.&nbsp;</span><nobr><a href="http://support.microsoft.com/contactus/?ws=mscom" target="_parent">Contact Us</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412892" target="_parent">Terms of Use</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412893" target="_parent">Trademarks</a> |</nobr><wbr><nobr><a href="http://go.microsoft.com/?linkid=4412894" target="_parent">Privacy Statement</a></nobr></div></td><td width="105" bgcolor="#6487db"><img src="bowman_02april08.mspx_files/text.jpg" alt="Microsoft" title="" width="105" border="0" height="29"></td></tr></tbody></table><div style="display: none;"><script type="text/javascript">var gDomain="m.webtrends.com";var gDcsId="dcsjwb9vb00000c932fd0rjc7_5p3t";var gFpc="WT_FPC";if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}</script><script src="bowman_02april08.mspx_files/wt.js" type="text/javascript"></script><noscript><img
+border="0" name="DCSIMG" width="1" height="1"
+src="http://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&WT.js=No"/></noscript></div><layer visibility="hide"><div style="display: none;"><img alt="" src="bowman_02april08.mspx_files/trans_pixel.gif" vspace="0" width="0" border="0" height="0" hspace="0"></div></layer><script src="bowman_02april08.mspx_files/broker-config.js"></script></body></html>

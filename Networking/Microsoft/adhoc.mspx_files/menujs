@@ -1,0 +1,83 @@
+
+
+function mnpMenuDir()
+{
+	return "LTR";
+}
+
+function mnpMenuCT()
+{
+	
+	return false;
+	
+}
+
+function m90f0c3765598a8f6d936ceb105f60def()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Using Windows XP: Overview', '/windowsxp/using/default.mspx', '', '', '_S3_Node1_S1_Node1');
+	this.items[n++] = new mnpPage('Digital Photography', '/windowsxp/using/digitalphotography/default.mspx', '', '', '_S3_Node1_S1_Node2');
+	this.items[n++] = new mnpPage('Games for Windows', '/windowsxp/using/games/default.mspx', '', '', '_S3_Node1_S1_Node3');
+	this.items[n++] = new mnpPage('Movies', '/windowsxp/using/moviemaker/default.mspx', '', '', '_S3_Node1_S1_Node4');
+	this.items[n++] = new mnpPage('Music and Video', '/windowsxp/using/windowsmediaplayer/default.mspx', '', '', '_S3_Node1_S1_Node5');
+	this.items[n++] = new mnpPage('Instant Messaging', '/windowsxp/using/windowsmessenger/default.mspx', '', '', '_S3_Node1_S1_Node6');
+	this.items[n++] = new mnpPage('Security and Privacy', '/windowsxp/using/security/default.mspx', '', '', '_S3_Node1_S1_Node7');
+	this.items[n++] = new mnpPage('Computer Setup and Maintenance', '/windowsxp/using/setup/default.mspx', '', '', '_S3_Node1_S1_Node8');
+	this.items[n++] = new mnpPage('Home and Small Business Networking', '/windowsxp/using/networking/default.mspx', '', '', '_S3_Node1_S1_Node9');
+	this.items[n++] = new mnpPage('Working Remotely', '/windowsxp/using/mobility/default.mspx', '', '', '_S3_Node1_S1_Node10');
+	this.items[n++] = new mnpPage('Web Browsing and E-mail', '/windowsxp/using/web/default.mspx', '', '', '_S3_Node1_S1_Node11');
+	this.items[n++] = new mnpPage('Pen and Ink', '/windowsxp/using/tabletpc/default.mspx', '', '', '_S3_Node1_S1_Node12');
+	this.items[n++] = new mnpPage('TV and Multimedia', '/windowsxp/using/mce/default.mspx', '', '', '_S3_Node1_S1_Node13');
+}
+
+function m0ab75ea5c65258a4d0f711a14581bde7()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Downloads: Overview', '/windowsxp/downloads/default.mspx', '', '', '_S3_Node2_S1_Node1');
+	this.items[n++] = new mnpPage('Software Updates', '/windowsxp/downloads/updates/default.mspx', '', '', '_S3_Node2_S1_Node2');
+	this.items[n++] = new mnpPage('Tools and Utilities', '/windowsxp/downloads/tools/default.mspx', '', '', '_S3_Node2_S1_Node3');
+	this.items[n++] = new mnpPage('Power Toys and Add-ins', '/windowsxp/downloads/powertoys/default.mspx', '', '', '_S3_Node2_S1_Node4');
+	this.items[n++] = new mnpPage('Desktop Enhancements', '/windowsxp/downloads/desktop/default.mspx', '', '', '_S3_Node2_S1_Node5');
+}
+
+function m79bcb962cfe9a15079154b3f186bd916()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Expert Zone Community', '/windowsxp/expertzone/default.mspx', '', '', '_S3_Node4_S1_Node1');
+	this.items[n++] = new mnpPage('Columns', '/windowsxp/expertzone/columns/archive.mspx', '', '', '_S3_Node4_S1_Node2');
+	this.items[n++] = new mnpPage('Newsgroups', '/windowsxp/expertzone/newsgroups.mspx', '', '', '_S3_Node4_S1_Node3');
+	this.items[n++] = new mnpPage('Chats', '/windowsxp/expertzone/chats/default.mspx', '', '', '_S3_Node4_S1_Node4');
+	this.items[n++] = new mnpPage('Related Communities', '/windowsxp/expertzone/related/default.mspx', '', '', '_S3_Node4_S1_Node5');
+	this.items[n++] = new mnpPage('Other Microsoft Communities', '/windowsxp/expertzone/relatedcomm.mspx', '', '', '_S3_Node4_S1_Node6');
+	this.items[n++] = new mnpPage('User Groups', '/windowsxp/expertzone/usergroups/default.mspx', '', '', '_S3_Node4_S1_Node7');
+	this.items[n++] = new mnpPage('Meet the Experts', '/windowsxp/expertzone/meetexperts/default.mspx', '', '', '_S3_Node4_S1_Node8');
+	this.items[n++] = new mnpPage('RSS Feeds', '/windows/rss', '', '', '_S3_Node4_S1_Node9');
+}
+
+function m830408569122205f4691f65de881aef3()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Windows Family', '/windows/default.asp', '', '', '_S4_Node1_S1_Node1');
+	this.items[n++] = new mnpPage('Windows XP', '/windowsxp/default.asp', '', '', '_S4_Node1_S1_Node2');
+	this.items[n++] = new mnpPage('Plus!', '/windows/plus/PlusHome.asp', '', '', '_S4_Node1_S1_Node3');
+	this.items[n++] = new mnpPage('Windows Vista', '/windows/products/windowsvista/default.mspx', '', '', '_S4_Node1_S1_Node4');
+	this.items[n++] = new mnpPage('Servers', '/servers/default.mspx', '', '', '_S4_Node1_S1_Node5');
+	this.items[n++] = new mnpPage('Windows Server 2003', '/windowsserver2003/default.mspx', '', '', '_S4_Node1_S1_Node6');
+	this.items[n++] = new mnpPage('Windows Small Business Server 2003', '/windowsserver2003/sbs/default.mspx', '', '', '_S4_Node1_S1_Node7');
+	this.items[n++] = new mnpPage('Windows 2000', '/windows2000/', '', '', '_S4_Node1_S1_Node8');
+	this.items[n++] = new mnpPage('Windows NT Workstation 4.0', '/ntworkstation/default.asp', '', '', '_S4_Node1_S1_Node9');
+	this.items[n++] = new mnpPage('Windows NT Server 4.0', '/windows/ntserver/default.asp', '', '', '_S4_Node1_S1_Node10');
+	this.items[n++] = new mnpPage('Windows Me', '/windowsme/default.asp', '', '', '_S4_Node1_S1_Node11');
+	this.items[n++] = new mnpPage('Windows 98', '/windows98/default.asp', '', '', '_S4_Node1_S1_Node12');
+	this.items[n++] = new mnpPage('Windows 95', '/windows95/default.asp', '', '', '_S4_Node1_S1_Node13');
+	this.items[n++] = new mnpPage('Windows Embedded', 'http://msdn.microsoft.com/embedded/', '', '', '_S4_Node1_S1_Node14');
+	this.items[n++] = new mnpPage('Internet Explorer', '/windows/ie/default.asp', '', '', '_S4_Node1_S1_Node15');
+	this.items[n++] = new mnpPage('Windows Media Player', '/windows/windowsmedia/default.asp', '', '', '_S4_Node1_S1_Node16');
+	this.items[n++] = new mnpPage('DirectX', '/windows/directx/default.asp', '', '', '_S4_Node1_S1_Node17');
+	this.items[n++] = new mnpPage('Windows Desktop Search', '/windows/desktopsearch/default.asp', '', '', '_S4_Node1_S1_Node18');
+}
+

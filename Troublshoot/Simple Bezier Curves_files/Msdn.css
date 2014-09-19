@@ -1,0 +1,1420 @@
+﻿/*-------- Start Reset --------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+}
+ 
+table {
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+/*-------- End Reset --------*/
+
+/* Start Elements */
+img {
+    border: none;
+}
+#BodyBackground
+{ 
+	min-width:36px;
+}
+a, 
+a:link,
+a:visited {
+    color: #0066dd;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #FF6600;
+    text-decoration: none;
+}   
+
+.bold,
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    color: #3a3e43;
+    font-family: 'Segoe UI Semibold','Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h1 {
+    font-size: 22px;
+    line-height: 130%;
+    margin: 5px 0px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 4px 0px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 3px 0px;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 2px 0px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+.Clear {
+    clear: both;
+}
+
+.ClearBreak {
+    clear: both;
+    padding-bottom: 1px;
+}
+
+.ClearLeft {
+    clear: left;
+}
+
+.ClearRight {
+    clear: right;
+}
+
+.ClearRightBreak {
+    clear: right;
+    height: 16px;
+}
+
+.Left {
+    float: left;
+}
+
+.Right {
+    float: right;
+}
+
+.Center {
+    text-align: center;
+}
+
+.no_wrap {
+    white-space: nowrap;	
+}
+
+p {
+    margin: 0px 0px 12px 0px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+ol,
+ul {
+    line-height: 125%;
+    margin: 0px 0px 12px 0px;
+    padding-left: 26px;
+}
+
+li {
+    padding: 0px 0px 3px 0px;
+}
+
+ul li ol li {
+    list-style-image: none;
+    list-style-type: hebrew;
+}
+
+.BulletList {
+    line-height: 125%;
+    list-style-type: disc;
+    margin: 12px 0px 12px 18px;
+    padding-left: 18px;
+}
+
+.NumberList {
+    margin: 12px 0px 12px 24px;
+}
+
+.DropDownArrow {
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
+
+a:hover .DropDownArrow {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.pre {
+    margin: 10px;
+    padding: 10px;
+}
+
+.code {
+    background: #dddddd;
+    display: block;
+    font-family: Lucida Console, Courier New;
+    font-size: 100%;
+    line-height: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-size: 100.01%;
+}
+
+body {
+    color: #333;
+	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 84%;
+    line-height: 125%;
+    text-align: left;
+}
+/* End Elements */
+
+#BodyBackground {
+	background: #fff url('../Images/MSDN/bg_body_msdn.png') repeat-x top;
+    padding: 0 483px;
+}
+
+#JelloSizer {
+    margin: 0px auto;
+    max-width: 440px;
+    padding: 0px;
+    width: 100%;
+}
+
+#JelloExpander {
+    margin: 0px -483px;
+    min-width: 966px;
+    position: relative;
+    padding:0 11px 0 12px;
+}
+
+#JelloWrapper {
+    background: url('../Images/MSDN/bg_branding_msdn.png') no-repeat 200px 0px;
+    width: 100%;
+}
+
+/*-------- Start Masthead Control --------*/
+
+.BrandLogo {
+    margin: 2px 0px 0px 8px;
+}
+*html .BrandLogo {
+    margin: 0px 0px 0px 4px;
+}
+
+.Masthead {
+    padding:12px 0 0;
+}
+
+.BrandLogo 
+{
+	background-image:url('../images/MSDN/logo_msdn.png');
+	background-repeat:no-repeat;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Segoe UI Semibold','Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    float: left;
+    line-height: 150%;
+    width: 312px;
+    height: 32px;
+}
+
+
+#BrandDisplayText
+{
+	display:none;	
+}
+
+*html .BrandLogo 
+{
+	background-image:url('../images/MSDN/logo_msdn.gif');
+    font-size: 18px;
+}
+
+.BrandLogo a,
+.BrandLogo a:link,
+.BrandLogo a:visited,
+.BrandLogo a:hover,
+.BrandLogo a:active {
+    color: #fff;
+}
+
+
+.PassportScarab {
+    float: right;
+    padding: 0px;
+    white-space: nowrap;	
+}
+
+.PassportScarab a, 
+.PassportScarab a:link,
+.PassportScarab a:visited,
+.PassportScarab a:hover,
+.PassportScarab a:active {
+    color: #fff;
+}
+
+.UserName {
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 257px;
+    text-align: right;
+}
+
+.UserName a, 
+.UserName a:link,
+.UserName a:visited,
+.UserName a:hover,
+.UserName a:active {
+    color: #fff;
+}
+*html .UserName {
+    margin-top: 4px;
+}
+
+#NetworkTaglineText
+{
+    display:none;
+}
+
+.NetworkLogo {
+    color:#FFFFFF;
+	line-height: 150%;
+	margin:0 2px 0 0;
+	position:absolute;
+	right: 10px;
+}
+
+#NetworkTaglineLogo 
+{
+	margin-top:2px;
+	margin-right:10px;
+	width: 87px;
+	height: 23px;
+	display:none;
+}
+
+.NetworkLogo a, 
+.NetworkLogo a:link,
+.NetworkLogo a:visited,
+.NetworkLogo a:hover,
+.NetworkLogo a:active {
+    color: #fff;
+}
+
+/*-------- End Masthead Control --------*/
+
+/*-------- Start tab control branding --------*/
+.internav {
+    background-image: url('../Images/MSDN/internav.png');
+}
+*html .internav {
+    background-color: #21204A;
+}
+
+.internav a, 
+.internav a:link,
+.internav a:visited,
+.internav a:hover,
+.internav a:active {
+    color: #fff;
+}
+
+.internav a:hover {
+    background: url('../Images/MSDN/internav.png') no-repeat -237px -1px;
+}
+*html .internav a:hover {
+    background-color: #181839;
+    background-image: none;
+}
+
+.internav a.active,
+.internav a.active:hover {
+    background: #09A7E1 url('../Images/MSDN/active.png') no-repeat 0px 0px;
+}
+*html .internav a.active,
+*html .internav a.active:hover {
+    background-image: none;
+}
+
+.LocalNavigation {
+    background:  url('../Images/MSDN/subnav_msdn.png') repeat-y top right;
+}
+*html .LocalNavigation {
+    background-color: #08A6E7;
+    background-image: none;
+}
+
+.LocalNavigation .TabOff a:hover {
+    background-color: #0281bd;
+}
+
+.LocalNavigation .TabOn {
+    background-color: #046ea0;
+}
+/*-------- End tab control branding --------*/
+
+/*-------- Start Inter App Nav --------*/
+.internav {
+    background-position: top right;
+    background-repeat: no-repeat;
+    float: left;
+    font-family: 'Segoe UI Semibold','Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    margin: 0px 0px 0px 8px;
+    max-width: 936px;
+    overflow: hidden;
+    padding: 0px 37px 0px 0px;
+    position: relative;
+    white-space: nowrap;
+}
+*html .internav {
+    background-image: none;
+    font-size: 13px;
+    margin: 0px 0px 0px 4px;
+    padding: 0px;
+}
+
+.leftcap {
+    background: url('../Images/MSDN/internav.png') no-repeat -200px 0px;
+    height: 32px;
+    left: -29px;
+    position: absolute;
+    width: 49px;
+}
+*html .leftcap {
+    background-image: none;
+}
+
+.internav a {
+    color: #fff;
+    float: left;
+    margin: 0px;
+    padding: 6px 9px;
+    white-space: nowrap;
+}
+*html .internav a {
+    padding: 8px 9px 4px 9px;
+}
+
+.internav a:hover {
+    color: #fff;
+    height: 20px;
+    margin: 1px 0px;
+    padding: 6px 9px 4px 9px;
+}
+*html .internav a:hover {
+    padding: 8px 9px 4px 9px;
+}
+
+.internav a.active {
+    color: #fff;
+    height: 20px;
+    margin: 1px 0px;
+    padding: 5px 9px;
+}
+*html .internav a.active,
+*html .internav a.active:hover {
+    padding: 8px 9px 2px 9px;
+}
+/*-------- End Inter App Nav --------*/
+
+/*-------- Start LocalNavigation --------*/
+.LocalNavigation {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 0px 0px -17px;
+    padding: 0px 0px 1px 0px;
+    white-space: nowrap;
+    width: 996px;
+}
+*html .LocalNavigation {
+    font-size: 11px;
+    margin: 0px 0px 0px 8px;
+    width: 950px;
+}
+
+.localleftcap 
+{
+	display:none;
+}
+
+.HeaderTabs {
+    margin: 0px 0px 0px 25px;
+    width:  948px;
+}
+*html .HeaderTabs {
+    margin: 0px;
+}
+
+.LocalNavigation .TabOff {
+    float: left;
+    white-space: nowrap;
+}
+
+.LocalNavigation .TabOff a {
+    float: left;
+    margin-top: 1px;
+    padding: 4px 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.LocalNavigation .TabOff a:hover {
+    padding: 5px 6px 3px 6px;
+}
+
+.LocalNavigation .TabOn {
+    float: left;
+    margin-top: 1px;
+    padding: 4px 6px;
+    white-space: nowrap;
+}
+
+.LocalNavigation .TabOn a,
+.LocalNavigation .TabOn a:hover,
+.LocalNavigation .TabOn a:visited  {
+    color: #fff;
+    cursor: default;
+    text-decoration: none;
+}
+
+.LocalNavBottom {
+    display: none;
+}
+
+.cleartabstrip {
+    clear: both;
+    height: 0px;
+}
+* html .cleartabstrip {
+    display:none;
+}
+/*-------- End LocalNavigation --------*/
+/*-------- End NavigationBox --------*/
+
+/*-------- Start Content Pane --------*/
+.topleftcorner {
+    background: transparent url('../Images/MSDN/contentpane.png') 0px 0px no-repeat;
+    height: 17px;
+    margin-top: -2px;
+    margin-right: 21px;
+}
+
+.toprightcorner {
+    background: transparent url('../Images/MSDN/contentpane.png') 100% 0px no-repeat;
+    float: right;
+    height: 17px;
+    margin-top: -17px;
+    width: 21px;
+}
+    
+.alley {
+    background: url('../Images/MSDN/contentpaneleft.png') repeat-y left;
+    min-height: 768px;
+    padding-left: 19px;
+}
+
+.wrapper {
+    background: url('../Images/MSDN/contentpaneright.png') repeat-y right;
+    min-height: 768px;
+    padding-right: 21px;
+}
+
+.inner {
+    background: #fff;
+    min-height: 768px;
+    padding: 1px;
+}
+
+.bottomleftcorner {
+    background: transparent url('../Images/MSDN/contentpane.png') 0px -17px no-repeat;
+    height: 21px;
+    margin-right: 21px;
+}
+
+.bottomrightcorner {
+    background: transparent url('../Images/MSDN/contentpane.png') 100% -17px no-repeat;
+    float: right;
+    height: 21px;
+    margin-top: -21px;
+    width: 21px;
+}
+/*-------- End Content Pane --------*/
+
+
+/*-------- Start SearchControl --------*/
+.Search {
+float:left;
+width:33.8%;
+}
+
+.SearchBox {
+    background-color: #fff;
+	border: solid 1px #346B94;
+	float: right;
+    height: 22px;
+	margin: 0px 0px 12px 0px;
+}
+
+*html .SearchBox {
+    height: 23px;
+}
+
+.SearchBox ul {
+	z-index: 999;
+	display: block;
+	font-size: 9pt;
+	list-style: none;
+	list-style-image: none;
+}
+
+.TextBoxSearch {
+	border: 1px solid #849CB1;
+	color: black;
+	font-size: 13px;
+	font-style: normal;
+	margin: 0px;
+    padding: 4px 0px 0px 5px;
+    vertical-align: top;
+    width: 232px;
+    float:left;
+}
+*html .TextBoxSearch {
+    padding: 2px 0px 0px 5px;
+    width: 228px;
+}
+
+.TextBoxSearchIE7 {
+   padding: 2px 2px 0px 5px;
+   border: solid 1px white;
+}
+
+.Bing {	
+	background: #fff url('../Images/bing.png') 0 0 no-repeat;
+    display: inline-block;
+    height: 22px;
+    overflow: hidden;
+	text-align: right;
+    width: 47px;	
+    float:left;
+}
+*html .Bing {
+	background-image: url('../Images/bing2.png');
+}
+
+.SearchButton {
+    background: #fff url('../Images/bing.png') 0 -22px no-repeat;
+    display: inline-block;
+	border-width: 0px;
+	cursor: pointer;
+	height: 21px;
+	margin: 0px;
+	padding: 0px;
+	text-align: right;
+	vertical-align: top;
+    width: 21px;
+}
+
+*html .SearchButton {
+	background-image: url('../Images/bing2.png');
+}
+/*-------- End SearchControl --------*/
+
+.FooterLogoContainer
+{	
+	display:none;
+}
+
+.FooterLinks 
+{
+    padding : 6px 0px 12px 8px;    	
+    font-size : 9pt;
+}
+
+.FooterLinks A {
+	color : #03c;
+	font-weight : normal;
+}
+
+A.FooterLinks:hover{
+	color : #f60;
+}
+
+.FooterCopyright 
+{
+	font-weight : normal;
+	color : #000;
+}
+
+.Pipe
+{
+    color : #CCCCCC;
+    font-size: 125%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+/* End MTPS Msdn.css */
+
+/* STO Community Styles */
+
+
+/* Locale Flyout */
+
+.GlobalBar {
+    color: #fff;
+    float: right;
+    font-size: 12px;
+    margin: -4px 10px 0px 0px;
+    width: 275px;
+    z-index:100;
+    position:relative;
+}
+
+*html .GlobalBar {
+    font-size: 11px;
+	margin-right: 4px;
+}
+
+.GlobalBar a:hover {
+    text-decoration: underline;
+}
+
+.LocaleFlyout {
+    float: right;
+    white-space: nowrap;
+    font-size:12px;
+}
+
+#TargetPanel a
+{
+    color:#fff;
+}
+
+.LocaleFlyout a, 
+.LocaleFlyout a:link,
+.LocaleFlyout a:visited,
+.LocaleFlyout a:hover,
+.LocaleFlyout a:active {
+    color: #000;
+}
+
+.LocaleFlyout a:hover
+{
+    text-decoration:underline;
+}
+
+.ContextMenuPanel 
+{
+    padding:3px;
+	background-color: white;
+    border: solid 1px #B8B8B8;
+	cursor: default;
+	position: absolute;
+    display: none;
+    min-width:150px;
+}
+
+a.ContextMenuItem 
+{
+    font-size:10px;
+    color: #000;
+	cursor: pointer;
+	display: block;
+	padding:1px 3px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+a.ContextMenuItem:hover {
+	text-decoration: underline;
+	background-color: #F0F7FD;
+}
+
+.DropDownArrow {
+    background: transparent url('../Images/arrow_dn_white.gif') no-repeat scroll 0 50%;
+    margin:0 0 0 5px;
+    height: 3px;
+    width: 5px;
+	padding-bottom:4px;
+	padding-left:5px;
+}
+
+#LocaleSelector
+{
+	cursor:pointer
+}
+/* End Locale Flyout */
+
+
+/* Search App */
+
+.ApplicationTitle a {
+	display: block;
+    float: left;
+	font: 1.2em 'Segoe UI', Tahoma;   
+    padding-right: .75em;
+    text-decoration: none;
+    position:relative;
+	font-weight:normal;
+}
+
+#sitenav {
+	font: 1.2em 'Segoe UI', Tahoma;
+	vertical-align:bottom;
+}
+
+#sitenav a {
+    float: left;
+	padding: 12px .75em 0em .5em;
+	white-space: nowrap;
+}
+
+.rssfeed {
+	background:transparent url(../images/rss.png) no-repeat scroll 0 0;
+	height:17px;
+	width:17px;
+}
+
+h1.ApplicationTitle
+{
+	margin-top:0px;	
+	padding-top:0px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+
+.RefinementListContainer 
+{
+	padding-top:0px;
+}
+
+span.ResultsMessage span {
+	font-size:90%;
+}
+
+.SearchResultsButton {
+	margin-left:.25em;
+	cursor:pointer; 
+	float:left;
+}
+
+.SearchResultsButton a {
+	font-size:.84em;
+	font-weight:bold;
+}
+
+.SearchResultsButton a,
+.SearchResultsButton a:link, 
+.SearchResultsButton a:visited, 
+.SearchResultsButton a:active  {
+	text-decoration:none; 
+	color:#464646;
+}
+
+.SearchResultsButton a:hover  {
+	color:#FF6600;
+}
+
+.SearchResultsButton .ButtonLeft  {
+	width:3px; 
+	height:22px; 
+	background-image:url(../images/button_left.png); 
+	background-repeat:no-repeat; 
+	float:left; 
+}
+
+.SearchResultsButton .ButtonMiddle  {
+	height:22px; 
+	background-image:url(../images/button_middle.png); 
+	background-repeat:repeat-x; 
+	float:left; 
+	text-align:center;
+	padding:.1em .5em 0 .5em;
+}
+
+.SearchResultsButton .ButtonRight  {
+	width:3px; 
+	height:22px; 
+	background-image:url(../images/button_right.png); 
+	background-repeat:no-repeat; 
+	float:left; 
+}
+
+#RightSideMastHead
+{
+    display:none;
+}
+
+SPAN.fullbadge .affil
+{
+vertical-align:inherit;
+}
+
+/* Boston Styles */
+
+.box {
+	margin: 0px 0px 12px 0px;
+	overflow: hidden;
+}
+
+.box h1,
+.box h2,
+.box h3,
+.box h4,
+.box h5 {
+	background: #260859 url('../images/Msdn/headers.gif') 0px 0px repeat;
+	color: #260859;
+	font-family: 'Segoe UI Semibold','Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	height: 23px;
+	margin: 0px 0px 10px 0px;
+	overflow: hidden;
+	padding: 8px 0px 0px 0px;
+	white-space: nowrap;
+}
+
+.box h1 {
+    font-size: 20px;
+    height: 31px;
+	padding: 0px;
+}
+
+.box h2 {
+    font-size: 18px;
+    height: 28px;
+	padding: 3px 0px 0px 0px;
+}
+
+.box h3 {
+    font-size: 16px;
+}
+
+.box h4 {
+    font-size: 14px;
+    height: 24px;
+	padding: 7px 0px 0px 0px;
+}
+
+.box h5 {
+    font-size: 13px;
+    height: 23px;
+	padding: 8px 0px 0px 0px;
+}
+
+.box h6 {
+    font-size: 13px;
+	height: 31px;
+    line-height: 100%;
+	padding: 0px;
+}
+
+.box h1 a,
+.box h2 a,
+.box h3 a,
+.box h4 a,
+.box h5 a,
+.box h6 a {
+	color: #260859;
+}
+
+.box h1 a:link,
+.box h2 a:link,
+.box h3 a:link,
+.box h4 a:link,
+.box h5 a:link,
+.box h6 a:link {
+	color: #260859;
+}
+
+.box h1 a:visited,
+.box h2 a:visited,
+.box h3 a:visited,
+.box h4 a:visited,
+.box h5 a:visited,
+.box h6 a:visited {
+	color: #260859;
+}
+
+.box h1 a:hover,
+.box h2 a:hover,
+.box h3 a:hover,
+.box h4 a:hover,
+.box h5 a:hover,
+.box h6 a:hover {
+	color: #260859;
+}
+
+.box h1 a:focus,
+.box h2 a:focus,
+.box h3 a:focus,
+.box h4 a:focus,
+.box h5 a:focus,
+.box h6 a:focus {
+	color: #260859;
+}
+
+.box h1 a:active,
+.box h2 a:active,
+.box h3 a:active,
+.box h4 a:active,
+.box h5 a:active,
+.box h6 a:active {
+	color: #260859;
+}
+
+.profile .forumPref
+{
+	margin-top:-8px;
+}
+
+#content .box h4
+{
+	font-size: 15px;
+}
+TD.displayname span.fullbadge
+{
+	width:60%;
+}
+div.head span.fullbadge
+{
+	width:55%;
+}
+span.fullbadge span.name
+{
+	display:block;
+	word-break:break-all;
+	white-space: normal;
+	height: auto;
+	line-height: 125%;
+}
+/* End Boston Styles */
+
+.Container {
+	position: relative;
+	margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+A.BrandLogoLink:hover{
+	text-decoration: none;	
+}
+
+/* forum styles */
+
+.IE7 li.message > div.head
+{
+	overflow:hidden;
+}
+
+ul.announcement li.announcement h4{
+	width:88%;
+	line-height: normal;
+	white-space: normal;
+	height:auto;
+	border: none;
+    overflow:visible;
+	clear:none;
+}
+
+ul.announcement li.announcement A[name='deleteAnnouncement']{
+	clear: right;
+}
+
+.IE7 ul.announcement li.announcement{
+	clear:both;
+}
+
+#content .announcement > A[name='createAnnouncement']
+{
+	top:10px;
+}
+
+.IE7 #content .announcement > A[name='deleteAnnouncement']{
+	clear:right;
+}
+
+.IE7 ul.announcement li.announcement h4{
+float:left;
+clear:left;
+}
+
+#content ul.category{
+	padding-top: 0px;
+}
+
+TABLE.users TR.userstitle TD.lastactivedate
+{
+	width:25%;
+}
+
+.IE7 div.replies li.children
+{
+	margin-top:-1em;
+}
+
+ul.category ul.forum li.forum h3
+{
+	white-space: normal;
+	line-height: 130%;
+	height: auto;
+}
+
+li.thread h3 a{
+    width:58%;
+    display:inline-block;
+}
+
+#content li.thread a.expcol,
+#content li.thread img.icon{
+    width:20px;
+    vertical-align:top;
+}
+
+.IE8 #content li.thread a.expcol,
+.IE8 #content li.thread img.icon{
+    margin-top:-2px;
+}
+
+/*Start IE6 fixes*/
+
+* html .SiteNavTabOffLeft
+{
+    margin-right: -2px;
+}
+
+* html #LocalNavBottom
+{
+    margin-top: -3px;
+    height:5px;
+    font-size: 1%;
+}
+
+* html .NavigationBox .ClearLeft, *+html .NavigationBox .ClearLeft
+{
+    font-size: 1%;
+}
+
+* html .SearchButton, * html .WebButton
+{
+    border: none 0;
+    background-position: top center;
+}
+
+.IE6 #JelloExpander {
+	height: 0;
+}
+
+.IE6 #JelloWrapper {
+    width: 99%;
+}
+
+.IE6 .SearchButton {	
+	background: #fff url(../Images/bing2.png) 0 -22px no-repeat;
+}
+
+.bing {	
+	background: #fff url(../Images/bing2.png) 0 0 no-repeat;
+}
+
+.IE6 #MastHeadSearchTextBox
+{
+	border: 1px solid #fff;
+}
+
+.IE6 .NavigationBox .ClearLeft
+{
+    Font-size: 1%;
+}
+
+.IE6 .BrandLogo {
+    margin-left: 10px;
+}
+
+.IE6 .leftcap {
+    background: transparent url('../Images/MSDN/internav.gif') -200px 0px no-repeat;
+    height: 32px;
+    left: -29px;
+    position: absolute;
+    width: 49px;
+}
+
+.IE6 .Container {
+	position: relative;
+}
+
+.IE6 .Container .titleLine {
+	position: static;
+}
+
+.IE6 .Container .contents {
+	display: inline-block;
+	border: solid 1px #828282;
+}
+
+.IE6 #MainContent #Search{
+    width:100%;
+}
+
+.IE6 #MainContent #Search .content{
+    padding-right:0px;
+}
+
+.IE6 .Container .titleLineBottom .blc,
+.IE6 .Container .titleLineBottom .brc,
+.IE6 .Container .rTop .tlc,
+.IE6 .Container .rTop .trc,
+.IE6 .Container .rBottom .blc,
+.IE6 .Container .rBottom .brc {
+	background: none;
+}
+
+.IE6 .ApplicationSearchContainer {
+	width: 20em;
+}
+
+.IE6 .ApplicationSearchContainer .contents {
+	padding-bottom: 1em;
+}
+
+.IE6 #MainContent .TextBoxSearch,
+.IE6 #MainContent .Watermark {
+    margin-right: -.75em;
+}
+
+.IE6 #toolbar .NewBookmark,
+.IE6 #toolbar .ViewBy,
+.IE6 #toolbar .FilterBy,
+.IE6 #toolbar .TagFilter {
+	position: static;
+	float: left;
+}
+
+.IE6 #toolbar .NewBookmark {
+    text-align: center;
+	width: 10%;
+}
+
+.IE6 #toolbar .ViewBy {
+	position: static;
+	width: 17%;
+    white-space: nowrap
+}
+
+.IE6 #toolbar .FilterBy {
+	position: static;
+	width: 21%;
+}
+
+.IE6 #toolbar .TagFilter {
+	width: 50%;
+	margin: 0 0 10px 0;
+}
+
+.IE6 #toolbar .NewBookmark .contents,
+.IE6 #toolbar .ViewBy .contents,
+.IE6 #toolbar .FilterBy .contents {
+	height: 6.25em;
+}
+
+.IE6 #toolbar .TagFilter .contents {
+	height: 6.1em;
+}
+
+.IE6 #toolbar .TagFilter .rTop,
+.IE6 #toolbar .TagFilter .rBottom {
+	border-top-width: 0px;
+}
+
+.IE6 #toolbar .TagFilter .contents {
+	background-color: #eeeeee;
+	border: solid 1px #828282;
+}
+
+.IE6 #toolbar .contents .label {
+    color: white;
+	padding: .1em .5em .1em .5em;
+	position: static;
+}
+
+.IE6 #toolbar .rTop .tlc,
+.IE6 #toolbar .rTop .trc,
+.IE6 #toolbar .rBottom .blc,
+.IE6 #toolbar .rBottom .brc,
+.IE6 #toolbar .TagFilter .rTop .tlc,
+.IE6 #toolbar .TagFilter .rTop .trc,
+.IE6 #toolbar .TagFilter .rBottom .blc,
+.IE6 #toolbar .TagFilter .rBottom .brc,
+.IE6 #toolbar .TagFilter #moreTags .rTop .tlc,
+.IE6 #toolbar .TagFilter #moreTags .rTop .trc {
+	background: none;
+}
+
+.IE6 .rButton {
+	position: static;
+}
+
+.IE6 #toolbar .rButton .rTop .tlc,
+.IE6 #toolbar .rButton .rTop .trc,
+.IE6 #toolbar .rButton .blc,
+.IE6 #toolbar .rButton .brc {
+	background: none;
+}
+
+/*-------- Start IE6 Content Pane --------*/
+.IE6 .topleftcorner {
+    background: transparent url('../Images/MSDN/contentpane.gif') 0px 0px no-repeat;
+    height: 17px;
+    margin-top: -2px;
+    margin-right: 21px;
+}
+
+.IE6 .toprightcorner {
+    background: transparent url('../Images/MSDN/contentpane.gif') 100% 0px no-repeat;
+    float: right;
+    height: 17px;
+    margin-top: -17px;
+    width: 21px;
+}
+    
+.IE6 .alley {
+    background: url('../Images/MSDN/contentpaneleft.gif') repeat-y left;
+    padding-left: 19px;
+    height: auto !important;
+    height: 768px;
+}
+
+.IE6 .wrapper {
+    background: url('../Images/MSDN/contentpaneright.gif') repeat-y right;
+    min-height: 768px;
+    padding-right: 21px;
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+
+.IE6 .inner {
+    background: #fff;
+    padding: 1px;
+    height: auto !important;
+    height: 768px;
+}
+.IE6 .bottomleftcorner {
+    background: transparent url('../Images/MSDN/contentpane.gif') 0px -17px no-repeat;
+    height: 21px;
+    margin-right: 21px;
+    margin-top: -22px;
+}
+
+.IE6 .bottomrightcorner {
+    background: transparent url('../Images/MSDN/contentpane.gif') 100% -17px no-repeat;
+    float: right;
+    height: 21px;
+    margin-top: -21px;
+    width: 21px;
+}
+
+.IE6 li.forum H3{
+    width:60%;
+}
+
+.IE6 li.category H2{
+    font-size:17px;
+}
+
+.IE6 h1,
+.IE6 h2,
+.IE6 h3,
+.IE6 h4,
+.IE6 h5,
+.IE6 h6 {
+    font-family: Arial,'Segoe UI Semibold','Segoe UI', 'Lucida Grande', Verdana,  Helvetica, sans-serif;
+}
+/* End IE6 Content Pane */
+
+.IE6 .leftcap {
+    background: url('../Images/MSDN/internav.gif') -200px 0px no-repeat;
+    height: 32px;
+    left: -29px;
+    position: absolute;
+    width: 49px;
+}
+
+.IE6 .LocalNavigation {
+    background:  url('../Images/MSDN/subnav_msdn.gif') top right repeat-y;
+}
+
+.IE6 #main-content #user-bar
+{
+    float:right;
+    width:auto !important;
+    width:30%;
+}
+
+.IE6 #main-content #points-bar,.IE6 #main-content #wrapper
+{
+    float:right;
+}
+
+.IE6 #content .category{
+  width:100%;
+}
+
+/*End IE6 fixes*/
+
+.SystemMessage {
+	background-color: #FFCC33;
+	border: solid 1px black;
+  	color: black;
+	font-weight: bold;
+	margin: 10px auto 10px auto;
+	padding: 4px 6px 4px 6px;
+	width: 50%;
+}

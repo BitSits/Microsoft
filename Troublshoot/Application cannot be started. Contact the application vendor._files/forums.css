@@ -1,0 +1,158 @@
+﻿div.box > h4
+{
+	font-weight: bold;
+}
+
+.box h1, 
+.box h2, 
+.box h3, 
+.box h4, 
+.box h5 
+{
+	margin-bottom:0px
+}
+
+div.box > h4
+{
+	padding-left:0px;
+}
+
+li.announcement h4
+{
+	padding:0px;
+}
+
+li.category > h2
+{
+	padding-left:0px;
+	margin-bottom:0px;
+}
+
+
+li.announcement h4
+{
+	background:none;
+}
+
+li.forum {
+	margin:1em;
+}
+
+div.box,
+li.box
+{
+	border: none;
+	background-image: none;
+	margin-bottom:0px;
+}
+
+div.discover
+{
+	border:1px solid #BBBBBB;
+}
+
+div.box > h4, 
+div.box > .help {
+	background-color:#260859;
+}
+
+li.category > h2 > a:hover,
+li.category > h2 > a:active,
+li.category > h2 > a:focus
+{
+	color: #260859;
+	text-decoration: none;
+}
+
+#forumsSearch input[type="text"] 
+{
+	font-size: 1em;	
+	width: 270px;
+}
+
+#rail > div 
+{
+	margin-bottom:0px;	
+}
+	
+a.help 
+{
+	font-size: 1.1em;	
+}	
+
+div#announcement
+{
+	font-size:90%;
+}
+
+div.box > .content
+{
+	margin: 2px;
+}
+
+div.discover
+{
+	margin-bottom:.5em;
+}
+
+.forum h3
+{
+	background: #fff none;
+	margin-bottom: 0px;
+	padding-top: 0px;
+}
+
+li.forum a,
+li.forum a:link,
+li.forum a:visited,
+li.forum a:hover,
+li.forum a:focus,
+li.forum a:active{
+	color:#0066DD;
+}
+
+li.thread > h3 
+{
+	font-size:90%;	
+	display:inline;
+	margin-right:1em;
+	margin-left:0em;
+}
+
+
+.internav a:hover
+{
+	text-decoration:none;
+}
+
+#masthead a,
+#masthead a:link,
+#masthead a:visited,
+#masthead a:hover,
+#masthead a:focus,
+#masthead a:active
+{
+	color:#fff;
+}
+
+
+h1 
+{
+	font-size:22px;	
+}
+
+a.author span {
+	display:inline;
+	color:Green;
+}
+
+li.thread img.icon 
+{
+	clear:left;
+}
+
+li.thread > h3
+{
+	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	clear: none;
+}

@@ -1,0 +1,1861 @@
+/* -------------------------------------------------------------- 
+   
+   CmsControlsBody.css
+   
+   Provides the layout for the controls used on the CMS system.
+   included into: CmsControls.css, siteHelp.css
+      
+-------------------------------------------------------------- */
+/* -------------------------------------------------------------- 
+In Use 
+-------------------------------------------------------------- */
+/* Begin General */
+.XnaCgp_Cms_Float_Left
+{
+    float: left;
+}
+.XnaCgp_Cms_Float_Right
+{
+    float: right;
+}
+.XnaCgp_Cms_Clear_Left
+{
+    clear: left;
+}
+.XnaCgp_Cms_Clear_Right
+{
+    clear: right;
+}
+.XnaCgp_Cms_Left_Container
+{
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+.XnaCgp_Cms_Right_Container
+{
+    margin-top: 12px;
+}
+.XnaCgp_Cms_Catalog_Wrapper
+{
+    
+}
+.XnaCgp_Cms_Content_Image
+{
+    float: left;
+    padding: 0em 8px 0em 0em;
+    border: none;
+}
+.XnaCgp_Cms_Content_Image_Alt
+{
+    float: right;
+    padding: 0em 8px 0em 0em;
+    border: none;
+}
+/* End General */
+.XnaCgp_Cms_Content_Community_Spotlight_Container
+{
+    margin-left: 25px;
+}
+/* Start Home Page Controls*/
+.XnaCgp_Cms_HomePage_Container
+{
+	margin-left:15px;
+}
+.XnaCgp_Cms_Tagline_Container
+{
+	min-height: 15px;/*$Browser#(IE7,IE8,FF,Uplevel)*/ 
+    margin: 15px 0px; 
+    padding: 0px;
+    text-align: center;
+font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 15px;
+    color: #758997;
+}
+.XnaCgp_Cms_HowItWorks_Container
+{
+	height: 334px;
+	width: 229px;
+    background: url(/assets/images/home/home/cco_home_how-it-works_new.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	float: left;
+}
+.XnaCgp_Cms_HowItWorks_TextDiv
+{
+	height: 21px;
+	padding: 8px 0px 0px 12px;	
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 12px;
+    margin-left: 7px;
+}
+.XnaCgp_Cms_HowItWorks_HowIt a, XnaCgp_Cms_HowItWorks_HowIt a:visited, XnaCgp_Cms_HowItWorks_HowIt a:hover, XnaCgp_Cms_HowItWorks_HowIt a:link
+{
+	color: #526569;
+}
+.XnaCgp_Cms_HowItWorks_Works
+{
+	color: #D65627;
+}
+.XnaCgp_Cms_HowItWorks_Container ol
+{
+	margin: 0;
+	padding: 0px;
+	list-style-type: none;
+	display: block;
+}
+.XnaCgp_Cms_HowItWorks_OL li
+{
+    display: block;
+    height: 69px;
+    overflow: hidden;
+    width: 221px;
+    margin: 0px 0px 8px 0px
+}
+.XnaCgp_Cms_HowItWorks_OL a, XnaCgp_Cms_HowItWorks_OL a:link, XnaCgp_Cms_HowItWorks_OL a:visited
+{
+	display: block;
+	color: #FB9700;
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 12px;
+    text-transform:uppercase;
+    height:70px;
+}
+	
+.XnaCgp_Cms_HowItWorks_OL a:hover
+{
+	color: #F6CA1E;
+}
+.XnaCgp_Cms_HowItWorks_StepDescription
+{
+    color: #758997;
+font-family: Verdana, Arial, Helvetica, Sans-Serif;
+font-size: 80%;
+    display:block;
+    padding:0px 11px 0px 80px;
+    text-transform:none;
+    font-weight:normal;
+    height:45px;
+}    
+.XnaCgp_Cms_HowItWorks_StepTitle
+{
+    display:block;
+    padding:11px 0px 0px 80px;
+}
+    
+.XnaCgp_Cms_HomePage_FeaturedArea1
+{
+	float: left;
+	margin: 0px 0 0 11px;
+	height: 334px;
+	width: 667px;
+	overflow: hidden;
+}
+/* TopMovers start */
+.XnaCgp_Cms_TopMovers_Container
+{
+    height: 334px;
+	width: 229px;
+    background: url(/assets/images/home/home/cco_home_top-movers.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	float: left;
+}
+.XnaCgp_Cms_TopMovers_Container .XnaCgp_Cms_HowItWorks_TextDiv
+{
+    margin-bottom:15px;
+}
+.XnaCgp_Cms_TopMovers_CreatorName
+{
+    display:block;
+    margin-top:7px;
+    width:140px;
+    overflow:hidden;
+    height:13px;
+    margin-bottom:1px; 
+}
+.XnaCgp_Cms_TopMovers_item
+{
+    height: 57px;
+    width: 198px;
+    float:left;
+    margin:0px 12px;
+font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size:11px;
+    line-height:12px;
+}
+.XnaCgp_Cms_TopMovers_Diamond
+{
+    float:left;
+    display:block;
+    height:15px;
+    width:115px;
+    background-image:url(/assets/Images/global/cco_global_reputation_diamond_small_allSet.png);
+    background-repeat:no-repeat;
+}
+.XnaCgp_Cms_TopMovers_level1
+{
+    background-position:left top;
+}
+.XnaCgp_Cms_TopMovers_level2
+{
+    background-position:left -15px;
+}
+.XnaCgp_Cms_TopMovers_level3
+{
+    background-position:left -30px;
+}
+.XnaCgp_Cms_TopMovers_level4
+{
+    background-position:left -45px;
+}
+.XnaCgp_Cms_TopMovers_level5
+{
+    background-position:left -60px;
+}
+.XnaCgp_Cms_TopMovers_level_access
+{
+    display:none;
+}
+.XnaCgp_Cms_TopMovers_score
+{
+    color:#999999;
+}
+.XnaCgp_Cms_TopMovers_scoreChange
+{
+    color:#526569;
+}
+.XnaCgp_Cms_TopMovers_Tile
+{
+   border:none;
+   float:left;
+   margin:8px 6px 8px 8px;
+   
+}
+/* TopMovers end */
+.XnaCgp_Cms_GotGame
+{
+	margin-top: 11px;	
+	clear:left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Top
+{
+  height:7px;/*$Browser#(FF)*/
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Top, .XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox, .XnaCgp_Cms_GotGame .XnaCgp_Global_WhiteBox_Bottom
+{
+	margin-left: 0;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Title
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 145%;
+    margin: 3px 0 0 9px; /*$Browser#(Uplevel,FF)*/
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Got
+{
+	color: #526569;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_Game
+{
+	color: #D65627;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBoxTop
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_top.jpg); 
+	width: 654px;
+	height: 5px;
+	margin-top: 10px;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBox
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_middle.jpg);
+	background-repeat: repeat-y;
+	width: 654px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GrayBoxBottom
+{
+	background-image: url(/assets/images/home/home/cco_home_game_genre-review_window_bottom.jpg);
+	width: 654px;
+	height: 5px;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GenreImage
+{
+	background-image: url(/assets/images/home/home/cco_Home_gamegenre_action.jpg); /* must match the first category in the list*/
+	background-position: left;
+	background-repeat: no-repeat;
+	width: 482px;
+	margin-left: 5px;
+	margin-right: 0px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame .XnaCgp_GenreList
+{
+	margin: 8px 0 0 10px;
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul
+{
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0;
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul:first-child 
+{
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0 0 0 132px; /*$Script#(Default)*/ 
+	float: left;
+}
+.XnaCgp_Cms_GotGame ul li
+{
+	background-image: url(/assets/Images/global/cco_global_dots.jpg);
+	background-position: left 3px;
+	background-repeat: no-repeat;
+	margin: 0 4px 7px 0;
+	padding-left: 18px;
+	width: 144px; /*$Script#(Default)*/ 
+}
+.XnaCgp_Cms_GotGame ul li a, .XnaCgp_Cms_GotGame ul li a:link, .XnaCgp_Cms_GotGame ul li a:visited
+{
+    color: #E16D2E;
+    text-decoration: none;
+}
+.XnaCgp_Cms_GotGame ul li a:hover
+{
+    color: #E27614;
+}
+.XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame, .XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:link, .XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:visited
+{
+	display: block;
+	background: url(/assets/images/home/home/cco_home_game_review_image.jpg) no-repeat center center;
+	border: none;
+	width: 153px;
+	margin-left: 14px;
+    padding-top: 110px;/*$Script#(Default)*/
+	float: left;
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 150%; /*$Script#(Default)*/
+    color: #D65627;
+    cursor: pointer;
+    text-align: center;
+}
+.XnaCgp_Cms_GotGame a.XnaCgp_ReviewAGame:hover
+{
+    color: #E27614;
+}
+.XnaCgp_Cms_Content_Featured_Announcement_Container
+{
+    clear: both; 
+    width: 674px; 
+    margin-top: 11px;
+}
+.XnaCgp_Cms_HomePage_News_Wrapper
+{
+    margin-top: 9px;
+}
+.XnaCgp_Cms_HomePage_News_Wrapper .XnaCgp_Cms_Page_Header
+{
+	padding: 0 0 4px 38px;
+}
+.XnaCgp_Cms_Content_Repeater_News_More_Link
+{
+	float: right;
+	margin: 10px 10px 0 0;
+}
+/* End Home Page Controls */
+/* Begin CmsContentRepeater */
+.XnaCgp_Cms_Content_Repeater_Pager
+{
+    width: 660px;
+    height: 20px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item	
+{
+    padding: 19px 0em 19px 0em;
+    width: 660px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner
+{
+    
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner p
+{
+    margin: 0em;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt
+{
+    
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt p
+{
+    margin: 0em;
+    clear: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Inner_Alt1 div
+{
+    clear: left;
+    float: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Title
+{
+    height: 16px;/*$Script#(Default)*/
+    margin-bottom: 8px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Title span
+{
+    float: left;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area
+{
+    margin-bottom: 8px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area_Column_Left
+{
+    padding-right: 5px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Item_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    border-left: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Repeater_List_Divider
+{
+    border-bottom: 1px solid #cccccc;
+    width: 660px;
+    height: 1px;
+    clear: both;
+}	
+/* End CmsContentRepeater */
+.XnaCgp_Cms_Page_Header
+{	
+    padding: 11px 0px 10px 30px;
+}
+.XnaCgp_Cms_Page_Header h1
+{
+    padding-right: 20px;
+    vertical-align: middle;
+    display: inline;
+}
+.XnaCgp_Cms_Page_Header a img
+{
+    position:relative;
+    top:-2px;
+}
+.XnaCgp_Cms_Section2
+{
+    float:left;
+    clear:left;/*$Browser#(IE8,FF,Uplevel)*/
+}
+/* feed repeater */
+.XnaCgp_Cms_FeedRepeater
+{
+    width:217px; 
+    float:left;
+    margin:11px 11px 0px 0px;
+}
+.XnaCgp_Cms_FeedRepeater_Sidebar .XnaCgp_Global_SmallWhiteBox 
+{
+    min-height:275px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_FeedRepeater_News .XnaCgp_Global_SmallWhiteBox 
+{
+    min-height:510px;/*$Browser#(FF)*/
+}
+.XnaCgp_Cms_FeedRepeater_Education .XnaCgp_Global_SmallWhiteBox,
+.XnaCgp_Cms_FeedRepeater_Spotlight .XnaCgp_Global_SmallWhiteBox,
+.XnaCgp_Cms_FeedRepeater_News .XnaCgp_Global_SmallWhiteBox
+{
+    overflow: hidden;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Page_Header
+{
+    float:left;
+    padding:0px 0px 0px 4px;
+    width:200px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Page_Header h1
+{
+    float:left;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 210%;/*$Script#(Default)*/
+    text-transform: lowercase; 
+    color: #799197;
+    padding:0px 0px 0px 9px;
+    display:inline;
+}
+.XnaCgp_Cms_FeedRepeater h3
+{
+    font-size:110%;
+    padding:9px 13px 0px 13px;
+    margin:0px;
+}
+.XnaCgp_Cms_FeedRepeater h3 span
+{
+    font-size:80%;
+    margin:0px;
+    padding:0px;
+    display:inline-block;
+}
+.XnaCgp_Cms_FeedRepeater span
+{
+    padding:2px 13px 0px 13px;
+    margin:0px;
+    display:block;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Repeater_News_Item
+{
+    width: 200px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Catalog_Divider
+{
+    width: 191px;
+    margin:0px 11px 6px;
+}	
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_Content_Repeater_News_Item_Body
+{
+    width: 200px;
+}
+.XnaCgp_Cms_FeedRepeater img
+{
+    border: 0em;
+    float:right;
+    margin:10px 2px 0px 0px;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_Body_Item img,
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_Body_Item_HomePage img
+{
+	margin: 10px 8px 0px 15px;
+}
+.XnaCgp_Cms_FeedRepeater_MoreLink
+{
+    background-image: url(/assets/Images/home/home/cco_home_whiteBox_middle.png);
+    width: 217px;
+    margin:0px;
+    height:15px;
+}
+.XnaCgp_Cms_FeedRepeater_MoreLink a
+{
+    float:right;
+    padding:0px 10px 0px 0px;
+}
+/* Education feed repeater */
+.XnaCgp_Cms_EducationSamples_Body_Item,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage
+{
+    min-height: 87px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item h3,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage h3
+{
+    padding:13px 0px 0px 0px;
+    margin:0px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item img,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage img
+{
+	float: left;
+}
+.XnaCgp_Cms_FeedRepeater .XnaCgp_Cms_EducationSamples_AreaLabel
+{
+    display:inline;
+    border-right:solid 1px black;
+    height:10px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item a
+{
+    display:block;
+    padding:1px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage a
+{
+    display:block;
+    padding:1px 1px 1px 68px; 
+}
+.XnaCgp_Cms_EducationSamples_Body_Item p,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage p
+{
+    padding:0px 2px;
+    margin:0px
+}
+.XnaCgp_Cms_Sidebar_Item
+{
+	margin-top: 20px;
+}
+.XnaCgp_Cms_Sidebar_Item_LR
+{
+	height:105px;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	overflow:hidden;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	width:217px;/*$Browser#(IE7,IE8,FF)*/ /*this breaks chrome/opera*/
+	clear:right;
+}
+.XnaCgp_Cms_FormElement
+{
+    padding: 5px 0px 5px 10px;
+}
+.XnaCgp_Cms_FindBox_DropDown
+{
+    font: 11px verdana; 
+    color: #666666
+}
+.XnaCgp_Cms_PagerWrapper
+{
+    border-bottom: 1px solid #CCC;
+    height: 22px;
+}
+.XnaCgp_Cms_PagerInnerWrapper
+{
+    text-align: right;
+    padding-right: 5px;
+}
+.XnaCgp_Cms_Content_Repeater_Item_Main_Info
+{
+    margin: 57px 0px 0px 0px;
+}
+.XnaCgp_Cms_Large_Subtitle
+{
+    padding-right: 22px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_Content_Align_Right
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Platform_Logo
+{
+    height: 30px;
+    text-align: right;
+}
+.XnaCgp_Cms_Platform_Logo_Starter_Kit
+{
+    width: 50px;
+    
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    float: right;
+    text-align: right;	
+    margin-top: -10px;	
+}
+.XnaCgp_Cms_Platform_Logo_Windows
+{
+    width: 23px;
+}
+.XnaCgp_Cms_Platform_Logo_Xbox
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Platform_Logo_Zune
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Content_Catalog_Pager
+{
+    width: 670px;
+    height: 20px;
+    margin-left: 14px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Container
+{
+    margin-left: 7px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item
+{
+    padding: 7px 0px 0px 0px;
+    min-height: 84px;
+    width: 684px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Top
+{
+    background-position: -2px 0;
+    margin: 0 2px;
+    padding: 0 5px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Bottom
+{
+    background-position: left bottom;
+    height: 3px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item:hover, .XnaCgp_Cms_Content_Catalog_Repeater_Item:hover .XnaCgp_Cms_Content_Catalog_Repeater_Item_Top,.XnaCgp_Cms_Content_Catalog_Repeater_Item:hover .XnaCgp_Cms_Content_Catalog_Repeater_Item_Bottom
+{
+    background-image: url(/assets/images/education/content_catalog/cco_DevEd_catalog_rollover.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: no-repeat;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item:hover .XnaCgp_Cms_Content_Catalog_Repeater_Item_Top
+{
+	    background-color: #F4ECE1;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Body
+{
+    width: 480px;
+    margin: 0em 0em 0em 52px; /*$Script#(Default)*/
+    padding-top: 6px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Body p
+{
+    margin: 0em;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Title
+{
+    clear: right;
+    height: 18px;/*$Script#(Default)*/
+    padding-top: 5px;
+    margin-right: 8px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area
+{
+    clear: right;	
+    height: 12px; /*$Script#(Default)*/
+    margin: 2px 15px 0em 0em;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area_Column_Left
+{
+    padding: 0em 8px 0em 10px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Area_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    border-left: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Type
+{
+    margin-right: 12px;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Platform_Logo
+{
+    margin-top: -7px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 75px;			
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Catalog_Divider
+{
+    border-bottom: 1px solid #cccccc;
+    width: 670px;
+    height: 1px;
+    margin-left: 7px;
+    clear: both;
+}	
+.XnaCgp_Cms_Content_Catalog_More_Link
+{
+    float: right;
+    padding-top: 10px;
+}	
+/* Begin CmsContentRepeaterLarge */
+.XnaCgp_Cms_Content_Repeater_Large_Wrapper
+{
+    float: left;
+    margin-bottom: 18px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big
+{
+    margin-top: 11px;
+    display: block;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Top
+{
+    background-image: url(/assets/images/global/cco_global_white_window_top.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 674px; 
+    height: 8px;
+    float: left;
+    clear: both;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Middle
+{
+    background-image: url(/assets/images/global/cco_global_white_window_middle.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 674px;
+    float: left;
+    clear: both;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Bottom
+{
+    background-image: url(/assets/images/global/cco_global_white_window_bottom.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 674px; 
+    height: 8px;
+    float: left;
+    clear: both;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item
+{	
+    margin: 8px 15px 6px 16px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Title
+{
+    clear: right; 
+    height: 16px; /*$Script#(Default)*/
+    margin-top: 21px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area
+{
+    clear: right; 
+    min-height:20px;/*$Script#(Default)*/
+    margin-top: 8px;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area_Column_Left
+{
+    padding: 0em 8px 0em 0px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    margin: 0em 0em 8px 0em;
+    max-width: 340px;
+    border-left: 1px solid #cccccc;
+    text-transform: lowercase;
+}
+.XnaCgp_Cms_Content_Repeater_List_Spotlight_Big_Item_Middle
+{
+    width: 440px;
+    margin: 8px 0em 16px 0em;
+    vertical-align: middle;
+}
+/* End CmsContentRepeaterLarge */
+/* Begin CmsContentFeaturedAreaItems */
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Container
+{
+    clear: both; 
+    width: 676px; 
+    height: 109px; 
+    margin-bottom: 20px;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items
+{
+    background-image:url(/assets/images/education/main/cco_DevEd_Main_Feature_window_small.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat:no-repeat;
+    width: 169px;
+    height: 115px;
+    float: left;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Image
+{
+    padding: 5px 0em 0em 5px;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Image img
+{
+    border: 0em;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Link
+{
+    float: left; 
+    padding-left: 10px;
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero_Items_Type
+{
+    float: right; 
+    padding-right: 10px;
+}
+/* End CmsContentFeaturedAreaItems */
+/* Begin CmsContentDetail */
+.XnaCgp_Cms_Content_Details_Wrapper
+{
+    padding-bottom: 20px;
+}
+.XnaCgp_Cms_Content_Details_Container
+{
+    margin: 20px 0em 20px 30px;
+}
+.XnaCgp_Cms_Content_Details_Container_Main_Info
+{
+}
+.XnaCgp_Cms_Content_Details_Container_Title
+{
+    clear: right; 
+    height: 16px; /*$Script#(Default)*/
+    margin-top: 21px;
+}
+.XnaCgp_Cms_Content_Details_Container_Area
+{
+    clear: right; 
+    min-height: 28px; 
+    margin-top: 8px;
+}
+.XnaCgp_Cms_Content_Details_Container_Area_Inner
+{
+    float: left;
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left
+{
+    clear: left;
+    min-width: 60px;
+    padding: 0em 8px 0em 10px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0em 0em 5px 8px;
+    width: 260px;
+    border-left: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Detail_Platform_Logo
+{
+    width: 75px;
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    float: right;
+    text-align: right;		
+    margin-top: -10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_Content_Detail_Blob
+{
+    margin-top: 17px;
+    border-top: 1px solid #cccccc;
+    clear: both;
+    width: 650px;
+    overflow: hidden;
+}
+.XnaCgp_Cms_Content_Detail_Download_Panel_Top
+{
+    margin-top: 15px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Title_Left
+{
+    background-image: url(/assets/images/global/cco_global_section_title_start.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Title_Middle
+{
+    background-image: url(/assets/images/global/cco_global_section_title_middle.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: repeat-x;
+    height: 25px;
+    width: 570px;
+    color: #FFFFFF; 
+    vertical-align: middle;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Title_Middle span
+{
+    display: block;
+    margin-top: 5px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Title_Right
+{
+    background-image: url(/assets/images/global/cco_global_section_title_end.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Body
+{
+    background-image: url(/assets/images/global/cco_global_window_gradation.jpg); 
+    background-position: left top; 
+    background-repeat: repeat-x;	
+    background-color: #F5F7F6;
+    border: solid 1px #CCC;
+    border-top: none;	
+    padding-bottom: 10px;
+    width: 638px;
+}
+.XnaCgp_Cms_Content_Detail_Download_Section_Info
+{
+    margin-left: 10px;
+    width: 250px;
+}
+.XnaCgp_Cms_Download_Wrapper
+{
+    margin: 19px 27px 0em 16px;
+    border-bottom: solid 1px #CCC;	
+    width: 600px;
+    
+    min-height:79px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_Content_Detail_Download_Attributes
+{
+    width: 240px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Download_Detail_Column_Left
+{	
+    vertical-align: text-bottom;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 128px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Download_Detail_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 6px 5px;
+    border-left: 1px solid #cccccc;
+font-weight: bold;
+    width: 100px;/*$Script#(Default)*/
+    margin-left: 132px;/*$Script#(Default)*/
+}
+.XnaCgp_Cms_Download_Detail_Column_Right p
+{
+    margin: 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download_Platform_Logo
+{
+    width: 75px;
+    
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+/* End CmsContentDetail */
+/* Begin CmsContentRepeaterNews */
+.XnaCgp_Cms_Content_Repeater_News_Container
+{
+    margin-left: 7px;
+    margin-bottom: 20px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item
+{
+    padding: 3px 0 0px 0;
+    min-height: 88px;
+    width: 684px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Top
+{
+    background-position: -2px 0;
+    margin: 0 2px;
+    padding: 0 5px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Bottom
+{
+    background-position: left bottom;
+    height: 3px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item:hover, .XnaCgp_Cms_Content_Repeater_News_Item:hover .XnaCgp_Cms_Content_Repeater_News_Item_Top, .XnaCgp_Cms_Content_Repeater_News_Item:hover .XnaCgp_Cms_Content_Repeater_News_Item_Bottom
+{
+    background-image: url(/assets/images/education/content_catalog/cco_DevEd_catalog_rollover.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: no-repeat;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item:hover .XnaCgp_Cms_Content_Repeater_News_Item_Top
+{
+	    background-color: #F4ECE1;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Title
+{
+    clear: right;
+    min-height: 18px;/*$Script#(Default)*/
+    padding-top: 5px;
+    margin-right: 8px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area
+{
+    clear: right;	
+    height: 12px;
+    margin: 2px 15px 0em 0em;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area_Column_Left
+{
+    padding: 0em 8px 0em 0px;
+    text-align: right;	
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Area_Column_Right
+{
+    text-align: left;
+    padding: 0em 0em 0em 8px;
+    border-left: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Body
+{	
+    padding-top: 5px;
+    width: 550px;
+}
+.XnaCgp_Cms_Content_Repeater_News_Item_Body p
+{	
+    margin: 0em;
+}
+/* End CmsContentRepeaterNews */
+/* Begin CmsContentCatalogAreaFilter */
+.XnaCgp_Cms_DevArea_Filter_Top
+{
+    background-image: url(/assets/images/global/cco_global_devarea_top.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: no-repeat;
+    width: 212px;
+}
+.XnaCgp_Cms_DevArea_Filter_Bottom
+{
+    background-image: url(/assets/images/global/cco_global_devarea_bottom.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: no-repeat;
+    width: 212px;
+    height: 10px;
+}
+.XnaCgp_Cms_DevArea_Filter_List
+{	
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+.XnaCgp_Cms_DevArea_Filter_List ul
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0em;
+    list-style-type: none;
+    list-style-image: none;
+}
+.XnaCgp_Cms_DevArea_Filter_List ul li
+{
+}
+.XnaCgp_Cms_DevArea_Filter_List a
+{
+    color: #FFFFFF;	
+}
+.XnaCgp_Cms_DevArea_Filter_Title
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #393D42;	
+    padding: 10px 0px 0px 15px;
+}
+.XnaCgp_Cms_DevArea_Filter_Subtitle
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+font-size: 9px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 15px;
+}
+.XnaCgp_Cms_DevArea_Filter_Divider
+{
+    border-bottom: solid 1px #989EA3;
+    width: 210px;
+    height: 1px;
+    margin-left: 1px;
+}
+/* End CmsContentCatalogAreaFilter */
+/* Begin CmsContentHotLinks */
+.XnaCgp_Cms_HotLinks_Container
+{
+    padding-top: 20px;
+}
+.XnaCgp_Cms_HotLinks_Title_Left
+{
+    background-image: url(/assets/images/global/cco_global_section_title_start.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;    
+    float: left;
+}
+.XnaCgp_Cms_HotLinks_Title_Middle
+{
+    background-image: url(/assets/images/global/cco_global_section_title_middle.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: repeat-x;
+    height: 25px;
+    width: 142px;
+    color: #FFFFFF; 
+    text-align: center;
+    float: left;
+}
+.XnaCgp_Cms_HotLinks_Title_Middle p
+{
+    margin: 0em;
+    padding-top: 5px;
+}
+.XnaCgp_Cms_HotLinks_Title_Right
+{
+    background-image: url(/assets/images/global/cco_global_section_title_end.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;
+    float: left;
+}
+.XnaCgp_Cms_HotLinks_Body
+{
+    background-image: url(/assets/images/global/cco_global_window_gradation.jpg); 
+    background-position: left top; 
+    background-repeat: repeat-x;	
+    background-color: #F5F7F6;
+    border: solid 1px #CCC;
+    border-top: none;	
+    padding: 2px 0px 2px 0px;
+    width: 210px;
+    clear: left;
+}
+.XnaCgp_Cms_HotLinks_Body ul
+{
+    list-style-image: url(/assets/images/global/cco_global_dots.jpg);	
+    margin: 3px 0px 3px 0px;
+    padding: 8px 0px 0px 30px;
+    vertical-align: top;
+}
+.XnaCgp_Cms_HotLinks_Body ul li
+{
+    padding-left: 2px;
+    padding-bottom: 8px;
+}
+/* End CmsContentHotLinks */
+/* Begin CmsContentQuickLinks */
+.XnaCgp_Cms_QuickLinks_Container
+{
+    padding-top: 20px;
+}
+.XnaCgp_Cms_QuickLinks_Title_Left
+{
+    background-image: url(/assets/images/global/cco_global_section_title_start.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;
+    float: left;
+}
+.XnaCgp_Cms_QuickLinks_Title_Middle
+{
+    background-image: url(/assets/images/global/cco_global_section_title_middle.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: repeat-x;
+    height: 25px;
+    width: 142px;
+    color: #FFFFFF; 
+    text-align: center;
+    float: left;
+}
+.XnaCgp_Cms_QuickLinks_Title_Middle p
+{
+    margin: 0em;
+    padding-top: 5px;
+}
+.XnaCgp_Cms_QuickLinks_Title_Right
+{
+    background-image: url(/assets/images/global/cco_global_section_title_end.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: no-repeat; 
+    width: 35px;
+    height: 25px;
+    float: left;
+}
+.XnaCgp_Cms_QuickLinks_Body
+{
+    background-image: url(/assets/images/global/cco_global_window_gradation.jpg); 
+    background-position: left top; 
+    background-repeat: repeat-x;	
+    background-color: #F5F7F6;
+    border: solid 1px #CCC;
+    border-top: none;	
+    padding: 10px 0px 10px 0px;
+    width: 210px;
+    clear: left;
+}
+.XnaCgp_Cms_QuickLinks_Item
+{
+}
+.XnaCgp_Cms_QuickLinks_Item img
+{
+    border: none;
+    margin: auto;
+    display: block;
+}
+.XnaCgp_Cms_QuickLinks_Item ul
+{
+    list-style-image: url(/assets/images/global/cco_global_required_dots.gif);	
+    margin: 0em;
+    padding-left: 30px;
+    line-height: 1.5em;
+    vertical-align: top;
+}
+.XnaCgp_Cms_QuickLinks_Item ul li
+{
+    padding-left: 8px;
+}
+/* End CmsContentQuickLinks */
+/* Begin CmsContentHtmlBlock */
+.XnaCgp_Cms_Content_Html_Block
+{
+    margin: 0px 0px 0px 0px;
+}
+/* End CmsContentHtmlBlock */
+/* Begin CmsContentFeaturedHero */
+.XnaCgp_Cms_Content_Featured_Area_Hero
+{
+    background-image: url(/assets/images/education/main/cco_DevEd_Main_Feature_window.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-repeat: no-repeat;
+    width: 676px;
+    height: 302px;	
+}
+.XnaCgp_Cms_Content_Featured_Area_Hero img
+{
+    padding: 10px 0px 0px 10px;
+}
+/* End CmsContentFeaturedHero */
+/* Begin PremiumHelper */
+.XnaCgp_Cms_Premium_Container
+{
+    min-height:14px;/*$Script#(Default)*/
+    text-align: center;
+    float: left;
+    clear: none;
+}
+.XnaCgp_Cms_Premium_End
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_end.png);/*$Script#(Default)*/
+    min-height:14px;/*$Script#(Default)*/
+    background-repeat: repeat-y; 
+    background-position: top right;     
+    padding-right: 8px;
+    float: left;
+}
+.XnaCgp_Cms_Premium_Start
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_start.png);/*$Script#(Default)*/
+    min-height:14px;/*$Script#(Default)*/
+    background-repeat: repeat-y; 
+    background-position: top left;
+    padding-left: 10px;
+    float: left;
+    padding-right: 4px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+font-weight: bold;
+font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 110%;
+}
+.XnaCgp_Cms_Premium_Container_Small
+{
+    min-height:14px;/*$Script#(Default)*/
+    text-align: center;
+    margin: 2px 0px 2px 0px;
+}
+.XnaCgp_Cms_Premium_End_Small
+{
+	background-image: url(/assets/Images/global/cco_global_premium_base_end.png);/*$Script#(Default)*/
+    min-height:14px;/*$Script#(Default)*/
+    background-repeat: no-repeat;
+    background-position: top right;     
+    padding-right: 8px;	
+    float: left;
+}
+.XnaCgp_Cms_Premium_Start_Small
+{    
+    background-image: url(/assets/Images/global/cco_global_premium_base_start.png);/*$Script#(Default)*/
+    padding-top: 0px;
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    float: left;
+    padding-left: 10px;
+    padding-right: 4px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+font-weight: bold;
+font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 110%;
+}
+/* End PremiumHelper */
+/* Begin NewHelper */
+.XnaCgp_Cms_New_Container
+{
+    width: 90px;
+    min-height:14px;/*$Script#(Default)*/
+    text-align: center;
+    float: left;
+    clear: none;
+}
+.XnaCgp_Cms_New_End
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_end.png);/*$Script#(Default)*/
+    min-height:14px;/*$Script#(Default)*/
+    background-repeat: repeat-y; 
+    background-position: top right;     
+    padding-right: 8px;
+    float: left;
+}
+.XnaCgp_Cms_New_Start
+{
+    background-image: url(/assets/Images/global/cco_global_premium_base_start.png);/*$Script#(Default)*/
+    min-height:14px;/*$Script#(Default)*/
+    background-repeat: repeat-y; 
+    background-position: top left;
+    padding-left: 10px;
+    float: left;
+    padding-right: 4px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+font-weight: bold;
+font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 110%;
+}
+/* End NewHelper */
+/* Begin CmsContentCatalogAreaTypeFilter */
+.XnaCgp_Global_FindBox
+{
+    margin-top: 19px;
+    padding-bottom: 7px; /* IE7 */
+}
+.XnaCgp_Global_FindBox_Text
+{
+    float: left;
+}
+.XnaCgp_FindAGame_PremiumContentOnly
+{
+    padding-left: 5px;
+    padding-top: 10px;
+    max-width: 200px;
+    float: left;
+}
+.XnaCgp_FindAGame_PremiumContentOnly label
+{
+    padding-left: 5px;
+}
+.XnaCgp_FindAGame_PremiumContentOnly input
+{
+    vertical-align: middle;
+}
+/* End CmsContentCatalogAreaTypeFilter */
+/* Begin Sorting control */
+.XnaCgp_Sorting_Container
+{
+    margin: 10px 0px 10px 0px;
+}
+.XnaCgp_Sorting
+{
+    background-image: url(/assets/images/global/cco_global_findbox_top.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 210px;
+    color:#FFFFFF;
+}
+.XnaCgp_Sorting_Middle
+{
+    background-image: url(/assets/images/global/cco_global_findbox_middle.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: repeat-y;
+    float: left;
+    width: 210px;
+}
+.XnaCgp_Sorting span
+{
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 3px 0 0 10px;
+    text-transform: lowercase;
+}
+.XnaCgp_Sorting_Bottom
+{
+    background-image: url(/assets/images/global/cco_global_findbox_bottom.png);/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    min-height:10px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 210px;
+}
+/* End Sorting control */
+/* Begin CmsContentEducationSamples */
+.XnaCgp_Cms_EducationSamples_Container
+{
+    padding-top: 20px;
+}
+.XnaCgp_Cms_EducationSamples
+{
+}
+.XnaCgp_Cms_EducationSamples_Title
+{
+    background-image: url(/assets/images/global/cco_global_section_title_small.png); /*$Browser#(IE7,IE8,FF,Uplevel)*/
+    background-position: left top; 
+    background-repeat: repeat-x;
+    min-height:53px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    width: 227px;
+    color: #FFFFFF; 
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    position: relative;
+    margin-left: -15px;
+    z-index: 100;
+}
+.XnaCgp_Cms_EducationSamples_Title p
+{
+	padding-left: 40px;
+	padding-top: 15px;
+    margin: 0;
+}
+.XnaCgp_Cms_EducationSamples_Body
+{
+    background-image: url(/assets/images/global/cco_global_window_gradation.jpg); 
+    background-position: left top; 
+    background-repeat: repeat-x;
+    background-color: #F5F7F6;
+    border: solid 1px #CCC;
+    border-top: none;	
+    width: 210px;
+    clear: both;
+    top: -20px;
+    margin-bottom: -20px;
+    min-height:100px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    position: relative;
+    z-index: 10;
+    padding-top: 25px;
+    overflow: hidden;/*$Browser#(Uplevel,FF,IE8)*/
+}
+.XnaCgp_Cms_EducationSamples_Body_Item,
+.XnaCgp_Cms_EducationSamples_Body_Item_HomePage
+{
+	width: 200px; /*$Script#(Default)*/
+	padding-bottom: 20px;
+	overflow: hidden;/*$Browser#(Uplevel,FF)*/
+    min-height:46px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Left
+{
+	float: left;
+	margin-right: 10px;
+	margin-left: 15px; /*$Script#(Default)*/
+	min-height: 46px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+	width: 46px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Left img
+{
+	width: 46px;
+	height: 46px;
+}
+.XnaCgp_Cms_EducationSamples_Body_Item_Right
+{
+	float: left;
+	clear: right;
+	width: 124px; /*$Script#(Default)*/
+}
+a.XnaCgp_Cms_EducationSamples_Item_Title
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+	font-size: 110%;
+	color: #d65627;	
+}
+.XnaCgp_Cms_EducationSamples_Item_Area
+{
+    clear: right;	
+    margin: 2px 15px 0px 0px; /*$Script#(Default)*/
+}
+.XnaCgp_Cms_EducationSamples_Item_Area_Column_Left
+{
+    padding: 0px 8px 0px 0px;/*$Script#(Default)*/
+    text-align: right;	
+    float: left;
+    border-right: 1px solid #cccccc;
+}
+.XnaCgp_Cms_EducationSamples_Item_Area_Column_Right
+{
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0px 0px 0px 8px;/*$Script#(Default)*/
+    float: left;
+}
+.XnaCgp_Cms_EducationSamples_More_Link
+{
+	clear: both;/*$Browser#(Uplevel,FF)*/
+	float: right;
+	margin-top: -10px;/*$Browser#(Uplevel,FF)*/
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+/* End CmsContentEducationSamples */
+/* -------------------------------------------------------------- 
+NOT In Use 
+-------------------------------------------------------------- */
+.XnaCgp_Cms_Content_Repeater_List
+{
+    list-style-type: none;
+    margin: 9px 29px 0em 25px;
+    width: 602px;
+}
+.XnaCgp_Cms_Content_Repeater_List_News_Catalog
+{
+    width: 602px;
+    list-style-type: none;
+}
+.XnaCgp_Cms_Content_Repeater_List_News_Catalog_Item
+{
+    width: 602px;  
+    
+    min-height:91px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    border-bottom: 1px solid #CCC;
+}
+.XnaCgp_Cms_Content_Meta_Info
+{
+    display: block;
+    list-style-type: none;
+    margin: 10px 0em 0em 0em;
+}
+.XnaCgp_Cms_Content_Meta_Info li
+{
+    margin: 0em 0em 8px 0em;
+}
+.XnaCgp_Cms_Content_Image_List_Item
+{
+    float: left;
+    padding: 0em 14px 0em 0em;
+}
+.XnaCgp_Cms_Content_Image_List_Item_Alt
+{
+    position: relative;
+    bottom: 14px;
+    float: right;
+    padding: 14px 0em 0em 14px;
+}
+.XnaCgp_Cms_Content_Image_List_Item img
+{
+    border: 0px;
+}
+.XnaCgp_Cms_Content_Image_List_Item_Alt img
+{
+    border: 0px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table
+{
+    margin: 10px 0em 0em 0em;
+    width: 602px;
+    height: 93px;
+    border-bottom: 1px solid #cccccc;
+    margin: 0em 0em 10px 14px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table td
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table div
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Title
+{
+    padding: 0em 0em 6px 9px;
+}
+.XnaCgp_Cms_Area_Column
+{
+    text-align: center;
+    width: 62px;
+}
+.XnaCgp_Cms_Content_Catalog_Item_Table td p
+{
+    margin: 0em;
+}
+.XnaCgp_Cms_Content_Categories
+{
+    padding: 0em 0em 6px 0em;
+}
+.XnaCgp_Cms_Content_Table_Bottom_Row
+{
+    height: 100%;
+}
+.XnaCgp_Cms_Content_Catalog_Content_Column
+{
+    padding: 0em 0em 9px 9px;
+}
+.XnaCgp_Cms_Content_Catalog_Items
+{
+    margin: 15px 0em 0em 0em;
+}
+.XnaCgp_Cms_Content_Area_Text
+{
+    border-right: 1px solid #cccccc;
+    padding: 0em 8px 0em 0em;
+}
+.XnaCgp_Cms_Content_Detail
+{
+    width: 602px;
+}
+.XnaCgp_Cms_Content_Detail_Header
+{
+    width: 602px;
+    margin: 53px 0em 17px 79px;
+}
+.XnaCgp_Cms_Content_Detail_Download
+{
+    width: 602px;
+    margin: 19px 0em 0em 89px;
+}
+.XnaCgp_Cms_Content_Detail_Download table
+{
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Detail_Download table th
+{
+    text-align: left;
+    padding: 0em 0em 0em 4em;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td ul
+{
+    margin: 0em;
+    padding: 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td table tr td table tr td
+{
+    white-space: nowrap;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr td ul li
+{
+    list-style-type: none;
+}
+.XnaCgp_Cms_Content_Detail_Download table tr
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Detail_Catalog_Item_Table
+{
+    width: 100%;
+}
+.XnaCgp_Cms_Content_Detail_Table_Bottom_Row
+{
+    vertical-align: top;
+}
+.XnaCgp_Cms_Content_Detail_Area_Text
+{
+    text-align: right;
+    padding: 0em 8px 0em 0em;
+}
+.XnaCgp_Cms_Content_Detail_Table_Right_Col
+{
+    text-align: right;
+}
+.XnaCgp_Cms_Download_Thumb_Col
+{
+    padding: 0em 16px 16px 16px;
+}
+.XnaCgp_Cms_Content_Download_Item_Table
+{
+    margin: 19px 0em 0em 0em;
+    border-bottom: 1px solid #cccccc;
+}
+.XnaCgp_Cms_Content_Detail_Download_Desc
+{
+    padding: 0em 0em 10px 0em;
+}
+.XnaCgp_Cms_Content_Detail_Download_Meta tr td
+{
+    padding: 0em 8px 8px 8px;
+}
+.XnaCgp_Cms_Content_Float_Left
+{
+    float: left;
+}
+.XnaCgp_Cms_Content_Float_Right
+{
+    display: inline;
+    float: right;
+}
+.XnaCgp_Cms_Content_Repeater_Thumb
+{
+    float: left; padding: 0px 20px 0px 0px
+}
+.XnaCgp_Cms_Content_Repeater_Thumb img
+{
+    border: 0px;
+}
+.XnaXgp_Cms_Content_Repeater_Title
+{
+    
+    min-height:15px;/*$Browser#(IE7,IE8,FF,Uplevel)*/
+    min-width: 400px;
+    padding: 0px 0px 7px 0px
+}
+.XnaCgp_Cms_Content_Repeater_Title_Text
+{
+    float: left; padding: 0px 22px 0px 0px;
+}
+.XnaCgp_Cms_Content_Repeater_Item
+{
+    clear: both;
+}
+.XnaCgp_Cms_Content_Catalog_Repeater_Item_Main_Info
+{
+    width: 550px;
+    float: left;
+    position: relative;
+    margin: 0px 0px 0px 14px;
+}
+.XnCgp_Cms_Content_Repeater_Platform_Type
+{
+    max-height: 90px;
+    width: 82px;
+    text-align: right;
+    white-space: nowrap
+}
+.XnaCgp_Cms_Content_Repeater_Logo
+{
+    width: 25px;
+}
+.XnaCgp_Cms_Content_Platform_Logo_Cell
+{
+    width: 50px;
+}
+.XnaCgp_Cms_Global_FindBox
+{
+    padding: 0px 0px 20px 20px;	
+}
+/* 
+included in FindAGame Control
+*/
+form
+{
+    margin: 0;
+    padding: 0;
+}
+.XnaCgp_Global_FindBox_Text
+{
+    padding-bottom: 5px;
+}
+.XnaCgp_Global_FindBox_Text .XnaCgp_Global_Button
+{
+    float: right;
+    margin-right: 20px; /*$Browser#(Uplevel,FF)*/
+    margin-top: 15px;
+}
+.XnaCgp_Global_FindBox
+{
+    margin-top: 29px;
+    padding-bottom: 10px;
+}
+.XnaCgp_FindAGame_Title
+{
+font-family: Arial, Helvetica, Sans-Serif;
+font-weight: bold;
+    font-size: 110%; 
+    padding: 43px 5px 0 15px; /*$Script#(Default)*/
+    display: block; 
+    text-transform:uppercase;
+    min-height: 17px;
+}
+.XnaCgp_FindAGame_TopHr
+{
+    border-bottom:solid 1px #989EA3;
+    height: 1px;
+    width: 210px;
+    padding: 15px 0 0 0px;
+}
+.XnaCgp_FindAGame_Filter_Label
+{
+font-weight: bold;
+    display: block;
+    margin: 15px 0 3px 8px;
+    padding-left: 6px;
+    text-transform: lowercase;
+}
+.XnaCgp_FindAGame_Filter_Select
+{
+    width: 190px;
+    font-size: 110%;
+    display: block;
+    margin-left: 8px;
+}
+.XnaCgp_Global_FindBox_Sort_Label
+{
+    margin-top: 0px;
+}

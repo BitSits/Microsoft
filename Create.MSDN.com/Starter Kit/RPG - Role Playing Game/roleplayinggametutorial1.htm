@@ -1,0 +1,702 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+<title>XNA Creators Club Online - role-playing game tutorial: adding a quest</title><script src="roleplayinggametutorial1_files/common.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="roleplayinggametutorial1_files/main_Default_FF.css"><link type="text/css" rel="stylesheet" href="roleplayinggametutorial1_files/CmsControls_Default_FF.css"><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://creators.xna.com/favicon.ico"><meta name="keywords" value="XNA, XNA Game Studio, XNA Game Studio Express, XNA Framework, XNA partners, XACT, PIX, DirectX, Direct3D, XNA games, XNA gaming, XNA GSE, game studio, XNA articles, XNA tutorials, game tutorials, starter kit, game engine, game physics, XNA Creators Club Online, creators club, C# express, C#, game creator, game development, game developer, game programming, game programmer, videogame, video game, ai, artificial intelligence, 3D animation, game design, 3D modeling, game development software, 3D technology, game audio, game animation, PC game, Windows game, Xbox game, new game, arcade development, Gamefest, game industry, game publishing, online games, casual games, Xbox Live Arcade, digital assets, game library, 3D models, shaders"><meta name="description" value="XNA Creators Club Online is the premier online resource for game developers on Microsoft Windows and Xbox 360."><link rel="alternate" type="application/rss+xml" title="Creators Club Online - All Feeds" href="http://public.xna.com/Feeds/AllFeeds.ashx">
+</head><body>
+    <div id="ctl00_xnaCgpShellBackground" class="XnaCgp_shell_background">
+        <div id="ctl00_xnaCgpShellHeaderContainer" class="XnaCgp_shell_header">
+            
+ 
+            <a href="http://creators.xna.com/en-US" class="XnaCgp_shell_header_logolink"><img src="roleplayinggametutorial1_files/cco_shell_default_header_xna_logo_print.jpg" alt="XNA Creators Club Online" class="XnaCgp_DisplayNone"></a><div class="XnaCgp_shell_header_TopLinks"><div id="cultureMenu" class="radmenu RadMenu_CultureMenu"><!-- 4.4.5 --><script type="text/javascript" src="roleplayinggametutorial1_files/RadMenu.js"></script><span id="cultureMenuStyleSheetHolder" style="display: none;"></span><script type="text/javascript">RadControlsNamespace.AppendStyleSheet(false, 'cultureMenu', '/assets/RadControls/Menu/Scripts/4_4_5/menu.css');</script><link rel="stylesheet" type="text/css" href="roleplayinggametutorial1_files/menu.css"><ul class="horizontal rootGroup"><li class="item first last"><a href="javascript:void(0)" id="cultureMenu_m0" class="link"><span class="text expandTop">United States (English)                                                                             </span></a><div style="z-index: 10;" class="slide"><ul style="z-index: 10;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-CA" id="cultureMenu_m0_m0" class="link"><span class="text">Canada (English)                                                                                    </span></a></li><li class="item"><a href="http://creators.xna.com/fr-CA" id="cultureMenu_m0_m1" class="link"><span class="text">Canada (Français)                                                                                   </span></a></li><li class="item"><a href="http://creators.xna.com/de-DE" id="cultureMenu_m0_m2" class="link"><span class="text">Deutschland (Deutsch)                                                                               </span></a></li><li class="item"><a href="http://creators.xna.com/es-ES" id="cultureMenu_m0_m3" class="link"><span class="text">España (Español)                                                                                    </span></a></li><li class="item"><a href="http://creators.xna.com/fr-FR" id="cultureMenu_m0_m4" class="link"><span class="text">France (Français)                                                                                   </span></a></li><li class="item"><a href="http://creators.xna.com/it-IT" id="cultureMenu_m0_m5" class="link"><span class="text">Italia (Italia)                                                                                     </span></a></li><li class="item"><a href="http://creators.xna.com/en-GB" id="cultureMenu_m0_m6" class="link"><span class="text">United Kingdom (English)                                                                            </span></a></li><li class="item"><a href="http://creators.xna.com/en-US" id="cultureMenu_m0_m7" class="link"><span class="text">United States (English)                                                                             </span></a></li><li class="item last"><a href="http://creators.xna.com/ja-JP" id="cultureMenu_m0_m8" class="link"><span class="text">日本 (日本語)                                                                                            </span></a></li></ul></div></li></ul><input id="cultureMenu_Hidden" name="cultureMenu" type="hidden"><script type="text/javascript">window["cultureMenu"] = RadMenu.Create("cultureMenu");window["cultureMenu"].Initialize({"Skin":"CultureMenu","Enabled":true},{});</script></div><a href="http://forums.xna.com/forums/">Forums</a><span class="XnaCgp_DisplayNone"> </span><span>Hi, </span><a class="XnaCgp_shell_header_profilelink" href="http://profile.xna.com/en-US/MyProfile.aspx">Visitor</a><span class="XnaCgp_DisplayNone"> </span><a href="http://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1255095216&amp;rver=5.5.4177.0&amp;wp=MBI&amp;wreply=https:%2F%2Fprofile.xna.com%2F%2FLiveSignIn.aspx%3Fradr%3Dhttp:%2F%2Fcreators.xna.com%2Fen-US%2Ftutorial%2Froleplayinggametutorial1&amp;lc=1033&amp;id=256908" class="XnaCgp_shell_header_passportlink"><span>Sign In</span></a></div><div class="XnaCgp_shell_header_LiveSearch"><form action="http://creators.xna.com/en-US/SearchResults.aspx" onsubmit="return ValidateSearchKeyword()"><input name="keyword" id="keyword" title="Enter search keywords" maxlength="100" type="text"><input src="roleplayinggametutorial1_files/cco_global_live_search_button.jpg" alt="Submit search" type="image"></form><script type="text/javascript" src="roleplayinggametutorial1_files/shellHeader.js"></script></div><div id="xnaMenu" class="radmenu RadMenu_MainMenu"><!-- 4.4.5 --><span id="xnaMenuStyleSheetHolder" style="display: none;"></span><ul class="horizontal rootGroup"><li class="item first"><a href="http://creators.xna.com/en-US/" id="xnaMenu_m0" class="link"><span class="text expandTop">Home</span></a><div style="z-index: 10;" class="slide"><ul style="z-index: 10;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/quickstart_main" id="xnaMenu_m0_m0" class="link"><span class="text">Quick Start Guide</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/community/news/" id="xnaMenu_m0_m1" class="link"><span class="text">News</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/membership" id="xnaMenu_m0_m2" class="link"><span class="text">Membership</span></a></li></ul></div></li><li class="item"><a href="http://catalog.xna.com/en-US/" id="xnaMenu_m1" class="link"><span class="text expandTop">Games</span></a><div style="z-index: 14;" class="slide"><ul style="z-index: 14;" class="vertical group level1"><li class="item first"><a href="http://catalog.xna.com/en-US/gamescatalog.aspx" id="xnaMenu_m1_m0" class="link"><span class="text">Games Catalog</span></a></li><li class="item"><a href="http://catalog.xna.com/en-US/myprojects.aspx" id="xnaMenu_m1_m1" class="link"><span class="text">Submit Game</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/ReviewAGame.aspx" id="xnaMenu_m1_m2" class="link"><span class="text">Review Game</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/PlaytestAGame.aspx" id="xnaMenu_m1_m3" class="link"><span class="text">Playtest Game</span></a></li></ul></div></li><li class="item"><a href="http://profile.xna.com/en-US/" id="xnaMenu_m2" class="link"><span class="text expandTop">Creators</span></a><div style="z-index: 19;" class="slide"><ul style="z-index: 19;" class="vertical group level1"><li class="item first"><a href="http://profile.xna.com/en-US/myprofile.aspx" id="xnaMenu_m2_m0" class="link"><span class="text">My Profile</span></a></li><li class="item last"><a href="https://profile.xna.com/en-US/mybusiness.aspx" id="xnaMenu_m2_m1" class="link"><span class="text">My Business</span></a></li></ul></div></li><li class="item"><a href="http://creators.xna.com/en-US/community/" id="xnaMenu_m3" class="link"><span class="text expandTop">Community</span></a><div style="z-index: 22;" class="slide"><ul style="z-index: 22;" class="vertical group level1"><li class="item first"><a href="http://forums.xna.com/forums/" id="xnaMenu_m3_m0" class="link"><span class="text">Forums</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/community/spotlight/" id="xnaMenu_m3_m1" class="link"><span class="text">Community Spotlight</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/community_resources" id="xnaMenu_m3_m2" class="link"><span class="text">Community Resources</span></a></li></ul></div></li><li class="item"><a href="http://creators.xna.com/en-US/education/" id="xnaMenu_m4" class="link current"><span class="text expandTop">Education</span></a><div style="z-index: 26;" class="slide"><ul style="z-index: 26;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/education/gettingstarted" id="xnaMenu_m4_m0" class="link"><span class="text">Getting Started</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/education/catalog/" id="xnaMenu_m4_m1" class="link"><span class="text">Education Catalog</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/education/starterkits/" id="xnaMenu_m4_m2" class="link"><span class="text">Starter Kits</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/education/utilities/" id="xnaMenu_m4_m3" class="link"><span class="text">Utilities</span></a></li></ul></div></li><li class="item last"><a href="http://creators.xna.com/en-US/resources/" id="xnaMenu_m5" class="link"><span class="text expandTop">Resources</span></a><div style="z-index: 31;" class="slide"><ul style="z-index: 31;" class="vertical group level1"><li class="item first"><a href="http://creators.xna.com/en-US/faq" id="xnaMenu_m5_m0" class="link"><span class="text">FAQ</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/partners" id="xnaMenu_m5_m1" class="link"><span class="text">Partners</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/downloads" id="xnaMenu_m5_m2" class="link"><span class="text">Download</span></a></li><li class="item"><a href="http://creators.xna.com/en-US/feedback" id="xnaMenu_m5_m3" class="link"><span class="text">Feedback</span></a></li><li class="item last"><a href="http://creators.xna.com/en-US/press" id="xnaMenu_m5_m4" class="link"><span class="text">Press Site</span></a></li></ul></div></li></ul><input id="xnaMenu_Hidden" name="xnaMenu" type="hidden"><script type="text/javascript">window["xnaMenu"] = RadMenu.Create("xnaMenu");window["xnaMenu"].Initialize({"Skin":"MainMenu","Enabled":true},{"xnaMenu_m4":{"CssClass":"current"}});</script></div>
+        </div>
+        <div id="ctl00_xnaCgpShellBodyShadow" class="XnaCgp_shell_body_shadow">
+            <div id="ctl00_xnaCgpShellBody" class="XnaCgp_shell_body">
+                
+
+<div id="ctl00_BodyContent_Panel1" class="XnaCgp_Global_col_680">
+        <div class="XnaCgp_Cms_Page_Header"><h1 class="XnaCgp_Global_PageTitle">tutorial details</h1></div>
+        <div id="ctl00_BodyContent_Panel2" class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Details_Wrapper">                       
+            <div class="XnaCgp_Cms_Content_Details_Container"><div class="XnaCgp_Cms_Content_Details_Container_Main_Info"><div class="XnaCgp_Cms_Float_Left"><img alt="" src="roleplayinggametutorial1_files/DevEd_thumbnail_RPG_game3_64x64.png" class="XnaCgp_Cms_Content_Image"></div><div class="XnaCgp_Cms_Content_Details_Container_Title"><div class="XnaCgp_Cms_Float_Left"><span class="XnaCgp_Global_Large_Subtitle XnaCgp_Cms_Large_Subtitle">Role-Playing Game Tutorial: Adding a Quest</span></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Align_Right"><span class="XnCgp_Cms_Content_Repeater_Type XnaCgp_Global_Small_Type">Tutorial</span></div></div><div class="XnaCgp_Cms_Content_Details_Container_Area"><div class="XnaCgp_Cms_Content_Details_Container_Area_Inner"><div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left">area</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=16">Gameplay</a></div></div><div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Left">submitted</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Catalog_Content_Column_Right">5/19/2008</div></div></div><div class="XnaCgp_Cms_Content_Detail_Platform_Logo"><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Windows"><img src="roleplayinggametutorial1_files/cco_global_logo_windows.png" alt=""></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Xbox"><img src="roleplayinggametutorial1_files/cco_global_logo_xbox.png" alt=""></div></div></div></div><div class="XnaCgp_Cms_Content_Detail_Blob">
+		<h3 class="XnaCgp_Global_Large_Subtitle">Introduction</h3>
+<p>In this tutorial, you are going to add a quest to an instance in the
+Role-Playing Game (RPG) starter kit. You can apply this tutorial to an
+instance of the starter kit as found on the XNA Creators Club Web site,
+without any other modifications.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">What is a Quest?</h3>
+<p>Quests are an important part of a role-playing game. A quest defines
+the storyline that takes the player through the game content. In the
+RPG starter kit, quests provide additional dangers and rewards to the
+player. They provide access to the next element in the story line.</p>
+<p>Quests are specified as XML files. They are located in the
+Content\Quests directory in the starter kit. These XML files are built
+by the XNA Content Pipeline. They are loaded at run time into a <strong>Quest</strong> object. They are defined in Quests\Quest.cs in the RolePlayingGameData project for your platform.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">What is a Quest Line?</h3>
+<p>Quests are organized into “lines.”Lines are a series of quests that
+open sequentially as previous entries complete. The starter kit
+initially only supports one quest line at a time: the “main quest
+line.” The first quest begins as soon as a new game starts. It
+continues until the primary adversary is defeated.<br>
+Quest lines are also specified as XML files, which are located in the
+Content\Quests\QuestLines directory in the starter kit. The XNA Content
+Pipeline builds these XML files. They are loaded at run time into a <strong>QuestLine</strong> object. This object is defined in Quests\QuestLine.cs in the RolePlayingGameData project for your platform.</p>
+<p>The starter kit comes with one quest line,
+Content\Quests\QuestLines\MainQuestLine.xml. When the player starts a
+new game, a new <strong>Session</strong> object is created with the
+data in Content\MainGameDescription.xml, which is processed by the XNA
+content pipeline and loaded into a <strong>GameStartDescription</strong> object. This description object tells the <strong>Session</strong> to load MainQuestLine.xml and start the first quest immediately (“Mercadia”).<br>
+As each quest is completed, the next quest in the quest line immediately begins until there are no more quests.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">What Quest Shall We Make?</h3>
+<p>In the beginning of the game, the player is instructed to visit
+“Shed-darr the Wise,”which is a non-player character (NPC) near the
+player’s starting position. Shed-darr gives the players a few simple
+quests and hands out starting equipment such as a piece of armor and a
+sword as a reward. He sends the player into a relatively easy fight
+with Sir Shire, and then sends him out to fight goblins.</p>
+<p>Let’s get the player some more gold, experience, and a shield before the party has to face Sir Shire.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Creating a New Quest</h3>
+<p>First, we need to create a new XML file. The easiest way to do this,
+and the best way to make sure it is in the right location, is to open
+the RPG starter kit and navigate in the Solution Explorer to the
+RolePlayingGame project for your platform, and then go to the
+Content\Quests folder. Right click on the Quests folder and select “New
+Item,” and choose “XML File” from the New Item dialog. Make sure you
+remove any content in the file before you follow the rest of the steps
+in the tutorial. Another way to do this is to create a new text
+document using Notepad or a similar application (as long as it makes
+plain text). Then rename it to XML, copy it to the Content\Quests
+folder within the RolePlayingGame project for your platform, and add it
+to the project after you are done. Make sure the XML file is named
+AndNowAHelmet.xml, so the “content name” property on the item is
+“AndNowAHelmet.”</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Outer Tags</h3>
+<p>The outermost tags are required for the XNA Content Pipeline, but
+they are not very interesting to us. They must be present in all XML
+files that describe quests. Otherwise, the XNA Content Pipeline cannot
+load the file.</p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;?</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">xml</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">version</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">1.0</span>" <span style="color: rgb(255, 0, 0);">encoding</span><span style="color: rgb(0, 0, 255);">=</span>"<span style="color: rgb(0, 0, 255);">utf-8</span>"<span style="color: rgb(0, 0, 255);"> ?&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">Type</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">RolePlayingGameData.Quest</span>"<span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<blockquote dir="ltr" style="margin-right: 0px;"></blockquote></span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</blockquote></span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</blockquote>
+<p><strong>Add the rest of the tags inside the Asset tag.</strong> The
+order of the content is significant. Your quest will fail to build
+(typically with a “missing tag” error where it expected to find certain
+information) if all of the required information is not present in the
+correct order.</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Name and Description</h3>
+<p>The first tag specifies the name of the quest as it shows up in the
+quest log menu. This value is for a well-formatted name, with spaces
+and other punctuation. It does not have to match the filename, nor does
+it have to be unique among the other quests.</p>
+<p dir="ltr" style="margin-right: 0px;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Name</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">And Now, A Helmet<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Name</span><span style="color: rgb(0, 0, 255);">&gt;</span></span></p>
+<p>The &lt;Description&gt; tag is the longer description displayed when
+the quest-detail screen appears in-game – when the quest is started or
+updated – or after selecting a quest in the quest log screen.</p>
+<p dir="ltr" style="margin-right: 0px;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Description</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">I
+do not think that you are quite ready for combat yet. Find me one more
+Glimmering Ruby, and I will reward you again. Then, we shall see how
+you fare in combat.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Description</span><span style="color: rgb(0, 0, 255);">&gt;</span></span></p>
+<p>This tag is required, but it may be empty:</p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Description /</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Objective and Completion Messages</h3>
+<p>The &lt;ObjectiveMessage&gt; tag is a message that describes
+specifically what the player has to do to complete the quest. Like the
+description, it appears when the Quest Detail screen is shown in-game –
+when the quest is started or updated – or after selecting a quest in
+the Quest Log screen where it appears under the “Current Objective”
+heading. Like the &lt;Description&gt; tag, it is mandatory, though it
+may be empty.</p>
+<p dir="ltr" style="margin-right: 0px;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">ObjectiveMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">Look for another nearby chest that contains the Glimmering Ruby.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ObjectiveMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span></span></p>
+<p>The text within the &lt;CompletionMessage&gt; tag is shown in one of two situations:</p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p>1) There is a destination NPC that the party must visit to finish
+the quest. In this case, the completion message is shown as the NPC’s
+dialogue when the party visits him or her.<br>
+<br>
+2) There is not a destination NPC. In this case, the completion
+dialogue is shown in a “Quest Complete” dialogue screen as soon as all
+requirements are met, and before the rewards screen is shown.</p>
+</blockquote>
+<p>Like the &lt;Description&gt; and &lt;ObjectiveMessage&gt; tags, it is mandatory, though it may be empty.</p>
+<p><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">CompletionMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Thank you for the Glimmering Ruby. I shall reward you with the Hide Helmet. Go to the Inventory screen and equip it now!<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">CompletionMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span></span></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Quest Requirements</h3>
+<p>All quests must have two requirement list tags: </p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p>• <strong>&lt;GearRequirements&gt;</strong>, containing a list of the set of gear, in the desired quantities, that the party must hold at the same time.<br>
+<br>
+• <strong>&lt;MonsterRequirements&gt;</strong>, containing the required number of monsters that the party must kill after receiving the quest.</p>
+</blockquote>
+<p dir="ltr">Each requirement in each list is loaded by the XNA Content Pipeline at runtime into a <strong>QuestRequirement </strong>object,
+defined in Quests\QuestRequirement.cs in the RolePlayingGameData
+project for your platform. Each item in the XML file has a
+&lt;ContentName&gt; tag, which is specified using theXNA Content
+Pipeline “content name” property (relative to the Content\Gear folder
+for gear requirements and Content\Characters\Monsters folder for
+monster requirements). Also, each item has a &lt;Count&gt; tag with the
+required number of gear or monsters for the requirement to be met.</p>
+<p>Like all list tags in the RPG starter kit content files, each entry
+in the list is contained with an &lt;Item&gt; tag. Like the earlier
+messages, both tags are required, but either or both may be empty.</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Items\GlimmeringRuby<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Count</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">1<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Count</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 10pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">MonsterRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';"> /&gt;</span></p>
+<p style="margin: 0in 0in 10pt; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 10pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p style="margin: 0in 0in 10pt; line-height: normal;">Though this quest
+will not require any monsters, here is an example of a non-empty
+monster tag. Do not add this to your quest – it will be difficult to
+complete.</p>
+<span style="font-size: 10pt; font-family: 'courier new';">
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MonsterRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">SirShire<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Count</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">1<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Count</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">MonsterRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span>
+<p></p>
+</span>
+<p></p>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Quest Entries</h3>
+<p dir="ltr" style="margin-right: 0px;">When a quest is active, it can
+add map entries to the world, in any map it wants. A quest must have
+two kinds of entry list tags: </p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p>• <strong>&lt;FixedCombatEntries&gt;</strong>, containing a list of
+“fixed combats,” each one a group of monsters represented by one
+monster sprite on the world map that initiates combat when the party
+sprite collides with it. These are represented in code by the <strong>FixedCombat </strong>object, defined in Maps\FixedCombat.cs in the RolePlayingGameData project for your platform.<br>
+<br>
+•<strong> &lt;ChestEntries&gt;</strong>, containing a list of chests, a box containing gold and items that the party may take. These are represented in code by the <strong>Chest </strong>object, which is defined in Maps\Chest.cs in the RolePlayingGameData project for your platform.</p>
+</blockquote>
+<p dir="ltr" style="margin-right: 0px;">These entries typically are added to ensure the player can find the monsters and gear required by the quest.</p>
+<p dir="ltr" style="margin-right: 0px;">Each entry has a
+&lt;ContentName&gt; tag, which is specified using the XNA Content
+Pipeline content name’s property (relative to the
+Content\Map\FixedCombats folder for fixed-combat entries and
+Content\Maps\Chests folder for treasure-chest entries). Also, each item
+has a &lt;MapPosition&gt; and &lt;MapContentName&gt; tag (relative to
+the Content\Maps folder) to specify the location of each entry.
+Finally, each fixed-combat entry has a &lt;Direction&gt; tag with the
+direction that the monster is facing on the world map.</p>
+<p>Like all list tags in the RPG starter kit content files, each entry
+in the list is contained with an &lt;Item&gt; tag. Like the earlier
+messages, both tags are required, but either or both may be empty.</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">FixedCombatEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"> /&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ChestEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Ruby<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapPosition</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">13 9<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapPosition</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Map001<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapContentName</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 10pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">ChestEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Though this quest will not require any monsters, here is an example
+of a non-empty monster tag. Do not add this to your quest – it will be
+difficult to complete.</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">FixedCombatEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">SirShire<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapPosition</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">9 19<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapPosition</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Direction</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">North<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Direction</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Map001<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapContentName</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 10pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">FixedCombatEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Optional Destination</h3>
+<p>When all requirements have been met, some quests require the party
+to return to a particular NPC to receive the reward. When the party
+interacts with this NPC, the party receives one final dialogue. Then
+the rewards screen appears.</p>
+<p>There are three tags to specify this destination. </p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p dir="ltr" style="margin-right: 0px;">• <strong>&lt;DestinationMap&gt;</strong>, containing the content name of the map that the NPC is on (relative to the Content\Maps folder). <br>
+<br>
+• <strong>&lt;DestinationNpc&gt;</strong>, containing the content
+name of the quest NPC with which the party must interact (relative to
+the Content\Characters\QuestNPCs folder). Note that if more than one of
+that quest’s NPC is on the specified map, then any one of them will
+complete the quest.<br>
+<br>
+• <strong>&lt;DestinationObjectiveMessage&gt;</strong>,
+containing the message shown under the “Current Objective” heading in
+the Quest Detail screen after all requirements have been met.</p>
+</blockquote>
+<p>Each of these tags is optional, so the quest will build if they are
+not present. If they are present, they must still appear in the order
+listed above.</p>
+<p>Both the &lt;DestinationMap&gt; and &lt;DestinationNpc&gt; must be
+present and non-empty for the destination to be valid. If the
+destination is valid, then the Quest Detail screen appears when the
+requirements are met. The message in the
+&lt;DestinationObjectMessage&gt; tag appears under the “Current
+Objective” heading. When the party meets with the destination NPC, the
+message in the &lt;CompletionMessage&gt; tag is shown as the NPC’s
+dialogue. If the destination is not valid, the message in the
+&lt;Completion&gt; tag appears in its own screen when the requirements
+are met, and the quest concludes immediately.</p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationMapContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Map001<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationMapContentName</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationNpcContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Sheddarr<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationNpcContentName</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationObjectiveMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Go and speak with Shed-darr the Wise.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationObjectiveMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span></span>
+<p></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Optional Rewards</h3>
+<p>When all requirements are met, and the destination NPC has been met
+(or, if there is no destination NPC, the “Quest Complete” dialogue
+screen has been dismissed), the rewards screen appears and a sound
+effect plays. Quests provide three kinds of rewards tags:</p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p>• <strong>&lt;ExperienceReward&gt;</strong>, containing an integer amount of experience awarded to each party member.<br>
+<br>
+• <strong>&lt;GoldReward&gt;</strong>, containing an integer amount of gold pieces that are added to the party coffers.<br>
+<br>
+• <strong>&lt;GearRewardContentNames&gt;</strong>, containing a
+list of content names of the gear added to the party’s inventory,
+relative to the Content\Gear folder. Like all list tags in the RPG
+starter kit content files, each entry in the list is contained with an
+&lt;Item&gt; tag. </p>
+</blockquote>
+<p dir="ltr" style="margin-right: 0px;">Each of these tags are
+optional, so the quest will build if they are not present. If they are
+present, they must still appear in the order listed above. </p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ExperienceReward</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">50<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ExperienceReward</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GoldReward</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">50<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">GoldReward</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRewardContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Armor\HideHelmet<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">GearRewardContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span>
+<p></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0in 10pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span>
+<p></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0in 10pt; line-height: normal;"></p>
+<p></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Let’s Review…</h3>
+<p>Let’s take a look at the whole XML file we constructed with our new quest.</p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p></p>
+</blockquote>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;?</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">xml</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">version</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">1.0</span>" <span style="color: rgb(255, 0, 0);">encoding</span><span style="color: rgb(0, 0, 255);">=</span>"<span style="color: rgb(0, 0, 255);">utf-8</span>"<span style="color: rgb(0, 0, 255);"> ?&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">Type</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">RolePlayingGameData.Quest</span>"<span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Name</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">And Now, A Helmet<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Name</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Description</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">I
+do not think that you are quite ready for combat yet. Find me one more
+Glimmering Ruby, and I will reward you again. Then, we shall see how
+you fare in combat.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Description</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ObjectiveMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Look for another nearby chest that contains the Glimmering Ruby.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ObjectiveMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">CompletionMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Thank you for the Glimmering Ruby. I shall reward you with the Hide Helmet. Go to the Inventory screen and equip it now!<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">CompletionMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Items\GlimmeringRuby<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Count</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">1<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Count</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MonsterRequirements</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"> /&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"></span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">FixedCombatEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"> /&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ChestEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Ruby<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapPosition</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">13 9<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapPosition</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">MapContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Map001<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">MapContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ChestEntries</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"></span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationMapContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Map001<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationMapContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationNpcContentName</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Sheddarr<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationNpcContentName</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">DestinationObjectiveMessage</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Go and speak with Shed-darr the Wise.<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">DestinationObjectiveMessage</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">ExperienceReward</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">50<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">ExperienceReward</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GoldReward</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">50<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">GoldReward</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRewardContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Armor\HideHelmet<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">GearRewardContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';"></span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span></p>
+<p dir="ltr" style="margin: 0in 0in 0pt; line-height: normal;"><span style="color: rgb(0, 0, 255);"></span></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';"></span></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p dir="ltr" style="margin: 0in 0px 0pt 0in; line-height: normal;">Make
+sure the XML file is part of your RolePlayingGame project for your
+platform, in the Content\Quests folder. Now you can build your project.
+If you get any errors at build-time, make sure your quest file matches
+the text given above.<span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';">
+<p></p>
+</span></span></span></span></span></span></span></span></span></span></span></span></span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Adding the Quest to the Game</h3>
+<p>Even though the quest has been added to the project and it builds
+correctly, the player will never see the quest in the game. Quests are
+only given to the player as part of a quest line, after the previous
+quest is completed. Therefore, the quest must be added to the main
+quest line.</p>
+<p>In the RolePlayingGame project for your platform, navigate to the
+Content\Quests\QuestLine folder in Solution Explorer. Open
+MainQuestLine.xml. If you have not modified your starter kit, you
+should see the following contents:</p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;?</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">xml</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">version</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">1.0</span>" <span style="color: rgb(255, 0, 0);">encoding</span><span style="color: rgb(0, 0, 255);">=</span>"<span style="color: rgb(0, 0, 255);">utf-8</span>"<span style="color: rgb(0, 0, 255);"> ?&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span> <span style="font-size: 10pt; color: rgb(255, 0, 0); font-family: 'courier new';">Type</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">=</span><span style="font-size: 10pt; font-family: 'courier new';">"<span style="color: rgb(0, 0, 255);">RolePlayingGameData.QuestLine</span>"<span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Name</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">Main Quest Line<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Name</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">QuestContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">SaveMercadia<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">HideArmor<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">ShortSword<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">TestBattle<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">TheGoblinBrigade<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">LushVillage<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">TheOrcCaptain<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></span></span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">TheBanditLeader<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> </span></span></span></span></span></span></span></span></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">DefeatTamar<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">QuestContentNames</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span>
+<p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Asset</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;<br>
+</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;/</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">XnaContent</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span>
+<p></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt; line-height: normal;"></p>
+</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Let’s insert this quest to the list just before the test battle, using its content name (relative to the Content\Quests folder):</p>
+<p><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">ShortSword<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span> <br>
+<span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; font-family: 'courier new';">AndNowAHelmet<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;<br>
+</span></span><span style="font-size: 10pt; font-family: 'courier new';"><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&lt;</span><span style="font-size: 10pt; color: rgb(163, 21, 21); line-height: 115%; font-family: 'courier new';">Item</span><span style="font-size: 10pt; color: rgb(0, 0, 255); line-height: 115%; font-family: 'courier new';">&gt;</span><span style="font-size: 10pt; line-height: 115%; font-family: 'courier new';">TestBattle<span style="color: rgb(0, 0, 255);">&lt;/</span><span style="color: rgb(163, 21, 21);">Item</span><span style="color: rgb(0, 0, 255);">&gt;</span></span> </span></span></p>
+<p>Save the quest line XML file, and build the project. As before, if
+you get any errors at build-time, make sure that your file matches the
+text given above.</p>
+<span style="font-size: 10pt; font-family: 'courier new';">
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+<p style="margin: 0in 0in 0pt 0.5in; line-height: normal;"></p>
+</span>
+<p></p>
+<p></p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Let’s Play!</h3>
+<p>Start up the game. Either start a new game or load a saved game from
+before the Short Sword quest was completed. The first few quests can be
+completed quickly, and then the new quest will be activated.
+Congratulations! You’re playing your own quest!</p>
+<h3 class="XnaCgp_Global_Large_Subtitle">Conclusion</h3>
+<p><orma>The power of the quest system in the RPG starter kit is
+obvious, but there are certain limits to how quests are defined and
+executed. However, you can modify the code in the quest system. You can
+add the ability to have secondary simultaneous quest lines, more quest
+entries, more quest requirements, different behavior for quest
+completion or requirement checks, and so on. Think about what your
+ideal quest line would require from such a system, and make it happen! </orma></p>
+<p>By this time, the power of the quest system should be clear. It
+should allow you to define your own storyline within the RPG starter
+kit. The only limit is your imagination!</p>
+</div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Panel_Top"><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Left"></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Middle"><span class="XnaCgp_Global_Section_Title">downloads</span></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Title_Right"></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Body"><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Download_Wrapper"><div class="XnaCgp_Cms_Float_Left"><img class="XnaCgp_Global_New" src="roleplayinggametutorial1_files/cco_deved_content_download_rtf_icon.png" alt=""></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Info"><div><span class="XnaCgp_Global_Small_Subtitle"><a href="http://creators.xna.com/downloads/?id=15">Microsoft Permissive License.rtf</a></span></div><div></div><div>Size: 0.04MB</div><div><span class="XnaCgp_Global_Body_Small">All content and source code downloaded from this page is bound to the Microsoft Permissive License (Ms-PL).</span></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Platform_Logo"></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Detail_Download_Attributes"></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Download_Wrapper"><div class="XnaCgp_Cms_Float_Left"><img class="XnaCgp_Global_New" src="roleplayinggametutorial1_files/cco_deved_content_download_doc_icon.png" alt=""></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Section_Info"><div><span class="XnaCgp_Global_Small_Subtitle"><a href="http://creators.xna.com/downloads/?id=76">Role Playing Game - Tutorial 1 - Adding A Quest.doc</a></span></div><div></div><div>Size: 0.06MB</div><div><span class="XnaCgp_Global_Body_Small">This
+document, used with the Role-Playing Game Starter Kit, details how you
+can extend the Starter Kit to create your own quests to challenge and
+reward players. </span></div></div><div class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Content_Detail_Download_Platform_Logo"><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Windows"><img src="roleplayinggametutorial1_files/cco_global_logo_windows.png" alt=""></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Platform_Logo_Xbox"><img src="roleplayinggametutorial1_files/cco_global_logo_xbox.png" alt=""></div></div><div class="XnaCgp_Cms_Float_Right XnaCgp_Cms_Content_Detail_Download_Attributes"><div class="XnaCgp_Cms_Download_Container"><div class="XnaCgp_Cms_Float_Left XnaCgp_Global_Body_Small XnaCgp_Cms_Download_Detail_Column_Left">Framework</div><div class="XnaCgp_Global_Body_Small XnaCgp_Cms_Download_Detail_Column_Right"><p>GS 2.0</p></div></div></div></div></div></div>
+        </div>
+    </div>
+
+
+
+
+    <div id="ctl00_BodyContent_Panel3" class="XnaCgp_Global_col_240_nomargin">
+        <div id="ctl00_BodyContent_Panel4" class="XnaCgp_Cms_Float_Left XnaCgp_Cms_Right_Container">                       
+            <div class="XnaCgp_Cms_DevArea_Filter_Top"><div class="XnaCgp_Cms_DevArea_Filter_Title">dev areas</div><div class="XnaCgp_Cms_DevArea_Filter_Subtitle">find content by dev area</div><div class="XnaCgp_Cms_DevArea_Filter_Divider"></div><div class="XnaCgp_Cms_DevArea_Filter_List"><ul><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=6">3D Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=11">Artificial Intelligence</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=12">Audio</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=8">Collision</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=13">Content Pipeline</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=10">Data Management</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=16">Gameplay</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=4">Graphics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=7">Input</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=17">Math</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=19">Networking</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=9">Physics</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=15">Postprocessing</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=14">Shaders</a></li><li><a href="http://creators.xna.com/en-US/education/catalog/?devarea=18">Storage</a></li></ul></div></div><div class="XnaCgp_Cms_DevArea_Filter_Bottom"></div>
+            <div id="ctl00_BodyContent_Panel5" class="XnaCgp_Cms_EducationSamples_Container">                           
+                <div class="XnaCgp_Cms_EducationSamples"><div class="XnaCgp_Cms_EducationSamples_Title"><p class="XnaCgp_Global_Section_Title">other tutorials</p></div><div class="XnaCgp_Cms_EducationSamples_Body"><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial1_files/DevEd_thumbnail_Collision1_2D_Rectangle_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/collision2drectangle" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Collision Series 1:  2D Rectangle Collision</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial1_files/DevEd_thumbnail_Collision2_PerPixel_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/collision2dperpixel" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Collision Series 2:  2D Per-Pixel Collision</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=5">2D Graphics</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_Body_Item"><div class="XnaCgp_Cms_EducationSamples_Body_Item_Left"><img src="roleplayinggametutorial1_files/Tutorials_thumbnail_64x64.png" alt=""></div><div class="XnaCgp_Cms_EducationSamples_Body_Item_Right"><a href="http://creators.xna.com/tutorial/optimization_highfrequency" class="XnaCgp_Global_Body_Small XnaCgp_Cms_EducationSamples_Item_Title">Optimization: Particles and High-Frequency Code</a><div class="XnaCgp_Cms_EducationSamples_Item_Area"><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Left">area</div><div class="XnaCgp_Cms_EducationSamples_Item_Area_Column_Right"><a href="http://creators.xna.com/en-US/education/catalog/?devarea=10">Data Management</a></div></div></div></div><div class="XnaCgp_Cms_EducationSamples_More_Link"><a href="http://creators.xna.com/en-US/education/catalog/?contenttype=2">more...</a></div></div></div>
+            </div>
+            <div id="ctl00_BodyContent_Panel6" class="XnaCgp_Cms_Sidebar_Item">                           
+                <div class="XnaCgp_Cms_Sidebar_Ad"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+            </div>
+        </div>
+        <div id="ctl00_xnaCgpShellFooterContainer" class="XnaCgp_shell_footer XnaCgp_shell_footer_default_bg">
+            <div>© 2009 Microsoft Corporation. All rights reserved.</div><div class="XnaCgp_Shell_Footer_Links"><ul><li class="XnaCgp_Shell_Footer_li_First"><a target="_blank" href="http://creators.xna.com/en-US/help/termsofuse">Terms of Use</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/w3c/policy">Privacy Statement</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/help/conduct">Code of Conduct</a></li><li><a target="_blank" href="http://creators.xna.com/en-US/feedback">Feedback</a></li></ul></div>
+            
+
+        </div>        
+    </div>
+<div id="XnaCgp_DisablePage" class="XnaCgp_DisplayNone">
+</div>
+
+<!-- Machine: -66117111  ID: 203 -->
+
+<script type="text/javascript">
+var gDomain='m.webtrends.com';
+var gDcsId='dcschd84w10000w4lw9hcqmsz_8n3x';
+var gTrackEvents=1;
+var gFpc='WT_FPC';
+/*<![CDATA[*/
+if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<scr"+"ipt type='text/javascript' src='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/scr"+"ipt>");}
+/*]]>*/
+
+</script><script src="roleplayinggametutorial1_files/WebTrends.js" type="text/javascript"></script><noscript><div><img
+alt="DCSIMG" id="DCSIMG" width="1" height="1"
+src="http://m.webtrends.com/dcschd84w10000w4lw9hcqmsz_8n3x/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No"
+/></div></noscript>
+</body></html>

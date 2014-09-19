@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_Head1" xmlns="http://www.w3.org/1999/xhtml"><title>
+	
+  How to: Build a Localized Application for Windows Phone
+
+</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="DCS.dcsuri" content="/en-us/library/ff637520(d=lightweight,l=en-us,v=VS.92).aspx"><meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/ff637520(d=lightweight,l=en-us,v=VS.92).aspx"><meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/ff637520(l=en-us,v=VS.92).aspx"><meta name="MN" content="EBF81F2-9:03:01 AM"><meta name="Search.ShortId" content="ff637520"><meta name="Ms.Locale" content="en-us"><link href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/2ff7dde78ff1c11903524a6a2fcdf65c.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"><link rel="canonical" href="http://msdn.microsoft.com/en-us/library/ff637520%28v=vs.92%29.aspx" xmlns="http://www.w3.org/1999/xhtml"><link rel="alternate" media="print" href="http://msdn.microsoft.com/en-us/library/ff637520%28d=printer,v=VS.92%29.aspx" xmlns="http://www.w3.org/1999/xhtml"><link rel="stylesheet" type="text/css" href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/a15fcf392bf954133123e209735029c3.css" media="print" title="printonly" xmlns="http://www.w3.org/1999/xhtml"></head>
+<body>
+
+   
+    <div class="MetricsContainer">
+    
+    <div class="WebtrendsContainer">
+      
+
+<script src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/ms2.js" async="" type="text/javascript"></script><script type="text/javascript" language="javascript">
+//<![CDATA[
+  var literalNormalizedUrl = '/en-us/library/ff637520(d=lightweight,l=en-us,v=VS.92).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    document.write("<scr" + "ipt type='text/javascript' src='" + "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js" + "'><\\/scr" + "ipt>");
+  }
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_devtools_lang';
+  var gTrackEvents = '0';
+/*]]>*/
+</script>
+<noscript><div><img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" /></div></noscript>
+
+
+    </div>
+    
+    <div class="OmnitureContainer">
+      
+
+
+
+<script type="text/javascript">
+  var omni_guid = '64e0b930-a3fa-42f3-9ecf-fccee10404d1'; 
+</script>
+
+
+
+<noscript>
+    <a href="http://www.omniture.com" title="Web Analytics">
+        <img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /></a>
+</noscript>
+
+
+    </div>
+    
+  
+</div>
+  <script language="javascript" type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/broker.js"></script>
+
+
+  <div class="header">
+    
+
+<table class="headerBar cl_lightweight_topnav_slice" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride">
+        <div class="tabContainer">
+          <a href="http://msdn.microsoft.com/en-us/default.aspx" title="Home" class=" headerTab">Home</a>
+          <a href="http://msdn.microsoft.com/en-us/library/default.aspx" title="Library" class="headerTabSelected cl_lightweight_selected_tab_repeatX ">Library</a>
+          <a href="http://msdn.microsoft.com/en-us/bb188199.aspx" title="Learn" class=" headerTab">Learn</a>
+          <a href="http://msdn.microsoft.com/en-us/aa570309.aspx" title="Downloads" class=" headerTab">Downloads</a>
+          <a href="http://msdn.microsoft.com/en-us/hh361695.aspx" title="Support" class=" headerTab">Support</a>
+          <a href="http://msdn.microsoft.com/en-us/aa497440.aspx" title="Community" class=" headerTab">Community</a>
+          
+        </div>
+      </td>
+			<td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+        <div class="tabContainer">
+            
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1318262581&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=msdn%24msdn%24msdn&amp;wreply=http:%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fff637520%2528v%3DVS.92%2529.aspx&amp;lc=1033&amp;cb=&amp;id=254354" title="Sign in" rel="nofollow">Sign in </a>
+            <span class="pipe">|</span>
+            <a href="http://msdn.microsoft.com/en-us/library/preferences/locale/?returnurl=%252fen-us%252flibrary%252fff637520%28v%253dVS.92%29.aspx" title="United States - English" rel="nofollow">United States - English </a>
+            <span class="pipe">|</span>
+            <a class="dispinline clip15x15" href="http://msdn.microsoft.com/en-us/library/preferences/experience/?returnurl=%252fen-us%252flibrary%252fff637520%28v%253dVS.92%29.aspx" title="Preferences" rel="nofollow"><img class="head_gear" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            <span class="pipe">|</span>
+            <a id="exportPrintLink" class="dispinline clip30x15 moveToDown" href="http://msdn.microsoft.com/en-us/library/ff637520%28d=printer,v=VS.92%29.aspx" title="Print/Export"><img class="head_print_noarrow" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            
+            <div id="exportPrintLinkArrowDiv" class="exportPrintLinkArrow">
+            <a id="exportPrintLinkArrow" class="dispinline clip30x15 moveToDown" href="javascript:void(0);" title="Print/Export"><img class="head_print_arrow" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            </div>
+            
+        </div>
+			</td>
+	</tr>
+</tbody></table>
+
+  </div>
+    
+  <div class="contentPlaceHolder">
+    
+    
+  <div class="navigation" id="Navigation" style="width:280px;padding-bottom:96px;">
+    <div class="searchcontainer">
+      
+<form id="SearchForm" action="http://social.msdn.microsoft.com/Search/en-us" method="get" style="margin: 0; padding: 0;" onsubmit="return checkSearchBox()">
+<div class="searchBoxContainer" style="">
+  <table class="searchBox" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td class="searchTextBoxTd">
+        <input value="Search MSDN with Bing" id="SearchInput" maxlength="200" class="searchTextBox" name="query" type="text">
+      </td>
+      <td class="searchButtonTd">
+          <input src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/0d0542f5f45cf9fc7273abd11cf5c0ee.gif" style="position: relative;" title="Search " type="image">
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    if (!MTPS) var MTPS = {};
+    if (!MTPS.Watermarks) MTPS.Watermarks = {};
+    MTPS.Watermarks.SearchInput = {
+        "control": "SearchInput",
+        "defaultValue": "Search MSDN with Bing",
+        "defaultCSS": "searchTextBox",
+        "focusCSS": "searchTextBoxTrue"
+    };
+    function checkSearchBox() {
+        if (document.getElementById("SearchInput").value == MTPS.Watermarks.SearchInput.defaultValue) {
+            document.getElementById("SearchInput").value = "";
+        }
+    }
+ //]]>
+</script>
+
+
+    </div>
+    <div class="navcontainer">
+      
+<div class="nav">
+    
+    <div id="tocnav">
+        
+        <div class="toclevel0 ancestry">
+            
+            <div class="clip5x9 nav_root">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_bullet" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a href="http://msdn.microsoft.com/en-us/library/aa187916.aspx" id="aa187916_MSDN.10_en-us" title="Development Tools and Languages">Development Tools and Languages</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a href="http://msdn.microsoft.com/en-us/library/ff402535%28v=VS.92%29.aspx" id="gg723708_VS.92_en-us" title="Windows Phone Development">Windows Phone Development</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a href="http://msdn.microsoft.com/en-us/library/ff967556%28v=VS.92%29.aspx" id="ff967576_VS.92_en-us" title="Common Application Development Tasks">Common Application Development Tasks</a>
+            </div>
+            
+            <div class="clip13x9 nav_arrows">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a href="http://msdn.microsoft.com/en-us/library/ff637522%28v=VS.92%29.aspx" id="ff967578_VS.92_en-us" title="Globalization and Localization for Windows Phone">Globalization and Localization for Windows Phone</a>
+            </div>
+            
+        </div>
+        
+        <div class="toclevel1 children" style="border-bottom: 1px solid #bbbbbb;">
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/hh202918%28v=VS.92%29.aspx" title="Culture and Language Support for Windows Phone">Culture and Language Support for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/hh202920%28v=VS.92%29.aspx" title="Font Support for Windows Phone">Font Support for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/ff967552%28v=VS.92%29.aspx" title="Localization Best Practices for Windows Phone">Localization Best Practices for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/ff637519%28v=VS.92%29.aspx" title="How to: Build a Globalized Application for Windows Phone">How to: Build a Globalized Application for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div class="toclevel1 current">
+                <a href="http://msdn.microsoft.com/en-us/library/ff637520%28v=VS.92%29.aspx" title="How to: Build a Localized Application for Windows Phone">How to: Build a Localized Application for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/ff967550%28v=VS.92%29.aspx" title="How to: Localize an Application Title for Windows Phone">How to: Localize an Application Title for Windows Phone</a>
+            </div>
+            
+            <div class="clip13x9 nav_dots_current">
+                <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/hh487168%28v=VS.92%29.aspx" title="How to: Test a Localized Application for Windows Phone">How to: Test a Localized Application for Windows Phone</a>
+            </div>
+            
+        </div>
+        
+    </div>
+    <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" alt="Separator" class="communityContentNavigationSeparator cl_lt_cc_line_top">
+    
+</div>
+
+<script type="text/javascript"> 
+  //<![CDATA[
+  if (!MTPS) var MTPS = {};
+  MTPS.TopicNodes= {
+  
+            "_last": ''
+    };
+  //]]>
+</script>
+
+    </div>
+    
+  </div>
+  <div id="tocResizeContainer" style="visibility: visible;">
+  <a href="javascript:void(0)" class="tocResize" id="TocResize" style="left: 280px;">
+    <img id="ResizeImageIncrease" class="cl_nav_resize_open" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" title="Expand" alt="Expand">
+      <img id="ResizeImageReset" class="cl_nav_resize_close" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" style="display: none;" title="Minimize" alt="Minimize">
+  </a>
+  </div>
+  <div class="content">
+    <img class="TOC_Fade_Top cl_lw_toc_fade_top" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" alt="">
+    
+
+<div class="clip117x31 logo">
+  <a href="http://msdn.microsoft.com/en-us/default.aspx">
+    <img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="msdn_body_logo" alt="MSDN" title="MSDN">
+  </a>
+</div>
+
+    <div class="topicContainer" style="">
+      
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">How to: Build a Localized Application for Windows Phone</h1>
+  <div class="lw_vs">
+    <div id="curversion">
+      <strong>
+            Windows Phone </strong>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  
+  <div id="mainSection">
+      <div id="mainBody">
+        
+        
+        <p></p> <p>September 23, 2011</p><div class="introduction"><p>By following the best practices in the <span><a href="http://msdn.microsoft.com/en-us/library/ff967552%28v=VS.92%29.aspx">Localization Best Practices for Windows Phone</a></span> topic, you can ensure that your application is localizable.</p><p>This
+ topic describes how to separate localizable resources from code by 
+creating language-specific resource files. Visual Studio uses these 
+files to create assemblies that allow your application to support many 
+languages. For more information about this process, see the <a href="http://go.microsoft.com/fwlink/?LinkId=189686">Packaging and Deploying Resources</a> topic. </p><p>To view a full, working code sample that contains the below code examples, download the <span class="label">Globalization Sample</span> from the <span><a href="http://msdn.microsoft.com/en-us/library/ff431744%28v=VS.92%29.aspx">Code Samples for Windows Phone</a></span> topic.</p></div><div xmlns=""><script type="text/javascript">if (!MTPS) var MTPS = {};if (!MTPS.LocalizedStrings) MTPS.LocalizedStrings = {}; 
+              MTPS.LocalizedStrings.ExpandButtonTooltip = 'Expand'; 
+              MTPS.LocalizedStrings.CollapseButtonTooltip = 'Collapse';</script><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Adding resource files to a project and enabling localization support</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle0" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">As described in the <span><a href="http://msdn.microsoft.com/en-us/library/ff967552%28v=VS.92%29.aspx">Localization Best Practices for Windows Phone</a></span> topic, all localizable resources should be moved to a resource file. </p>
+<ol xmlns="http://www.w3.org/1999/xhtml">
+  <li>
+    <p>Add a resource file for the default language of your application.</p>
+    <ol>
+      <li>
+        <p>Open the project in Visual Studio.</p>
+      </li>
+      <li>
+        <p>Add a resource file. In <span class="label">Solution Explorer</span>, right-click on the project name, click <span class="label">Add</span> and click <span class="label">New Item</span>.</p>
+      </li>
+      <li>
+        <p>In the <span class="label">Add New Item</span> dialog box, choose <span class="label">Resources File</span> and re-name the file if desired. For example, you could re-name the file as <strong>AppResources.resx</strong>. This file will contain the resources for the default language for the application.</p>
+      </li>
+      <li>
+        <p>Identify strings in your application and add them to the 
+resource file. You can input a name, a value, and an optional comment 
+for each string. </p>
+        <ul>
+          <li>
+            <p>The name must be unique. Make it as descriptive as possible.</p>
+          </li>
+          <li>
+            <p>The value is the string that will be displayed to the user in the application.</p>
+          </li>
+          <li>
+            <p>The comment is optional, but it is helpful for translators, especially in large resource files with many strings. </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Add a resource file for each additional language that the 
+application will support. Each resource file must contain the correct 
+culture/language name, as described in <span><a href="http://msdn.microsoft.com/en-us/library/hh202918%28v=VS.92%29.aspx">Culture and Language Support for Windows Phone</a></span>. </p>
+    <p>For example: </p>
+    <ul>
+      <li>
+        <p>For the culture Spanish (Spain), use <strong>AppResources.es-ES.resx</strong>.</p>
+      </li>
+      <li>
+        <p>For the culture German (Germany), use <strong>AppResources.de-DE.resx</strong>.</p>
+      </li>
+    </ul>
+    <div class="alert">
+      <table>
+        <tbody><tr>
+          <th>
+            
+            <img id="alert_note" alt="Note" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" title="Note" xmlns="" class="cl_IC101471">
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <p>You need to complete this step only for additional 
+languages. For example, if your default language is English (United 
+States) and you have added the strings for that language into the 
+default language resource file, you should not create an additional 
+resource file for "en-US."</p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+  </li>
+  <li>
+    <p>Define the default culture that the application will support:</p>
+    <div class="alert">
+      <table>
+        <tbody><tr>
+          <th>
+            
+            <img id="alert_caution" alt="Important note" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" title="Important note" xmlns="" class="cl_IC46226">
+            <strong>Important Note:</strong>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <p>By default, the Neutral Language is set to the default 
+culture in Visual Studio. If your application targets a different 
+culture than the default culture in Visual Studio, you will need to 
+complete the following steps. If you are not targeting a different 
+culture, verify with the following steps that the correct Neutral 
+Language is set.</p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+    <ol>
+      <li>
+        <p>In <span class="label">Solution Explorer</span>, right-click the project name, and click <span class="label">Properties</span>. </p>
+      </li>
+      <li>
+        <p>Under the Application tab, click the <span class="label">Assembly Information</span> button.</p>
+      </li>
+      <li>
+        <p>In the <span class="label">Neutral Language</span> list, 
+select the default culture. This identifies the language of the strings 
+in the default resources file. For example, if the default resources 
+file is named <strong>AppResources.resx</strong>, and the strings in that file are English (United States) language strings, you would select <span class="label">English (United States)</span> as the <span class="label">Neutral Language</span> for the project.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Close the project and open the project file (<strong>&lt;project name&gt;.csproj</strong>) in a text editor. Locate the <span class="code">&lt;SupportedCultures&gt;</span>
+ tag and add the names of each additional culture (language) your 
+application needs to support. You should have an entry for each .resx 
+file added to the project).</p>
+    <p>Separate the language names using a semicolon, and only add the 
+additional culture names. For example, if an application uses English 
+(United States) for its default culture, but the application also 
+supports German (Germany) and Spanish (Spain), you would update this tag
+ as follows: </p>
+    <p>
+      <span class="code">&lt;SupportedCultures&gt;de-DE;es-ES;&lt;/SupportedCultures&gt;</span>
+    </p>
+  </li>
+</ol></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Replacing hard-coded strings with strings in a resource file</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle1" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">Re-open the project to replace the hard-coded strings with strings in a resource file.</p>
+<ol xmlns="http://www.w3.org/1999/xhtml">
+  <li>
+    <p>In <span class="label">Solution Explorer</span>, open a resource file and select <span class="label">Public</span> from the <span class="label">AccessModifier</span> list box at the top of the pane.  Repeat this step for each resource file in your project.</p>
+  </li>
+  <li>
+    <p>Define a class with a property that points to the resources. In the following example, the <span class="code">LocalizedStrings</span> class contains a property that points to the <span class="code">AppResources</span> resource file in the <span class="code">sdkGlobalizationCS</span> namespace. </p>
+
+<div class="codeSnippetContainer" xmlns="">
+  <script type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.js"></script>
+  <link href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.css" rel="stylesheet" type="text/css">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_6fa094c4-51f9-41cd-af29-754b017642e4');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_6fa094c4-51f9-41cd-af29-754b017642e4" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">class</span> LocalizedStrings
+{
+    <span style="color:Blue;">public</span> LocalizedStrings()
+    {
+    }
+
+    <span style="color:Blue;">private</span> <span style="color:Blue;">static</span> sdkGlobalizationCS.AppResources localizedResources = <span style="color:Blue;">new</span> sdkGlobalizationCS.AppResources();
+
+    <span style="color:Blue;">public</span> sdkGlobalizationCS.AppResources LocalizedResources { <span style="color:Blue;">get</span> { <span style="color:Blue;">return</span> localizedResources; } }
+}
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p>If there are additional resource files in your project, you can have a single <span class="code">LocalizedStrings</span> class with multiple properties, each of which returns a particular resource.</p></li>
+  <li>
+    <p>Open your App.xaml file and add the following XAML code to the &lt;Application.Resources&gt; section:</p>
+
+<div class="codeSnippetContainer" xmlns="">
+  <script type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.js"></script>
+  <link href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.css" rel="stylesheet" type="text/css">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>other</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_acd935a8-7e82-4a81-8b98-6d582da86d08');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_acd935a8-7e82-4a81-8b98-6d582da86d08" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;Application.Resources&gt;
+    &lt;local:LocalizedStrings xmlns:local="clr-namespace:sdkGlobalizationCS" x:Key="LocalizedStrings" /&gt;
+&lt;/Application.Resources&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p>where <span class="code">LocalizedStrings</span> is the name of the class with the property that returns your resource file, and <span class="code">sdkGlobalizationCS</span> is the namespace that contains the <span class="code">LocalizedStrings</span> class. The <span class="code">x:Key</span> attribute defines the name by which you refer to a <span class="code">LocalizedStrings</span> instance in code.</p></li>
+  <li>
+    <p>Replace each hard-coded string with the following XAML code:</p>
+    <p>
+      <span class="code">"{Binding Path=resourceFile.resourceName, Source={StaticResource LocalizedStrings}}"</span>
+    </p>
+    <p>Where <span class="code">resourceName</span> is the name of the localizable resource, <span class="code">resourceFile</span> is the name of the pointer that contains <span class="code">resourceName</span>, and <span class="code">LocalizedStrings</span> is the name assigned to an instance of the class that returns the resource. </p>
+    <p>The following XAML code example from the <span class="label">Globalization Sample</span> binds the ListBoxItem control with the LangRegionNameFrFR string returned from the LocalizedStrings class instance:</p>
+
+<div class="codeSnippetContainer" xmlns="">
+  <script type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.js"></script>
+  <link href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.css" rel="stylesheet" type="text/css">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>other</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_3ef8d328-eb87-49f7-a029-dc95c32397c9');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_3ef8d328-eb87-49f7-a029-dc95c32397c9" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;ListBoxItem Content="{Binding Path=LocalizedResources.LangRegionNameFrFR, Source={StaticResource LocalizedStrings}}" /&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</li>
+  <li>
+    <p>Repeat the previous step for each string that you want to make 
+localizable, in each XAML file in your application that contains 
+localizable content.</p>
+  </li>
+  <li>
+    <p>Build your application – it will now build as a multilingual 
+application and display a user interface according to the language 
+settings of the phone.</p>
+  </li>
+</ol></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Localizing an Application Bar</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle2" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">You can add an Application Bar 
+to a page in your application either in the page’s XAML or using C# in 
+the page’s code-behind. However, because the Application Bar is not a 
+Silverlight control, it does not support dynamic data binding for the 
+text label of the ApplicationBarIconButton or for the text of the 
+ApplicationBarMenuItem. For this reason, if you want to localize these 
+strings, you must create or update the Application Bar at run time. The 
+following code example shows a helper function that builds an 
+Application Bar using localized resources to provide the string values. 
+This example assumes that you have created a localized resource DLL with
+ string table entries called “ButtonText” and “MenuItemText”. For 
+information on creating an application bar, see <span><a href="http://msdn.microsoft.com/en-us/library/ff431813%28v=VS.92%29.aspx">Application Bar Overview for Windows Phone</a></span>. </p>
+<div class="alert" xmlns="http://www.w3.org/1999/xhtml">
+  <table>
+    <tbody><tr>
+      <th>
+        
+        <img id="alert_caution" alt="Caution note" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" title="Caution note" xmlns="" class="cl_IC46226">
+        <strong>Caution:</strong>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>The below code is not included in the <span class="label">Globalization Sample</span>.</p>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+
+<div class="codeSnippetContainer" xmlns="">
+  <script type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.js"></script>
+  <link href="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/CodeSnippet.css" rel="stylesheet" type="text/css">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_99edccac-7cf0-4ae1-af1b-757c2b0a9781');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_99edccac-7cf0-4ae1-af1b-757c2b0a9781" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Green;">// Helper function to build a localized ApplicationBar</span>
+<span style="color:Blue;">private</span> <span style="color:Blue;">void</span> BuildApplicationBar()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Green;">// Set the page's ApplicationBar to a new instance of ApplicationBar.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;ApplicationBar = <span style="color:Blue;">new</span> ApplicationBar();
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Green;">// Create a new button and set the text value to the localized string from AppResources.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;ApplicationBarIconButton appBarButton = <span style="color:Blue;">new</span> ApplicationBarIconButton(<span style="color:Blue;">new</span> Uri(<span style="color:#A31515;">"ApplicationIcon.png"</span>,UriKind.Relative));
+&nbsp;&nbsp;&nbsp;&nbsp;appBarButton.Text = AppResources.ButtonText;
+&nbsp;&nbsp;&nbsp;&nbsp;ApplicationBar.Buttons.Add(appBarButton);
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Green;">// Create a new menu item with the localized string from AppResources.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;ApplicationBarMenuItem appBarMenuItem = <span style="color:Blue;">new</span> ApplicationBarMenuItem(AppResources.MenuItemText);
+&nbsp;&nbsp;&nbsp;&nbsp;ApplicationBar.MenuItems.Add(appBarMenuItem);
+
+}
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Testing a localized application</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle3" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">To test your localized strings, follow the steps in <span><a href="http://msdn.microsoft.com/en-us/library/hh487168%28v=VS.92%29.aspx">How to: Test a Localized Application for Windows Phone</a></span>.</p></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/030c41d9079671d09a62d8e2c1db6973.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">See Also</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="seeAlsoToggle" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<h4 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">Other Resources</h4>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/ff637522%28v=VS.92%29.aspx">Globalization and Localization for Windows Phone</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/fwlink/?LinkId=190276">Localizing Silverlight-based Applications</a>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/fwlink/?LinkId=190278">Creating Globally Aware Applications</a>
+</div></div></div></div>
+      
+      <p></p>
+    </div>
+</div>
+    </div>
+    
+  </div>
+  
+  </div>
+  <div class="footer">
+    
+
+<div id="footer" class="footerContainer cl_footer_slice">
+  <div class="footerLogoContainer">
+    <div class="footerContent">
+    <div class="copyright">
+      © 2011 Microsoft. All rights reserved.</div>
+    <div class="footerLogo cl_footer_logo"></div>
+    <a href="http://msdn.microsoft.com/cc300389.aspx">Terms of Use</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a>
+    <span class="pipe">| </span>
+    <span class="FeedbacklinkDisabled" id="FeedbacklinkDisabled">Feedback</span>
+    <a id="Feedbacklink" title="Feedback" class="FeedbackLink" href="javascript:void(0)">
+      Feedback
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+          <img id="feedBackImg" class="cl_footer_feedback_icon" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" alt="Feedback">
+        </span>
+      </a>
+    
+  <div id="FeedbackContainer" class="FeedbackContainer">
+    <form method="post" action="/en-us/library/feedback/add/ff637520(v=VS.92).aspx">
+    <div class="FeedbackTitleContainer">
+        <div class="FeedbackTitle">
+            Feedback</div>
+        <div class="FeedbackCancel">
+            <a href="javascript:;" onclick="document.getElementById('FeedbackContainer').style.display = 'none';">x</a>
+            </div>
+    </div>
+    <div class="FeedbackData">
+        <div class="FeedbackInfoText">
+            Tell us about your experience...
+        </div>
+        <div class="QuestionText">
+            Did the page load quickly?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="searchBox" name="searchBox" value="1" type="radio"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="searchBox" name="searchBox" value="0" type="radio"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Do you like the page design?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="tabbedCode" name="tabbedCode" value="1" type="radio"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="tabbedCode" name="tabbedCode" value="0" type="radio"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            How useful is this topic?
+        </div>
+        <div class="FeedbackGraphicHolder clip269x23">            
+                <img alt="" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_online_scale FeedbackSiderGraphic">
+        </div>        
+            <div class="RadioButtonHolder"><div class="RateRadioOne">
+                    <input id="topicUseful" name="topicUseful" title="Really disliked it" value="1" type="radio">
+                </div>
+               <div class="RateRadio">
+                    <input id="topicUseful" name="topicUseful" title="Disliked it" value="2" type="radio">
+                </div>
+               <div class="RateRadio">
+                    <input id="topicUseful" name="topicUseful" title="OK" value="3" type="radio">
+                </div>
+               <div class="RateRadio">
+                    <input id="topicUseful" name="topicUseful" title="Good" value="4" type="radio">
+                </div>
+               <div class="RateRadioLast">
+                    <input id="topicUseful" name="topicUseful" title="Really Good" value="5" type="radio">
+                </div>
+               
+            </div>            
+        <div class="QuestionText">
+            Tell us more
+        </div>
+        <div class="FeedbackTextAreaContainer">
+            <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="FeedbackTextArea"></textarea>
+            
+            <textarea id="feedbackDescription" name="feedbackDescription" cols="25" rows="10" style="display: none;">Enter description here.</textarea>
+            <input id="feedbackPriority" name="feedbackPriority" value="" type="hidden">
+            <input id="feedbackSourceUrl" name="feedbackSourceUrl" value="" type="hidden">
+            <input id="ClientIP" name="ClientIP" value="" type="hidden">
+            <input id="ClientOS" name="ClientOS" value="" type="hidden">
+            <input id="ClientBrowser" name="ClientBrowser" value="" type="hidden">
+            <input id="ClientTime" name="ClientTime" value="" type="hidden">
+            <input id="ClientTimeZone" name="ClientTimeZone" value="" type="hidden">
+            
+            
+        </div>
+        <div>
+            <input value="Send" class="FeedbackSubmit" onclick="document.getElementById('feedbackDescription').value='';document.getElementById('feedBackVersion').value = '-1';" type="submit">
+        </div>
+    </div>
+    <input id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/ff637520(v=VS.92).aspx" type="hidden">
+    
+    
+    <input id="feedBackVersion" name="feedBackVersion" value="1" type="hidden">
+    
+  </form> 
+</div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+ 
+<script type="text/javascript" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/97bf6854a8f5043ccfc9641ede05f54d.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+
+<script src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/broker-config.js"></script><div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="How%20to-%20Build%20a%20Localized%20Application%20for%20Windows%20Phone_files/Sync.htm" style="z-index: -1; height: 1px; width: 1px; display: none; visibility: hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

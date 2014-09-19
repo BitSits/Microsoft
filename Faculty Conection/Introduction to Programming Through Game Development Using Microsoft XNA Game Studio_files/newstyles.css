@@ -1,0 +1,332 @@
+﻿body {margin:0; padding:0; font-family:Segoe, Arial, sans-serif; color:#555;}
+input {font-family:Segoe, Arial, sans-serif;}
+
+#spotlight {width:360px; height:101px; font-size:13px; background-image:url("images/gradient_blue_360w.gif"); color:#fff;}
+#spotlight a:link, #spotlight a:hover, #spotlight a:active, #spotlight a:visited {color:#fff;}
+#headlineSpotlight {font-size:18px; padding-top:16px;}
+#textSpotlight {width:325px;}
+
+#headline {font-size:12px;}
+.headlineBig {font-size:20px;}
+.resourceLink {font-size:12px; font-weight:bold;}
+#headline a:link, #headline a:hover, #headline a:active, #headline a:visited {color:#489722; text-decoration:none;}
+
+.facetMenuHeader {font-size:14px; color:#555; font-weight:bold; padding-bottom:5px; padding-left:5px; background-color:Navy; color:White}
+.facetMenuLink a:link, .facetMenuLink a:hover, .facetMenuLink a:active, .facetMenuLink a:visited {color:#2162A2; text-decoration:none; font-size:12px; font-weight:normal;}
+
+.alphaBarLink a:link, .alphaBarLink a:hover, .alphaBarLink a:active, .alphaBarLink a:visited {color:#2162A2; text-decoration:none; font-size:12px; font-weight:bold;}
+.alphaBarCount {color:#bbb; font-weight:bold; padding-left:1px; padding-right:8px;}
+
+.totalCount {}
+
+.chkList {font-family:Verdana,Geneva,Arial; font-size:8pt;}
+
+.breadCrumbLink {color:#333; text-decoration:none; font-size:14px; font-weight:bold;}
+.breadCrumbLink a:link, .breadCrumbLink a:hover, .breadCrumbLink a:active, .breadCrumbLink a:visited {color:#333; font-size:14px; font-weight:bold;}
+
+.header2 {font-size:20px; font-weight:bold; color:#333; margin-bottom:0px;}
+.header3 {font-size:18px; font-weight:bold; color:#333; margin-bottom:0px;}
+
+#key {font-size:12px; color:#333;}
+.keyLink {font-size:12px; font-weight:bold;}
+#key a:link, #key a:hover, #key a:active, #key a:visited {color:#6EC359;}
+
+#calendar {font-size:12px; color:#333333; font-weight:bold; padding-left:0px; padding-right:0px;}
+.calendarHeader {font-size:14px; color:#000; font-weight:bold;}
+#calendar a:link, #calendar a:hover, #calendar a:active, #calendar a:visited {color:#6EC359;}
+
+#calendarContent {font-size:12px; color:#555555; padding-left:0px; padding-right:0px;}
+.calendarContentHeader {font-size:14px; color:#000000; font-weight:bold;}
+#calendarContent a:link, #calendarContent a:hover, #calendarContent a:active, #calendarContent a:visited {color:#0A6CCE;}
+
+.lineVertical {background-image:url("images/line_vertical.gif"); background-repeat:repeat-y;}
+
+#featuresHead {padding:25px 0 25px 0;}
+.featuresSubhead {color:#1B48A3; font-size:18px; margin-bottom:5px;}
+.featuredBig {font-size:18px; color:#fff;}
+.featuredLink {font-size:12px; font-weight:bold;}
+#featured a:link, #featured a:hover, #featured a:active, #featured a:visited {color:#ffffff;}
+#featured {font-size:12px; color:#fff;}
+
+#featuresTrainBtm, #featuresSoftware, #featuresArticles {font-size:11px;}
+#featuresTrainBtm .item a:link, #featuresTrainBtm .item a:hover, #featuresTrainBtm .item a:active, #featuresTrainBtm .item a:visited {font-weight:bold; color:#006AD0;}
+#featuresSoftware .item a:link, #featuresSoftware .item a:hover, #featuresSoftware .item a:active, #featuresSoftware .item a:visited {font-weight:bold; color:#006AD0;}
+#featuresArticles .item a:link, #featuresArticles .item a:hover, #featuresArticles .item a:active, #featuresArticles .item a:visited {font-weight:bold; color:#006AD0;}
+#quickLINKS .item {margin-top:12px; color:#2162A2; font-size:12px;}
+
+#featuresTrainBtm .item a:link, #featuresTrainBtm .item a:hover, #featuresTrainBtm .item a:active, #featuresTrainBtm .item a:visited {font-weight:bold; color:#fff;}
+#featuresTrainMid {width:262px; background-color:#1B48A3;}
+#featuresTrainTop {background-image:url("images/train_events_top.gif"); background-position:top left; background-repeat:no-repeat;}
+#featuresTrainBtm {background-image:url("images/train_events_btm.gif"); background-position:bottom left; background-repeat:no-repeat; padding-bottom:15px; color:#fff; padding:10px 25px 35px 15px;}
+#featuresTrainBtm .item {margin-top:25px;}
+#featuresTrainBtm .item img {float:left; margin-right:10px; margin-bottom:20px;}
+#featuresTrainBtm .header {font-size:13px; color:#2F58AB;}
+
+#featuresSoftware .item {margin-top:15px; width:200px;}
+#featuresSoftware .item img {float:left; margin-right:5px; margin-bottom:20px;}
+#featuresSoftware .itemTitle {margin-bottom:5px; clear:both; color:#202020; font-weight:bold;}
+
+#featuresArticles .item {margin-top:15px; width:220px;}
+#featuresArticles .itemTitle {color:#202020; font-weight:bold;}
+
+#course {font-size:12px; color:#333333;}
+.courseBig {font-size:18px; color:#333333;}
+.courseLink {font-size:12px; font-weight:bold;}
+#course a:link, #course a:hover, #course a:active, #course a:visited {color:#333333;}
+
+#rightBar {font-size:16px; padding-top:16px; padding-left:16px; padding-right:16px; padding-bottom:0px;}
+.rightBig {font-size:16px;}
+.rightSmall {font-size:11px; color:#4F84B8;}
+.rightSmaller {font-size:10px; color:#666666;}
+.rightBigBlack {font-size:16px; color:#000000;}
+.rightLink {font-size:12px; font-weight:bold;}
+#rightBar a:link, #rightBar a:hover, #rightBar a:active, #rightBar a:visited {color:#489722; text-decoration:none;}
+
+#container {width:830px;}
+
+#nav {font-size:11px; color:#666; font-weight:bold;}
+#nav a:link, #nav a:hover, #nav a:active, #nav a:visited {color:#666;}
+
+#sidebar {width:141px; border:1px solid #3B80FA; z-index:0; float:right; margin-top:41px; padding:15px 14px 5px 19px; font-size:12px; color:#666; background-image:url("images/sidebar_forums_bg.gif"); background-position:top left; background-repeat:repeat-x; background-color:#DDD;}
+#sidebar .item {margin-bottom:10px;}
+#sidebar .itemTitle {color:#1e77d3;}
+.sidebarTitle {font-size:16px; color:#000; margin-bottom:13px; font-weight:bold;}
+.sidebarDivider {height:1px; border-top:1px solid #D0D0D0;}
+.sidebarFooter {margin-top:20px; color:#000; font-size:14px; font-weight:bold;}
+
+#detailSidebar {width:178px; border:1px solid #3B80FA; font-size:12px; color:#666; background-image:url("images/sidebar_forums_bg.gif"); background-position:top left; background-repeat:repeat-x; background-color:#DDD;}
+#detailSidebar .item {margin-bottom:10px;}
+#detailSidebar .itemTitle {color:#1e77d3;}
+#detailSidebar #title, #detailSidebar #subtitle, #detailSidebar .divider, #detailSidebar .item, #detailSidebar #footer {margin-right:14px; margin-left:19px;}
+#detailSidebar #title {margin-top:15px; font-size:15px; color:#000; margin-bottom:13px; font-weight:bold;}
+#detailSidebar #subtitle {font-size:15px; color:#666; margin-bottom:13px; font-weight:bold;}
+#detailSidebar #footer {margin-bottom:5px; margin-top:15px; color:#000; font-size:14px; font-weight:bold;}
+#detailSidebar .divider {height:1px; border-top:1px solid #D0D0D0;}
+
+#passport {font-size:11px; color:#000;}
+
+/* Forums page */
+#forumsHeader {position:absolute; z-index:0; float:left; padding-left:10px;}
+#forumsHeaderBlurb {position:absolute; top:100px; margin-left:209px; color:#555; font-size:12px; width:390px;}
+#forumsHeaderForm {position:absolute; top:155px; margin-left:12px; font-weight:bold; color:#000; font-size:12px;}
+#forumsSidebar {width:137px; border:1px solid #3B80FA; z-index:0; float:right; margin-top:41px; padding:15px 19px 5px 19px; font-size:12px; color:#666; background-image:url("images/sidebar_forums_bg.gif"); background-position:top left; background-repeat:repeat-x; background-color:#DDD;}
+#container #passport {z-index:1; position:relative; top:10px; right:-178px; text-align:right; font-size:11px; color:#000;}
+
+/* Software List page */
+#softwareHeader {position:absolute; z-index:0; float:left; padding-left:10px;}
+#softwareHeaderBlurb {color:#555; font-size:12px; background:#fff url('images/header_software_blurb.jpg') no-repeat left top;}
+
+#softwareHeaderForm {font-weight:bold; color:#000; font-size:13px; background:#fff url('images/header_software_form.jpg') no-repeat left top; padding-left:10px;}
+#softwareHeaderForm .formTitle, #articlesHeaderForm .formTitle, #newslinkHeaderForm .formTitle, #trainingHeaderForm .formTitle {font-weight:normal; margin-bottom:8px;}
+#softwareHeaderForm th, #articlesHeaderForm th, #newslinkHeaderForm th, #trainingHeaderForm th {font-weight:bold; color:#333; font-size:13px; text-align:left; padding-bottom:5px;}
+#softwareHeaderForm form, #articlesHeaderForm form, #newslinkHeaderForm form, #trainingHeaderForm form {margin:0; padding:0;}
+#softwareHeaderForm input, #articlesHeaderForm input, #newslinkHeaderForm input, #trainingHeaderForm input, #softwareHeaderForm select, #articlesHeaderForm select, #newslinkHeaderForm select, #trainingHeaderForm select {font-size:12px;}
+
+#softwareList {border:1px solid #535353;}
+.softwareListNav td.navTop {font-size:12px; color:#666; font-weight:bold; padding:15px 10px 5px 0;}
+.softwareListNav td.navBtm {font-size:12px; color:#666; font-weight:bold; padding:10px 10px 0 0;}
+
+#headerCategory {margin-left:415px; display:inline;}
+#softwareList td {font-size:12px; color:#666; vertical-align:top;}
+#softwareList tr.item td {padding:6px 0 13px 9px;}
+#softwareList .itemTitle {padding-bottom:5px;} 
+#softwareList .itemTitle a:link, #softwareList .itemTitle a:hover, #softwareList .itemTitle a:active, #softwareList .itemTitle a:visited {color:#0a6cce;}
+#softwareList .itemLinks a:link, #softwareList .itemLinks a:hover, #softwareList .itemLinks a:active, #softwareList .itemLinks a:visited, .softwareListNav a:link, .softwareListNav a:hover, .softwareListNav a:active, .softwareListNav a:visited {color:#666;}
+#softwareList tr.item td.itemCategory {border-left:1px solid #535353;}
+#softwareListHeaders td {background-image:url("images/gradient_green_672w.gif"); background-position:top left; background-repeat:repeat-y; padding:10px 0 10px 8px; border-bottom:1px solid #fff; font-size:12px; font-weight:bold; color:#333;}
+
+/* Software Detail page */
+#softwareDetailMain {color:#333; font-size:13px;  line-height:19px;}
+h1#softwareDetailTitle {font-size:26px; color:#333; font-weight:bold; margin:-5px 0 0 0; padding:0;}
+#softwareDetailCategory {font-size:11px; color:#666; font-weight:bold; margin-bottom:23px;}
+#softwareDetailCategory #categoryLabel {color:#333;}
+
+/* Verification pages */
+#verifHeader {position:absolute; float:left; padding-left:10px;}
+#verifHeader #nav {position:absolute; top:16px; margin-left:116px;}
+#verifHeaderBlurb {position:absolute; top:110px; margin-left:116px; color:#333	; font-size:12px; line-height:19px;width:500px;}
+
+#verifMain {position:absolute; top:292px; margin-left:126px; width:360px; color:#333; font-size:13px;  line-height:19px;}
+#verifMain h2 {font-size:16px; color:#333; font-weight:bold; margin:0 0 12px 0; padding:0;}
+
+#verifMain ol {padding:0; margin:0 0 0 2em; font-weight:bold; line-height:normal;}
+#verifMain ol span {font-weight:normal;}
+#verifMain ol input {margin:10px 0 15px -2em; font-weight:normal;}
+
+#verifHeaderBlurb form {margin:17px 0 0 0; padding:0;}
+
+/* Article pages */
+h1#articleEmailTitle {font-size:26px; color:#333; font-weight:bold; margin:0; padding:0;}
+#articleEmailBlurb {font-size:12px; color:#333;}
+#articleEmailForm td, #articleEmailForm th {font-size:12px; color:#000;}
+#articleEmailForm th {padding-top:10px; padding-bottom:5px; text-align:left; font-weight:normal;}
+#articleEmailForm form {margin:0; padding:0;}
+#articleEmailform input {margin-bottom:10px;}
+
+#articleDetailMain {color:#333; font-size:13px;  line-height:19px;}
+h1#articleDetailTitle {font-size:26px; color:#333; font-weight:bold; margin:-5px 0 0 0; padding:0;}
+#articleDetailRelated {float:right; margin-left:20px;}
+#articleDetailInfo {font-size:11px; color:#666; font-weight:bold; margin-bottom:23px;}
+#articleDetailInfo .label {color:#333;}
+
+#articlesHeaderForm {font-weight:bold; color:#000; font-size:13px; background:#fff url('images/header_articles_form.jpg') no-repeat left top; padding-left:10px;}
+
+#articlesList {border-right:1px solid #535353; border-bottom:1px solid #535353; border-left:1px solid #535353;}
+.articlesListNav td.navTop {font-size:12px; color:#666; font-weight:bold; padding:15px 10px 5px 0;}
+.articlesListNav td.navBtm {font-size:12px; color:#666; font-weight:bold; padding:10px 10px 0 0;}
+
+#articlesList td {font-size:12px; color:#666; vertical-align:top;}
+#articlesList tr.item td {padding:6px 10px 13px 9px;}
+#articlesList .itemTitle {padding-bottom:5px;} 
+#articlesList .itemTitle a:link, #articlesList .itemTitle a:hover, #articlesList .itemTitle a:active, #articlesList .itemTitle a:visited {color:#0a6cce;}
+#articlesList .itemLinks a:link, #articlesList .itemLinks a:hover, #articlesList .itemLinks a:active, #articlesList .itemLinks a:visited, .articlesListNav a:link, .articlesListNav a:hover, .articlesListNav a:active, .articlesListNav a:visited {color:#666;}
+#articlesList tr.item td.itemCategory {border-left:1px solid #535353;}
+#articlesListHeaders td {padding:10px 0 10px 8px; border-bottom:1px solid #fff; font-size:12px; font-weight:bold; color:#333;}
+#articlesListHeaders {background-image:url("images/gradient_green_672w.gif"); background-position:top left; background-repeat:repeat-y; border-top:1px solid #535353; border-right:1px solid #535353; border-left:1px solid #535353;}
+
+/* Newslink pages */
+#newslinkHeaderBlurb {color:#555; font-size:12px; background:#fff url('images/header_newslink_blurb.jpg') no-repeat left top;}
+#newslinkHeaderForm {font-weight:bold; color:#000; font-size:13px; background:#fff url('images/header_newslink_form.jpg') no-repeat left top; padding-left:10px;}
+#newslinkMain {padding-top:30px; padding-bottom:15px;}
+#newslinkMain .divider {border-top:1px solid #ADADAD; margin-top:15px; padding-bottom:0px;}
+#newslinkTitle {font-size:22px; font-weight:bold; color:#333; margin-bottom:20px;}
+.newslinkItem {font-size:13px; color:#333; line-height:19px;}
+.newslinkItem .title {font-size:16px; font-weight:bold; margin-bottom:10px;}
+.newslinkItem .readMore {margin-top:5px;}
+.newslinkItem .readMore a:link, .newslinkItem .readMore a:hover, .newslinkItem .readMore a:active, .newslinkItem .readMore a:visited {color:#333;}
+#newslinkDetailRelated {float:right; margin-left:20px;}
+#newslinkDetailRelated .relatedBoxTop {height:30px;}
+
+/* Training page */
+#trainingList {border-right:1px solid #535353; border-bottom:1px solid #535353; border-left:1px solid #535353;}
+
+#trainingList td {font-size:12px; color:#666; vertical-align:top;}
+#trainingList tr.item td {padding:6px 10px 13px 9px;}
+#trainingList .itemTitle {padding-bottom:5px;} 
+#trainingList tr.item td.itemCategory, #trainingList tr.item td.itemSite {border-left:1px solid #535353;}
+#trainingListHeaders td {padding:10px 0 10px 8px; border-top:1px solid #535353; border-bottom:1px solid #fff; font-size:12px; font-weight:bold; color:#333;}
+
+#trainingHeaderForm {font-weight:bold; color:#000; font-size:13px; background:#fff url("images/header_training_form.jpg") no-repeat left top; padding-left:10px;}
+
+#trainingList .itemLinks a:link, #trainingList .itemLinks a:hover, #trainingList .itemLinks a:active, #trainingList .itemLinks a:visited, .trainingListNav a:link, .trainingListNav a:hover, .trainingListNav a:active, .trainingListNav a:visited {color:#666;}
+#trainingList .item .itemSite a:link, #trainingList .item .itemSite a:hover, #trainingList .item .itemSite a:active, #trainingList .item .itemSite a:visited {color:#0A6CCE;}
+.trainingListNav td.navTop {font-size:12px; color:#666; font-weight:bold; padding:15px 10px 5px 0;}
+.trainingListNav td.navBtm {font-size:12px; color:#666; font-weight:bold; padding:10px 10px 0 0;}
+
+#backLink {padding-left:115px; padding-top:10px; font-size:11px; color:#666; font-weight:bold;}
+#backLink a:link, #backLink a:hover, #backLink a:active, #backLink a:visited {color:#666;}
+
+.activationCodeText { font-size:18px; font-weight:bold }
+#downloadInstructions { font-weight:bold; }
+
+#softwareDownloadHeader { background-image:url("images/header_software_download.jpg"); background-position:top left; background-repeat:no-repeat;}
+#softwareDownloadInstructions { padding-left:150px; padding-top:120px; width:450px }
+
+#enterInvitationCodeHeader { background-image:url("images/header_enter_invitation_code.jpg"); background-position:top left; background-repeat:no-repeat;}
+#enterInvitationCodeInstructions { padding-left:115px; padding-top:80px }
+.enterInvitionCodeBold {font-weight: bold; }
+
+#manualVerificationInstructionsHeader { background-image:url("images/header_manual_verification_instructions.jpg"); background-position:top left; background-repeat:no-repeat;}
+#manualVerificationInstructions { padding-left:115px; padding-top:110px; width:620px; }
+.manualSubmissionTypeSelection {font-size:20px; font-weight: bold; }
+.enterManualInfo { font-weight: bold; }
+.manualSubmissionInfoText { padding-left:20px; }
+.manualVerificationSiteUserId { font-weight: bold; }
+
+#manualVerficationSubmittedHeader { background-image:url("images/header_manual_verification_submitted.jpg"); background-position:top left; background-repeat:no-repeat;}
+#manualVerificationSubmittedText { padding-left:115px; padding-top:110px }
+
+#manualVerficationAdminHeader { background-image:url("images/header_manual_verification_admin.jpg"); background-position:top left; background-repeat:no-repeat;}
+#manualVerificationAdminContent { padding-left:115px; padding-top:110px }
+
+#facultyConnectionSearchHeader { background-image:url("images/header_faculty_connection_search.jpg"); background-position:top left; background-repeat:no-repeat;}
+#facultyConnectionSearchContent { padding-left:115px; padding-top:110px; width:540px; }
+
+#pilotPortalHeader { background-image:url("images/header_pilot_portal.jpg"); background-position:top left; background-repeat:no-repeat;}
+#pilotPortalContent { padding-left:115px; padding-top:110px }
+
+#welcomeHeader { background-image:url("images/header_verif2.jpg"); background-position:top left; background-repeat:no-repeat;}
+#welcomeContent { padding-left:115px; padding-top:80px }
+
+#searchResultsTable { width:540px }
+#searchResultsTable td { width:540px }
+.searchResultsUrl { font-size:12px; color:green; }
+.searchSites { width:560px }
+
+.faxCoverSheet { padding-top:20px; padding-left:20px; }
+.faxCoverSheetTitle { font-weight:bold; font-size:18px; }
+.faxFieldLabel { font-weight:bold; background-color:#cccccc; border-style:solid; border-width:1px; border-color:Black; width:80px; padding-left:10px; }
+.faxSpacer { width:80px; }
+.faxFieldTextBox { border-style:solid; border-width:1px; border-color:Black; width:400px; padding-left:10px; }
+.faxFieldInstructions { font-size:10px }
+.faxCoverSheetButtons { padding-left:20px;	width:430px; }
+.faxCoverSheetButton { width:200px; }
+
+#relatedContent {float:right; margin-left:20px;}
+.relatedBox {width:240px; margin-bottom:15px; border-right:1px solid #535353; border-bottom:1px solid #535353; border-left:1px solid #535353; padding:0px 0 20px 0;}
+.relatedBox a {display:block; font-size:12px; margin:7px 10px 0 10px;}
+.relatedBox a:link, .relatedBox a:hover, .relatedBox a:active, .relatedBox a:visited {color:#666;}
+.relatedBoxTop {width:240px; height:40px; background-image:url("images/gradient_green_240w.gif");background-position:top left; background-repeat:repeat-y;  vertical-align:middle; border-top:1px solid #535353; border-right:1px solid #535353; border-left:1px solid #535353; }
+.relatedBoxTop h2 {font-size:13px; font-weight:bold; color:#333; margin:5px 8px 0 8px; padding:0;}
+
+.collabtable {
+width:500px;border-collapse:collapse;
+}
+
+.rfv 
+{
+
+	color:Red !important;
+	font-size:20px;
+	
+}
+
+
+
+
+#recommended ul 
+{
+    margin-top:0;
+    padding-top:0;
+    margin-left:35px;
+    padding-left:0px;
+	
+    
+}
+
+#recommended h4 
+{
+    color:#666;
+    float:left;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+
+#recommended a:link, #recommended a:visited, #recommended a:hover, #recommended a:active
+    {
+        text-decoration:none;
+        
+        }
+        
+
+
+a.recommendedtop:link,  a.recommendedtop:visited,  a.recommendedtop:hover,  a.recommendedtop:active 
+{
+    text-decoration:none;
+    font-size:10px;
+    float:right;
+}
+
+#recommended .hr {
+ clear:both;
+ height:1px;
+ border-top:1px solid #999;
+ display:block;
+ padding:0;
+ margin-bottom:2px;
+ line-height:2px;
+ 
+ 
+   
+}

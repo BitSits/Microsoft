@@ -1,0 +1,443 @@
+/*
+
+http://img.microsoft.com/downloads/loc/en/main.css
+
+http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en
+
+*/
+
+body {color:#000;}
+body,table{
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+body, form, input, table, td, button{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+input, select{font-size:1em;}
+h1{
+font-size:18pt;
+font-weight:normal;
+}
+h2{font-size:14pt;}
+h4{font-size:10pt;margin-bottom:.3em; clear:left;}
+h5{font-size:10pt;margin-bottom:5px;}
+body, div, form, table, td{
+margin:0;
+padding:0;
+}
+img, a img{
+border:0 none;
+}
+/*
+p{
+font-size:.7em;
+line-height:1.3em;
+margin-bottom:0;
+}*/
+ul , ol{
+margin-bottom:.3em;
+margin-top:.3em;
+}
+li{
+padding-bottom:3px;
+padding-top:3px;
+}
+hr{
+border:none 0;
+border-bottom:solid 1px #E2E2E4;
+height:1px;
+margin:-3px 0 -3px 0;
+padding:0;
+}
+div.pageMargin{
+margin:20px 20px 50px 20px;
+}
+a, a:link{color:#0033cc}
+a:visited{color:#800080}
+a:active,a:hover{color:#ff6600}
+
+option.disabled{color:#808080;}
+
+/* START MNP styles */
+.mnpMenuRow a {color:#000000;}
+/* END MNP styles */
+
+
+/* START rounded corners */
+.topCorners, .bottomCorners{display:block; height:5px; overflow:hidden; padding:0;}
+.topCorners *, .bottomCorners *{display:block; height:1px; overflow:hidden; padding:0; line-height:1px; font-size:1px;}
+.l1{margin:0 5px}
+.l2{margin:0 3px}
+.l3{margin:0 2px}
+.l4{margin:0 1px; height:2px}
+/* zoom:1; is to force IE to have "layout" for this element so the bottom corners that follow it don't go funny... */
+.styledPanel{zoom:1;}
+/* END rounded corners */
+
+/* START Personalization */
+#recommended{
+clear:both;
+margin:1.32em 0 auto -10px;
+}
+#browse #recommended{margin-right:-10px}
+#recommended ol{
+font-size:.7em;
+margin-bottom:0;
+padding-bottom:2px;
+}
+#recommended .styledPanel{
+padding:0 10px;
+background: #EBF2FA;
+}
+#recommended .styledPanel h4{
+background:#7FB6CB;
+border-bottom:solid 1px #999999;
+margin:0 -10px 8px;
+padding:0 10px 5px 10px;
+}
+#recommended .styledPanel{padding-bottom:6px}
+#recommended h4 a{
+font-size:.85em;
+font-weight:normal;
+}
+#recommended .l2{border-left:solid 2px #999999; border-right:solid 2px #999999;}
+#recommended .l3, #recommended .l4, #recommended .styledPanel{border-left:solid 1px #999999; border-right:solid 1px #999999;}
+#recommended .l1{background:#999999;}
+#recommended .topCorners .l2,#recommended .topCorners .l3,#recommended .topCorners .l4{background:#7FB6CB;}
+#recommended .bottomCorners .l2,#recommended .bottomCorners .l3,#recommended .bottomCorners .l4{background:#EBF2FA;}
+/* END Personalization */
+
+
+/* START details PageIndex */
+#onthispage{
+width:480px;
+}
+#onthispage div{
+width:220px;
+float:left;
+background-image:url(images/arrow_down.gif);
+background-position:left;
+background-repeat:no-repeat;
+padding-left:20px;
+padding-bottom:3px;
+vertical-align:top;
+font-family:Verdana,Arial;
+font-size:95%;
+}
+/* END details PageIndex */
+
+#detailsThankyouIntro{
+margin-bottom:16px;
+}
+#detailsThankyouIntro #logo{
+float:right;
+height:108px;
+margin-left:18px;
+width:177px;
+}
+#detailsThankyouIntro #logo img{
+float:left;
+}
+#detailsThankyouIntro #logo h4{
+font-size:.7em;
+margin:15px 0 4px 0;
+}
+#detailsThankyouIntro #logo p{
+font-size:.6em;
+margin:0;
+}
+#thankyou ul li{
+font-size:.7em;
+margin:4px 0;
+padding:0;
+}
+#relatedDownloads ul li{
+font-size:1em;
+}
+/* fix IE 3px bug */
+* html #detailsThankyouIntro #logo img{margin:0 -3px;}
+#detailsThankyouIntro h1{
+margin-bottom:5px;
+}
+#detailsThankyouIntro h2{
+font-weight:normal;
+margin-top:0em;
+margin-bottom:25px;
+}
+#quickDescription{
+font-size:.7em;
+padding:0;
+}
+
+/* START colored box */
+#genuineValidated #quickInfoHeader, #genuineValidated .topCorners * {background:#003399;color:#FFFFCC}
+#genuineValidated #quickInfoContents, #genuineValidated .bottomCorners * {background:#FCF4B5;}
+#genuineNotValidated #quickInfoHeader, #genuineNotValidated .topCorners * {background:#DEB031;color:#FFFFCC}
+#genuineNotValidated #quickInfoContents, #genuineNotValidated .bottomCorners * {background:#FCF4B5;}
+#regsysNotRegistered #quickInfoHeader, #regsysNotRegistered .topCorners * {background:#75A569;color:#FFFFFF}
+#regsysNotRegistered #quickInfoContents, #regsysNotRegistered .bottomCorners * {background:#E8F7E0;}
+#regsysRegistered #quickInfoHeader, #regsysRegistered .topCorners * {background:#308216;color:#FFFFFF}
+#regsysRegistered #quickInfoContents, #regsysRegistered .bottomCorners * {background:#E8F7E0;}
+#unRestricted #quickInfoHeader, #unRestricted .topCorners * {background:#82ADE2;color:#E5EFF8}
+#unRestricted #quickInfoContents, #unRestricted .bottomCorners * {background:#E5EFF8;}
+
+#genuineValidated, #genuineNotValidated, #regsysNotRegistered, #regsysRegistered,  #unRestricted{
+clear:both;
+display:block;
+margin:0 -10px;
+width:auto;
+padding-top:20px;
+}
+#genuineValidated hr, #genuineNotValidated hr{border-bottom:solid 1px #EFDF60;}
+#regsysNotRegistered hr, #regsysRegistered hr{border-bottom:solid 1px #8DC061;}
+#quickInfoContents hr{margin:0;padding:0;}
+#quickInfoContents td>hr{margin:5px 0;}
+
+#quickInfoContents,#quickInfoHeader{
+margin:0;
+padding:1px 10px 0.1em 10px;
+}
+
+#quickInfoHeader {
+font-weight:bold;
+font-size:.7em;
+/*height:22px;*/
+}
+
+#quickInfoHeader form{
+clear:none;
+float:left;
+margin:0;
+padding:0;
+border:0;
+}
+
+#quickInfoHeader input, #multiFileList button {
+font-size:8pt;
+font-weight:bold;
+position:relative;
+top:-2px;
+}
+
+#multiFileList button {top:0}
+#quickInfoHeader div {
+display:inline;
+margin-left:5px;
+}
+#quickInfoHeader a img{
+vertical-align:bottom;
+}
+#quickInfoHeader a, #quickInfoHeader a:visited, #quickInfoHeader a:hover {
+color:#FFFFFF;
+font-weight:normal;
+padding:5px;
+}
+
+/*adjusts the table to 100% but not over the colored area*/
+#quickInfoContents table{
+margin-left:20px;
+width:100%;
+}
+/*adjusts the table to 100% but not over the colored area works for IE*/
+* html #quickInfoContents table{
+table-layout:fixed;
+width:auto;
+}
+div#quickInfoContents td{
+
+}
+td.quickInfoValue{
+margin-bottom:0;
+}
+div#quickInfoContents p{
+padding-bottom:10px;
+}
+#quickInfoContents td.quickInfoName {
+padding:5px 0;
+}
+#quickInfoContents td.quickInfoName{
+padding-right:30px;
+width:200px;
+}
+div#otherDownloadInfo{
+margin:0 0 12px 0;
+}
+div#otherDownloadInfo {
+}
+td#detailsDisclaimer {
+padding:5px 0;
+}
+div.detailsInfoLabel{
+font-weight:bold;
+padding-top:5px;
+padding-bottom:5px;
+}
+div.downloadInfo{
+font-size:.7em;
+margin:0 0 10px 20px;
+}
+div.detailsContent{
+font-size:10pt;
+}
+/* END colored box */
+div#details p.topOfPage{
+border-bottom:solid 1px #E2E2E4;
+padding:0 0 10px 0;
+}
+div#affinity div{
+font-size:.7em;
+}
+/* START multi-file table */
+table#multiFileList{
+border-collapse:collapse;
+margin:15px 0;
+width:100%;
+}
+/*helps the table scale to design in IE*/
+* html table#multiFileList{
+table-layout:fixed;
+width:auto;
+}
+table#multiFileList th{
+font-size:.7em;
+padding:7px 20px;
+text-align:left;
+}
+table#multiFileList td{
+padding:4px 20px;
+}
+table#multiFileList .buttonCell{width:100px; padding-right:0px;padding-left:0px;font-size:.7em}
+table#multiFileList th#sizeCol{white-space:nowrap}
+table#multiFileList th#multiFileNameCol{width:50%}
+/* END multi-file table */
+div#relatedLinks{
+margin:-5px 0 15px 0;
+}
+div#gaTalkBack{
+border-top:solid 1px #D19638;
+border-bottom:solid 1px #D19638;
+margin:27px 0 30px 0;
+overflow:hidden;
+padding:0;
+}
+* html div#gaTalkBack{
+width:100%;
+}
+#gaTalkBack p{
+margin:5px 0 15px 0;
+}
+div#gaTalkBack div#color{
+margin:0 0 11px 0;
+background:#F8DF75;
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#DC9B3C', EndColorStr='#F8DF75');
+height:7px;
+font-size:1px;
+}
+div#gaTalkBack div#gabody{
+padding:0 0 0 20px;
+margin:0;
+}
+div#gaTalkBack h4{
+color:#C89225;
+margin:0;
+}
+div#gaAd,div#msnAd{
+float:right;
+margin:0 0 15px 0;
+text-align:center;
+width:165px;
+}
+/* START Download Notifications */
+div#notifications{
+border:solid 1px #999999;
+clear:right;
+font-size:.85em;
+float:right;
+margin-left:15px;
+width:165px;
+}
+div#notifications *{
+margin:0 0 2px 0;
+}
+div#notifications div{
+padding:0 5px 3px 5px;
+}
+div#notifications a{
+font-size:.8em;
+font-weight:bold;
+}
+/* END Download Notifications */
+/* END details thankyou*/
+
+/* START WWList */
+table#wwList td{
+font-size:.7em;
+padding-right:10px;
+vertical-align:top;
+width:30%;
+}
+/* END WWList */
+
+/* START Products */
+div#products #links{
+font-size:.8em;
+font-weight:bold;
+}
+div#products li{
+color:#999999;
+font-size:.7em;
+line-height:.7em;
+}
+div#products p{
+margin:0 0 10px 0;
+}
+div#products h1{
+margin:0;
+}
+div#products h4{
+border-bottom:solid 1px #E2E2E4;
+padding:0 0 5px 0;
+margin-bottom:5px;
+}
+/* END Products */
+
+
+.summary{
+width:480px;
+}
+.summary h4 
+{
+    width:220px;
+    float:left;
+}
+.summary div{
+width:220px;
+float:left;
+padding-left:20px;
+padding-bottom:3px;
+vertical-align:top;
+font-family:Verdana,Arial;
+font-size:95%;
+}
+
+.detailsTable 
+{   
+    margin-left: 20px;
+    padding: 2px;
+}
+.detailsLabel
+{
+    width:200px;
+    vertical-align: top;
+}
+
+.headerTable 
+{   
+    padding: 0;
+}
+.headerLabel
+{
+    width:220px;
+    vertical-align: top;
+}

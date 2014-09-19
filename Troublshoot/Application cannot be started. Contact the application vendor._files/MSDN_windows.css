@@ -1,0 +1,213 @@
+﻿#BodyBackground {
+    background: #fff url('images/bg_body_windows.png') repeat-x top;
+}
+
+#JelloWrapper {
+    background: url('images/bg_branding_windows.png') no-repeat scroll top right;
+}
+
+/*-------- Start Masthead Control --------*/
+.BrandLogo 
+{
+	background-image:url('images/logo_windows.png');
+    margin: -3px 0px 0px 14px !important;
+    height: 39px;
+}    
+*html .BrandLogo 
+{
+	background-image:url('images/logo_windows.png');
+    margin: -3px 0px 0px 4px !important;
+}
+
+#BrandDisplayText
+{
+	display:none;
+}
+
+#LocaleFlyout a, 
+#LocaleFlyout a:link,
+#LocaleFlyout a:visited,
+#LocaleFlyout a:hover,
+#LocaleFlyout a:active {
+    color: #000;
+}
+
+.DropDownArrow {
+    background-image: url('../../images/arrow_dn.gif');
+}
+.PassportScarab a, 
+.PassportScarab a:link,
+.PassportScarab a:visited,
+.PassportScarab a:hover,
+.PassportScarab a:active {
+    color: #000;
+}
+
+.UserName a, 
+.UserName a:link,
+.UserName a:visited,
+.UserName a:hover,
+.UserName a:active {
+    color: #000;
+}
+
+.UserName{
+	width:auto;
+}
+
+.NetworkLogo a, 
+.NetworkLogo a:link,
+.NetworkLogo a:visited,
+.NetworkLogo a:hover,
+.NetworkLogo a:active {
+    color: #000	;
+}
+
+.NetworkLogo
+{ 
+  background:url('images/logo_msdn_dark.png') no-repeat ;
+}
+
+.NetworkLogo #NetworkTaglineLogo
+{ 
+   visibility:hidden;
+   margin-right:0px;
+}  
+
+/*-------- End Masthead Control --------*/
+
+/*-------- Start tab control branding --------*/
+.internav {
+     background-image: url('images/internav_msdn_windows.png'); 
+     width: 75%;
+}
+
+*html .internav {
+    background: #eee none !important;
+}
+  
+.internav a.active, .internav a.active:hover, .internav a.active:visited, .internav a:Link.active {
+background:#297f02 none repeat scroll 0 0;
+color:#FFFFFF;
+background-image: url('../../images/MSDN/active.png'); 
+}
+ 
+.internav a, 
+.internav a:link,
+.internav a:visited,
+.internav a:hover{
+    color: #FFFFFF;
+}
+
+.leftcap {
+    background-image: url('images/internav_msdn_windows.png');
+    left:-12px;
+}
+
+.LocalNavigation {
+    background-image: url('images/subnav_sharepoint.png');
+}
+*html .LocalNavigation {
+    background: #ccc none !important;
+}
+
+.localleftcap {
+    background-image: url('images/subnav_sharepoint.png');
+}
+
+.LocalNavigation .TabOn,
+.LocalNavigation .TabOn:hover {
+    background-image: url('images/subnav_sharepoint.png');
+}
+
+.LocalNavigation .TabOff a:hover {
+    background-color: #b0b0b1 !important;
+}
+
+/*-------- End tab control branding --------*/
+#MainContent h3
+{
+    line-height: 125%;
+    color: #3a3e43;
+}
+
+.nobar {
+    border-top-color: transparent !important;
+}
+
+.nobar .rssfeed,
+.nobar .opmlfeed {
+    position: relative !important;
+    top: 0px !important;
+}
+
+/* Boston Styles */
+.box h1,
+.box h2,
+.box h3,
+.box h4,
+.box h5,
+.box h6 
+{
+	color: #3a3e43;
+}
+
+.box h1 a,
+.box h2 a,
+.box h4 a,
+.box h5 a,
+.box h6 a {
+    color: #3a3e43;
+}
+
+/*forums styles*/
+
+#content .box h4{
+    color: #3a3e43;
+    background-color: #297f02;
+    }
+
+ul.category li.category > h2,
+ul.category li.category > h3,
+ul.category li.category > h4,
+ul.category li.category > h5,
+ul.category li.category > h6
+{
+background-color:#297f02;
+color: #3a3e43;
+}
+
+ul.category li.category h2 A,
+ul.category li.category h2 A:link,
+ul.category li.category h2 A:hover,
+ul.category li.category h2 A:Active
+{
+color: #3a3e43;
+}
+
+#rail div.box > h4 {
+background-color:#297f02;
+}
+
+#rail div.box > h4 a:Link
+{
+	color: #3a3e43;
+}
+
+#controls.box > h4
+{
+background-color:#297f02;
+color: #3a3e43;
+}
+
+ul.announcement li.announcement h4{
+    line-height: normal;
+	white-space: normal;
+	border-top: none;
+	width: 88%;
+	color: #3a3e43;
+}
+
+#content ul.announcement li.announcement h4{
+background-color: #ffffff;
+}

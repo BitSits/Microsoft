@@ -1,0 +1,545 @@
+/*-------- Remove this once the content HTML has been placed in the right spot --------*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*----------------------------------- The Content Wrapper -----------------------------------*/
+#content-wrapper {
+	position: relative;
+	margin: 0px 169px 0px 0px;
+	padding: 0;
+	color: #000000;
+	background: #FFFFFF;
+}
+
+
+/*---------------------------------- The Featured Headline ----------------------------------*/
+#featured {
+	position: relative;
+	margin: 10px;
+	padding: 5px;
+	color: #000000;
+	background: #FFFFFF;
+	border-bottom: 2px dotted #999999;
+}
+
+
+/*------------------------------------ The Program News -------------------------------------*/
+#program-news {
+	position: relative;
+	margin: 0px 10px;
+	padding: 0px 5px;
+	color: #000000;
+	background: #FFFFFF;
+}
+#more-news {
+	position: relative;
+	float: right;
+	height: 16px;
+	margin: 0px 20px 0px 0px;
+	padding: 0;
+}
+
+
+/*--------------------------------- The Technical Articles ----------------------------------*/
+#technical-articles {
+	position: relative;
+	margin: 0px 10px;
+	padding: 1px 5px 0px 5px;
+	color: #000000;
+	background: #FFFFFF;
+}
+
+
+/*--------------------------------- The Calendar of Events ----------------------------------*/
+#calendar {
+position: relative;
+width: 180px;
+float: left;
+margin: 20px 7px 20px 10px;
+padding: 0px 5px;
+color: #000000;
+} 
+#calendar-top {
+	position: relative;
+	float: left;
+	width: 180px;
+	height: 24px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/middle_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#calendar-top a {
+	margin-left: 10px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#calendar-top a:hover {
+	margin-left: 10px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#calendar p {
+	margin: 5px 10px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+#calendar ul {
+	clear: both;
+	list-style-type: square;
+	margin: 5px 10px 5px 24px;
+	padding: 0;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #E36531;
+	background-color: #FFFFFF;
+}
+
+
+/*--------------------------------- The Resource Highlights ----------------------------------*/
+#resource {
+position: relative;
+width: 180px;
+float: left;
+margin: 20px 7px;
+padding: 0px 5px;
+color: #000000;
+} 
+#resource-top {
+	position: relative;
+	float: left;
+	width: 180px;
+	height: 24px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/middle_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#resource-top a {
+	margin-left: 10px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#resource-top a:hover {
+	margin-left: 10px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#resource p {
+	margin: 5px 10px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+#resource ul {
+	clear: both;
+	list-style-type: square;
+	margin: 5px 10px 5px 24px;
+	padding: 0;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #E36531;
+	background-color: #FFFFFF;
+}
+
+/*------------------------------ The Right Side Content Wrapper ------------------------------*/
+#right-wrapper {
+	position: relative;
+	float: right;
+	width: 161px;
+	margin: 0px 0px 0px;
+	padding: 0;
+	color: #000000;
+	background: #FFFFFF;
+}
+
+
+/*------------------------------------- The Program Box --------------------------------------*/
+#program {
+	position: relative;
+	float: left;
+	margin: 5px 0px;
+	padding: 0;
+}
+#program-top {
+	position: relative;
+	float: left;
+	width: 145px;
+	height: 20px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/right_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#program-middle {
+	position: relative;
+	width: 145px;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background: #3C739A;
+	border-right: 1px solid #3C739A;
+	border-left: 1px solid #3C739A;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: 145px;
+}
+html>body>#right-wrapper>#program>#program-middle {
+	width: 143px; 
+}
+#right-wrapper #program #program-middle p {
+	margin: 0px 8px;
+	padding: 3px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+img.square-bullet {
+	margin: 15px 5px 0px 0px;
+}
+img.register {
+	margin: 10px 5px 0px 15px;
+}
+#program-bottom {
+	width: 145px;
+	height: 7px;
+	margin: 0;
+	padding: 0;
+	background-image: url(/images/right_box_bluebottom.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+
+/*------------------------------------- The Security Box -------------------------------------*/
+#security {
+	position: relative;
+	float: left;
+	margin: 5px 0px;
+	padding: 0;
+	color: #000000;
+	background: #FFFFFF;
+}
+#security-top {
+	position: relative;
+	float: left;
+	width: 143px;
+	height: 20px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/right_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#security-middle {
+	position: relative;
+	width: 143px;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #E7F2F9;
+	border-right: 1px solid #3C739A;
+	border-left: 1px solid #3C739A;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: 145px;
+}
+html>body>#right-wrapper>#security>#security-middle {
+	width: 143px; 
+}
+#security-middle p {
+	margin: 0px 8px;
+	padding: 3px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+#security-bottom {
+	width: 143px;
+	height: 7px;
+	background: #FFFFFF;
+	background-image: url(/images/right_box_bottom.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+
+/*------------------------------------- The Community Box ------------------------------------*/
+#community {
+	position: relative;
+	float: left;
+	margin: 5px 0px;
+	padding: 0;
+	color: #000000;
+	background: #FFFFFF;
+}
+#community-top {
+	position: relative;
+	float: left;
+	width: 145px;
+	height: 20px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/right_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#community-middle {
+	position: relative;
+	width: 145px;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #E7F2F9;
+	border-right: 1px solid #3C739A;
+	border-left: 1px solid #3C739A;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: 145px;
+}
+html>body>#right-wrapper>#community>#community-middle {
+	width: 143px; 
+}
+#community-middle p {
+	margin: 0px 8px;
+	padding: 3px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+#community-bottom {
+	width: 145px;
+	height: 7px;
+	background: #FFFFFF;
+	background-image: url(/images/right_box_bottom.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+
+/*--------------------------------------- The Links Box --------------------------------------*/
+#links {
+	position: relative;
+	float: left;
+	margin: 5px 0px;
+	padding: 0;
+	color: #000000;
+	background: #FFFFFF;
+}
+#links-top {
+	position: relative;
+	float: left;
+	width: 145px;
+	height: 20px;
+	margin: 0;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3C739A;
+	background-image: url(/images/right_box_top.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+#links-middle {
+	position: relative;
+	width: 145px;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #E7F2F9;
+	border-right: 1px solid #3C739A;
+	border-left: 1px solid #3C739A;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: 145px;
+}
+html>body>#right-wrapper>#links>#links-middle {
+	width: 143px;
+}
+#links-middle p {
+	margin: 0px 8px;
+	padding: 3px 0px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+#links-bottom {
+	width: 145px;
+	height: 7px;
+	background: #FFFFFF;
+	background-image: url(/images/right_box_bottom.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+
+/*--------------------------- code for the RSS feed boxes and search-----------------*/
+
+    #topdownloads {
+    width:380px;
+    border:solid 1px #d7e6f7;
+    float:left;
+    display:inline;
+    }
+    
+    #topdownloads .header,  #top10newitems .header{
+    background-color:#000080;margin:0;padding:0;
+    }
+    
+    #topdownloads h1, #top10newitems h1 {
+    color:#ffffff;margin:0;
+    padding:2px;
+    font-size:14px; font-weight:bold;
+    }
+    
+    #topdownloadssearch {
+    background-color:#f1f1f1;
+    margin:0;
+    padding-top:
+    5px;padding-bottom:8px;
+    padding-left:3px;
+    border-top:solid 1px #d7e6f7;
+    border-bottom:solid 1px #d7e6f7;
+    }
+    
+    .topnumber {
+    float:left;width:30px;display:inline;
+    }
+    
+    .topdownloadstext {
+    display:inline;float:left;margin-bottom:4px;width:330px;
+    }
+    
+    .toptext {
+    display:inline;float:left;margin-bottom:4px;width:300px;
+    }
+    
+    #top10newitems {
+    width:342px;border:solid 1px #d7e6f7;float:left;display:inline;margin-left:20px;
+    }
+    
+    .toptext a:link, .toptext a:visited, .toptext a:hover, .toptext a:active
+    {
+	color:#2162A2; text-decoration:none; font-size:11px; font-weight:normal;
+    }
+    
+    .toptext a:hover 
+    {
+		text-decoration:underline;
+    }
+
+
+    .topdownloadstext a:link, .topdownloadstext a:visited, .topdownloadstext a:hover, .topdownloadstext a:active
+    {
+	color:#2162A2; text-decoration:none; font-size:11px; font-weight:normal;
+    }
+    
+    .topdownloadstext a:hover 
+    {
+		text-decoration:underline;
+    }
+
+    
+/* end rss search code */
+
+/* resource kit styles */
+
+    .rk_os
+    {
+    }
+    
+/* end resource kit styles */    
+
+
+
+#toc h3 {
+margin-top:30px;
+}

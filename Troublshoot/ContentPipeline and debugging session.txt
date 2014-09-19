@@ -1,0 +1,12 @@
+"Unable to install or run the application. The application requires that assembly Microsoft.Xna.Framework.Content.Pipeline Version 3.1.0.0 be installed in the Global Assembly Cache (GAC) first. Please contact your system administrator."
+
+
+Runtime usage of content pipeline creation components 
+
+Publish > Application Files > Microsoft.Xna.Framework.Content.Pipeline > Include (rather than the default of Prerequisite).
+
+
+
+"The security debugging option is set but it requires the Visual Studio hosting process which is unavailable in this debugging configuration. The security debugging option will be disabled. This option may be re-enabled in the Security property page. The debugging session will continue without security debugging."
+
+http://support.microsoft.com/kb/919829

@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsIllustrator.SmartTag", "PhysicsIllustrator.SmartTag.csproj", "{63FA5CD2-E38B-4CB8-B5C1-FA507B481CEE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{709D8BBC-ED13-4C0E-9C78-3ECC678AE62E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{63FA5CD2-E38B-4CB8-B5C1-FA507B481CEE}.Debug.ActiveCfg = Debug|.NET
+		{63FA5CD2-E38B-4CB8-B5C1-FA507B481CEE}.Debug.Build.0 = Debug|.NET
+		{63FA5CD2-E38B-4CB8-B5C1-FA507B481CEE}.Release.ActiveCfg = Release|.NET
+		{63FA5CD2-E38B-4CB8-B5C1-FA507B481CEE}.Release.Build.0 = Release|.NET
+		{709D8BBC-ED13-4C0E-9C78-3ECC678AE62E}.Debug.ActiveCfg = Debug|.NET
+		{709D8BBC-ED13-4C0E-9C78-3ECC678AE62E}.Debug.Build.0 = Debug|.NET
+		{709D8BBC-ED13-4C0E-9C78-3ECC678AE62E}.Release.ActiveCfg = Release|.NET
+		{709D8BBC-ED13-4C0E-9C78-3ECC678AE62E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

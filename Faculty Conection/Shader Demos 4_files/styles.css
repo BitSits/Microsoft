@@ -1,0 +1,517 @@
+/*
+A
+{
+	font-size: 8pt;
+	color: #3c739a;
+	font-family: Verdana, Geneva, Arial;
+	text-decoration: none;
+}
+A:active
+{
+	text-decoration:none;
+	font-size: 8pt;
+	color: #3c739a;
+	font-family: Verdana, Geneva, Arial;
+}
+
+A:hover
+{
+	text-decoration:underline;
+	font-size: 8pt;
+	color: #3c739a;
+	font-family: Verdana, Geneva, Arial;
+}
+
+
+body {
+	font-family: Verdana, Geneva, Arial;
+	font-size: 8pt;
+}
+p {
+	font-family: Verdana, Geneva, Arial;
+	font-size: 8pt;
+}*/
+
+span {
+	font-family: Verdana, Geneva, Arial;
+	font-size: 8pt;
+}
+td {
+	font-family: Verdana, Geneva, Arial;
+	font-size: 8pt;
+}
+.DefaultMainTitle {
+	font-family: Verdana, Geneva, Arial;
+	font-size: 15pt;
+	font-weight: bold;
+	color:Navy;
+}
+
+.MainText
+{
+	
+	font-size: 8pt;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+}
+
+.SubPageText
+{
+	
+	font-size: 8pt;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+}
+
+.MainLink
+{
+	
+	font-size: 8pt;
+	color: #960000;
+	font-family: Verdana, Geneva, Arial;
+}
+
+.copyright
+{
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+}
+
+a.copyrightlink:link
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}	
+a.copyrightlink:visited
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+a.copyrightlink:hover
+{
+	font-size: 8pt;
+	text-decoration:none;
+		color: #E2612C;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+
+a.copyrightlink:active
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+.smallWhite
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+}	
+
+.toolbarwhite
+{
+	font-size: 8pt;
+	font-weight:normal;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+}	
+.searchlink
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+}	
+.searchlink:hover
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+}
+.subsearchlink
+{
+	font-size: 8pt;
+	font-weight: 800;
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+}	
+.subsearchlink:hover
+{
+	font-size: 8pt;
+	font-weight: 800;
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+}
+/*
+H1
+{
+	font-family: Verdana, Geneva, Arial;
+	color: #000000;
+	font-size: 12pt;
+}
+
+H2
+{
+	font-family: Verdana, Geneva, Arial;
+	color: #000000;
+	font-size: 11pt;
+}
+*/
+.FooterBlue
+{
+    COLOR: white;
+    BACKGROUND-COLOR: #3568CC
+}
+.MSBlue
+{
+    COLOR: white;
+    BACKGROUND-COLOR: #3568CC
+}
+.SmallHeading
+{
+	color: #991F19;
+	font-size: 10pt;
+	font-weight: 900;
+}
+.codeclass
+{
+	BACKGROUND-COLOR: #dddddd;
+	font-family: Courier;
+	font-size: 6pt;
+}
+.codeclass2
+{
+	BACKGROUND-COLOR:#eeeeee;
+	font-family: Courier New;
+	color: #990000;
+}
+a.toolbarlink:link
+{
+	font-size: 8pt;
+	font-weight:normal;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+	
+	
+}
+a.toolbarlink:visited
+{
+	font-size: 8pt;
+	font-weight:normal;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+
+a.toolbarlink:hover
+{
+	font-size: 8pt;
+	font-weight:normal;
+	text-decoration:none;
+	color: #E2612C;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+a.toolbarlink:active
+{
+	font-size: 8pt;
+	font-weight:normal;
+	text-decoration:none;
+	color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+
+
+a.righthandglobal:link
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+a.righthandglobal:visited
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+a.righthandglobal:hover
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #E2612C;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+a.righthandglobal:active
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+	font-size:xx-small;
+}
+
+a.morelink:link
+{
+	font-size: 8pt;
+	font-weight:bold;
+	text-decoration:none;
+	color: #991F19;
+	font-family: Verdana, Geneva, Arial;
+}
+
+a.morelink:visited
+{
+	font-size: 8pt;
+	font-weight:bold;
+	text-decoration:none;
+	color: #991F19;
+	font-family: Verdana, Geneva, Arial;
+}
+
+a.morelink:hover
+{
+	font-size: 8pt;
+	text-decoration:underline;
+	color: #991F19;
+	font-family: Verdana, Geneva, Arial;
+}
+
+a.morelink:active
+{
+	font-size: 8pt;
+	text-decoration:none;
+	color: #991F19;
+	font-family: Verdana, Geneva, Arial;
+}
+table.SearchResultsBox
+{
+	border: 2px solid #3C739A;
+}
+td.ActiveSearchTab
+{
+	/*background-color: #3C739A;*/
+	background-image: url(/images/tab_down.gif);
+	vertical-align: middle;
+	/*padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;*/
+	width: 93px;
+	height: 23px;
+	color: White;
+}
+td.InactiveSearchTab
+{
+	/*background-color: #A2BEC9;*/
+	background-image: url(/images/tab_down.gif);	
+	border-top: 2px solid white;
+	border-left: 1px solid white;
+	/*border-right: 1px solid white;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;*/
+	width: 93px;
+	height: 23px;
+	vertical-align: middle;
+	color: White;
+	cursor: hand;
+}
+.SearchTabLabel, .SearchTabLabel:hover, .SearchTabLabel:active, .SearchTabLabel:link, .SearchTabLabel:visited
+{
+	color: White;
+}
+
+
+/*BEGIN ADDED BY EH 2-21-04*/
+.whiteLinkBold
+{
+    COLOR: white;
+    BACKGROUND-COLOR: #3568CC;
+	font-weight: bold;	
+}
+a.whiteLinkBold
+{
+    COLOR: white;
+    BACKGROUND-COLOR: #3568CC;
+	font-weight: bold;	
+}
+.linkStyleNotLinked
+{
+	font-size: 15pt;
+	font-weight:bold;
+	text-decoration:none;
+	color: #E2612C;
+	font-family: Verdana, Geneva, Arial;
+}
+
+
+/*END ADDED BY EH 2-21-04*/
+
+/*BEGIN ADDED BY CB 6-28-04*/
+DIV.clsDocBody
+{
+	margin-left:23px;
+}
+
+DIV.clsMSDNSearch {
+	PADDING-LEFT: 0px; MARGIN: 0px; PADDING-TOP: 3px
+}
+
+a.breadcrumb:link
+{
+	font-size: 8pt;
+	font-weight:normal;
+}
+a.breadcrumb:visited
+{
+	font-size: 8pt;
+	font-weight:normal;
+}
+
+a.breadcrumb:hover
+{
+	font-size: 8pt;
+	font-weight:normal;
+}
+
+a.breadcrumb
+{
+	font-size: 8pt;
+	font-weight:normal;
+}
+
+.Breadcrumb
+{
+	font-size: 8pt;
+	font-weight:normal;
+	color: #000000;
+}
+
+.clsCRLinkBar
+{
+	padding-left: 10px;
+}
+
+H1
+{
+	font-family: Verdana, Geneva, Arial;
+	color: #000000;
+	font-size: 10pt;
+}
+
+H2
+{
+	font-family: Verdana, Geneva, Arial;
+	color: #000000;
+	font-size: 10pt;
+}
+
+.clsRateObjectlb
+{
+	font-weight: bold;
+	
+}
+
+.MoreResultscell
+{
+	padding-right:			50px;
+}
+/*END ADDED BY CB 6-28-04*/
+.questionLabel
+{
+	font-family:Times New Roman,Serif;
+}
+.lt0
+{
+    BACKGROUND: #f1f1f1;
+    BORDER-RIGHT: #f1f1f1 1px solid;
+    BORDER-TOP: #f1f1f1 1px solid;
+    BORDER-LEFT: #f1f1f1 1px solid;
+    BORDER-BOTTOM: #f1f1f1 1px solid;
+    PADDING-RIGHT: 6px;
+    PADDING-LEFT: 5px;	
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+}
+.lt1
+{
+    BACKGROUND: #ccc;
+    BORDER-RIGHT: #999 1px solid;
+    BORDER-TOP: #999 1px solid;
+    BORDER-LEFT: #999 1px solid;
+    BORDER-BOTTOM: #999 1px solid;
+    PADDING-RIGHT: 6px;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+}
+#gatorMainNav A
+{
+    font-family: Verdana, Geneva, Arial;
+	font-size: 11px;
+    COLOR: black;
+    TEXT-DECORATION: none
+}
+
+/*BEGIN ADDED FOR CR SURVEY 9-21-2004 - EH */
+
+
+/*END ADDED FOR CR SURVEY 9-21-2004 - EH */
+
+.repTableHeader
+{
+	color: white;
+	font-weight:bold;
+	background-color: #3568cc;
+}
+.repTableBorder
+{
+	border-right: #999999 1px solid;
+	border-left: #999999 1px solid;
+	border-bottom: #999999 1px solid;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+/*BEGIN ADDED FOR SEARCH RESULTS 9-14-2005 - BC */
+.SearchCriteriaLabel
+{
+	FONT-SIZE: 10pt;
+	/*font-weight:bold;*/
+	color: #000000;
+}
+.SearchCriteria
+{
+	font-size: 10pt;
+	/*font-weight:bold;*/
+	text-decoration:none;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial;
+}
+
+/*END ADDED FOR SEARCH RESULTS 9-14-2005 - BC */
